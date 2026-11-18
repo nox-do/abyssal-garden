@@ -1,0 +1,4 @@
+variants/
+results/*.png
+results/*.log
+results/compare.html

@@ -294,7 +294,7 @@ D = Wd.gy = T.smp = null; // with gy goes the generator's working memory (about 
 
 await say('Building set pieces…', 0.94, 1200);
 // mesh ids: 0-3 boulders, 4-6 sponges, 7-8 coral, 9 tube sponge, 10 whale fluke, 11 ship, 12 manta, 13 fish,
-// 14-20 rock chunks + pebbles, 21-22 coral LOD, 23-25 far LOD of the large rock chunks
+// 14-20 rock chunks + pebbles, 21-22 coral LOD, 23-25 far rock LOD, 26 shallow fish
 const meshes = [meshChunk(1, 3), meshChunk(7, 3), meshChunk(13, 3), meshChunk(22, 3),
   meshLathe([[0, 0, 0.5], [0.34, 0, 0.6], [0.5, 0.2, 0.85], [0.6, 0.6, 1], [0.55, 0.95, 1], [0.47, 1.08, 1], [0.38, 1.1, 0.9], [0.3, 1.0, 0.45], [0.26, 0.6, 0.15], [0, 0.35, 0.05]], 18, 0.3, 9),
   meshLathe([[0, 0, 0.5], [0.2, 0, 0.6], [0.26, 0.5, 0.85], [0.4, 1.25, 1], [0.4, 1.42, 1], [0.33, 1.48, 0.9], [0.26, 1.38, 0.4], [0.18, 0.8, 0.12], [0, 0.5, 0.05]], 16, 0.35, 8),
@@ -302,6 +302,7 @@ const meshes = [meshChunk(1, 3), meshChunk(7, 3), meshChunk(13, 3), meshChunk(22
   meshCoral(0), meshCoral(1), meshTubes()].map((m) => m.build());
 meshes.push(meshFluke(), meshShip().build(), meshManta().build(), meshFish().build(),
   meshChunk(3).build(), meshChunk(11).build(), meshChunk(29).build(), meshChunk(5, 3).build(), meshChunk(17, 3).build(), meshChunk(41, 3).build(), meshChunk(9, 1).build(), meshCoral(0, 1).build(), meshCoral(1, 1).build(), meshChunk(5, 2, 1).build(), meshChunk(17, 2, 1).build(), meshChunk(41, 2, 1).build());
+meshes.push(meshFish(true).build());
 let nV = 0, nI = 0;
 for (const m of meshes) { m.v0 = nV; m.i0 = nI; nV += m.nv; nI += m.ib.length; }
 const allV = new Uint8Array(nV * 16), allI = new Uint16Array(nI);
@@ -316,7 +317,7 @@ const ibBig = buf(new Uint8Array(Wd.big.buf), BU.VERTEX), ibSmall = buf(new Uint
 const ibFish = buf(Wd.fish, BU.VERTEX), ibManta = buf(Wd.mantas, BU.VERTEX), ibBubbles = buf(Wd.bubbles, BU.VERTEX), ibSnowB = buf(Wd.snow, BU.VERTEX);
 const ibGl = buf(Wd.glints, BU.VERTEX), nGl = Wd.glints.length / 8;
 const nFish = Wd.fish.length / 8, nManta = Wd.mantas.length / 8, nBub = Wd.bubbles.length / 8, nSnow = Wd.snow.length / 4;
-const MANTA = meshes[12], FISH = meshes[13];
+const MANTA = meshes[12], FISH = meshes[13], REEF = meshes[26];
 Q.writeTexture({ texture: tVol }, Wd.volD, { bytesPerRow: NX, rowsPerImage: NY / 2 }, [NX / 2, NY / 2, NZ / 2]);
 Q.writeTexture({ texture: tMap }, Wd.gm, { bytesPerRow: 2048 }, [512, 512]);
 
@@ -503,7 +504,8 @@ function render() {
     if (lod) drawCells(r, Wd.props[i].start, Wd.props[i].lo, Wd.props[i].hi, 3, meshes[18 + i], 0, 6, 110);
   }
   r.setPipeline(pManta); r.setVertexBuffer(1, ibManta); r.drawIndexed(MANTA.ni, nManta, MANTA.i0, MANTA.v0, 0);
-  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ni, nFish, FISH.i0, FISH.v0, 0);
+  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ni, Wd.nSchoolFish, FISH.i0, FISH.v0, 0);
+  r.drawIndexed(REEF.ni, nFish - Wd.nSchoolFish, REEF.i0, REEF.v0, Wd.nSchoolFish);
   // kelp and plants: 9-row blades up close, 5 rows mid-range, a decimated set far away
   r.setPipeline(pLeaf); r.setVertexBuffer(0, ibBig); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 18, 0, 24);
   r.setPipeline(pLeaf5); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 10, 24, 58);

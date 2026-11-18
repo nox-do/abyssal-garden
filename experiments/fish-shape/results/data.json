@@ -1,0 +1,18 @@
+{
+  "sourceMatchFromPatches": true,
+  "legacyMeshByteIdentical": true,
+  "vertices": 110,
+  "triangles": 210,
+  "vertexBytes": 1760,
+  "indexBytes": 1260,
+  "gpuBytes": 3020,
+  "temporaryMeshTypedArrayBytes": 4280,
+  "extraTrianglesPerFrame": 8960,
+  "minOutwardRadialDot": 0.006803149606299213,
+  "minTriangleArea": 0.00003394112549695428,
+  "maxDeformedRadiusBound": 0.38591704043744957,
+  "limits": [
+    "Typed-array payload only; JS objects, driver overhead and peak process RAM not measured.",
+    "The radius is an analytical upper bound using maximum size and bend, not a sampled GPU position."
+  ]
+}

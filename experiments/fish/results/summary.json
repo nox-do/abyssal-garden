@@ -1,0 +1,579 @@
+{
+  "base": "cc3d14b",
+  "htmlBytes": 106554,
+  "htmlDelta": 1248,
+  "gzipBytes": 43023,
+  "gzipDelta": 486,
+  "qa": {
+    "cases": 6,
+    "images": 258
+  },
+  "resources": [
+    {
+      "level": 0,
+      "fishBefore": 4240,
+      "fishAfter": 4296,
+      "extraGPUBufferBytes": 1792,
+      "extraTemporaryCPUArrayBytes": 1792,
+      "newTextures": 0,
+      "newBuffers": 0,
+      "newDrawCalls": 0,
+      "extraRenderedTriangles": 2800,
+      "paths": {
+        "groups": [
+          {
+            "center": [
+              0,
+              -7,
+              -10
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              -8,
+              -5,
+              -76
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              9,
+              -7,
+              -69
+            ],
+            "R": 4,
+            "clearance": 1
+          },
+          {
+            "center": [
+              50,
+              -6,
+              10
+            ],
+            "R": 4,
+            "clearance": 0.9406065155902138
+          },
+          {
+            "center": [
+              -58,
+              -5,
+              8
+            ],
+            "R": 4.5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              7,
+              -4,
+              76
+            ],
+            "R": 4,
+            "clearance": 0.5218851728474634
+          },
+          {
+            "center": [
+              -150,
+              -3.799999952316284,
+              10
+            ],
+            "R": 3,
+            "clearance": 0.8110235619732723
+          }
+        ],
+        "minClearance": 0.5218851728474634,
+        "maxY": -2.599999952316284,
+        "checks": 13440
+      },
+      "sequence": {
+        "frames": [],
+        "count": 56,
+        "times": 361,
+        "minClearance": 0.961171694878207,
+        "maxY": -2.7189210414886475
+      }
+    },
+    {
+      "level": 1,
+      "fishBefore": 4240,
+      "fishAfter": 4296,
+      "extraGPUBufferBytes": 1792,
+      "extraTemporaryCPUArrayBytes": 1792,
+      "newTextures": 0,
+      "newBuffers": 0,
+      "newDrawCalls": 0,
+      "extraRenderedTriangles": 2800,
+      "paths": {
+        "groups": [
+          {
+            "center": [
+              0,
+              -7,
+              -10
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              -8,
+              -5,
+              -76
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              9,
+              -7,
+              -69
+            ],
+            "R": 4,
+            "clearance": 1
+          },
+          {
+            "center": [
+              50,
+              -6,
+              10
+            ],
+            "R": 4,
+            "clearance": 0.9406065155902138
+          },
+          {
+            "center": [
+              -58,
+              -5,
+              8
+            ],
+            "R": 4.5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              7,
+              -4,
+              76
+            ],
+            "R": 4,
+            "clearance": 0.5218851728474634
+          },
+          {
+            "center": [
+              -150,
+              -3.799999952316284,
+              10
+            ],
+            "R": 3,
+            "clearance": 0.8110235619732723
+          }
+        ],
+        "minClearance": 0.5218851728474634,
+        "maxY": -2.599999952316284,
+        "checks": 13440
+      }
+    },
+    {
+      "level": 2,
+      "fishBefore": 4240,
+      "fishAfter": 4296,
+      "extraGPUBufferBytes": 1792,
+      "extraTemporaryCPUArrayBytes": 1792,
+      "newTextures": 0,
+      "newBuffers": 0,
+      "newDrawCalls": 0,
+      "extraRenderedTriangles": 2800,
+      "paths": {
+        "groups": [
+          {
+            "center": [
+              0,
+              -7,
+              -10
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              -8,
+              -5,
+              -76
+            ],
+            "R": 5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              9,
+              -7,
+              -69
+            ],
+            "R": 4,
+            "clearance": 1
+          },
+          {
+            "center": [
+              50,
+              -6,
+              10
+            ],
+            "R": 4,
+            "clearance": 0.9406065155902138
+          },
+          {
+            "center": [
+              -58,
+              -5,
+              8
+            ],
+            "R": 4.5,
+            "clearance": 1
+          },
+          {
+            "center": [
+              7,
+              -4,
+              76
+            ],
+            "R": 4,
+            "clearance": 0.5218851728474634
+          },
+          {
+            "center": [
+              -150,
+              -3.799999952316284,
+              10
+            ],
+            "R": 3,
+            "clearance": 0.8110235619732723
+          }
+        ],
+        "minClearance": 0.5218851728474634,
+        "maxY": -2.599999952316284,
+        "checks": 13440
+      }
+    }
+  ],
+  "limits": [
+    "Actual process or peak RAM not measured.",
+    "Extra CPU array is temporary and cleared after upload; buffer size is GPU payload.",
+    "Sampled terrain clearance is not a proof for every instant or collision with all props/plants."
+  ],
+  "timing": {
+    "protocol": {
+      "warmupRounds": 1,
+      "measuredRounds": 3,
+      "views": 2,
+      "warmupFrames": 20,
+      "measuredFrames": 60,
+      "serialGPU": true,
+      "limits": [
+        "Repeated local pages, not cold starts.",
+        "GPU timestamps of serial render passes, not gameplay FPS.",
+        "One Mac/Chrome; no process/peak RAM measurement."
+      ]
+    },
+    "groups": [
+      {
+        "name": "baseline",
+        "level": 0,
+        "readyMs": {
+          "median": 2464,
+          "min": 2435.5,
+          "max": 2484.0999999940395
+        },
+        "worldMs": {
+          "median": 1244.2999999970198,
+          "min": 1224.5,
+          "max": 1246
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 11.337728,
+              "min": 11.239424,
+              "max": 11.337728
+            },
+            "cpuMeanMs": {
+              "median": 0.11333333303531011,
+              "min": 0.09000000109275182,
+              "max": 0.1516666685541471
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 11.042815999999998,
+              "min": 10.97728,
+              "max": 11.4688
+            },
+            "cpuMeanMs": {
+              "median": 0.09833333368102709,
+              "min": 0.08499999940395356,
+              "max": 0.10166666706403096
+            }
+          }
+        ]
+      },
+      {
+        "name": "shallow",
+        "level": 0,
+        "readyMs": {
+          "median": 2446.7999999970198,
+          "min": 2442.9000000059605,
+          "max": 2457.9000000059605
+        },
+        "worldMs": {
+          "median": 1236.2999999970198,
+          "min": 1234.7000000029802,
+          "max": 1241.699999988079
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 11.272192,
+              "min": 11.272192,
+              "max": 11.370496
+            },
+            "cpuMeanMs": {
+              "median": 0.10499999970197678,
+              "min": 0.09499999930461248,
+              "max": 0.12833333238959313
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 11.304960000000001,
+              "min": 10.81344,
+              "max": 11.4688
+            },
+            "cpuMeanMs": {
+              "median": 0.11666666716337204,
+              "min": 0.09999999826153119,
+              "max": 0.13333333358168603
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 1,
+        "readyMs": {
+          "median": 2343.3999999910593,
+          "min": 2331.8999999910593,
+          "max": 2362.199999988079
+        },
+        "worldMs": {
+          "median": 1172.9000000059605,
+          "min": 1167.9000000059605,
+          "max": 1181.7999999970198
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 9.011199999999999,
+              "min": 8.912896,
+              "max": 9.50272
+            },
+            "cpuMeanMs": {
+              "median": 0.11999999930461248,
+              "min": 0.10999999965230624,
+              "max": 0.15666666701436044
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 8.716288,
+              "min": 8.650752,
+              "max": 8.716288
+            },
+            "cpuMeanMs": {
+              "median": 0.1066666677594185,
+              "min": 0.09833333392937978,
+              "max": 0.12666666631897291
+            }
+          }
+        ]
+      },
+      {
+        "name": "shallow",
+        "level": 1,
+        "readyMs": {
+          "median": 2374.5,
+          "min": 2358.800000011921,
+          "max": 2379.0999999940395
+        },
+        "worldMs": {
+          "median": 1181,
+          "min": 1171.7000000029802,
+          "max": 1182.1000000089407
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 9.109504,
+              "min": 8.945664,
+              "max": 9.50272
+            },
+            "cpuMeanMs": {
+              "median": 0.1500000002483527,
+              "min": 0.1316666680077712,
+              "max": 0.24666666562358538
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 8.650752,
+              "min": 8.650752,
+              "max": 8.716288
+            },
+            "cpuMeanMs": {
+              "median": 0.10500000044703484,
+              "min": 0.08000000069538753,
+              "max": 0.11666666641831398
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 2,
+        "readyMs": {
+          "median": 2298.6000000089407,
+          "min": 2286.2000000029802,
+          "max": 2325.2000000029802
+        },
+        "worldMs": {
+          "median": 1149.2999999970198,
+          "min": 1139.2999999970198,
+          "max": 1167.7999999970198
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.538944,
+              "min": 3.538944,
+              "max": 3.538944
+            },
+            "cpuMeanMs": {
+              "median": 0.1533333331346512,
+              "min": 0.11666666716337204,
+              "max": 0.17333333318432173
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 3.080192,
+              "min": 3.014656,
+              "max": 3.145728
+            },
+            "cpuMeanMs": {
+              "median": 0.08333333333333333,
+              "min": 0.06666666716337204,
+              "max": 0.12333333243926366
+            }
+          }
+        ]
+      },
+      {
+        "name": "shallow",
+        "level": 2,
+        "readyMs": {
+          "median": 2301.5,
+          "min": 2298.699999988079,
+          "max": 2313.4000000059605
+        },
+        "worldMs": {
+          "median": 1151.7999999970198,
+          "min": 1143.800000011921,
+          "max": 1168.9000000059605
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.538944,
+              "min": 3.538944,
+              "max": 3.538944
+            },
+            "cpuMeanMs": {
+              "median": 0.11333333452542622,
+              "min": 0.1116666669646899,
+              "max": 0.13000000069538753
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 3.014656,
+              "min": 3.014656,
+              "max": 3.014656
+            },
+            "cpuMeanMs": {
+              "median": 0.06833333298563957,
+              "min": 0.05,
+              "max": 0.08833333378036817
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

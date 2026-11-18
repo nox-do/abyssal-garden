@@ -1,0 +1,11 @@
+import {spawnSync} from 'node:child_process';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const cases=[];
+for(let round=0;round<4;round++)for(let j=0;j<3;j++)for(const name of round%2?['shallow','baseline']:['baseline','shallow'])cases.push(`${name}:${(j+round)%3}`);
+const result=spawnSync(process.execPath,[new URL('browser.mjs',import.meta.url).pathname,'--timing',...cases],{stdio:'inherit',env:{...process.env,FISH_REPORT:'timing.json'}});
+assert.equal(result.status,0);
+const path=new URL('results/timing.json',import.meta.url),r=JSON.parse(await fs.readFile(path,'utf8'));assert.ok(r.complete);assert.equal(r.tests.length,24);
+r.tests.forEach((t,i)=>{t.round=Math.floor(i/6);t.warmup=t.round===0;});
+r.protocol={warmupRounds:1,measuredRounds:3,views:2,warmupFrames:20,measuredFrames:60,serialGPU:true,limits:['Repeated local pages, not cold starts.','GPU timestamps of serial render passes, not gameplay FPS.','One Mac/Chrome; no process/peak RAM measurement.']};
+await fs.writeFile(path,JSON.stringify(r,null,2)+'\n');

@@ -1,0 +1,396 @@
+{
+  "baseline": {
+    "bytes": 106554,
+    "gzipBytes": 43023,
+    "sha256": "18bf93dc05fc32565dbfbac392392976837d2ab67cc4cf840cd7db469b6ae36a"
+  },
+  "rounded": {
+    "bytes": 107000,
+    "gzipBytes": 43241,
+    "sha256": "f5b532374dd61cdfa3ecabf73d1ad85b233091d373a92834a608fee91d0d75f5"
+  },
+  "productByteIdentical": true,
+  "htmlDelta": 446,
+  "gzipDelta": 218,
+  "qa": {
+    "cases": 6,
+    "images": 282
+  },
+  "geometry": {
+    "sourceMatchFromPatches": true,
+    "legacyMeshByteIdentical": true,
+    "vertices": 110,
+    "triangles": 210,
+    "vertexBytes": 1760,
+    "indexBytes": 1260,
+    "gpuBytes": 3020,
+    "temporaryMeshTypedArrayBytes": 4280,
+    "extraTrianglesPerFrame": 8960,
+    "minOutwardRadialDot": 0.006803149606299213,
+    "minTriangleArea": 0.00003394112549695428,
+    "maxDeformedRadiusBound": 0.38591704043744957,
+    "limits": [
+      "Typed-array payload only; JS objects, driver overhead and peak process RAM not measured.",
+      "The radius is an analytical upper bound using maximum size and bend, not a sampled GPU position."
+    ]
+  },
+  "resources": [
+    {
+      "level": 0,
+      "extraGPUBufferBytes": 3020,
+      "newBuffers": 0,
+      "newTextures": 0,
+      "newPipelines": 0,
+      "extraDrawCalls": 1,
+      "fishBefore": 4296,
+      "fishAfter": 4296,
+      "unchangedHashes": 133,
+      "addedHashes": 2
+    },
+    {
+      "level": 1,
+      "extraGPUBufferBytes": 3020,
+      "newBuffers": 0,
+      "newTextures": 0,
+      "newPipelines": 0,
+      "extraDrawCalls": 1,
+      "fishBefore": 4296,
+      "fishAfter": 4296,
+      "unchangedHashes": 133,
+      "addedHashes": 2
+    },
+    {
+      "level": 2,
+      "extraGPUBufferBytes": 3020,
+      "newBuffers": 0,
+      "newTextures": 0,
+      "newPipelines": 0,
+      "extraDrawCalls": 1,
+      "fishBefore": 4296,
+      "fishAfter": 4296,
+      "unchangedHashes": 133,
+      "addedHashes": 2
+    }
+  ],
+  "timing": {
+    "protocol": {
+      "warmupRounds": 1,
+      "measuredRounds": 3,
+      "views": 2,
+      "warmupFrames": 20,
+      "measuredFrames": 60,
+      "serialGPU": true,
+      "limits": [
+        "Repeated local pages, not cold starts.",
+        "GPU timestamps of serial render passes, not gameplay FPS.",
+        "One Mac/Chrome; no process/peak RAM measurement."
+      ]
+    },
+    "groups": [
+      {
+        "name": "baseline",
+        "level": 0,
+        "readyMs": {
+          "median": 2441.1000000089407,
+          "min": 2435.199999988079,
+          "max": 2446
+        },
+        "worldMs": {
+          "median": 1234.3999999910593,
+          "min": 1216.7000000029802,
+          "max": 1239.7999999970198
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 11.337728,
+              "min": 11.337728,
+              "max": 11.436032
+            },
+            "cpuMeanMs": {
+              "median": 0.09833333268761635,
+              "min": 0.09666666736205419,
+              "max": 0.27999999970197675
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 10.878976,
+              "min": 10.81344,
+              "max": 11.010048
+            },
+            "cpuMeanMs": {
+              "median": 0.09333333497246106,
+              "min": 0.08666666547457377,
+              "max": 0.11166666671633721
+            }
+          }
+        ]
+      },
+      {
+        "name": "rounded",
+        "level": 0,
+        "readyMs": {
+          "median": 2427.2999999970198,
+          "min": 2410.2000000029802,
+          "max": 2459.300000011921
+        },
+        "worldMs": {
+          "median": 1246.2999999970198,
+          "min": 1229.8999999910593,
+          "max": 1257.7000000029802
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 11.304960000000001,
+              "min": 11.304960000000001,
+              "max": 11.403264
+            },
+            "cpuMeanMs": {
+              "median": 0.10500000044703484,
+              "min": 0.10333333338300386,
+              "max": 0.11499999860922495
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 10.944512,
+              "min": 10.878976,
+              "max": 11.010048
+            },
+            "cpuMeanMs": {
+              "median": 0.10499999895691872,
+              "min": 0.10333333512147268,
+              "max": 0.1100000003973643
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 1,
+        "readyMs": {
+          "median": 2387.2999999970198,
+          "min": 2373.0999999940395,
+          "max": 2396.5
+        },
+        "worldMs": {
+          "median": 1173.7999999970198,
+          "min": 1170.9000000059605,
+          "max": 1178.9000000059605
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 8.912896,
+              "min": 8.84736,
+              "max": 8.945664
+            },
+            "cpuMeanMs": {
+              "median": 0.11500000059604645,
+              "min": 0.0933333324889342,
+              "max": 0.12499999950329463
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 8.650752,
+              "min": 8.650752,
+              "max": 8.650752
+            },
+            "cpuMeanMs": {
+              "median": 0.10000000024835269,
+              "min": 0.08333333333333333,
+              "max": 0.13666666795810065
+            }
+          }
+        ]
+      },
+      {
+        "name": "rounded",
+        "level": 1,
+        "readyMs": {
+          "median": 2358.8999999910593,
+          "min": 2343.8999999910593,
+          "max": 2368.4000000059605
+        },
+        "worldMs": {
+          "median": 1160.7999999970198,
+          "min": 1159.699999988079,
+          "max": 1171.9000000059605
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 8.912896,
+              "min": 8.912896,
+              "max": 8.945664
+            },
+            "cpuMeanMs": {
+              "median": 0.10833333258827528,
+              "min": 0.10666666651765505,
+              "max": 0.1383333332836628
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 8.650752,
+              "min": 8.650752,
+              "max": 8.650752
+            },
+            "cpuMeanMs": {
+              "median": 0.09499999930461248,
+              "min": 0.09333333397905032,
+              "max": 0.10499999995032946
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 2,
+        "readyMs": {
+          "median": 2275.5,
+          "min": 2273.0999999940395,
+          "max": 2288.300000011921
+        },
+        "worldMs": {
+          "median": 1137.300000011921,
+          "min": 1132.699999988079,
+          "max": 1148.5
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.538944,
+              "min": 3.538944,
+              "max": 3.538944
+            },
+            "cpuMeanMs": {
+              "median": 0.15999999890724817,
+              "min": 0.12000000054637591,
+              "max": 0.17666666607062023
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 3.014656,
+              "min": 3.014656,
+              "max": 3.080192
+            },
+            "cpuMeanMs": {
+              "median": 0.08000000019868216,
+              "min": 0.07333333219091097,
+              "max": 0.11999999980131786
+            }
+          }
+        ]
+      },
+      {
+        "name": "rounded",
+        "level": 2,
+        "readyMs": {
+          "median": 2279.7000000029802,
+          "min": 2265.7000000029802,
+          "max": 2283.7000000029802
+        },
+        "worldMs": {
+          "median": 1132.5,
+          "min": 1123.9000000059605,
+          "max": 1135.1000000089407
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.538944,
+              "min": 3.506176,
+              "max": 3.538944
+            },
+            "cpuMeanMs": {
+              "median": 0.12666666532556217,
+              "min": 0.11999999855955441,
+              "max": 0.19000000009934107
+            }
+          },
+          {
+            "pose": [
+              0.7287074902429839,
+              -6.731536273956299,
+              -5.374069171633744,
+              0.6051731705665588,
+              -6.851536273956299,
+              -7.169825077056885
+            ],
+            "gpuMs": {
+              "median": 3.014656,
+              "min": 3.014656,
+              "max": 3.080192
+            },
+            "cpuMeanMs": {
+              "median": 0.06999999980131785,
+              "min": 0.06833333273728688,
+              "max": 0.20666666552424431
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "limits": [
+    "Actual process/peak RAM not measured.",
+    "Serial render timing is not gameplay FPS.",
+    "One Mac/Chrome; three measured pages per group."
+  ],
+  "shipping": {
+    "passed": true,
+    "cases": 3,
+    "date": "2026-11-18T17:28:35.758Z"
+  }
+}

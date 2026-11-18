@@ -593,16 +593,21 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
   var o: VO;
   let s = i.b.x; let h = vec3f(hs(s), hs(s + .37), hs(s + .71));
   let R = i.a.w; let t = g.cam.w;
-  let ta = t * i.b.y + i.b.w * 6.3 + (h.x - .5) * (26. / R);
-  let ph = i.b.w * 17.;
-  let P = i.a.xyz + vec3f(R * cos(ta), 2.2 * sin(3. * ta + ph), R * .6 * sin(ta));
-  let T = normalize(vec3f(-R * sin(ta), 6.6 * cos(3. * ta + ph), R * .6 * cos(ta))) * sign(i.b.y);
+  // Negative phase encodes the shallow palette; existing shoals keep their inputs.
+  let reef = i.b.w < 0.; let kind = select(0., floor(-i.b.w), reef);
+  let phase = select(i.b.w, fract(-i.b.w), reef); let amp = select(2.2, .35, reef);
+  let ta = t * i.b.y + phase * 6.3 + (h.x - .5) * (select(26., 3., reef) / R);
+  let ph = phase * 17.;
+  let P = i.a.xyz + vec3f(R * cos(ta), amp * sin(3. * ta + ph), R * .6 * sin(ta));
+  let T = normalize(vec3f(-R * sin(ta), select(6.6, 1.05, reef) * cos(3. * ta + ph), R * .6 * cos(ta))) * sign(i.b.y);
   let S = normalize(cross(vec3f(0., 1., 0.), T)); let Up = cross(T, S);
-  let off = S * ((h.y - .5) * 5. + sin(t * .6 + s * 40.) * .5) + Up * ((h.z - .5) * 3.2 + cos(t * .5 + s * 31.) * .4);
+  let off = S * ((h.y - .5) * select(5., 1.2, reef) + sin(t * .6 + s * 40.) * select(.5, .15, reef)) + Up * ((h.z - .5) * select(3.2, .6, reef) + cos(t * .5 + s * 31.) * select(.4, .15, reef));
   var l = i.p * i.b.z * (.75 + .5 * h.z);
+  var ln = i.n.xyz;
+  if (reef) { l.y *= 1.65; l.z *= .85; ln.y /= 1.65; ln.z /= .85; }
   l.z += sin(t * 9. + s * 50. + l.x * 5.) * .22 * (.25 * i.b.z - l.x);
   let w = P + off + T * l.x + Up * l.y + S * l.z;
-  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.n = T * i.n.x + Up * i.n.y + S * i.n.z; o.op = i.p; o.sd = s;
+  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.n = T * ln.x + Up * ln.y + S * ln.z; o.op = i.p; o.sd = select(s, kind, reef);
   o.lt = shadow1(w);
   return o;
 }
@@ -611,9 +616,26 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
   let z = zone(i.wp); let vv = vol(i.wp);
   var alb = mix(vec3f(.50, .68, .80), vec3f(.10, .22, .40), ss(-.05, .2, i.op.y));
   alb = mix(alb, vec3f(.95, .8, .3), step(.86, fract(i.sd * 7.7)) * .6);
+  // Pigment masks follow the undeformed body coordinates, including its tail motion.
+  if (i.sd >= 1.) {
+    let tail = 1. - ss(-.34, -.28, i.op.x);
+    alb = mix(vec3f(.025, .34, .95), vec3f(.015, .12, .72), ss(-.12, .13, i.op.y));
+    let flank = 1. - ss(.75, 1., length((i.op.xy - vec2f(-.02, .045)) / vec2f(.28, .055)));
+    alb = mix(alb, vec3f(.005, .012, .035), flank);
+    alb = mix(alb, vec3f(.95, .76, .012), tail);
+    if (i.sd >= 2.) {
+      alb = mix(vec3f(.95, .78, .018), vec3f(.7, .43, .008), ss(.02, .17, i.op.y) * .5);
+      alb = mix(alb, vec3f(.035, .13, .16), ss(.115, .17, abs(i.op.y)) * (1. - tail) * .8);
+    }
+    let gill = 1. - ss(.006, .013, abs(i.op.x - .23 + abs(i.op.y) * .35));
+    alb *= 1. - gill * .28;
+    let eye = length((i.op.xy - vec2f(.32, .025)) * vec2f(36., 45.));
+    alb = mix(alb, vec3f(.5, .67, .65), 1. - ss(1., 1.4, eye));
+    alb = mix(alb, vec3f(.003, .007, .01), 1. - ss(.6, .95, eye));
+  }
   let E = sunE(i.wp.y, z) * i.lt;
   var c = alb * (E * (.25 + .75 * sat(dot(n, L))) + amb(i.wp, n, vv.g, z) * 1.3);
-  c += E * pow(sat(dot(n, normalize(V + L))), 24.) * 1.6 + vec3f(.3, .6, .7) * pow(1. - sat(dot(n, V)), 3.) * .25 * vv.g;
+  c += E * pow(sat(dot(n, normalize(V + L))), 24.) * select(1.6, .3, i.sd >= 1.) + vec3f(.3, .6, .7) * pow(1. - sat(dot(n, V)), 3.) * select(.25, .08, i.sd >= 1.) * vv.g;
   return fin(fog(c, i.wp, z));
 }
 @vertex fn vsManta(i: VI) -> VO {

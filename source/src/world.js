@@ -371,6 +371,12 @@ function makeWorld(D, T, flyPts, POSES) {
   const SCH = [[-2, -36, -10, 15, 520, 0.3, 1, 0.945], [8, -30, -70, 22, 420, 0.32, -1], [48, -30, 14, 18, 360, 0.3, 1], [-58, -30, -8, 11, 420, 0.28, -1, 0.3], [8, -36, 84, 16, 320, 0.28, 1],
     [-90, -28, -70, 25, 300, 0.3, 1], [95, -30, 70, 25, 300, 0.3, -1], [0, -22, 20, 30, 380, 0.34, -1], [-30, -30, -100, 18, 300, 0.3, 1], [16, -36, 30, 12, 300, 0.3, 1], [-48, -34, -58, 12, 300, 0.3, -1], [-45, -35, 38, 14, 320, 0.3, 1]];
   for (const s of SCH) { const ss = s[7] === undefined ? rnd() : s[7]; for (let i = 0; i < s[4]; i++) fish.push(s[0], s[1], s[2], s[3], rnd(), s[6] * 1.9 / s[3], s[5], ss); }
+  const nSchoolFish = fish.length / 8;
+  // Small shallow shoals have their own rounded mesh. Negative phase tags the palette;
+  // ihash keeps their variation independent of the existing fish/particle RNG stream.
+  for (const [g, s] of [[0, -7, -10, 5, 1], [-8, -5, -76, 5, 1], [9, -7, -69, 4, 2], [50, -6, 10, 4, 1], [-58, -5, 8, 4.5, 2], [7, -4, 76, 4, 1], [-150, -3.8, 10, 3, 2]].entries()) {
+    for (let i = 0; i < 8; i++) fish.push(s[0], s[1], s[2], s[3], ihash(g, i, 71), (g % 2 ? -1 : 1) * .45 / s[3], .46, -s[4] - (.1 + i * .1));
+  }
   const mantas = [];
   for (const m of [[1, -28, 3.5, 14, 3.012, 0.085, 3.6, 0.1], [49, -31, 24.5, 5, 0.029, -0.08, 3.7, 0.4], [0, -14, -80, 34, 0.3, 0.06, 5.2, 0.7], [-50, -18, 20, 26, 5, -0.075, 3.8, 0.55], [10, -16, 86, 26, 2.2, 0.07, 4.4, 0.85], [20, -11, -20, 46, 4.2, -0.045, 5.6, 0.25]]) mantas.push(...m);
 
@@ -389,7 +395,7 @@ function makeWorld(D, T, flyPts, POSES) {
     for (let c = 0; c < nCells; c++) { const a = L[c]; for (let i = 0; i < a.length; i += 12) { for (let j = 0; j < 12; j++) data[k++] = a[i + j]; lo[c] = min(lo[c], a[i + 1] - 3); hi[c] = max(hi[c], a[i + 1] + 3); } }
     return { data, n, start, lo, hi };
   };
-  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), mantas: new Float32Array(mantas), snow };
+  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), nSchoolFish, mantas: new Float32Array(mantas), snow };
 }
 const fract = (x) => x - floor(x);
 
@@ -548,11 +554,26 @@ function meshManta() {
   }
   return m;
 }
-function meshFish() {
+function meshFish(reef = false) {
   const m = new Mesh();
   const X = [0.5, 0.3, 0.05, -0.22, -0.34], H = [0.01, 0.13, 0.17, 0.09, 0.035], Wd = [0.01, 0.05, 0.065, 0.03, 0.012], rings = [];
-  for (let i = 0; i < 5; i++) { const r = []; for (let k = 0; k < 6; k++) { const a = k / 6 * TAU; r.push(m.v(X[i], sin(a) * H[i], cos(a) * Wd[i])); } rings.push(r); }
-  for (let i = 0; i < 4; i++) for (let k = 0; k < 6; k++) { const k2 = (k + 1) % 6; m.quad(rings[i][k], rings[i + 1][k], rings[i + 1][k2], rings[i][k2]); }
+  const rows = reef ? 13 : 5, sides = reef ? 8 : 6;
+  for (let i = 0; i < rows; i++) {
+    // Concentrate samples at the curved snout and tail root; keep the old shoal exact.
+    const u = .5 - .5 * cos(i / (rows - 1) * PI), s = sin(u * PI);
+    const x = reef ? .5 - .84 * u : X[i], h = reef ? .012 + .023 * u + .16 * pow(s, .85) * (1 - .2 * u) : H[i], w = reef ? .008 + .058 * s : Wd[i], r = [];
+    for (let k = 0; k < sides; k++) { const a = k / sides * TAU; r.push(m.v(x, sin(a) * h, cos(a) * w)); }
+    rings.push(r);
+  }
+  for (let i = 0; i < rows - 1; i++) for (let k = 0; k < sides; k++) {
+    const j = (k + 1) % sides, a = rings[i], b = rings[i + 1];
+    // The legacy shoal has inward normals. Give the new body outward normals.
+    if (reef) m.quad(a[k], a[j], b[j], b[k]); else m.quad(a[k], b[k], b[j], a[j]);
+  }
+  if (reef) for (const i of [0, rows - 1]) {
+    const c = m.v(i ? -.34 : .5, 0, 0), r = rings[i];
+    for (let k = 0; k < sides; k++) { const j = (k + 1) % sides; if (i) m.tri(c, r[k], r[j]); else m.tri(c, r[j], r[k]); }
+  }
   const a = m.v(-0.33, 0, 0), b = m.v(-0.56, 0.2, 0), c = m.v(-0.47, 0, 0), d = m.v(-0.56, -0.2, 0);
   m.tri(a, b, c); m.tri(a, c, d);
   return m;

@@ -1,0 +1,24 @@
+{
+  "base": "cc3d14b",
+  "node": "v22.23.4",
+  "sourceHashes": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "bf749a644787a025f917008bb3bd696d7921a0b2374b3d7c95d7c131e6991d3b",
+    "shaders.js": "9c710224d14a790e0db6bc8d63cc0f1d2966bc01563a3b63211f46d00cfa886a",
+    "world.js": "4f81c35e4795b5e151291201b26f1b741def66f4c755f50f05d6a5c3825e5e8c",
+    "main.js": "4512f6346309e8859862b81cbf1aec329488c877a44a639561e0cb12887b6603",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 106554,
+      "gzipBytes": 43023,
+      "sha256": "18bf93dc05fc32565dbfbac392392976837d2ab67cc4cf840cd7db469b6ae36a"
+    },
+    "rounded": {
+      "bytes": 107000,
+      "gzipBytes": 43241,
+      "sha256": "f5b532374dd61cdfa3ecabf73d1ad85b233091d373a92834a608fee91d0d75f5"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-18T17:13:13.930Z",
+  "mode": "shipping",
+  "quick": false,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "product",
+      "level": 0,
+      "readyMs": 2463.4000000059605,
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/index.html"
+      ],
+      "pointerLockSuppressed": 1,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    },
+    {
+      "name": "product",
+      "level": 1,
+      "readyMs": 2379.3999999910593,
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/index.html"
+      ],
+      "pointerLockSuppressed": 1,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    },
+    {
+      "name": "product",
+      "level": 2,
+      "readyMs": 2270,
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/index.html"
+      ],
+      "pointerLockSuppressed": 1,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "description": ""
+  },
+  "complete": true
+}

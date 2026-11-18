@@ -1,0 +1,47 @@
+Rounded shallow fish: run from repository root (source/node_modules installed).
+
+1. node experiments/fish-shape/build.mjs
+2. node experiments/fish-shape/data.mjs
+3. caffeinate -i node experiments/fish-shape/browser.mjs
+4. python3 experiments/fish-shape/analyze.py
+   Requires NumPy and Pillow. Here the bundled runtime was:
+   /Users/ddeuter/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+5. caffeinate -i node experiments/fish-shape/timing.mjs
+6. npm --prefix source run build
+7. caffeinate -i node experiments/fish-shape/browser.mjs --shipping
+8. node experiments/fish-shape/summarize.mjs
+
+Build reconstructs angular.patch on cc3d14b in a temporary directory. Its
+106554-byte baseline must match SHA-256
+18bf93dc05fc32565dbfbac392392976837d2ab67cc4cf840cd7db469b6ae36a.
+The rounded candidate comes from the current product source. Summary checks
+the generated index.html against that candidate. Frozen upstream is untouched.
+
+Chrome runs headless in an isolated temporary profile, with offline network
+conditions and requestPointerLock suppressed. No personal browser or mouse
+capture. Browser/GPU runs must be serial. caffeinate is limited to the runner.
+
+47 images per case, six cases: original world poses, shallow shoals, wide,
+surface, near, oblique, front/opposite, 12 temporal steps per close view,
+and later times. Resolution 1280x720, render detail 1, identical cameras and
+time per pair. poses.json is fixed from actual GPU positions at t=8 s.
+The GPU path probe is QA-only and excluded from captured product allocations
+and timings. It repeats the original 0..180 s sample on the new mesh variant;
+data.mjs proves the old 0.4 m radius reserve still bounds this mesh.
+
+Timing: one warmup round plus three measured rounds, rotated quality order,
+alternating variant order, two views, 20 warmup + 60 measured frames per view.
+Repeated local pages, no cold-start or real gameplay FPS claim. Actual process
+and peak RAM were not measured. The extra geometry and draw cost real work,
+even if small timing differences fall within the run-to-run variation.
+
+Quick local image check: browser.mjs --quick baseline:0 rounded:0
+Reports are overwritten on rerun; preserve historical results as needed.
+PNG/HTML/log files are ignored, JSON and scripts are retained.
+
+Revert ONLY rounding (preserves colorful fish):
+  git apply --reverse experiments/fish-shape/shape-only.patch
+  npm --prefix source run build
+Then to remove the first colorful-fish experiment too:
+  git apply --reverse experiments/fish/fish-only.patch
+  npm --prefix source run build

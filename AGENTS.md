@@ -48,6 +48,20 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
   Schatten mit kleinen Kantenabweichungen. Separate Ruecknahmepatches vorhanden.
   Fuenf Agentenplaene liegen unter `experiments/demoscene/plans/`; Packing,
   Pflanzenrezepte und WGSL-Minifizierung sind weiterhin nicht implementiert.
+- Flache Fischgruppen als lokal gesicherter Versuch ab `cc3d14b`:
+  56 blau-gelbe/gelbe Fische in sieben Gruppen, Zentren 3,8-7 m tief.
+  Erste Version: +1.792 B Fischpuffer, HTML 106.554 B (+1.248 B).
+  Siehe `docs/fish-study.md` und `experiments/fish/RUN.txt`; separater
+  `fish-only.patch`. Die bisherigen 4.240 Fische und alle anderen Weltdaten
+  bleiben erhalten. Pointer Lock bleibt in allen Testseiten unterdrueckt.
+- Nach Nutzerfeedback sind nur diese 56 Fische gerundet: eigenes kleines
+  Modell, nach aussen gerichtete Normalen, ein zusaetzlicher Draw. Weitere
+  +446 B HTML / +3.020 B GPU-Modelldaten. Aktuell **107.000 B HTML**;
+  Details in `docs/fish-shape-study.md` und `experiments/fish-shape/RUN.txt`.
+  Alle bisherigen 133 Datenhashes und Bewegungsparameter unveraendert;
+  282 Vergleichsbilder auf drei Stufen. Auf Nutzerwunsch lokal committed,
+  nichts gepusht. Fuer Ruecknahme
+  aller Fische zuerst `shape-only.patch`, dann `fish-only.patch` umkehren.
 
 ## Code und Builds
 

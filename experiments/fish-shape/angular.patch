@@ -1,0 +1,76 @@
+diff --git a/source/src/shaders.js b/source/src/shaders.js
+index 5f84b05..975e8a9 100644
+--- a/source/src/shaders.js
++++ b/source/src/shaders.js
+@@ -593,16 +593,21 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
+   var o: VO;
+   let s = i.b.x; let h = vec3f(hs(s), hs(s + .37), hs(s + .71));
+   let R = i.a.w; let t = g.cam.w;
+-  let ta = t * i.b.y + i.b.w * 6.3 + (h.x - .5) * (26. / R);
+-  let ph = i.b.w * 17.;
+-  let P = i.a.xyz + vec3f(R * cos(ta), 2.2 * sin(3. * ta + ph), R * .6 * sin(ta));
+-  let T = normalize(vec3f(-R * sin(ta), 6.6 * cos(3. * ta + ph), R * .6 * cos(ta))) * sign(i.b.y);
++  // Negative phase encodes the shallow palette; existing shoals keep their inputs.
++  let reef = i.b.w < 0.; let kind = select(0., floor(-i.b.w), reef);
++  let phase = select(i.b.w, fract(-i.b.w), reef); let amp = select(2.2, .35, reef);
++  let ta = t * i.b.y + phase * 6.3 + (h.x - .5) * (select(26., 3., reef) / R);
++  let ph = phase * 17.;
++  let P = i.a.xyz + vec3f(R * cos(ta), amp * sin(3. * ta + ph), R * .6 * sin(ta));
++  let T = normalize(vec3f(-R * sin(ta), select(6.6, 1.05, reef) * cos(3. * ta + ph), R * .6 * cos(ta))) * sign(i.b.y);
+   let S = normalize(cross(vec3f(0., 1., 0.), T)); let Up = cross(T, S);
+-  let off = S * ((h.y - .5) * 5. + sin(t * .6 + s * 40.) * .5) + Up * ((h.z - .5) * 3.2 + cos(t * .5 + s * 31.) * .4);
++  let off = S * ((h.y - .5) * select(5., 1.2, reef) + sin(t * .6 + s * 40.) * select(.5, .15, reef)) + Up * ((h.z - .5) * select(3.2, .6, reef) + cos(t * .5 + s * 31.) * select(.4, .15, reef));
+   var l = i.p * i.b.z * (.75 + .5 * h.z);
++  var ln = i.n.xyz;
++  if (reef) { l.y *= 1.65; l.z *= .85; ln.y /= 1.65; ln.z /= .85; }
+   l.z += sin(t * 9. + s * 50. + l.x * 5.) * .22 * (.25 * i.b.z - l.x);
+   let w = P + off + T * l.x + Up * l.y + S * l.z;
+-  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.n = T * i.n.x + Up * i.n.y + S * i.n.z; o.op = i.p; o.sd = s;
++  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.n = T * ln.x + Up * ln.y + S * ln.z; o.op = i.p; o.sd = select(s, kind, reef);
+   o.lt = shadow1(w);
+   return o;
+ }
+@@ -611,9 +616,26 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
+   let z = zone(i.wp); let vv = vol(i.wp);
+   var alb = mix(vec3f(.50, .68, .80), vec3f(.10, .22, .40), ss(-.05, .2, i.op.y));
+   alb = mix(alb, vec3f(.95, .8, .3), step(.86, fract(i.sd * 7.7)) * .6);
++  // Pigment masks follow the undeformed body coordinates, including its tail motion.
++  if (i.sd >= 1.) {
++    let tail = 1. - ss(-.34, -.28, i.op.x);
++    alb = mix(vec3f(.025, .34, .95), vec3f(.015, .12, .72), ss(-.12, .13, i.op.y));
++    let flank = 1. - ss(.75, 1., length((i.op.xy - vec2f(-.02, .045)) / vec2f(.28, .055)));
++    alb = mix(alb, vec3f(.005, .012, .035), flank);
++    alb = mix(alb, vec3f(.95, .76, .012), tail);
++    if (i.sd >= 2.) {
++      alb = mix(vec3f(.95, .78, .018), vec3f(.7, .43, .008), ss(.02, .17, i.op.y) * .5);
++      alb = mix(alb, vec3f(.035, .13, .16), ss(.115, .17, abs(i.op.y)) * (1. - tail) * .8);
++    }
++    let gill = 1. - ss(.006, .013, abs(i.op.x - .23 + abs(i.op.y) * .35));
++    alb *= 1. - gill * .28;
++    let eye = length((i.op.xy - vec2f(.32, .025)) * vec2f(36., 45.));
++    alb = mix(alb, vec3f(.5, .67, .65), 1. - ss(1., 1.4, eye));
++    alb = mix(alb, vec3f(.003, .007, .01), 1. - ss(.6, .95, eye));
++  }
+   let E = sunE(i.wp.y, z) * i.lt;
+   var c = alb * (E * (.25 + .75 * sat(dot(n, L))) + amb(i.wp, n, vv.g, z) * 1.3);
+-  c += E * pow(sat(dot(n, normalize(V + L))), 24.) * 1.6 + vec3f(.3, .6, .7) * pow(1. - sat(dot(n, V)), 3.) * .25 * vv.g;
++  c += E * pow(sat(dot(n, normalize(V + L))), 24.) * select(1.6, .3, i.sd >= 1.) + vec3f(.3, .6, .7) * pow(1. - sat(dot(n, V)), 3.) * select(.25, .08, i.sd >= 1.) * vv.g;
+   return fin(fog(c, i.wp, z));
+ }
+ @vertex fn vsManta(i: VI) -> VO {
+diff --git a/source/src/world.js b/source/src/world.js
+index 86631e9..42535d2 100644
+--- a/source/src/world.js
++++ b/source/src/world.js
+@@ -371,6 +371,11 @@ function makeWorld(D, T, flyPts, POSES) {
+   const SCH = [[-2, -36, -10, 15, 520, 0.3, 1, 0.945], [8, -30, -70, 22, 420, 0.32, -1], [48, -30, 14, 18, 360, 0.3, 1], [-58, -30, -8, 11, 420, 0.28, -1, 0.3], [8, -36, 84, 16, 320, 0.28, 1],
+     [-90, -28, -70, 25, 300, 0.3, 1], [95, -30, 70, 25, 300, 0.3, -1], [0, -22, 20, 30, 380, 0.34, -1], [-30, -30, -100, 18, 300, 0.3, 1], [16, -36, 30, 12, 300, 0.3, 1], [-48, -34, -58, 12, 300, 0.3, -1], [-45, -35, 38, 14, 320, 0.3, 1]];
+   for (const s of SCH) { const ss = s[7] === undefined ? rnd() : s[7]; for (let i = 0; i < s[4]; i++) fish.push(s[0], s[1], s[2], s[3], rnd(), s[6] * 1.9 / s[3], s[5], ss); }
++  // Small shallow shoals share the fish mesh/draw. Negative phase tags the palette;
++  // ihash keeps their variation independent of the existing fish/particle RNG stream.
++  for (const [g, s] of [[0, -7, -10, 5, 1], [-8, -5, -76, 5, 1], [9, -7, -69, 4, 2], [50, -6, 10, 4, 1], [-58, -5, 8, 4.5, 2], [7, -4, 76, 4, 1], [-150, -3.8, 10, 3, 2]].entries()) {
++    for (let i = 0; i < 8; i++) fish.push(s[0], s[1], s[2], s[3], ihash(g, i, 71), (g % 2 ? -1 : 1) * .45 / s[3], .46, -s[4] - (.1 + i * .1));
++  }
+   const mantas = [];
+   for (const m of [[1, -28, 3.5, 14, 3.012, 0.085, 3.6, 0.1], [49, -31, 24.5, 5, 0.029, -0.08, 3.7, 0.4], [0, -14, -80, 34, 0.3, 0.06, 5.2, 0.7], [-50, -18, 20, 26, 5, -0.075, 3.8, 0.55], [10, -16, 86, 26, 2.2, 0.07, 4.4, 0.85], [20, -11, -20, 46, 4.2, -0.045, 5.6, 0.25]]) mantas.push(...m);
+ 

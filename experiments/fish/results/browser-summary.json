@@ -1,0 +1,1446 @@
+{
+  "report": "browser",
+  "comparisons": [
+    {
+      "name": "shallow",
+      "level": 0,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 403,
+          "mean": 0.00029694733796296294,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 410,
+          "mean": 0.00034215856481481483,
+          "maximum": 12,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 1653,
+          "mean": 0.0014171006944444444,
+          "maximum": 21,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 102,
+          "mean": 7.30613425925926e-05,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 402,
+          "mean": 0.00043149594907407405,
+          "maximum": 21,
+          "pixelsOver16": 4
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 1,
+          "mean": 3.616898148148148e-07,
+          "maximum": 1,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "blue",
+          "changedPixels": 23165,
+          "mean": 0.09131980613425926,
+          "maximum": 136,
+          "pixelsOver16": 1744
+        },
+        {
+          "label": "yellow",
+          "changedPixels": 26928,
+          "mean": 0.11691840277777778,
+          "maximum": 121,
+          "pixelsOver16": 2681
+        },
+        {
+          "label": "kelp",
+          "changedPixels": 42534,
+          "mean": 0.247236328125,
+          "maximum": 188,
+          "pixelsOver16": 4861
+        },
+        {
+          "label": "wreck",
+          "changedPixels": 46824,
+          "mean": 0.28876627604166666,
+          "maximum": 165,
+          "pixelsOver16": 4449
+        },
+        {
+          "label": "grotto",
+          "changedPixels": 53330,
+          "mean": 0.5093778935185185,
+          "maximum": 144,
+          "pixelsOver16": 6165
+        },
+        {
+          "label": "beach",
+          "changedPixels": 41550,
+          "mean": 0.22386827256944444,
+          "maximum": 117,
+          "pixelsOver16": 4451
+        },
+        {
+          "label": "wide",
+          "changedPixels": 4225,
+          "mean": 0.009371744791666666,
+          "maximum": 102,
+          "pixelsOver16": 241
+        },
+        {
+          "label": "surface",
+          "changedPixels": 8323,
+          "mean": 0.020621744791666667,
+          "maximum": 144,
+          "pixelsOver16": 736
+        },
+        {
+          "label": "blue-close",
+          "changedPixels": 98697,
+          "mean": 1.1349027054398149,
+          "maximum": 209,
+          "pixelsOver16": 17632
+        },
+        {
+          "label": "yellow-close",
+          "changedPixels": 87129,
+          "mean": 0.7082946325231482,
+          "maximum": 135,
+          "pixelsOver16": 12771
+        },
+        {
+          "label": "blue-close-time1",
+          "changedPixels": 100136,
+          "mean": 1.158679832175926,
+          "maximum": 208,
+          "pixelsOver16": 17832
+        },
+        {
+          "label": "blue-close-time2",
+          "changedPixels": 101790,
+          "mean": 1.1883564814814815,
+          "maximum": 203,
+          "pixelsOver16": 18078
+        },
+        {
+          "label": "blue-close-time3",
+          "changedPixels": 103380,
+          "mean": 1.215066550925926,
+          "maximum": 203,
+          "pixelsOver16": 18327
+        },
+        {
+          "label": "blue-close-time4",
+          "changedPixels": 105057,
+          "mean": 1.237681568287037,
+          "maximum": 202,
+          "pixelsOver16": 18541
+        },
+        {
+          "label": "blue-close-time5",
+          "changedPixels": 106408,
+          "mean": 1.2552944155092594,
+          "maximum": 202,
+          "pixelsOver16": 18730
+        },
+        {
+          "label": "blue-close-time6",
+          "changedPixels": 106444,
+          "mean": 1.2648408564814815,
+          "maximum": 202,
+          "pixelsOver16": 18837
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 106568,
+          "mean": 1.2743540219907408,
+          "maximum": 201,
+          "pixelsOver16": 18882
+        },
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 107109,
+          "mean": 1.278283058449074,
+          "maximum": 198,
+          "pixelsOver16": 18824
+        },
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 106605,
+          "mean": 1.2781293402777778,
+          "maximum": 196,
+          "pixelsOver16": 18760
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 107074,
+          "mean": 1.2751808449074074,
+          "maximum": 192,
+          "pixelsOver16": 18585
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 107185,
+          "mean": 1.2700889756944445,
+          "maximum": 187,
+          "pixelsOver16": 18364
+        },
+        {
+          "label": "blue-close-time12",
+          "changedPixels": 106651,
+          "mean": 1.259558738425926,
+          "maximum": 184,
+          "pixelsOver16": 18102
+        },
+        {
+          "label": "yellow-close-time1",
+          "changedPixels": 87605,
+          "mean": 0.712162181712963,
+          "maximum": 132,
+          "pixelsOver16": 12829
+        },
+        {
+          "label": "yellow-close-time2",
+          "changedPixels": 87993,
+          "mean": 0.7110033275462962,
+          "maximum": 132,
+          "pixelsOver16": 12855
+        },
+        {
+          "label": "yellow-close-time3",
+          "changedPixels": 88542,
+          "mean": 0.7086335358796296,
+          "maximum": 133,
+          "pixelsOver16": 12890
+        },
+        {
+          "label": "yellow-close-time4",
+          "changedPixels": 88213,
+          "mean": 0.6998271122685186,
+          "maximum": 133,
+          "pixelsOver16": 12917
+        },
+        {
+          "label": "yellow-close-time5",
+          "changedPixels": 88222,
+          "mean": 0.6903862847222222,
+          "maximum": 127,
+          "pixelsOver16": 12898
+        },
+        {
+          "label": "yellow-close-time6",
+          "changedPixels": 87886,
+          "mean": 0.6849146412037037,
+          "maximum": 149,
+          "pixelsOver16": 12903
+        },
+        {
+          "label": "yellow-close-time7",
+          "changedPixels": 88829,
+          "mean": 0.68125,
+          "maximum": 158,
+          "pixelsOver16": 12873
+        },
+        {
+          "label": "yellow-close-time8",
+          "changedPixels": 88257,
+          "mean": 0.6800842737268519,
+          "maximum": 151,
+          "pixelsOver16": 12841
+        },
+        {
+          "label": "yellow-close-time9",
+          "changedPixels": 89205,
+          "mean": 0.682505787037037,
+          "maximum": 153,
+          "pixelsOver16": 12802
+        },
+        {
+          "label": "yellow-close-time10",
+          "changedPixels": 89704,
+          "mean": 0.6881325954861112,
+          "maximum": 145,
+          "pixelsOver16": 12777
+        },
+        {
+          "label": "yellow-close-time11",
+          "changedPixels": 90865,
+          "mean": 0.6973267505787037,
+          "maximum": 141,
+          "pixelsOver16": 12737
+        },
+        {
+          "label": "yellow-close-time12",
+          "changedPixels": 91270,
+          "mean": 0.698361183449074,
+          "maximum": 145,
+          "pixelsOver16": 12697
+        },
+        {
+          "label": "blue-later20",
+          "changedPixels": 60107,
+          "mean": 0.36576352719907407,
+          "maximum": 149,
+          "pixelsOver16": 5855
+        },
+        {
+          "label": "blue-later40",
+          "changedPixels": 39365,
+          "mean": 0.24844907407407407,
+          "maximum": 181,
+          "pixelsOver16": 4741
+        },
+        {
+          "label": "blue-later80",
+          "changedPixels": 23839,
+          "mean": 0.10511610243055555,
+          "maximum": 115,
+          "pixelsOver16": 2399
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "blue-close-time2",
+          "mean": 0.24823784722222222,
+          "maximum": 145,
+          "pixelsOver16": 4490
+        },
+        {
+          "label": "blue-close-time3",
+          "mean": 0.25818576388888886,
+          "maximum": 127,
+          "pixelsOver16": 4710
+        },
+        {
+          "label": "blue-close-time4",
+          "mean": 0.2633615451388889,
+          "maximum": 141,
+          "pixelsOver16": 4724
+        },
+        {
+          "label": "blue-close-time5",
+          "mean": 0.2673654513888889,
+          "maximum": 144,
+          "pixelsOver16": 4770
+        },
+        {
+          "label": "blue-close-time6",
+          "mean": 0.2594458912037037,
+          "maximum": 144,
+          "pixelsOver16": 4724
+        },
+        {
+          "label": "blue-close-time7",
+          "mean": 0.2514482060185185,
+          "maximum": 159,
+          "pixelsOver16": 4637
+        },
+        {
+          "label": "blue-close-time8",
+          "mean": 0.24617006655092594,
+          "maximum": 143,
+          "pixelsOver16": 4527
+        },
+        {
+          "label": "blue-close-time9",
+          "mean": 0.24285698784722223,
+          "maximum": 147,
+          "pixelsOver16": 4549
+        },
+        {
+          "label": "blue-close-time10",
+          "mean": 0.25310908564814816,
+          "maximum": 138,
+          "pixelsOver16": 4760
+        },
+        {
+          "label": "blue-close-time11",
+          "mean": 0.27448061342592595,
+          "maximum": 151,
+          "pixelsOver16": 5118
+        },
+        {
+          "label": "blue-close-time12",
+          "mean": 0.2888114872685185,
+          "maximum": 147,
+          "pixelsOver16": 5433
+        },
+        {
+          "label": "yellow-close-time2",
+          "mean": 0.17973017939814814,
+          "maximum": 119,
+          "pixelsOver16": 3121
+        },
+        {
+          "label": "yellow-close-time3",
+          "mean": 0.1849486400462963,
+          "maximum": 121,
+          "pixelsOver16": 3178
+        },
+        {
+          "label": "yellow-close-time4",
+          "mean": 0.18776765046296295,
+          "maximum": 119,
+          "pixelsOver16": 3243
+        },
+        {
+          "label": "yellow-close-time5",
+          "mean": 0.1862449363425926,
+          "maximum": 131,
+          "pixelsOver16": 3253
+        },
+        {
+          "label": "yellow-close-time6",
+          "mean": 0.17820674189814814,
+          "maximum": 143,
+          "pixelsOver16": 3202
+        },
+        {
+          "label": "yellow-close-time7",
+          "mean": 0.1757248263888889,
+          "maximum": 140,
+          "pixelsOver16": 3145
+        },
+        {
+          "label": "yellow-close-time8",
+          "mean": 0.17407805266203705,
+          "maximum": 127,
+          "pixelsOver16": 3059
+        },
+        {
+          "label": "yellow-close-time9",
+          "mean": 0.16980070891203702,
+          "maximum": 115,
+          "pixelsOver16": 2985
+        },
+        {
+          "label": "yellow-close-time10",
+          "mean": 0.1736570457175926,
+          "maximum": 153,
+          "pixelsOver16": 2933
+        },
+        {
+          "label": "yellow-close-time11",
+          "mean": 0.17179470486111112,
+          "maximum": 116,
+          "pixelsOver16": 2859
+        },
+        {
+          "label": "yellow-close-time12",
+          "mean": 0.17420789930555555,
+          "maximum": 135,
+          "pixelsOver16": 2813
+        }
+      ],
+      "identicalImages": 0,
+      "worst": [
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 107109,
+          "mean": 1.278283058449074,
+          "maximum": 198,
+          "pixelsOver16": 18824
+        },
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 106605,
+          "mean": 1.2781293402777778,
+          "maximum": 196,
+          "pixelsOver16": 18760
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 107074,
+          "mean": 1.2751808449074074,
+          "maximum": 192,
+          "pixelsOver16": 18585
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 106568,
+          "mean": 1.2743540219907408,
+          "maximum": 201,
+          "pixelsOver16": 18882
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 107185,
+          "mean": 1.2700889756944445,
+          "maximum": 187,
+          "pixelsOver16": 18364
+        }
+      ]
+    },
+    {
+      "name": "shallow",
+      "level": 1,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 314,
+          "mean": 0.00026511863425925927,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 424,
+          "mean": 0.0003443287037037037,
+          "maximum": 12,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 1408,
+          "mean": 0.0012905092592592593,
+          "maximum": 23,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 81,
+          "mean": 6.799768518518518e-05,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 425,
+          "mean": 0.0004376446759259259,
+          "maximum": 20,
+          "pixelsOver16": 4
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "blue",
+          "changedPixels": 24289,
+          "mean": 0.09425202546296296,
+          "maximum": 115,
+          "pixelsOver16": 1744
+        },
+        {
+          "label": "yellow",
+          "changedPixels": 26911,
+          "mean": 0.11677010995370371,
+          "maximum": 102,
+          "pixelsOver16": 2679
+        },
+        {
+          "label": "kelp",
+          "changedPixels": 44597,
+          "mean": 0.2770395688657407,
+          "maximum": 143,
+          "pixelsOver16": 4878
+        },
+        {
+          "label": "wreck",
+          "changedPixels": 47962,
+          "mean": 0.29245225694444443,
+          "maximum": 164,
+          "pixelsOver16": 4459
+        },
+        {
+          "label": "grotto",
+          "changedPixels": 52975,
+          "mean": 0.5092100694444445,
+          "maximum": 144,
+          "pixelsOver16": 6164
+        },
+        {
+          "label": "beach",
+          "changedPixels": 41499,
+          "mean": 0.22420572916666667,
+          "maximum": 117,
+          "pixelsOver16": 4451
+        },
+        {
+          "label": "wide",
+          "changedPixels": 3676,
+          "mean": 0.009729094328703704,
+          "maximum": 98,
+          "pixelsOver16": 289
+        },
+        {
+          "label": "surface",
+          "changedPixels": 8551,
+          "mean": 0.020919777199074074,
+          "maximum": 144,
+          "pixelsOver16": 757
+        },
+        {
+          "label": "blue-close",
+          "changedPixels": 97450,
+          "mean": 1.1293630642361112,
+          "maximum": 210,
+          "pixelsOver16": 17626
+        },
+        {
+          "label": "yellow-close",
+          "changedPixels": 87751,
+          "mean": 0.7142592592592593,
+          "maximum": 135,
+          "pixelsOver16": 12775
+        },
+        {
+          "label": "blue-close-time1",
+          "changedPixels": 98736,
+          "mean": 1.153913845486111,
+          "maximum": 208,
+          "pixelsOver16": 17833
+        },
+        {
+          "label": "blue-close-time2",
+          "changedPixels": 100346,
+          "mean": 1.1829644097222223,
+          "maximum": 203,
+          "pixelsOver16": 18075
+        },
+        {
+          "label": "blue-close-time3",
+          "changedPixels": 102447,
+          "mean": 1.2091471354166667,
+          "maximum": 203,
+          "pixelsOver16": 18332
+        },
+        {
+          "label": "blue-close-time4",
+          "changedPixels": 103550,
+          "mean": 1.2315747974537037,
+          "maximum": 206,
+          "pixelsOver16": 18532
+        },
+        {
+          "label": "blue-close-time5",
+          "changedPixels": 104536,
+          "mean": 1.2477332899305555,
+          "maximum": 208,
+          "pixelsOver16": 18710
+        },
+        {
+          "label": "blue-close-time6",
+          "changedPixels": 104992,
+          "mean": 1.2574273003472223,
+          "maximum": 208,
+          "pixelsOver16": 18830
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 105173,
+          "mean": 1.2677354600694444,
+          "maximum": 207,
+          "pixelsOver16": 18879
+        },
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 105499,
+          "mean": 1.2731163194444444,
+          "maximum": 206,
+          "pixelsOver16": 18828
+        },
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 105658,
+          "mean": 1.2748187934027777,
+          "maximum": 202,
+          "pixelsOver16": 18750
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 106263,
+          "mean": 1.2718095341435185,
+          "maximum": 193,
+          "pixelsOver16": 18568
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 105674,
+          "mean": 1.265320095486111,
+          "maximum": 188,
+          "pixelsOver16": 18364
+        },
+        {
+          "label": "blue-close-time12",
+          "changedPixels": 105524,
+          "mean": 1.2560224971064815,
+          "maximum": 188,
+          "pixelsOver16": 18105
+        },
+        {
+          "label": "yellow-close-time1",
+          "changedPixels": 87971,
+          "mean": 0.7188078703703704,
+          "maximum": 137,
+          "pixelsOver16": 12824
+        },
+        {
+          "label": "yellow-close-time2",
+          "changedPixels": 88399,
+          "mean": 0.717413917824074,
+          "maximum": 134,
+          "pixelsOver16": 12858
+        },
+        {
+          "label": "yellow-close-time3",
+          "changedPixels": 88313,
+          "mean": 0.7141257957175926,
+          "maximum": 134,
+          "pixelsOver16": 12890
+        },
+        {
+          "label": "yellow-close-time4",
+          "changedPixels": 88676,
+          "mean": 0.7092086226851851,
+          "maximum": 152,
+          "pixelsOver16": 12914
+        },
+        {
+          "label": "yellow-close-time5",
+          "changedPixels": 88848,
+          "mean": 0.6988046151620371,
+          "maximum": 192,
+          "pixelsOver16": 12907
+        },
+        {
+          "label": "yellow-close-time6",
+          "changedPixels": 88915,
+          "mean": 0.692613208912037,
+          "maximum": 157,
+          "pixelsOver16": 12895
+        },
+        {
+          "label": "yellow-close-time7",
+          "changedPixels": 89503,
+          "mean": 0.6871252893518518,
+          "maximum": 150,
+          "pixelsOver16": 12872
+        },
+        {
+          "label": "yellow-close-time8",
+          "changedPixels": 89039,
+          "mean": 0.6838024450231481,
+          "maximum": 154,
+          "pixelsOver16": 12834
+        },
+        {
+          "label": "yellow-close-time9",
+          "changedPixels": 89757,
+          "mean": 0.6874779369212963,
+          "maximum": 145,
+          "pixelsOver16": 12795
+        },
+        {
+          "label": "yellow-close-time10",
+          "changedPixels": 90371,
+          "mean": 0.694253833912037,
+          "maximum": 144,
+          "pixelsOver16": 12770
+        },
+        {
+          "label": "yellow-close-time11",
+          "changedPixels": 91689,
+          "mean": 0.7038950376157408,
+          "maximum": 142,
+          "pixelsOver16": 12731
+        },
+        {
+          "label": "yellow-close-time12",
+          "changedPixels": 92218,
+          "mean": 0.7047786458333334,
+          "maximum": 145,
+          "pixelsOver16": 12693
+        },
+        {
+          "label": "blue-later20",
+          "changedPixels": 59339,
+          "mean": 0.36552770543981483,
+          "maximum": 150,
+          "pixelsOver16": 5845
+        },
+        {
+          "label": "blue-later40",
+          "changedPixels": 39645,
+          "mean": 0.25267180266203704,
+          "maximum": 182,
+          "pixelsOver16": 4743
+        },
+        {
+          "label": "blue-later80",
+          "changedPixels": 26130,
+          "mean": 0.11575629340277778,
+          "maximum": 122,
+          "pixelsOver16": 2413
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "blue-close-time2",
+          "mean": 0.24394856770833334,
+          "maximum": 135,
+          "pixelsOver16": 4401
+        },
+        {
+          "label": "blue-close-time3",
+          "mean": 0.2541970486111111,
+          "maximum": 129,
+          "pixelsOver16": 4620
+        },
+        {
+          "label": "blue-close-time4",
+          "mean": 0.25934461805555553,
+          "maximum": 142,
+          "pixelsOver16": 4635
+        },
+        {
+          "label": "blue-close-time5",
+          "mean": 0.263408203125,
+          "maximum": 143,
+          "pixelsOver16": 4672
+        },
+        {
+          "label": "blue-close-time6",
+          "mean": 0.2555866608796296,
+          "maximum": 143,
+          "pixelsOver16": 4628
+        },
+        {
+          "label": "blue-close-time7",
+          "mean": 0.24704137731481482,
+          "maximum": 152,
+          "pixelsOver16": 4555
+        },
+        {
+          "label": "blue-close-time8",
+          "mean": 0.2425611255787037,
+          "maximum": 133,
+          "pixelsOver16": 4461
+        },
+        {
+          "label": "blue-close-time9",
+          "mean": 0.2390237991898148,
+          "maximum": 135,
+          "pixelsOver16": 4459
+        },
+        {
+          "label": "blue-close-time10",
+          "mean": 0.25107855902777776,
+          "maximum": 142,
+          "pixelsOver16": 4693
+        },
+        {
+          "label": "blue-close-time11",
+          "mean": 0.27085865162037037,
+          "maximum": 193,
+          "pixelsOver16": 5062
+        },
+        {
+          "label": "blue-close-time12",
+          "mean": 0.2868395543981481,
+          "maximum": 150,
+          "pixelsOver16": 5376
+        },
+        {
+          "label": "yellow-close-time2",
+          "mean": 0.17891782407407408,
+          "maximum": 122,
+          "pixelsOver16": 3091
+        },
+        {
+          "label": "yellow-close-time3",
+          "mean": 0.18359845196759259,
+          "maximum": 121,
+          "pixelsOver16": 3158
+        },
+        {
+          "label": "yellow-close-time4",
+          "mean": 0.18705982349537037,
+          "maximum": 120,
+          "pixelsOver16": 3207
+        },
+        {
+          "label": "yellow-close-time5",
+          "mean": 0.18604130497685184,
+          "maximum": 130,
+          "pixelsOver16": 3254
+        },
+        {
+          "label": "yellow-close-time6",
+          "mean": 0.17817708333333335,
+          "maximum": 141,
+          "pixelsOver16": 3196
+        },
+        {
+          "label": "yellow-close-time7",
+          "mean": 0.1756962528935185,
+          "maximum": 134,
+          "pixelsOver16": 3145
+        },
+        {
+          "label": "yellow-close-time8",
+          "mean": 0.17544307002314816,
+          "maximum": 136,
+          "pixelsOver16": 3021
+        },
+        {
+          "label": "yellow-close-time9",
+          "mean": 0.16822627314814814,
+          "maximum": 113,
+          "pixelsOver16": 2936
+        },
+        {
+          "label": "yellow-close-time10",
+          "mean": 0.17250578703703703,
+          "maximum": 136,
+          "pixelsOver16": 2887
+        },
+        {
+          "label": "yellow-close-time11",
+          "mean": 0.17283203125,
+          "maximum": 117,
+          "pixelsOver16": 2832
+        },
+        {
+          "label": "yellow-close-time12",
+          "mean": 0.17694697627314815,
+          "maximum": 133,
+          "pixelsOver16": 2807
+        }
+      ],
+      "identicalImages": 1,
+      "worst": [
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 105658,
+          "mean": 1.2748187934027777,
+          "maximum": 202,
+          "pixelsOver16": 18750
+        },
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 105499,
+          "mean": 1.2731163194444444,
+          "maximum": 206,
+          "pixelsOver16": 18828
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 106263,
+          "mean": 1.2718095341435185,
+          "maximum": 193,
+          "pixelsOver16": 18568
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 105173,
+          "mean": 1.2677354600694444,
+          "maximum": 207,
+          "pixelsOver16": 18879
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 105674,
+          "mean": 1.265320095486111,
+          "maximum": 188,
+          "pixelsOver16": 18364
+        }
+      ]
+    },
+    {
+      "name": "shallow",
+      "level": 2,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 359,
+          "mean": 0.0003103298611111111,
+          "maximum": 9,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 347,
+          "mean": 0.00034505208333333333,
+          "maximum": 18,
+          "pixelsOver16": 2
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 1160,
+          "mean": 0.0011823640046296296,
+          "maximum": 18,
+          "pixelsOver16": 12
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 110,
+          "mean": 8.7890625e-05,
+          "maximum": 9,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 350,
+          "mean": 0.0003638599537037037,
+          "maximum": 18,
+          "pixelsOver16": 4
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "blue",
+          "changedPixels": 25696,
+          "mean": 0.10144169560185186,
+          "maximum": 124,
+          "pixelsOver16": 1737
+        },
+        {
+          "label": "yellow",
+          "changedPixels": 26785,
+          "mean": 0.11901873553240741,
+          "maximum": 103,
+          "pixelsOver16": 2654
+        },
+        {
+          "label": "kelp",
+          "changedPixels": 44516,
+          "mean": 0.2862297453703704,
+          "maximum": 189,
+          "pixelsOver16": 4872
+        },
+        {
+          "label": "wreck",
+          "changedPixels": 48057,
+          "mean": 0.2967364728009259,
+          "maximum": 171,
+          "pixelsOver16": 4428
+        },
+        {
+          "label": "grotto",
+          "changedPixels": 51801,
+          "mean": 0.5117122395833333,
+          "maximum": 139,
+          "pixelsOver16": 6133
+        },
+        {
+          "label": "beach",
+          "changedPixels": 41431,
+          "mean": 0.2292357494212963,
+          "maximum": 114,
+          "pixelsOver16": 4368
+        },
+        {
+          "label": "wide",
+          "changedPixels": 3061,
+          "mean": 0.009129050925925926,
+          "maximum": 58,
+          "pixelsOver16": 283
+        },
+        {
+          "label": "surface",
+          "changedPixels": 8210,
+          "mean": 0.02086407696759259,
+          "maximum": 90,
+          "pixelsOver16": 787
+        },
+        {
+          "label": "blue-close",
+          "changedPixels": 97904,
+          "mean": 1.143954716435185,
+          "maximum": 210,
+          "pixelsOver16": 17416
+        },
+        {
+          "label": "yellow-close",
+          "changedPixels": 88574,
+          "mean": 0.7314558015046296,
+          "maximum": 134,
+          "pixelsOver16": 12619
+        },
+        {
+          "label": "blue-close-time1",
+          "changedPixels": 98498,
+          "mean": 1.1684447337962962,
+          "maximum": 208,
+          "pixelsOver16": 17601
+        },
+        {
+          "label": "blue-close-time2",
+          "changedPixels": 99847,
+          "mean": 1.1982327835648148,
+          "maximum": 203,
+          "pixelsOver16": 17836
+        },
+        {
+          "label": "blue-close-time3",
+          "changedPixels": 101291,
+          "mean": 1.2251772280092592,
+          "maximum": 203,
+          "pixelsOver16": 18095
+        },
+        {
+          "label": "blue-close-time4",
+          "changedPixels": 103392,
+          "mean": 1.25017578125,
+          "maximum": 206,
+          "pixelsOver16": 18343
+        },
+        {
+          "label": "blue-close-time5",
+          "changedPixels": 103782,
+          "mean": 1.2634049479166667,
+          "maximum": 208,
+          "pixelsOver16": 18501
+        },
+        {
+          "label": "blue-close-time6",
+          "changedPixels": 104231,
+          "mean": 1.2741351996527779,
+          "maximum": 208,
+          "pixelsOver16": 18628
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 104849,
+          "mean": 1.2811530671296296,
+          "maximum": 208,
+          "pixelsOver16": 18652
+        },
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 104411,
+          "mean": 1.2822522424768519,
+          "maximum": 207,
+          "pixelsOver16": 18588
+        },
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 105404,
+          "mean": 1.2888483796296297,
+          "maximum": 205,
+          "pixelsOver16": 18531
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 105308,
+          "mean": 1.2857353153935185,
+          "maximum": 200,
+          "pixelsOver16": 18341
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 104958,
+          "mean": 1.277818648726852,
+          "maximum": 181,
+          "pixelsOver16": 18109
+        },
+        {
+          "label": "blue-close-time12",
+          "changedPixels": 104542,
+          "mean": 1.2688046151620371,
+          "maximum": 179,
+          "pixelsOver16": 17891
+        },
+        {
+          "label": "yellow-close-time1",
+          "changedPixels": 88541,
+          "mean": 0.7350112123842593,
+          "maximum": 132,
+          "pixelsOver16": 12679
+        },
+        {
+          "label": "yellow-close-time2",
+          "changedPixels": 88516,
+          "mean": 0.7347258391203704,
+          "maximum": 131,
+          "pixelsOver16": 12707
+        },
+        {
+          "label": "yellow-close-time3",
+          "changedPixels": 89291,
+          "mean": 0.7319299768518519,
+          "maximum": 169,
+          "pixelsOver16": 12747
+        },
+        {
+          "label": "yellow-close-time4",
+          "changedPixels": 88838,
+          "mean": 0.7281691261574074,
+          "maximum": 184,
+          "pixelsOver16": 12755
+        },
+        {
+          "label": "yellow-close-time5",
+          "changedPixels": 88918,
+          "mean": 0.7192965133101852,
+          "maximum": 140,
+          "pixelsOver16": 12748
+        },
+        {
+          "label": "yellow-close-time6",
+          "changedPixels": 89197,
+          "mean": 0.712308666087963,
+          "maximum": 150,
+          "pixelsOver16": 12747
+        },
+        {
+          "label": "yellow-close-time7",
+          "changedPixels": 89251,
+          "mean": 0.7045091869212963,
+          "maximum": 159,
+          "pixelsOver16": 12714
+        },
+        {
+          "label": "yellow-close-time8",
+          "changedPixels": 89291,
+          "mean": 0.6962594039351852,
+          "maximum": 152,
+          "pixelsOver16": 12689
+        },
+        {
+          "label": "yellow-close-time9",
+          "changedPixels": 89885,
+          "mean": 0.6978566261574074,
+          "maximum": 159,
+          "pixelsOver16": 12649
+        },
+        {
+          "label": "yellow-close-time10",
+          "changedPixels": 90487,
+          "mean": 0.7046824363425926,
+          "maximum": 132,
+          "pixelsOver16": 12617
+        },
+        {
+          "label": "yellow-close-time11",
+          "changedPixels": 91296,
+          "mean": 0.7161078559027778,
+          "maximum": 134,
+          "pixelsOver16": 12584
+        },
+        {
+          "label": "yellow-close-time12",
+          "changedPixels": 92020,
+          "mean": 0.7167136863425926,
+          "maximum": 135,
+          "pixelsOver16": 12549
+        },
+        {
+          "label": "blue-later20",
+          "changedPixels": 58931,
+          "mean": 0.37120261863425924,
+          "maximum": 149,
+          "pixelsOver16": 5752
+        },
+        {
+          "label": "blue-later40",
+          "changedPixels": 38780,
+          "mean": 0.2568746383101852,
+          "maximum": 181,
+          "pixelsOver16": 4690
+        },
+        {
+          "label": "blue-later80",
+          "changedPixels": 26363,
+          "mean": 0.11920102719907408,
+          "maximum": 121,
+          "pixelsOver16": 2399
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "blue-close-time2",
+          "mean": 0.24767578125,
+          "maximum": 133,
+          "pixelsOver16": 4174
+        },
+        {
+          "label": "blue-close-time3",
+          "mean": 0.25768735532407405,
+          "maximum": 152,
+          "pixelsOver16": 4367
+        },
+        {
+          "label": "blue-close-time4",
+          "mean": 0.2618844039351852,
+          "maximum": 153,
+          "pixelsOver16": 4372
+        },
+        {
+          "label": "blue-close-time5",
+          "mean": 0.26527705439814814,
+          "maximum": 142,
+          "pixelsOver16": 4423
+        },
+        {
+          "label": "blue-close-time6",
+          "mean": 0.25826714409722223,
+          "maximum": 147,
+          "pixelsOver16": 4358
+        },
+        {
+          "label": "blue-close-time7",
+          "mean": 0.24965530960648147,
+          "maximum": 174,
+          "pixelsOver16": 4248
+        },
+        {
+          "label": "blue-close-time8",
+          "mean": 0.24577365451388888,
+          "maximum": 131,
+          "pixelsOver16": 4177
+        },
+        {
+          "label": "blue-close-time9",
+          "mean": 0.2416728153935185,
+          "maximum": 139,
+          "pixelsOver16": 4168
+        },
+        {
+          "label": "blue-close-time10",
+          "mean": 0.25376410590277776,
+          "maximum": 143,
+          "pixelsOver16": 4358
+        },
+        {
+          "label": "blue-close-time11",
+          "mean": 0.27248914930555557,
+          "maximum": 200,
+          "pixelsOver16": 4696
+        },
+        {
+          "label": "blue-close-time12",
+          "mean": 0.286953125,
+          "maximum": 150,
+          "pixelsOver16": 5004
+        },
+        {
+          "label": "yellow-close-time2",
+          "mean": 0.18675094039351853,
+          "maximum": 122,
+          "pixelsOver16": 2771
+        },
+        {
+          "label": "yellow-close-time3",
+          "mean": 0.18904152199074073,
+          "maximum": 121,
+          "pixelsOver16": 2870
+        },
+        {
+          "label": "yellow-close-time4",
+          "mean": 0.19263020833333333,
+          "maximum": 123,
+          "pixelsOver16": 2891
+        },
+        {
+          "label": "yellow-close-time5",
+          "mean": 0.18947084780092593,
+          "maximum": 135,
+          "pixelsOver16": 2911
+        },
+        {
+          "label": "yellow-close-time6",
+          "mean": 0.18574074074074073,
+          "maximum": 146,
+          "pixelsOver16": 2892
+        },
+        {
+          "label": "yellow-close-time7",
+          "mean": 0.18062427662037037,
+          "maximum": 132,
+          "pixelsOver16": 2853
+        },
+        {
+          "label": "yellow-close-time8",
+          "mean": 0.18192816840277778,
+          "maximum": 134,
+          "pixelsOver16": 2778
+        },
+        {
+          "label": "yellow-close-time9",
+          "mean": 0.16999710648148147,
+          "maximum": 116,
+          "pixelsOver16": 2667
+        },
+        {
+          "label": "yellow-close-time10",
+          "mean": 0.1737109375,
+          "maximum": 159,
+          "pixelsOver16": 2621
+        },
+        {
+          "label": "yellow-close-time11",
+          "mean": 0.17078016493055556,
+          "maximum": 120,
+          "pixelsOver16": 2520
+        },
+        {
+          "label": "yellow-close-time12",
+          "mean": 0.17787507233796296,
+          "maximum": 118,
+          "pixelsOver16": 2492
+        }
+      ],
+      "identicalImages": 1,
+      "worst": [
+        {
+          "label": "blue-close-time9",
+          "changedPixels": 105404,
+          "mean": 1.2888483796296297,
+          "maximum": 205,
+          "pixelsOver16": 18531
+        },
+        {
+          "label": "blue-close-time10",
+          "changedPixels": 105308,
+          "mean": 1.2857353153935185,
+          "maximum": 200,
+          "pixelsOver16": 18341
+        },
+        {
+          "label": "blue-close-time8",
+          "changedPixels": 104411,
+          "mean": 1.2822522424768519,
+          "maximum": 207,
+          "pixelsOver16": 18588
+        },
+        {
+          "label": "blue-close-time7",
+          "changedPixels": 104849,
+          "mean": 1.2811530671296296,
+          "maximum": 208,
+          "pixelsOver16": 18652
+        },
+        {
+          "label": "blue-close-time11",
+          "changedPixels": 104958,
+          "mean": 1.277818648726852,
+          "maximum": 181,
+          "pixelsOver16": 18109
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Pixel metrics locate differences, not aesthetic acceptance or flicker guarantees.",
+    "One machine/browser; buffer sizes and nominal texture payload are not process memory."
+  ]
+}

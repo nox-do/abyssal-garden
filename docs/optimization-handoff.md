@@ -1,6 +1,26 @@
 # Optimierungsexperiment: Stand und Einstieg
 
-**Aktuellster Stand (18.11.2026):** Der akzeptierte Blatt-/Auftauch-/Strandstand
+**Aktuellster Stand (18.11.2026):** Nach Feedback zu den eckigen bunten Fischen
+haben nur diese 56 Tiere ein rundes Laengsprofil und korrekte Koerpernormalen
+erhalten. Sichtbarer Nahbereichsgewinn fuer weitere 446 B HTML, 3.020 B
+GPU-Modelldaten und einen Draw. HTML jetzt **107.000 B**, gzip 43.241 B.
+Alle bisherigen Weltdaten/Schwarmmodelle und Bewegungsparameter erhalten;
+282 Vergleichsbilder, drei Stufen, Offline/Audio/Bedienung und separate
+Zeitmessung bestanden. Details: [`fish-shape-study.md`](fish-shape-study.md).
+Auf Nutzerwunsch samt erstem Fischversuch lokal committed; nichts gepusht.
+Eigener `experiments/fish-shape/shape-only.patch`; bei
+Ruecknahme aller Fische zuerst diesen, dann den ersten Fischpatch umkehren.
+
+**Erster Fischversuch (18.11.2026):** Nach der Sicherung `cc3d14b` hat der Nutzer
+einen Versuch mit bunten, flacher schwimmenden Fischen beauftragt. 56 neue
+Fische nutzen bestehendes Modell und Draw, prozedurale Farbmasken und kleinere
+Bahnen mit Zentren 3,8-7 m tief. In `source/` und `index.html`; inzwischen
+zusammen mit der anschliessenden Rundung lokal gesichert.
+HTML 106.554 B (+1.248 B), GPU-Fischpuffer +1.792 B; keine neuen Texturen/Puffer.
+258 Vergleichsbilder, alle drei Stufen, GPU-Bahnprobe und separate Zeitmessung:
+[`fish-study.md`](fish-study.md). Ein eigener Patch ermoeglicht die Ruecknahme.
+
+**Vorheriger Stand (18.11.2026):** Der akzeptierte Blatt-/Auftauch-/Strandstand
 ist lokal als `3178034` gesichert. Danach wurden auf Nutzerauftrag fuenf
 Demoscene-Themen durch einzelne Agenten geplant und zwei kleine Versuche
 umgesetzt: Nah-/Fernblaetter teilen und 16-Bit-Schatten. Sie sind auf Branch

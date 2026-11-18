@@ -1,0 +1,38 @@
+Shallow fish experiment from accepted product commit cc3d14b.
+Run at repository root; dependencies as in source/ (esbuild), Node with
+WebSocket, Chrome on macOS, Python with Pillow/NumPy for image analysis.
+
+node experiments/fish/build.mjs
+FISH_REPORT=screen.json caffeinate -i node experiments/fish/browser.mjs --quick baseline:0 shallow:0
+FISH_REPORT=browser.json caffeinate -i node experiments/fish/browser.mjs
+python3 experiments/fish/analyze.py browser
+caffeinate -i node experiments/fish/timing.mjs
+node experiments/fish/summarize.mjs
+
+Historical acceptance commands (before the fish-shape follow-up):
+npm --prefix source run build
+cmp index.html experiments/fish/variants/shallow.html
+caffeinate -i node experiments/fish/browser.mjs --shipping
+
+Baseline sources/template come from git show cc3d14b and compile byte-for-byte
+to its index.html. The original candidate is now reconstructed from the saved
+fish-only.patch; later product edits do not change this experiment. The current
+product and its shipping check are described in ../fish-shape/RUN.txt. QA retains fish
+data and evaluates the actual WGSL vertex math in a temporary compute probe;
+its extra allocations/CPU copies are not a product footprint measurement.
+Timing and normal builds omit that probe and all data hashing.
+
+poses.json fixes near cameras from High GPU positions at t=8. They are shared
+by both variants and all quality levels. The normal build has no extra camera
+presets. Do not overwrite old reports when changing the experiment's scope.
+
+All browser jobs run sequentially in an isolated headless profile, offline.
+requestPointerLock is suppressed so the physical mouse is never captured.
+The test profile is closed and removed afterwards; personal Chrome untouched.
+Generated variants, images and logs are ignored in Git. JSON reports are kept.
+
+If rounding is present, first reverse ../fish-shape/shape-only.patch.
+Then rollback this first fish experiment and rebuild:
+git apply --check -R experiments/fish/fish-only.patch
+git apply -R experiments/fish/fish-only.patch
+npm --prefix source run build

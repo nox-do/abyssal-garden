@@ -1,0 +1,39 @@
+{
+  "base": "3178034",
+  "node": "v22.23.4",
+  "sourceHashes": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "bf749a644787a025f917008bb3bd696d7921a0b2374b3d7c95d7c131e6991d3b",
+    "shaders.js": "3c9a9dc87249d651ec328ae61f4740999775034babc5b8af3585638c5644b31c",
+    "world.js": "fb37fd59be60d7a643ab1d8551008a56df57271c73c5a7d563abd74e32ccf260",
+    "main.js": "2093703de3aec2538445921eb77767af8b2012fe3ffff7e82a215f1bf18c5742",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 105121,
+      "gzipBytes": 42433,
+      "sha256": "f3fd418f1a34f3729f86c460d24f51ccccc8ad635400308e7721e387ecdf1fd6"
+    },
+    "shadow16-bias2": {
+      "bytes": 105139,
+      "gzipBytes": 42448,
+      "sha256": "d44138d4a64436f09425d5a53a4b5320c811b0a753605518cdd1168fcdbd6e27"
+    },
+    "shadow16-bias0": {
+      "bytes": 105139,
+      "gzipBytes": 42449,
+      "sha256": "b0075d5ab5ad5f9d12959c281908e72010eabd7d5d896bebb33cc69a4f860dbc"
+    },
+    "shared-far": {
+      "bytes": 105288,
+      "gzipBytes": 42522,
+      "sha256": "c96f97c315456d344c44ca8002e26b0ad274cd5583c7ce6454e32f48b2dffb26"
+    },
+    "combined": {
+      "bytes": 105306,
+      "gzipBytes": 42537,
+      "sha256": "e16462f0bc45d3e71bbcca7cafbce5363661aa0de7d5cb38098246b6355f1baa"
+    }
+  }
+}

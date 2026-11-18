@@ -1,0 +1,46 @@
+Demoscene-inspired memory experiment, product baseline 3178034.
+Run from repository root. Dependencies: source npm install (esbuild), Chrome on
+macOS, Node with WebSocket, Python with Pillow/NumPy for diagnostic pictures.
+
+node experiments/demoscene/shared-data.mjs
+node experiments/demoscene/build.mjs
+
+DEMO_REPORT=screen.json caffeinate -i node experiments/demoscene/browser.mjs --quick baseline:0 shadow16-bias2:0 shadow16-bias0:0
+DEMO_REPORT=shadow-browser.json caffeinate -i node experiments/demoscene/browser.mjs
+DEMO_REPORT=shared-browser.json caffeinate -i node experiments/demoscene/browser.mjs baseline:0 shared-far:0 combined:0 baseline:1 shared-far:1 combined:1 baseline:2 shared-far:2 combined:2
+
+python3 experiments/demoscene/analyze.py screen
+python3 experiments/demoscene/analyze.py shadow-browser
+python3 experiments/demoscene/analyze.py shared-browser
+
+caffeinate -i node experiments/demoscene/timing.mjs
+node experiments/demoscene/summarize.mjs
+
+Only after adopting accepted source changes and rebuilding index.html:
+npm --prefix source run build
+caffeinate -i node experiments/demoscene/browser.mjs --shipping
+
+Run browser jobs sequentially; they share the GPU. Each runner uses headless
+Chrome with its own temporary profile, file: URLs and disabled network.
+requestPointerLock is suppressed: never capture the user's physical mouse.
+No personal Chrome process is controlled. All temporary test pages are closed.
+
+Variants are regenerated from git show 3178034:source/... (not frozen upstream).
+Baseline compilation must equal that commit's index.html. Normal, timing and
+QA HTMLs are separate: no hashes or reference arrays in normal/timing builds.
+QA sharedFarProof reconstructs old leaf records temporarily; its startup and
+memory are deliberately NOT a performance sample.
+
+Runs overwrite matching JSON/PNG outputs. Baseline image names are reused by
+the two full suites; summarize.mjs checks hashes against both original reports.
+Generated HTML/PNGs/logs are ignored; scripts, plans and JSON remain reproducible.
+All comparisons use 1280x720, detail=1, identical cameras and animation times.
+One timing warmup round then three measured rounds, four views per page,
+20 warmup frames and 120 samples per view. No cold-start, FPS or RSS guarantee.
+
+Independent rollback patches for the adopted source changes:
+git apply -R experiments/demoscene/shared-far-only.patch
+git apply -R experiments/demoscene/shadow16-only.patch
+npm --prefix source run build
+Either patch may be reversed on its own. Check first with git apply --check -R
+if later edits have changed these source sections.

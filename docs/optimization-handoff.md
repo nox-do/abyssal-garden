@@ -1,5 +1,18 @@
 # Optimierungsexperiment: Stand und Einstieg
 
+**Aktuellster Stand (18.11.2026):** Der akzeptierte Blatt-/Auftauch-/Strandstand
+ist lokal als `3178034` gesichert. Danach wurden auf Nutzerauftrag fuenf
+Demoscene-Themen durch einzelne Agenten geplant und zwei kleine Versuche
+umgesetzt: Nah-/Fernblaetter teilen und 16-Bit-Schatten. Sie sind auf Branch
+`codex/demoscene-memory` in `source/` und `index.html` integriert und auf
+Nutzerwunsch lokal committed; nichts gepusht. Details und Kosten:
+[`demoscene-study.md`](demoscene-study.md).
+HTML jetzt 105.306 B; nominal -55,005 MiB GPU-Ressourcen auf High, keine
+Prozessspeichermessung. Geteilter Blattpuffer in 162 Bildern pixelgleich;
+Schatten visuell beurteilt, nicht pixelgleich. Kleine CPU-/GPU-/Startzeitkosten
+sind dokumentiert. Die folgenden Abschnitte beschreiben historische Stufen
+und deren jeweils damaligen Integrationsstatus.
+
 Wir haben Abyssal Garden aus dem Staticseal-Projekt heraus untersucht. Beide
 liefern eine eigenstaendige, lokal nutzbare HTML-Datei aus. Gesucht waren konkrete
 Einsparungen im Code und bei der Ausfuehrung, ohne die Unterwasserwelt optisch

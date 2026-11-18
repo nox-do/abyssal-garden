@@ -324,19 +324,21 @@ function makeWorld(D, T, flyPts, POSES) {
   }
 
   // --- pack leaves (36 bytes: 8 floats + 4 unorm8), sorted by culling cell
-  const pack = (L, step = 1, wm = 1) => {
+  const pack = (L, step = 1) => {
     let n = 0; const start = new Uint32Array(nCells + 1);
     for (let c = 0; c < nCells; c++) { start[c] = n; n += Math.ceil(L[c].length / 12 / step); }
     start[nCells] = n;
-    const buf = new ArrayBuffer(n * 36), f = new Float32Array(buf), u8 = new Uint8Array(buf), lo = new Float32Array(nCells).fill(1e9), hi = new Float32Array(nCells).fill(-1e9);
+    const buf = step === 1 ? new ArrayBuffer(n * 36) : null, f = buf && new Float32Array(buf), u8 = buf && new Uint8Array(buf), lo = new Float32Array(nCells).fill(1e9), hi = new Float32Array(nCells).fill(-1e9);
     let k = 0;
     for (let c = 0; c < nCells; c++) { const a = L[c]; for (let i = 0; i < a.length; i += 12 * step, k++) {
-      for (let j = 0; j < 8; j++) f[k * 9 + j] = a[i + j];
-      f[k * 9 + 6] *= wm;
-      u8[k * 36 + 32] = a[i + 8]; u8[k * 36 + 33] = a[i + 9] * 255; u8[k * 36 + 34] = a[i + 10] * 255; u8[k * 36 + 35] = a[i + 11] * 255;
+      if (buf) {
+        for (let j = 0; j < 8; j++) f[k * 9 + j] = a[i + j];
+        u8[k * 36 + 32] = a[i + 8]; u8[k * 36 + 33] = a[i + 9] * 255; u8[k * 36 + 34] = a[i + 10] * 255; u8[k * 36 + 35] = a[i + 11] * 255;
+      }
       const y = a[i + 1], l = a[i + 3]; if (y - l < lo[c]) lo[c] = y - l; if (y + l > hi[c]) hi[c] = y + l;
     } }
-    return { buf, n, start, lo, hi };
+    // Shared far leaves: keep original cell metadata, without another leaf array.
+    return buf ? { buf, n, start, lo, hi } : { n, start, lo, hi };
   };
 
   // --- half-res volume: r = openness, g = skylight
@@ -387,7 +389,7 @@ function makeWorld(D, T, flyPts, POSES) {
     for (let c = 0; c < nCells; c++) { const a = L[c]; for (let i = 0; i < a.length; i += 12) { for (let j = 0; j < 12; j++) data[k++] = a[i + j]; lo[c] = min(lo[c], a[i + 1] - 3); hi[c] = max(hi[c], a[i + 1] + 3); } }
     return { data, n, start, lo, hi };
   };
-  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2, 1.5), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), mantas: new Float32Array(mantas), snow };
+  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), mantas: new Float32Array(mantas), snow };
 }
 const fract = (x) => x - floor(x);
 

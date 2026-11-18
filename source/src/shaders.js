@@ -451,6 +451,7 @@ const W_LEAF = S_B + /*wgsl*/`
 override ROWS: f32 = 7.;
 override CUTOUT: bool = false;
 override FAR: f32 = 150.;
+override WIDTH: f32 = 1.;
 struct LI { @location(0) a: vec4f, @location(1) b: vec4f, @location(2) c: vec4f };
 struct LO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n: vec3f, @location(2) uv: vec2f,
   @location(3) @interpolate(flat) col: vec3f, @location(4) @interpolate(flat) pr: vec4f,
@@ -477,7 +478,7 @@ fn pal(h: f32) -> vec3f {
   let u = f32(vi & 1u) * 2. - 1.; let v = sin(f32(vi >> 1u) / (ROWS - 1.) * 1.5708);
   let ty = i32(i.c.x * 255. + .5); let s1 = i.c.y; let s2 = i.c.z;
   let t = g.cam.w;
-  let len = i.a.w; let hA = i.b.w;
+  let len = i.a.w; let hA = i.b.w; let wid = i.b.z * WIDTH;
   let cy = cos(i.b.x); let sy = sin(i.b.x); let ct = cos(i.b.y); let st = sin(i.b.y);
   let d = vec3f(st * cy, ct, st * sy); let pe = vec3f(ct * cy, -st, ct * sy); let sd = vec3f(-sy, 0., cy);
   // per type: x sparkle prob, y translucency, z iridescence, w emissive
@@ -511,8 +512,8 @@ fn pal(h: f32) -> vec3f {
   let cd = distance(i.a.xyz, g.cam.xyz); let far = FAR * g.mis.z;
   let nearK = select(1. - ss(26., 40., cd), 0., shp_);
   let farK = select((1. - ss(far * .8, far, cd)) * ss(.6, 2.2, distance(c, g.cam.xyz)) * ss(len * 1.1 + .5, len * 2.2 + 1.2, distance(i.a.xyz + d * (len * .5), g.cam.xyz)), 1., shp_);
-  let ruf = sin(v * 10. + s2 * 30. + t * .6) * i.b.z * .36 * u * shape2(v) * nearK;
-  var p = c + S * (u * farK * select(i.b.z * .5 * shape, select(max(i.b.z * .5, .09) * shape, 0., ty == 1), shp_));
+  let ruf = sin(v * 10. + s2 * 30. + t * .6) * wid * .36 * u * shape2(v) * nearK;
+  var p = c + S * (u * farK * select(wid * .5 * shape, select(max(wid * .5, .09) * shape, 0., ty == 1), shp_));
   p += N2 * ruf;
   let sw = sway(i.a.xz, hA + (p.y - i.a.y), t);
   p.x += sw.x; p.z += sw.y;

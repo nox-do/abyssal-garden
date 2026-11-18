@@ -1,0 +1,29 @@
+--- a/source/src/main.js
++++ b/source/src/main.js
+@@ -30,7 +30,7 @@
+   dead = body.className = 'l e'; $('s').textContent = 'The graphics device was lost. Reload the page to try again.';
+ });
+ const ctx = canvas.getContext('webgpu'), FMT = navigator.gpu.getPreferredCanvasFormat();
+-const Q = device.queue, HDR = 'rgba16float', DEPTH = 'depth32float';
++const Q = device.queue, HDR = 'rgba16float', DEPTH = 'depth32float', SHADOW_DEPTH = 'depth16unorm';
+ const TU = GPUTextureUsage, BU = GPUBufferUsage, SS = GPUShaderStage;
+ 
+ const mod = (code) => device.createShaderModule({ code });
+@@ -41,7 +41,7 @@
+ const sRep = device.createSampler({ addressModeU: 'repeat', addressModeV: 'repeat', magFilter: 'linear', minFilter: 'linear', mipmapFilter: 'linear', maxAnisotropy: LV > 1 ? 1 : 8 });
+ const sClamp = device.createSampler({ magFilter: 'linear', minFilter: 'linear' });
+ const sCmp = device.createSampler({ compare: 'less-equal', magFilter: 'linear', minFilter: 'linear' });
+-const tShadow = tex(SHADOW, SHADOW, DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
++const tShadow = tex(SHADOW, SHADOW, SHADOW_DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
+ const tDummy = tex(1, 1, DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
+ const tWater = tex(WATER, WATER, HDR, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING, { mips: 5 });
+ const tDetail = tex(1024, 1024, 'rgba8unorm', TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING, { mips: 11 });
+@@ -93,7 +93,7 @@
+   fragment: o.clip ? { module: m, entryPoint: 'fsSh', targets: [] } : undefined,
+   vertex: { module: m, entryPoint: vsE, buffers, constants: o.constants },
+   primitive: { topology: o.strip ? 'triangle-strip' : 'triangle-list', cullMode: o.cull || 'none' },
+-  depthStencil: { format: DEPTH, depthWriteEnabled: true, depthCompare: 'less', depthBias: 2, depthBiasSlopeScale: 1.5 } });
++  depthStencil: { format: SHADOW_DEPTH, depthWriteEnabled: true, depthCompare: 'less', depthBias: 0, depthBiasSlopeScale: 1.5 } });
+ 
+ await say('Compiling shaders…', 0.05, 300);
+ const mSolid = mod(W_SOLID), mLeaf = mod(W_LEAF), mAnim = mod(W_ANIM), mSurf = mod(W_SURF), mSpr = mod(W_SPR);

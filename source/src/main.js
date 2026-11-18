@@ -30,7 +30,7 @@ device.lost.then((l) => {
   dead = body.className = 'l e'; $('s').textContent = 'The graphics device was lost. Reload the page to try again.';
 });
 const ctx = canvas.getContext('webgpu'), FMT = navigator.gpu.getPreferredCanvasFormat();
-const Q = device.queue, HDR = 'rgba16float', DEPTH = 'depth32float';
+const Q = device.queue, HDR = 'rgba16float', DEPTH = 'depth32float', SHADOW_DEPTH = 'depth16unorm';
 const TU = GPUTextureUsage, BU = GPUBufferUsage, SS = GPUShaderStage;
 
 const mod = (code) => device.createShaderModule({ code });
@@ -41,7 +41,7 @@ const tex = (w, h, format, usage, o = {}) => device.createTexture({ size: [w, h,
 const sRep = device.createSampler({ addressModeU: 'repeat', addressModeV: 'repeat', magFilter: 'linear', minFilter: 'linear', mipmapFilter: 'linear', maxAnisotropy: LV > 1 ? 1 : 8 });
 const sClamp = device.createSampler({ magFilter: 'linear', minFilter: 'linear' });
 const sCmp = device.createSampler({ compare: 'less-equal', magFilter: 'linear', minFilter: 'linear' });
-const tShadow = tex(SHADOW, SHADOW, DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
+const tShadow = tex(SHADOW, SHADOW, SHADOW_DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
 const tDummy = tex(1, 1, DEPTH, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING);
 const tWater = tex(WATER, WATER, HDR, TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING, { mips: 5 });
 const tDetail = tex(1024, 1024, 'rgba8unorm', TU.RENDER_ATTACHMENT | TU.TEXTURE_BINDING, { mips: 11 });
@@ -93,7 +93,7 @@ const shadowPipe = (m, vsE, buffers, o = {}) => device.createRenderPipeline({ la
   fragment: o.clip ? { module: m, entryPoint: 'fsSh', targets: [] } : undefined,
   vertex: { module: m, entryPoint: vsE, buffers, constants: o.constants },
   primitive: { topology: o.strip ? 'triangle-strip' : 'triangle-list', cullMode: o.cull || 'none' },
-  depthStencil: { format: DEPTH, depthWriteEnabled: true, depthCompare: 'less', depthBias: 2, depthBiasSlopeScale: 1.5 } });
+  depthStencil: { format: SHADOW_DEPTH, depthWriteEnabled: true, depthCompare: 'less', depthBias: 0, depthBiasSlopeScale: 1.5 } });
 
 await say('Compiling shaders…', 0.05, 300);
 const mSolid = mod(W_SOLID), mLeaf = mod(W_LEAF), mAnim = mod(W_ANIM), mSurf = mod(W_SURF), mSpr = mod(W_SPR);
@@ -102,7 +102,7 @@ const pSolid = scenePipe(mSolid, 'vs', 'fs', [vbSolid, ibSolid]);
 const pLeaf = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 9 } });
 const pLeaf5 = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 5 } });
 const pLeafS = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants: { ROWS: 3, FAR: 70 } });
-const pLeafF = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 3 } });
+const pLeafF = scenePipe(mLeaf, 'vs', 'fs', [{ ...ibLeaf, arrayStride: 72 }], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 3, WIDTH: 1.5 } });
 const pFish = scenePipe(mAnim, 'vsFish', 'fsFish', [vbSolid, ibAnim]);
 const pManta = scenePipe(mAnim, 'vsManta', 'fsManta', [vbSolid, ibAnim]);
 const pSurf = scenePipe(mSurf, 'vs', 'fs', [], { strip: true, depthWrite: true, blend: { color: { srcFactor: 'src-alpha', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'zero' } } }), pBack = scenePipe(mSurf, 'vsB', 'fsB', [], { strip: true });
@@ -312,7 +312,7 @@ const nSolid = Wd.solids.data.length / 12;
 const solidData = new Float32Array((nSolid + 1) * 12); solidData.set(Wd.solids.data); solidData.set([0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0], nSolid * 12);
 const ibSolids = buf(solidData, BU.VERTEX);
 const ibChunk = Wd.chunks.map((c) => buf(c.data, BU.VERTEX)), ibProp = Wd.props.map((c) => buf(c.data, BU.VERTEX));
-const ibBig = buf(new Uint8Array(Wd.big.buf), BU.VERTEX), ibBigF = buf(new Uint8Array(Wd.bigF.buf), BU.VERTEX), ibSmall = buf(new Uint8Array(Wd.small.buf), BU.VERTEX);
+const ibBig = buf(new Uint8Array(Wd.big.buf), BU.VERTEX), ibSmall = buf(new Uint8Array(Wd.small.buf), BU.VERTEX);
 const ibFish = buf(Wd.fish, BU.VERTEX), ibManta = buf(Wd.mantas, BU.VERTEX), ibBubbles = buf(Wd.bubbles, BU.VERTEX), ibSnowB = buf(Wd.snow, BU.VERTEX);
 const ibGl = buf(Wd.glints, BU.VERTEX), nGl = Wd.glints.length / 8;
 const nFish = Wd.fish.length / 8, nManta = Wd.mantas.length / 8, nBub = Wd.bubbles.length / 8, nSnow = Wd.snow.length / 4;
@@ -416,7 +416,7 @@ const submitList = [null];
 const rowOrd = new Uint8Array(CELLS);
 // Draws the cells of a cell-sorted buffer that are in view and within [minD, maxD) (scaled by `det`, but not for the
 // terrain) as merged runs, nearest rows first.
-function drawCells(r, start, lo, hi, mar, indexed, verts, minD, maxD) {
+function drawCells(r, start, lo, hi, mar, indexed, verts, minD, maxD, sharedFar = false) {
   const cx = F[CX], cy = F[CY], cz = F[CZ], fx = F[FX], fy = F[FY], fz = F[FZ], rx = F[RX], rz = F[RZ], ux = F[UX], uy = F[UY], uz = F[UZ];
   const ds = indexed === 1 ? 1 : det * det;
   const tx = TANH * W / H, hw = CELLW * 0.5, ex = hw + mar, min2 = minD * minD * ds, max2 = maxD * maxD * ds;
@@ -434,6 +434,17 @@ function drawCells(r, start, lo, hi, mar, indexed, verts, minD, maxD) {
             if (lim >= 0 && abs(px * rx + pz * rz) - ex * (abs(rx) + abs(rz)) <= lim * tx) v = abs(px * ux + py * uy + pz * uz) - ex * (abs(ux) + abs(uz)) - ey * abs(uy) <= lim * TANH;
           }
         }
+      }
+      // Far selection restarts per cell; odd near counts prevent merging cells.
+      if (sharedFar) {
+        if (v) {
+          const a = Wd.big.start[c], n = start[c + 1] - start[c];
+          if (n > 0) {
+            r.setVertexBuffer(0, ibBig, a * 36, (Wd.big.start[c + 1] - a) * 36);
+            r.draw(verts, n, 0, 0);
+          }
+        }
+        continue;
       }
       if (v) { if (run < 0) run = c; } else if (run >= 0) {
         const a = start[run], n = start[c] - a;
@@ -496,7 +507,7 @@ function render() {
   // kelp and plants: 9-row blades up close, 5 rows mid-range, a decimated set far away
   r.setPipeline(pLeaf); r.setVertexBuffer(0, ibBig); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 18, 0, 24);
   r.setPipeline(pLeaf5); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 10, 24, 58);
-  r.setPipeline(pLeafF); r.setVertexBuffer(0, ibBigF); drawCells(r, Wd.bigF.start, Wd.bigF.lo, Wd.bigF.hi, 5, false, 6, 58, 150);
+  r.setPipeline(pLeafF); drawCells(r, Wd.bigF.start, Wd.bigF.lo, Wd.bigF.hi, 5, false, 6, 58, 150, true);
   r.setPipeline(pLeafS); r.setVertexBuffer(0, ibSmall); drawCells(r, Wd.small.start, Wd.small.lo, Wd.small.hi, 1.5, false, 6, 0, 70);
   r.setPipeline(pBack); r.draw(4);
   r.setPipeline(pBub); r.setVertexBuffer(0, ibBubbles); r.draw(4, nBub);

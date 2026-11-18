@@ -1,0 +1,307 @@
+{
+  "report": "screen",
+  "comparisons": [
+    {
+      "name": "shadow16-bias2",
+      "level": 0,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 22461,
+          "mean": 0.015596064814814814,
+          "maximum": 82,
+          "pixelsOver16": 102
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 16156,
+          "mean": 0.008486689814814815,
+          "maximum": 34,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 30690,
+          "mean": 0.025132740162037037,
+          "maximum": 80,
+          "pixelsOver16": 362
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 22329,
+          "mean": 0.017574869791666666,
+          "maximum": 50,
+          "pixelsOver16": 191
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 12732,
+          "mean": 0.00861400462962963,
+          "maximum": 85,
+          "pixelsOver16": 60
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 31750,
+          "mean": 0.02276837384259259,
+          "maximum": 121,
+          "pixelsOver16": 147
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 28026,
+          "mean": 0.020833333333333332,
+          "maximum": 89,
+          "pixelsOver16": 163
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 32784,
+          "mean": 0.028957248263888888,
+          "maximum": 79,
+          "pixelsOver16": 394
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 19523,
+          "mean": 0.01347583912037037,
+          "maximum": 68,
+          "pixelsOver16": 67
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 2822,
+          "mean": 0.0016644965277777778,
+          "maximum": 18,
+          "pixelsOver16": 2
+        },
+        {
+          "label": "west",
+          "changedPixels": 3717,
+          "mean": 0.0021650752314814814,
+          "maximum": 9,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 3594,
+          "mean": 0.0022880497685185187,
+          "maximum": 9,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 1536,
+          "mean": 0.0008655237268518518,
+          "maximum": 10,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 2613,
+          "mean": 0.001710792824074074,
+          "maximum": 6,
+          "pixelsOver16": 0
+        }
+      ],
+      "identicalImages": 1,
+      "worst": [
+        {
+          "label": "detail4",
+          "changedPixels": 32784,
+          "mean": 0.028957248263888888,
+          "maximum": 79,
+          "pixelsOver16": 394
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 30690,
+          "mean": 0.025132740162037037,
+          "maximum": 80,
+          "pixelsOver16": 362
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 31750,
+          "mean": 0.02276837384259259,
+          "maximum": 121,
+          "pixelsOver16": 147
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 28026,
+          "mean": 0.020833333333333332,
+          "maximum": 89,
+          "pixelsOver16": 163
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 22329,
+          "mean": 0.017574869791666666,
+          "maximum": 50,
+          "pixelsOver16": 191
+        }
+      ]
+    },
+    {
+      "name": "shadow16-bias0",
+      "level": 0,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 9448,
+          "mean": 0.006055049189814815,
+          "maximum": 41,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 7126,
+          "mean": 0.0036903211805555556,
+          "maximum": 34,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 13884,
+          "mean": 0.01027488425925926,
+          "maximum": 79,
+          "pixelsOver16": 131
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 10349,
+          "mean": 0.007736906828703704,
+          "maximum": 50,
+          "pixelsOver16": 83
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 5686,
+          "mean": 0.003828486689814815,
+          "maximum": 85,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 14493,
+          "mean": 0.00956344039351852,
+          "maximum": 107,
+          "pixelsOver16": 57
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 10421,
+          "mean": 0.007259837962962963,
+          "maximum": 51,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 15140,
+          "mean": 0.012799117476851852,
+          "maximum": 79,
+          "pixelsOver16": 174
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 8697,
+          "mean": 0.0057161458333333335,
+          "maximum": 68,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 1160,
+          "mean": 0.0006846788194444445,
+          "maximum": 18,
+          "pixelsOver16": 2
+        },
+        {
+          "label": "west",
+          "changedPixels": 1697,
+          "mean": 0.0009255642361111112,
+          "maximum": 8,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 1511,
+          "mean": 0.0009411168981481482,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 658,
+          "mean": 0.0003765190972222222,
+          "maximum": 5,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 1164,
+          "mean": 0.0007157841435185185,
+          "maximum": 6,
+          "pixelsOver16": 0
+        }
+      ],
+      "identicalImages": 1,
+      "worst": [
+        {
+          "label": "detail4",
+          "changedPixels": 15140,
+          "mean": 0.012799117476851852,
+          "maximum": 79,
+          "pixelsOver16": 174
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 13884,
+          "mean": 0.01027488425925926,
+          "maximum": 79,
+          "pixelsOver16": 131
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 14493,
+          "mean": 0.00956344039351852,
+          "maximum": 107,
+          "pixelsOver16": 57
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 10349,
+          "mean": 0.007736906828703704,
+          "maximum": 50,
+          "pixelsOver16": 83
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 10421,
+          "mean": 0.007259837962962963,
+          "maximum": 51,
+          "pixelsOver16": 52
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Pixel metrics locate differences, not aesthetic acceptance or flicker guarantees.",
+    "One machine/browser; buffer sizes and nominal texture payload are not process memory."
+  ]
+}

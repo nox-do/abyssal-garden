@@ -1,0 +1,3450 @@
+{
+  "base": "3178034",
+  "node": "v22.23.4",
+  "synthetic": {
+    "checkedRecords": 16384,
+    "checkedBytes": 589824,
+    "oddCells": 128,
+    "savedGPUBytes": 589824,
+    "sameMetadata": true,
+    "byteIdenticalCPUReconstruction": true
+  },
+  "cameraCases": 333,
+  "drawCases": [
+    {
+      "level": 0,
+      "label": "pose1",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 40,
+      "sharedBindings": 40,
+      "selectedIDs": 196
+    },
+    {
+      "level": 0,
+      "label": "pose1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 102
+    },
+    {
+      "level": 0,
+      "label": "pose1",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 54
+    },
+    {
+      "level": 0,
+      "label": "pose2",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 132
+    },
+    {
+      "level": 0,
+      "label": "pose2",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 74
+    },
+    {
+      "level": 0,
+      "label": "pose2",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 15,
+      "sharedBindings": 15,
+      "selectedIDs": 51
+    },
+    {
+      "level": 0,
+      "label": "pose3",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 105
+    },
+    {
+      "level": 0,
+      "label": "pose3",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 77
+    },
+    {
+      "level": 0,
+      "label": "pose3",
+      "detail": 0.4,
+      "baselineDraws": 7,
+      "sharedDraws": 16,
+      "sharedBindings": 16,
+      "selectedIDs": 45
+    },
+    {
+      "level": 0,
+      "label": "pose4",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 243
+    },
+    {
+      "level": 0,
+      "label": "pose4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 26,
+      "sharedBindings": 26,
+      "selectedIDs": 176
+    },
+    {
+      "level": 0,
+      "label": "pose4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 10,
+      "sharedBindings": 10,
+      "selectedIDs": 67
+    },
+    {
+      "level": 0,
+      "label": "pose5",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 77
+    },
+    {
+      "level": 0,
+      "label": "pose5",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 81
+    },
+    {
+      "level": 0,
+      "label": "pose5",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 39
+    },
+    {
+      "level": 0,
+      "label": "pose6",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 133
+    },
+    {
+      "level": 0,
+      "label": "pose6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 0,
+      "label": "pose6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 86
+    },
+    {
+      "level": 0,
+      "label": "detail1",
+      "detail": 1,
+      "baselineDraws": 9,
+      "sharedDraws": 42,
+      "sharedBindings": 42,
+      "selectedIDs": 198
+    },
+    {
+      "level": 0,
+      "label": "detail1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 116
+    },
+    {
+      "level": 0,
+      "label": "detail1",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 62
+    },
+    {
+      "level": 0,
+      "label": "detail4",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 37,
+      "sharedBindings": 37,
+      "selectedIDs": 230
+    },
+    {
+      "level": 0,
+      "label": "detail4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 155
+    },
+    {
+      "level": 0,
+      "label": "detail4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 9,
+      "sharedBindings": 9,
+      "selectedIDs": 60
+    },
+    {
+      "level": 0,
+      "label": "detail6",
+      "detail": 1,
+      "baselineDraws": 5,
+      "sharedDraws": 18,
+      "sharedBindings": 18,
+      "selectedIDs": 111
+    },
+    {
+      "level": 0,
+      "label": "detail6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 0,
+      "label": "detail6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 13,
+      "sharedBindings": 13,
+      "selectedIDs": 91
+    },
+    {
+      "level": 0,
+      "label": "lagoon",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "lagoon",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "lagoon",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "coast",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "coast",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "coast",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 8
+    },
+    {
+      "level": 0,
+      "label": "east",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "east",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "east",
+      "detail": 0.4,
+      "baselineDraws": 3,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 12
+    },
+    {
+      "level": 0,
+      "label": "west",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "west",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "west",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 12
+    },
+    {
+      "level": 0,
+      "label": "down",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 72
+    },
+    {
+      "level": 0,
+      "label": "down",
+      "detail": 0.7,
+      "baselineDraws": 11,
+      "sharedDraws": 30,
+      "sharedBindings": 30,
+      "selectedIDs": 100
+    },
+    {
+      "level": 0,
+      "label": "down",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 94
+    },
+    {
+      "level": 0,
+      "label": "sun",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "sun",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "sun",
+      "detail": 0.4,
+      "baselineDraws": 3,
+      "sharedDraws": 4,
+      "sharedBindings": 4,
+      "selectedIDs": 12
+    },
+    {
+      "level": 0,
+      "label": "justBelow",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "justBelow",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "justBelow",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "beach-wide",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-wide",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-wide",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-near",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-near",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-near",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-side",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 11,
+      "sharedBindings": 11,
+      "selectedIDs": 53
+    },
+    {
+      "level": 0,
+      "label": "beach-side",
+      "detail": 0.7,
+      "baselineDraws": 3,
+      "sharedDraws": 7,
+      "sharedBindings": 7,
+      "selectedIDs": 36
+    },
+    {
+      "level": 0,
+      "label": "beach-side",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 17
+    },
+    {
+      "level": 0,
+      "label": "beach-under",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-under",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "beach-under",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "cross-0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross-0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross-0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross-0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross-0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross-0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross-0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross-0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross-0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross0",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross0",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross0",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "cross0.28",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 0,
+      "label": "cross0.28",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 0,
+      "label": "cross0.28",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-23.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-23.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 5,
+      "sharedBindings": 5,
+      "selectedIDs": 14
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-23.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-24.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-57.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-57.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-57.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 27,
+      "sharedBindings": 27,
+      "selectedIDs": 91
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-58.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-149.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-149.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-149.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 0,
+      "label": "boundary-camera-150.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "pose1",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 40,
+      "sharedBindings": 40,
+      "selectedIDs": 196
+    },
+    {
+      "level": 1,
+      "label": "pose1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 102
+    },
+    {
+      "level": 1,
+      "label": "pose1",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 54
+    },
+    {
+      "level": 1,
+      "label": "pose2",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 132
+    },
+    {
+      "level": 1,
+      "label": "pose2",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 74
+    },
+    {
+      "level": 1,
+      "label": "pose2",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 15,
+      "sharedBindings": 15,
+      "selectedIDs": 51
+    },
+    {
+      "level": 1,
+      "label": "pose3",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 105
+    },
+    {
+      "level": 1,
+      "label": "pose3",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 77
+    },
+    {
+      "level": 1,
+      "label": "pose3",
+      "detail": 0.4,
+      "baselineDraws": 7,
+      "sharedDraws": 16,
+      "sharedBindings": 16,
+      "selectedIDs": 45
+    },
+    {
+      "level": 1,
+      "label": "pose4",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 243
+    },
+    {
+      "level": 1,
+      "label": "pose4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 26,
+      "sharedBindings": 26,
+      "selectedIDs": 176
+    },
+    {
+      "level": 1,
+      "label": "pose4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 10,
+      "sharedBindings": 10,
+      "selectedIDs": 67
+    },
+    {
+      "level": 1,
+      "label": "pose5",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 77
+    },
+    {
+      "level": 1,
+      "label": "pose5",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 81
+    },
+    {
+      "level": 1,
+      "label": "pose5",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 39
+    },
+    {
+      "level": 1,
+      "label": "pose6",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 133
+    },
+    {
+      "level": 1,
+      "label": "pose6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 1,
+      "label": "pose6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 86
+    },
+    {
+      "level": 1,
+      "label": "detail1",
+      "detail": 1,
+      "baselineDraws": 9,
+      "sharedDraws": 42,
+      "sharedBindings": 42,
+      "selectedIDs": 198
+    },
+    {
+      "level": 1,
+      "label": "detail1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 116
+    },
+    {
+      "level": 1,
+      "label": "detail1",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 62
+    },
+    {
+      "level": 1,
+      "label": "detail4",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 37,
+      "sharedBindings": 37,
+      "selectedIDs": 230
+    },
+    {
+      "level": 1,
+      "label": "detail4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 155
+    },
+    {
+      "level": 1,
+      "label": "detail4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 9,
+      "sharedBindings": 9,
+      "selectedIDs": 60
+    },
+    {
+      "level": 1,
+      "label": "detail6",
+      "detail": 1,
+      "baselineDraws": 5,
+      "sharedDraws": 18,
+      "sharedBindings": 18,
+      "selectedIDs": 111
+    },
+    {
+      "level": 1,
+      "label": "detail6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 1,
+      "label": "detail6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 13,
+      "sharedBindings": 13,
+      "selectedIDs": 91
+    },
+    {
+      "level": 1,
+      "label": "lagoon",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "lagoon",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "lagoon",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "coast",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "coast",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "coast",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 8
+    },
+    {
+      "level": 1,
+      "label": "east",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "east",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "east",
+      "detail": 0.4,
+      "baselineDraws": 3,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 12
+    },
+    {
+      "level": 1,
+      "label": "west",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "west",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "west",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 12
+    },
+    {
+      "level": 1,
+      "label": "down",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 72
+    },
+    {
+      "level": 1,
+      "label": "down",
+      "detail": 0.7,
+      "baselineDraws": 11,
+      "sharedDraws": 30,
+      "sharedBindings": 30,
+      "selectedIDs": 100
+    },
+    {
+      "level": 1,
+      "label": "down",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 94
+    },
+    {
+      "level": 1,
+      "label": "sun",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "sun",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "sun",
+      "detail": 0.4,
+      "baselineDraws": 3,
+      "sharedDraws": 4,
+      "sharedBindings": 4,
+      "selectedIDs": 12
+    },
+    {
+      "level": 1,
+      "label": "justBelow",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "justBelow",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "justBelow",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "beach-wide",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-wide",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-wide",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-near",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-near",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-near",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-side",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 11,
+      "sharedBindings": 11,
+      "selectedIDs": 53
+    },
+    {
+      "level": 1,
+      "label": "beach-side",
+      "detail": 0.7,
+      "baselineDraws": 3,
+      "sharedDraws": 7,
+      "sharedBindings": 7,
+      "selectedIDs": 36
+    },
+    {
+      "level": 1,
+      "label": "beach-side",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 17
+    },
+    {
+      "level": 1,
+      "label": "beach-under",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-under",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "beach-under",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "cross-0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross-0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross-0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross-0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross-0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross-0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross-0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross-0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross-0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross0",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross0",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross0",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "cross0.28",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 1,
+      "label": "cross0.28",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 1,
+      "label": "cross0.28",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-23.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-23.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 5,
+      "sharedBindings": 5,
+      "selectedIDs": 14
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-23.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-24.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-57.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-57.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-57.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 27,
+      "sharedBindings": 27,
+      "selectedIDs": 91
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-58.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-149.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-149.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-149.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 1,
+      "label": "boundary-camera-150.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "pose1",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 40,
+      "sharedBindings": 40,
+      "selectedIDs": 196
+    },
+    {
+      "level": 2,
+      "label": "pose1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 102
+    },
+    {
+      "level": 2,
+      "label": "pose1",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 54
+    },
+    {
+      "level": 2,
+      "label": "pose2",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 132
+    },
+    {
+      "level": 2,
+      "label": "pose2",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 74
+    },
+    {
+      "level": 2,
+      "label": "pose2",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 15,
+      "sharedBindings": 15,
+      "selectedIDs": 51
+    },
+    {
+      "level": 2,
+      "label": "pose3",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 105
+    },
+    {
+      "level": 2,
+      "label": "pose3",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 77
+    },
+    {
+      "level": 2,
+      "label": "pose3",
+      "detail": 0.4,
+      "baselineDraws": 7,
+      "sharedDraws": 16,
+      "sharedBindings": 16,
+      "selectedIDs": 45
+    },
+    {
+      "level": 2,
+      "label": "pose4",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 39,
+      "sharedBindings": 39,
+      "selectedIDs": 243
+    },
+    {
+      "level": 2,
+      "label": "pose4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 26,
+      "sharedBindings": 26,
+      "selectedIDs": 176
+    },
+    {
+      "level": 2,
+      "label": "pose4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 10,
+      "sharedBindings": 10,
+      "selectedIDs": 67
+    },
+    {
+      "level": 2,
+      "label": "pose5",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 77
+    },
+    {
+      "level": 2,
+      "label": "pose5",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 24,
+      "sharedBindings": 24,
+      "selectedIDs": 81
+    },
+    {
+      "level": 2,
+      "label": "pose5",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 39
+    },
+    {
+      "level": 2,
+      "label": "pose6",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 133
+    },
+    {
+      "level": 2,
+      "label": "pose6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 2,
+      "label": "pose6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 86
+    },
+    {
+      "level": 2,
+      "label": "detail1",
+      "detail": 1,
+      "baselineDraws": 9,
+      "sharedDraws": 42,
+      "sharedBindings": 42,
+      "selectedIDs": 198
+    },
+    {
+      "level": 2,
+      "label": "detail1",
+      "detail": 0.7,
+      "baselineDraws": 7,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 116
+    },
+    {
+      "level": 2,
+      "label": "detail1",
+      "detail": 0.4,
+      "baselineDraws": 6,
+      "sharedDraws": 14,
+      "sharedBindings": 14,
+      "selectedIDs": 62
+    },
+    {
+      "level": 2,
+      "label": "detail4",
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 37,
+      "sharedBindings": 37,
+      "selectedIDs": 230
+    },
+    {
+      "level": 2,
+      "label": "detail4",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 155
+    },
+    {
+      "level": 2,
+      "label": "detail4",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 9,
+      "sharedBindings": 9,
+      "selectedIDs": 60
+    },
+    {
+      "level": 2,
+      "label": "detail6",
+      "detail": 1,
+      "baselineDraws": 5,
+      "sharedDraws": 18,
+      "sharedBindings": 18,
+      "selectedIDs": 111
+    },
+    {
+      "level": 2,
+      "label": "detail6",
+      "detail": 0.7,
+      "baselineDraws": 6,
+      "sharedDraws": 21,
+      "sharedBindings": 21,
+      "selectedIDs": 137
+    },
+    {
+      "level": 2,
+      "label": "detail6",
+      "detail": 0.4,
+      "baselineDraws": 5,
+      "sharedDraws": 13,
+      "sharedBindings": 13,
+      "selectedIDs": 91
+    },
+    {
+      "level": 2,
+      "label": "lagoon",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "lagoon",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "lagoon",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "coast",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "coast",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "coast",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 8
+    },
+    {
+      "level": 2,
+      "label": "east",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "east",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "east",
+      "detail": 0.4,
+      "baselineDraws": 3,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 12
+    },
+    {
+      "level": 2,
+      "label": "west",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "west",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "west",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 2,
+      "sharedBindings": 2,
+      "selectedIDs": 12
+    },
+    {
+      "level": 2,
+      "label": "down",
+      "detail": 1,
+      "baselineDraws": 8,
+      "sharedDraws": 25,
+      "sharedBindings": 25,
+      "selectedIDs": 72
+    },
+    {
+      "level": 2,
+      "label": "down",
+      "detail": 0.7,
+      "baselineDraws": 11,
+      "sharedDraws": 30,
+      "sharedBindings": 30,
+      "selectedIDs": 100
+    },
+    {
+      "level": 2,
+      "label": "down",
+      "detail": 0.4,
+      "baselineDraws": 8,
+      "sharedDraws": 23,
+      "sharedBindings": 23,
+      "selectedIDs": 94
+    },
+    {
+      "level": 2,
+      "label": "sun",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "sun",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "sun",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 4
+    },
+    {
+      "level": 2,
+      "label": "justBelow",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "justBelow",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "justBelow",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "beach-wide",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-wide",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-wide",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-near",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-near",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-near",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-side",
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 11,
+      "sharedBindings": 11,
+      "selectedIDs": 53
+    },
+    {
+      "level": 2,
+      "label": "beach-side",
+      "detail": 0.7,
+      "baselineDraws": 3,
+      "sharedDraws": 7,
+      "sharedBindings": 7,
+      "selectedIDs": 36
+    },
+    {
+      "level": 2,
+      "label": "beach-side",
+      "detail": 0.4,
+      "baselineDraws": 2,
+      "sharedDraws": 3,
+      "sharedBindings": 3,
+      "selectedIDs": 17
+    },
+    {
+      "level": 2,
+      "label": "beach-under",
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-under",
+      "detail": 0.7,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "beach-under",
+      "detail": 0.4,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "cross-0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross-0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross-0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross-0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross-0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross-0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross-0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross-0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross-0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross0",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross0",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross0",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross0.005",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross0.005",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross0.005",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross0.03",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross0.03",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross0.03",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross0.1",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross0.1",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross0.1",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "cross0.28",
+      "detail": 1,
+      "baselineDraws": 6,
+      "sharedDraws": 36,
+      "sharedBindings": 36,
+      "selectedIDs": 125
+    },
+    {
+      "level": 2,
+      "label": "cross0.28",
+      "detail": 0.7,
+      "baselineDraws": 5,
+      "sharedDraws": 22,
+      "sharedBindings": 22,
+      "selectedIDs": 69
+    },
+    {
+      "level": 2,
+      "label": "cross0.28",
+      "detail": 0.4,
+      "baselineDraws": 4,
+      "sharedDraws": 12,
+      "sharedBindings": 12,
+      "selectedIDs": 37
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-23.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-23.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 5,
+      "sharedBindings": 5,
+      "selectedIDs": 14
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-23.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 2,
+      "sharedDraws": 6,
+      "sharedBindings": 6,
+      "selectedIDs": 17
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-24.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 7,
+      "sharedDraws": 38,
+      "sharedBindings": 38,
+      "selectedIDs": 154
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-57.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-57.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-57.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 27,
+      "sharedBindings": 27,
+      "selectedIDs": 91
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-58.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 4,
+      "sharedDraws": 28,
+      "sharedBindings": 28,
+      "selectedIDs": 94
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-149.99",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-149.99",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-149.99",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 1,
+      "sharedDraws": 1,
+      "sharedBindings": 1,
+      "selectedIDs": 3
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150.01",
+      "range": [
+        0,
+        24
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150.01",
+      "range": [
+        24,
+        58
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    },
+    {
+      "level": 2,
+      "label": "boundary-camera-150.01",
+      "range": [
+        58,
+        150
+      ],
+      "targetCell": 21,
+      "detail": 1,
+      "baselineDraws": 0,
+      "sharedDraws": 0,
+      "sharedBindings": 0,
+      "selectedIDs": 0
+    }
+  ],
+  "costs": [
+    {
+      "level": 0,
+      "removedGPUBufferBytes": 24122988,
+      "removedTemporaryCPUArrayBytes": 24122988,
+      "unchangedFarMetadataBytes": 3076
+    },
+    {
+      "level": 1,
+      "removedGPUBufferBytes": 12737376,
+      "removedTemporaryCPUArrayBytes": 12737376,
+      "unchangedFarMetadataBytes": 3076
+    },
+    {
+      "level": 2,
+      "removedGPUBufferBytes": 7045236,
+      "removedTemporaryCPUArrayBytes": 7045236,
+      "unchangedFarMetadataBytes": 3076
+    }
+  ],
+  "semantics": {
+    "selection": "Restart the 0,2,4,... near-record selection in each cell; preserve old Far start/lo/hi from original JS lists.",
+    "range": "Explicit [nearStart*36, nearCellCount*36] vertex range, firstInstance=0; (ceil(N/2)-1)*72+36 <= N*36, including final odd cell.",
+    "width": "Baseline writes width into Float32Array before *=1.5: f32(f32(originalWidth)*1.5). Candidate CPU reconstruction follows the same order exactly; GPU shader execution remains to be checked.",
+    "draws": "One draw and one vertex-buffer binding per nonempty visible far cell. Counts below use recorded real bounds/cameras; actual counts do not affect number of calls when cell occupancy stays the same.",
+    "qaOnly": "sharedFarQA recreates old Far and near arrays temporarily; exclude it from shipping and timing builds."
+  },
+  "limits": [
+    "No browser or shader execution.",
+    "Culling uses recorded real bounds and cameras with artificial per-cell counts.",
+    "Full actual-world record proof is exported as sharedFarQA; requires builder/browser execution.",
+    "API buffer payload reductions are not process RSS/peak measurements."
+  ]
+}

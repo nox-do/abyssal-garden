@@ -38,6 +38,16 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
   `memory-only.patch` unter `experiments/surface/`. Fuer Ruecknahme des gesamten
   Auftauchens zuerst den Strand-Patch umkehren; der danach verwendete aktualisierte
   `surface-only.patch` erhaelt Blatt-, Material- und Speicheroptimierungen.
+- Demoscene-Fortsetzung auf Branch `codex/demoscene-memory`: Sicherung davor
+  ist `3178034`. Geteilter Nah-/Fern-Blattpuffer und 16-Bit-Schattenkarte sind
+  nach Vergleich in Produktquellen/index.html integriert und auf Nutzerwunsch
+  lokal gesichert; nichts gepusht.
+  Siehe `docs/demoscene-study.md` und `experiments/demoscene/RUN.txt`.
+  HTML 105.306 B (+185 B), nominal -55,005/-20,147/-14,719 MiB GPU-Ressourcen
+  High/Medium/Low bei 1280x720; keine Prozess-RAM-Messung. Shared-Far pixelgleich,
+  Schatten mit kleinen Kantenabweichungen. Separate Ruecknahmepatches vorhanden.
+  Fuenf Agentenplaene liegen unter `experiments/demoscene/plans/`; Packing,
+  Pflanzenrezepte und WGSL-Minifizierung sind weiterhin nicht implementiert.
 
 ## Code und Builds
 

@@ -1,0 +1,3894 @@
+{
+  "report": "shared-browser",
+  "comparisons": [
+    {
+      "name": "shared-far",
+      "level": 0,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "identicalImages": 54,
+      "worst": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ]
+    },
+    {
+      "name": "combined",
+      "level": 0,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 9448,
+          "mean": 0.006055049189814815,
+          "maximum": 41,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 7126,
+          "mean": 0.0036903211805555556,
+          "maximum": 34,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 13884,
+          "mean": 0.01027488425925926,
+          "maximum": 79,
+          "pixelsOver16": 131
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 10349,
+          "mean": 0.007736906828703704,
+          "maximum": 50,
+          "pixelsOver16": 83
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 5686,
+          "mean": 0.003828486689814815,
+          "maximum": 85,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 14493,
+          "mean": 0.00956344039351852,
+          "maximum": 107,
+          "pixelsOver16": 57
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 10421,
+          "mean": 0.007259837962962963,
+          "maximum": 51,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 15140,
+          "mean": 0.012799117476851852,
+          "maximum": 79,
+          "pixelsOver16": 174
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 8697,
+          "mean": 0.0057161458333333335,
+          "maximum": 68,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 1160,
+          "mean": 0.0006846788194444445,
+          "maximum": 18,
+          "pixelsOver16": 2
+        },
+        {
+          "label": "west",
+          "changedPixels": 1697,
+          "mean": 0.0009255642361111112,
+          "maximum": 8,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 1511,
+          "mean": 0.0009411168981481482,
+          "maximum": 7,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 658,
+          "mean": 0.0003765190972222222,
+          "maximum": 5,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 1164,
+          "mean": 0.0007157841435185185,
+          "maximum": 6,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 9435,
+          "mean": 0.006111111111111111,
+          "maximum": 42,
+          "pixelsOver16": 32
+        },
+        {
+          "label": "time2",
+          "changedPixels": 10747,
+          "mean": 0.00719654224537037,
+          "maximum": 81,
+          "pixelsOver16": 39
+        },
+        {
+          "label": "time3",
+          "changedPixels": 11023,
+          "mean": 0.007379195601851852,
+          "maximum": 77,
+          "pixelsOver16": 34
+        },
+        {
+          "label": "time4",
+          "changedPixels": 9722,
+          "mean": 0.006328125,
+          "maximum": 50,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time5",
+          "changedPixels": 10042,
+          "mean": 0.006513671875,
+          "maximum": 52,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "time6",
+          "changedPixels": 9469,
+          "mean": 0.006208043981481481,
+          "maximum": 53,
+          "pixelsOver16": 32
+        },
+        {
+          "label": "time7",
+          "changedPixels": 11308,
+          "mean": 0.007750289351851852,
+          "maximum": 76,
+          "pixelsOver16": 50
+        },
+        {
+          "label": "time8",
+          "changedPixels": 11302,
+          "mean": 0.007769458912037037,
+          "maximum": 78,
+          "pixelsOver16": 47
+        },
+        {
+          "label": "time9",
+          "changedPixels": 11569,
+          "mean": 0.007963324652777777,
+          "maximum": 77,
+          "pixelsOver16": 45
+        },
+        {
+          "label": "time10",
+          "changedPixels": 9810,
+          "mean": 0.006643518518518518,
+          "maximum": 50,
+          "pixelsOver16": 38
+        },
+        {
+          "label": "time11",
+          "changedPixels": 10083,
+          "mean": 0.006878255208333333,
+          "maximum": 73,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time12",
+          "changedPixels": 10190,
+          "mean": 0.006820746527777778,
+          "maximum": 48,
+          "pixelsOver16": 35
+        },
+        {
+          "label": "time13",
+          "changedPixels": 10822,
+          "mean": 0.007373408564814814,
+          "maximum": 70,
+          "pixelsOver16": 55
+        },
+        {
+          "label": "time14",
+          "changedPixels": 10692,
+          "mean": 0.00730324074074074,
+          "maximum": 71,
+          "pixelsOver16": 51
+        },
+        {
+          "label": "time15",
+          "changedPixels": 9249,
+          "mean": 0.006450376157407407,
+          "maximum": 55,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time16",
+          "changedPixels": 10094,
+          "mean": 0.006830150462962963,
+          "maximum": 56,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "time17",
+          "changedPixels": 9563,
+          "mean": 0.0066225405092592594,
+          "maximum": 55,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time18",
+          "changedPixels": 9525,
+          "mean": 0.006482204861111111,
+          "maximum": 52,
+          "pixelsOver16": 40
+        },
+        {
+          "label": "time19",
+          "changedPixels": 9137,
+          "mean": 0.006081090856481481,
+          "maximum": 51,
+          "pixelsOver16": 40
+        },
+        {
+          "label": "time20",
+          "changedPixels": 9168,
+          "mean": 0.006095196759259259,
+          "maximum": 53,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time21",
+          "changedPixels": 9329,
+          "mean": 0.006210575810185185,
+          "maximum": 55,
+          "pixelsOver16": 38
+        },
+        {
+          "label": "time22",
+          "changedPixels": 8932,
+          "mean": 0.005971860532407407,
+          "maximum": 76,
+          "pixelsOver16": 33
+        },
+        {
+          "label": "time23",
+          "changedPixels": 9025,
+          "mean": 0.006009837962962963,
+          "maximum": 75,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time24",
+          "changedPixels": 9183,
+          "mean": 0.006089409722222223,
+          "maximum": 67,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time25",
+          "changedPixels": 8750,
+          "mean": 0.00583080150462963,
+          "maximum": 45,
+          "pixelsOver16": 34
+        },
+        {
+          "label": "time26",
+          "changedPixels": 8408,
+          "mean": 0.005624276620370371,
+          "maximum": 40,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time27",
+          "changedPixels": 8875,
+          "mean": 0.0059841579861111115,
+          "maximum": 68,
+          "pixelsOver16": 34
+        },
+        {
+          "label": "time28",
+          "changedPixels": 9954,
+          "mean": 0.0064366319444444445,
+          "maximum": 64,
+          "pixelsOver16": 33
+        },
+        {
+          "label": "time29",
+          "changedPixels": 8832,
+          "mean": 0.005852864583333333,
+          "maximum": 37,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "time30",
+          "changedPixels": 8625,
+          "mean": 0.005756293402777778,
+          "maximum": 41,
+          "pixelsOver16": 25
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 9166,
+          "mean": 0.006076750578703704,
+          "maximum": 40,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 10048,
+          "mean": 0.006484736689814815,
+          "maximum": 42,
+          "pixelsOver16": 33
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 9702,
+          "mean": 0.0062738715277777775,
+          "maximum": 38,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 9216,
+          "mean": 0.006102068865740741,
+          "maximum": 36,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 9448,
+          "mean": 0.006055049189814815,
+          "maximum": 41,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 9468,
+          "mean": 0.006155960648148148,
+          "maximum": 40,
+          "pixelsOver16": 33
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 9195,
+          "mean": 0.006058304398148148,
+          "maximum": 37,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 9389,
+          "mean": 0.006236255787037037,
+          "maximum": 39,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 9842,
+          "mean": 0.006418909143518519,
+          "maximum": 41,
+          "pixelsOver16": 31
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.008354673032407407,
+          "maximum": 81,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time3",
+          "mean": 0.008064597800925926,
+          "maximum": 41,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "time4",
+          "mean": 0.008370225694444445,
+          "maximum": 77,
+          "pixelsOver16": 18
+        },
+        {
+          "label": "time5",
+          "mean": 0.007233434606481482,
+          "maximum": 22,
+          "pixelsOver16": 6
+        },
+        {
+          "label": "time6",
+          "mean": 0.007319516782407408,
+          "maximum": 52,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time7",
+          "mean": 0.008654513888888889,
+          "maximum": 76,
+          "pixelsOver16": 28
+        },
+        {
+          "label": "time8",
+          "mean": 0.008395182291666666,
+          "maximum": 30,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time9",
+          "mean": 0.008707320601851852,
+          "maximum": 48,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time10",
+          "mean": 0.00917064525462963,
+          "maximum": 77,
+          "pixelsOver16": 32
+        },
+        {
+          "label": "time11",
+          "mean": 0.007963324652777777,
+          "maximum": 73,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "time12",
+          "mean": 0.007985749421296297,
+          "maximum": 73,
+          "pixelsOver16": 21
+        },
+        {
+          "label": "time13",
+          "mean": 0.008315972222222223,
+          "maximum": 70,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time14",
+          "mean": 0.008346354166666667,
+          "maximum": 67,
+          "pixelsOver16": 21
+        },
+        {
+          "label": "time15",
+          "mean": 0.007913049768518518,
+          "maximum": 71,
+          "pixelsOver16": 23
+        },
+        {
+          "label": "time16",
+          "mean": 0.007439236111111111,
+          "maximum": 37,
+          "pixelsOver16": 7
+        },
+        {
+          "label": "time17",
+          "mean": 0.007774884259259259,
+          "maximum": 56,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time18",
+          "mean": 0.0074594907407407405,
+          "maximum": 38,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time19",
+          "mean": 0.007298538773148148,
+          "maximum": 51,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time20",
+          "mean": 0.007324580439814815,
+          "maximum": 51,
+          "pixelsOver16": 19
+        },
+        {
+          "label": "time21",
+          "mean": 0.007327473958333333,
+          "maximum": 46,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time22",
+          "mean": 0.007201967592592592,
+          "maximum": 76,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time23",
+          "mean": 0.007074291087962963,
+          "maximum": 55,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time24",
+          "mean": 0.007138310185185185,
+          "maximum": 46,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time25",
+          "mean": 0.0069599971064814815,
+          "maximum": 66,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time26",
+          "mean": 0.006402994791666667,
+          "maximum": 45,
+          "pixelsOver16": 7
+        },
+        {
+          "label": "time27",
+          "mean": 0.006734302662037037,
+          "maximum": 68,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time28",
+          "mean": 0.007046802662037037,
+          "maximum": 40,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time29",
+          "mean": 0.007341579861111111,
+          "maximum": 64,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time30",
+          "mean": 0.006765407986111111,
+          "maximum": 32,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.011931423611111111,
+          "maximum": 39,
+          "pixelsOver16": 57
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.012090205439814814,
+          "maximum": 40,
+          "pixelsOver16": 58
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.011636646412037037,
+          "maximum": 37,
+          "pixelsOver16": 50
+        },
+        {
+          "label": "travel0",
+          "mean": 0.011535011574074074,
+          "maximum": 40,
+          "pixelsOver16": 46
+        },
+        {
+          "label": "travel1",
+          "mean": 0.011572989004629629,
+          "maximum": 40,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "travel2",
+          "mean": 0.011574797453703704,
+          "maximum": 40,
+          "pixelsOver16": 60
+        },
+        {
+          "label": "travel3",
+          "mean": 0.011552372685185185,
+          "maximum": 39,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "travel4",
+          "mean": 0.011973017939814815,
+          "maximum": 39,
+          "pixelsOver16": 59
+        }
+      ],
+      "identicalImages": 1,
+      "worst": [
+        {
+          "label": "detail4",
+          "changedPixels": 15140,
+          "mean": 0.012799117476851852,
+          "maximum": 79,
+          "pixelsOver16": 174
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 13884,
+          "mean": 0.01027488425925926,
+          "maximum": 79,
+          "pixelsOver16": 131
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 14493,
+          "mean": 0.00956344039351852,
+          "maximum": 107,
+          "pixelsOver16": 57
+        },
+        {
+          "label": "time9",
+          "changedPixels": 11569,
+          "mean": 0.007963324652777777,
+          "maximum": 77,
+          "pixelsOver16": 45
+        },
+        {
+          "label": "time8",
+          "changedPixels": 11302,
+          "mean": 0.007769458912037037,
+          "maximum": 78,
+          "pixelsOver16": 47
+        }
+      ]
+    },
+    {
+      "name": "shared-far",
+      "level": 1,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "identicalImages": 54,
+      "worst": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ]
+    },
+    {
+      "name": "combined",
+      "level": 1,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 9159,
+          "mean": 0.005835141782407407,
+          "maximum": 59,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 9608,
+          "mean": 0.004509910300925926,
+          "maximum": 58,
+          "pixelsOver16": 3
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 14203,
+          "mean": 0.009664351851851851,
+          "maximum": 63,
+          "pixelsOver16": 99
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 8206,
+          "mean": 0.006276041666666667,
+          "maximum": 53,
+          "pixelsOver16": 76
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 4351,
+          "mean": 0.0027785011574074075,
+          "maximum": 33,
+          "pixelsOver16": 19
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 17736,
+          "mean": 0.011993272569444444,
+          "maximum": 72,
+          "pixelsOver16": 85
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 11959,
+          "mean": 0.008099681712962962,
+          "maximum": 69,
+          "pixelsOver16": 63
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 13984,
+          "mean": 0.010982349537037037,
+          "maximum": 52,
+          "pixelsOver16": 139
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 13786,
+          "mean": 0.008880208333333334,
+          "maximum": 81,
+          "pixelsOver16": 28
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 651,
+          "mean": 0.0003562644675925926,
+          "maximum": 14,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 72,
+          "mean": 4.1956018518518515e-05,
+          "maximum": 2,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 72,
+          "mean": 5.642361111111111e-05,
+          "maximum": 3,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 13,
+          "mean": 6.510416666666667e-06,
+          "maximum": 1,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 9031,
+          "mean": 0.005583767361111111,
+          "maximum": 39,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time2",
+          "changedPixels": 9088,
+          "mean": 0.0056691261574074074,
+          "maximum": 39,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time3",
+          "changedPixels": 8180,
+          "mean": 0.005216290509259259,
+          "maximum": 40,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time4",
+          "changedPixels": 8485,
+          "mean": 0.005347222222222222,
+          "maximum": 41,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time5",
+          "changedPixels": 8363,
+          "mean": 0.005279586226851852,
+          "maximum": 42,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time6",
+          "changedPixels": 8273,
+          "mean": 0.0052199074074074075,
+          "maximum": 43,
+          "pixelsOver16": 24
+        },
+        {
+          "label": "time7",
+          "changedPixels": 8276,
+          "mean": 0.0052868200231481486,
+          "maximum": 44,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time8",
+          "changedPixels": 8604,
+          "mean": 0.005435836226851852,
+          "maximum": 45,
+          "pixelsOver16": 25
+        },
+        {
+          "label": "time9",
+          "changedPixels": 8083,
+          "mean": 0.005210141782407408,
+          "maximum": 46,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time10",
+          "changedPixels": 8568,
+          "mean": 0.005360966435185185,
+          "maximum": 38,
+          "pixelsOver16": 28
+        },
+        {
+          "label": "time11",
+          "changedPixels": 8425,
+          "mean": 0.005429325810185185,
+          "maximum": 53,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time12",
+          "changedPixels": 7972,
+          "mean": 0.005341073495370371,
+          "maximum": 64,
+          "pixelsOver16": 28
+        },
+        {
+          "label": "time13",
+          "changedPixels": 8492,
+          "mean": 0.0054680266203703705,
+          "maximum": 54,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time14",
+          "changedPixels": 8344,
+          "mean": 0.005294415509259259,
+          "maximum": 40,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time15",
+          "changedPixels": 8498,
+          "mean": 0.005482855902777778,
+          "maximum": 45,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "time16",
+          "changedPixels": 8238,
+          "mean": 0.005370008680555555,
+          "maximum": 49,
+          "pixelsOver16": 30
+        },
+        {
+          "label": "time17",
+          "changedPixels": 8551,
+          "mean": 0.0055494068287037035,
+          "maximum": 49,
+          "pixelsOver16": 30
+        },
+        {
+          "label": "time18",
+          "changedPixels": 8101,
+          "mean": 0.005307436342592593,
+          "maximum": 57,
+          "pixelsOver16": 25
+        },
+        {
+          "label": "time19",
+          "changedPixels": 7858,
+          "mean": 0.005248119212962963,
+          "maximum": 53,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time20",
+          "changedPixels": 7643,
+          "mean": 0.005000361689814815,
+          "maximum": 36,
+          "pixelsOver16": 25
+        },
+        {
+          "label": "time21",
+          "changedPixels": 7851,
+          "mean": 0.005033637152777778,
+          "maximum": 52,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time22",
+          "changedPixels": 7511,
+          "mean": 0.004895833333333334,
+          "maximum": 33,
+          "pixelsOver16": 25
+        },
+        {
+          "label": "time23",
+          "changedPixels": 7703,
+          "mean": 0.004945746527777778,
+          "maximum": 33,
+          "pixelsOver16": 26
+        },
+        {
+          "label": "time24",
+          "changedPixels": 8332,
+          "mean": 0.005172526041666667,
+          "maximum": 36,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time25",
+          "changedPixels": 7812,
+          "mean": 0.0051953125,
+          "maximum": 38,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "time26",
+          "changedPixels": 8139,
+          "mean": 0.005353370949074074,
+          "maximum": 38,
+          "pixelsOver16": 36
+        },
+        {
+          "label": "time27",
+          "changedPixels": 8167,
+          "mean": 0.0052940538194444445,
+          "maximum": 38,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time28",
+          "changedPixels": 8036,
+          "mean": 0.005206886574074074,
+          "maximum": 38,
+          "pixelsOver16": 27
+        },
+        {
+          "label": "time29",
+          "changedPixels": 7828,
+          "mean": 0.005181206597222222,
+          "maximum": 37,
+          "pixelsOver16": 29
+        },
+        {
+          "label": "time30",
+          "changedPixels": 8478,
+          "mean": 0.005443431712962963,
+          "maximum": 36,
+          "pixelsOver16": 32
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 9063,
+          "mean": 0.005715060763888889,
+          "maximum": 57,
+          "pixelsOver16": 35
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 8710,
+          "mean": 0.005705656828703704,
+          "maximum": 56,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 9357,
+          "mean": 0.006098090277777778,
+          "maximum": 49,
+          "pixelsOver16": 42
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 8847,
+          "mean": 0.0057161458333333335,
+          "maximum": 55,
+          "pixelsOver16": 42
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 9159,
+          "mean": 0.005835141782407407,
+          "maximum": 59,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 8942,
+          "mean": 0.005805121527777778,
+          "maximum": 55,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 9282,
+          "mean": 0.006008029513888889,
+          "maximum": 48,
+          "pixelsOver16": 35
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 8964,
+          "mean": 0.005783058449074074,
+          "maximum": 57,
+          "pixelsOver16": 39
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 9691,
+          "mean": 0.00611328125,
+          "maximum": 58,
+          "pixelsOver16": 40
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.006744791666666666,
+          "maximum": 36,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time3",
+          "mean": 0.006656539351851852,
+          "maximum": 31,
+          "pixelsOver16": 15
+        },
+        {
+          "label": "time4",
+          "mean": 0.006335358796296296,
+          "maximum": 24,
+          "pixelsOver16": 18
+        },
+        {
+          "label": "time5",
+          "mean": 0.006476056134259259,
+          "maximum": 36,
+          "pixelsOver16": 19
+        },
+        {
+          "label": "time6",
+          "mean": 0.006295934606481482,
+          "maximum": 36,
+          "pixelsOver16": 18
+        },
+        {
+          "label": "time7",
+          "mean": 0.006367549189814815,
+          "maximum": 36,
+          "pixelsOver16": 22
+        },
+        {
+          "label": "time8",
+          "mean": 0.006302083333333333,
+          "maximum": 31,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time9",
+          "mean": 0.006461226851851852,
+          "maximum": 37,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time10",
+          "mean": 0.006319806134259259,
+          "maximum": 30,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time11",
+          "mean": 0.006552010995370371,
+          "maximum": 53,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time12",
+          "mean": 0.006350549768518518,
+          "maximum": 36,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time13",
+          "mean": 0.006442780671296297,
+          "maximum": 64,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time14",
+          "mean": 0.006391782407407408,
+          "maximum": 54,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time15",
+          "mean": 0.006617838541666666,
+          "maximum": 40,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time16",
+          "mean": 0.006619646990740741,
+          "maximum": 48,
+          "pixelsOver16": 12
+        },
+        {
+          "label": "time17",
+          "mean": 0.006537181712962963,
+          "maximum": 40,
+          "pixelsOver16": 15
+        },
+        {
+          "label": "time18",
+          "mean": 0.006389250578703704,
+          "maximum": 49,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time19",
+          "mean": 0.006260127314814815,
+          "maximum": 52,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time20",
+          "mean": 0.006055772569444445,
+          "maximum": 53,
+          "pixelsOver16": 15
+        },
+        {
+          "label": "time21",
+          "mean": 0.005998263888888889,
+          "maximum": 52,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time22",
+          "mean": 0.005974030671296296,
+          "maximum": 50,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time23",
+          "mean": 0.005768952546296296,
+          "maximum": 24,
+          "pixelsOver16": 5
+        },
+        {
+          "label": "time24",
+          "mean": 0.006104962384259259,
+          "maximum": 24,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "time25",
+          "mean": 0.006140407986111111,
+          "maximum": 37,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "time26",
+          "mean": 0.006103515625,
+          "maximum": 36,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time27",
+          "mean": 0.006177662037037037,
+          "maximum": 36,
+          "pixelsOver16": 12
+        },
+        {
+          "label": "time28",
+          "mean": 0.006253255208333333,
+          "maximum": 36,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time29",
+          "mean": 0.006070240162037037,
+          "maximum": 31,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "time30",
+          "mean": 0.00618091724537037,
+          "maximum": 31,
+          "pixelsOver16": 7
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.010803674768518519,
+          "maximum": 57,
+          "pixelsOver16": 65
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.011251808449074073,
+          "maximum": 55,
+          "pixelsOver16": 79
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.011280381944444445,
+          "maximum": 54,
+          "pixelsOver16": 80
+        },
+        {
+          "label": "travel0",
+          "mean": 0.010979817708333334,
+          "maximum": 58,
+          "pixelsOver16": 69
+        },
+        {
+          "label": "travel1",
+          "mean": 0.011097005208333333,
+          "maximum": 59,
+          "pixelsOver16": 64
+        },
+        {
+          "label": "travel2",
+          "mean": 0.011246744791666667,
+          "maximum": 54,
+          "pixelsOver16": 65
+        },
+        {
+          "label": "travel3",
+          "mean": 0.011170428240740741,
+          "maximum": 56,
+          "pixelsOver16": 66
+        },
+        {
+          "label": "travel4",
+          "mean": 0.011253255208333333,
+          "maximum": 57,
+          "pixelsOver16": 66
+        }
+      ],
+      "identicalImages": 2,
+      "worst": [
+        {
+          "label": "pose6",
+          "changedPixels": 17736,
+          "mean": 0.011993272569444444,
+          "maximum": 72,
+          "pixelsOver16": 85
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 13984,
+          "mean": 0.010982349537037037,
+          "maximum": 52,
+          "pixelsOver16": 139
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 14203,
+          "mean": 0.009664351851851851,
+          "maximum": 63,
+          "pixelsOver16": 99
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 13786,
+          "mean": 0.008880208333333334,
+          "maximum": 81,
+          "pixelsOver16": 28
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 11959,
+          "mean": 0.008099681712962962,
+          "maximum": 69,
+          "pixelsOver16": 63
+        }
+      ]
+    },
+    {
+      "name": "shared-far",
+      "level": 2,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time5",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time6",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time7",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time8",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time9",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time10",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time11",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time12",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time13",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time14",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time15",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time16",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time17",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time18",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time19",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time20",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time21",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time22",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time23",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time24",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time25",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time26",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time27",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time28",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time29",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time30",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel0",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel1",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel2",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel3",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "travel4",
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ],
+      "identicalImages": 54,
+      "worst": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        }
+      ]
+    },
+    {
+      "name": "combined",
+      "level": 2,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 5674,
+          "mean": 0.004285300925925926,
+          "maximum": 66,
+          "pixelsOver16": 46
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 8412,
+          "mean": 0.005393518518518519,
+          "maximum": 64,
+          "pixelsOver16": 20
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 11537,
+          "mean": 0.008094618055555556,
+          "maximum": 49,
+          "pixelsOver16": 58
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 5614,
+          "mean": 0.004427806712962963,
+          "maximum": 55,
+          "pixelsOver16": 54
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 4426,
+          "mean": 0.0031571903935185184,
+          "maximum": 44,
+          "pixelsOver16": 30
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 13548,
+          "mean": 0.009999638310185185,
+          "maximum": 124,
+          "pixelsOver16": 94
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 6402,
+          "mean": 0.0046853298611111115,
+          "maximum": 57,
+          "pixelsOver16": 49
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 10046,
+          "mean": 0.008091724537037038,
+          "maximum": 90,
+          "pixelsOver16": 130
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 13197,
+          "mean": 0.009735966435185185,
+          "maximum": 163,
+          "pixelsOver16": 63
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 506,
+          "mean": 0.00037760416666666666,
+          "maximum": 33,
+          "pixelsOver16": 1
+        },
+        {
+          "label": "west",
+          "changedPixels": 5,
+          "mean": 2.170138888888889e-06,
+          "maximum": 1,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-wide",
+          "changedPixels": 2,
+          "mean": 7.233796296296296e-07,
+          "maximum": 1,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-near",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-side",
+          "changedPixels": 15,
+          "mean": 1.5190972222222222e-05,
+          "maximum": 11,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "beach-under",
+          "changedPixels": 0,
+          "mean": 0.0,
+          "maximum": 0,
+          "pixelsOver16": 0
+        },
+        {
+          "label": "time1",
+          "changedPixels": 5422,
+          "mean": 0.004148582175925926,
+          "maximum": 66,
+          "pixelsOver16": 40
+        },
+        {
+          "label": "time2",
+          "changedPixels": 5862,
+          "mean": 0.004303747106481482,
+          "maximum": 66,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time3",
+          "changedPixels": 5636,
+          "mean": 0.0043015769675925925,
+          "maximum": 66,
+          "pixelsOver16": 45
+        },
+        {
+          "label": "time4",
+          "changedPixels": 5576,
+          "mean": 0.0042321325231481485,
+          "maximum": 66,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time5",
+          "changedPixels": 5827,
+          "mean": 0.00437355324074074,
+          "maximum": 66,
+          "pixelsOver16": 49
+        },
+        {
+          "label": "time6",
+          "changedPixels": 5889,
+          "mean": 0.004398509837962963,
+          "maximum": 66,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "time7",
+          "changedPixels": 5297,
+          "mean": 0.003988353587962963,
+          "maximum": 66,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "time8",
+          "changedPixels": 5100,
+          "mean": 0.0038935908564814814,
+          "maximum": 66,
+          "pixelsOver16": 39
+        },
+        {
+          "label": "time9",
+          "changedPixels": 5675,
+          "mean": 0.004224537037037037,
+          "maximum": 65,
+          "pixelsOver16": 48
+        },
+        {
+          "label": "time10",
+          "changedPixels": 5868,
+          "mean": 0.004377170138888889,
+          "maximum": 64,
+          "pixelsOver16": 55
+        },
+        {
+          "label": "time11",
+          "changedPixels": 5422,
+          "mean": 0.0040997540509259255,
+          "maximum": 58,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "time12",
+          "changedPixels": 5769,
+          "mean": 0.004211516203703703,
+          "maximum": 57,
+          "pixelsOver16": 41
+        },
+        {
+          "label": "time13",
+          "changedPixels": 5448,
+          "mean": 0.004089626736111111,
+          "maximum": 57,
+          "pixelsOver16": 39
+        },
+        {
+          "label": "time14",
+          "changedPixels": 5034,
+          "mean": 0.003857060185185185,
+          "maximum": 57,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "time15",
+          "changedPixels": 5163,
+          "mean": 0.003906611689814815,
+          "maximum": 53,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "time16",
+          "changedPixels": 5285,
+          "mean": 0.0039561631944444444,
+          "maximum": 49,
+          "pixelsOver16": 46
+        },
+        {
+          "label": "time17",
+          "changedPixels": 5190,
+          "mean": 0.004004991319444444,
+          "maximum": 48,
+          "pixelsOver16": 52
+        },
+        {
+          "label": "time18",
+          "changedPixels": 5169,
+          "mean": 0.004014033564814815,
+          "maximum": 48,
+          "pixelsOver16": 51
+        },
+        {
+          "label": "time19",
+          "changedPixels": 5308,
+          "mean": 0.0039872685185185185,
+          "maximum": 46,
+          "pixelsOver16": 49
+        },
+        {
+          "label": "time20",
+          "changedPixels": 5272,
+          "mean": 0.003993778935185185,
+          "maximum": 45,
+          "pixelsOver16": 47
+        },
+        {
+          "label": "time21",
+          "changedPixels": 5304,
+          "mean": 0.004004991319444444,
+          "maximum": 43,
+          "pixelsOver16": 50
+        },
+        {
+          "label": "time22",
+          "changedPixels": 4952,
+          "mean": 0.003880208333333333,
+          "maximum": 43,
+          "pixelsOver16": 53
+        },
+        {
+          "label": "time23",
+          "changedPixels": 4817,
+          "mean": 0.003655598958333333,
+          "maximum": 44,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time24",
+          "changedPixels": 4877,
+          "mean": 0.003771339699074074,
+          "maximum": 48,
+          "pixelsOver16": 45
+        },
+        {
+          "label": "time25",
+          "changedPixels": 5207,
+          "mean": 0.003884548611111111,
+          "maximum": 52,
+          "pixelsOver16": 44
+        },
+        {
+          "label": "time26",
+          "changedPixels": 4893,
+          "mean": 0.0037680844907407407,
+          "maximum": 56,
+          "pixelsOver16": 42
+        },
+        {
+          "label": "time27",
+          "changedPixels": 5019,
+          "mean": 0.0037919560185185187,
+          "maximum": 60,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "time28",
+          "changedPixels": 4894,
+          "mean": 0.0037178096064814817,
+          "maximum": 62,
+          "pixelsOver16": 35
+        },
+        {
+          "label": "time29",
+          "changedPixels": 5057,
+          "mean": 0.003816550925925926,
+          "maximum": 64,
+          "pixelsOver16": 41
+        },
+        {
+          "label": "time30",
+          "changedPixels": 4996,
+          "mean": 0.0037471064814814815,
+          "maximum": 63,
+          "pixelsOver16": 41
+        },
+        {
+          "label": "travel-4",
+          "changedPixels": 5562,
+          "mean": 0.0040455005787037035,
+          "maximum": 109,
+          "pixelsOver16": 43
+        },
+        {
+          "label": "travel-3",
+          "changedPixels": 5016,
+          "mean": 0.0037492766203703703,
+          "maximum": 53,
+          "pixelsOver16": 37
+        },
+        {
+          "label": "travel-2",
+          "changedPixels": 5320,
+          "mean": 0.0037717013888888887,
+          "maximum": 44,
+          "pixelsOver16": 34
+        },
+        {
+          "label": "travel-1",
+          "changedPixels": 5481,
+          "mean": 0.004026692708333333,
+          "maximum": 111,
+          "pixelsOver16": 34
+        },
+        {
+          "label": "travel0",
+          "changedPixels": 5674,
+          "mean": 0.004285300925925926,
+          "maximum": 66,
+          "pixelsOver16": 46
+        },
+        {
+          "label": "travel1",
+          "changedPixels": 5589,
+          "mean": 0.004150752314814815,
+          "maximum": 70,
+          "pixelsOver16": 40
+        },
+        {
+          "label": "travel2",
+          "changedPixels": 5855,
+          "mean": 0.004202835648148148,
+          "maximum": 85,
+          "pixelsOver16": 41
+        },
+        {
+          "label": "travel3",
+          "changedPixels": 5476,
+          "mean": 0.003824508101851852,
+          "maximum": 51,
+          "pixelsOver16": 31
+        },
+        {
+          "label": "travel4",
+          "changedPixels": 5668,
+          "mean": 0.004118200231481481,
+          "maximum": 52,
+          "pixelsOver16": 41
+        }
+      ],
+      "temporalErrorChange": [
+        {
+          "label": "time2",
+          "mean": 0.004580078125,
+          "maximum": 32,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "time3",
+          "mean": 0.004606481481481481,
+          "maximum": 39,
+          "pixelsOver16": 12
+        },
+        {
+          "label": "time4",
+          "mean": 0.004469039351851852,
+          "maximum": 28,
+          "pixelsOver16": 12
+        },
+        {
+          "label": "time5",
+          "mean": 0.004769603587962963,
+          "maximum": 56,
+          "pixelsOver16": 15
+        },
+        {
+          "label": "time6",
+          "mean": 0.004663266782407407,
+          "maximum": 55,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time7",
+          "mean": 0.004633969907407408,
+          "maximum": 43,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time8",
+          "mean": 0.004244791666666667,
+          "maximum": 34,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time9",
+          "mean": 0.004383318865740741,
+          "maximum": 35,
+          "pixelsOver16": 17
+        },
+        {
+          "label": "time10",
+          "mean": 0.004615885416666667,
+          "maximum": 33,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time11",
+          "mean": 0.00461986400462963,
+          "maximum": 36,
+          "pixelsOver16": 22
+        },
+        {
+          "label": "time12",
+          "mean": 0.004567057291666667,
+          "maximum": 25,
+          "pixelsOver16": 18
+        },
+        {
+          "label": "time13",
+          "mean": 0.004439742476851852,
+          "maximum": 23,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "time14",
+          "mean": 0.0043326822916666665,
+          "maximum": 33,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time15",
+          "mean": 0.004040436921296296,
+          "maximum": 19,
+          "pixelsOver16": 6
+        },
+        {
+          "label": "time16",
+          "mean": 0.004350766782407408,
+          "maximum": 29,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time17",
+          "mean": 0.004268301504629629,
+          "maximum": 27,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time18",
+          "mean": 0.004261067708333333,
+          "maximum": 26,
+          "pixelsOver16": 14
+        },
+        {
+          "label": "time19",
+          "mean": 0.004217303240740741,
+          "maximum": 26,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time20",
+          "mean": 0.004301215277777778,
+          "maximum": 25,
+          "pixelsOver16": 11
+        },
+        {
+          "label": "time21",
+          "mean": 0.004360170717592593,
+          "maximum": 23,
+          "pixelsOver16": 16
+        },
+        {
+          "label": "time22",
+          "mean": 0.004072265625,
+          "maximum": 28,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "time23",
+          "mean": 0.004122178819444444,
+          "maximum": 32,
+          "pixelsOver16": 22
+        },
+        {
+          "label": "time24",
+          "mean": 0.003943142361111111,
+          "maximum": 24,
+          "pixelsOver16": 11
+        },
+        {
+          "label": "time25",
+          "mean": 0.004101200810185186,
+          "maximum": 37,
+          "pixelsOver16": 13
+        },
+        {
+          "label": "time26",
+          "mean": 0.004052372685185185,
+          "maximum": 36,
+          "pixelsOver16": 8
+        },
+        {
+          "label": "time27",
+          "mean": 0.003871527777777778,
+          "maximum": 36,
+          "pixelsOver16": 7
+        },
+        {
+          "label": "time28",
+          "mean": 0.0039760561342592595,
+          "maximum": 42,
+          "pixelsOver16": 10
+        },
+        {
+          "label": "time29",
+          "mean": 0.004117115162037037,
+          "maximum": 41,
+          "pixelsOver16": 18
+        },
+        {
+          "label": "time30",
+          "mean": 0.0039952256944444445,
+          "maximum": 28,
+          "pixelsOver16": 9
+        },
+        {
+          "label": "travel-3",
+          "mean": 0.007605251736111111,
+          "maximum": 109,
+          "pixelsOver16": 78
+        },
+        {
+          "label": "travel-2",
+          "mean": 0.007315538194444445,
+          "maximum": 53,
+          "pixelsOver16": 69
+        },
+        {
+          "label": "travel-1",
+          "mean": 0.007598741319444445,
+          "maximum": 111,
+          "pixelsOver16": 66
+        },
+        {
+          "label": "travel0",
+          "mean": 0.008092086226851852,
+          "maximum": 111,
+          "pixelsOver16": 76
+        },
+        {
+          "label": "travel1",
+          "mean": 0.008172743055555556,
+          "maximum": 70,
+          "pixelsOver16": 81
+        },
+        {
+          "label": "travel2",
+          "mean": 0.008112702546296296,
+          "maximum": 85,
+          "pixelsOver16": 78
+        },
+        {
+          "label": "travel3",
+          "mean": 0.007803819444444445,
+          "maximum": 85,
+          "pixelsOver16": 71
+        },
+        {
+          "label": "travel4",
+          "mean": 0.0077083333333333335,
+          "maximum": 52,
+          "pixelsOver16": 72
+        }
+      ],
+      "identicalImages": 2,
+      "worst": [
+        {
+          "label": "pose6",
+          "changedPixels": 13548,
+          "mean": 0.009999638310185185,
+          "maximum": 124,
+          "pixelsOver16": 94
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 13197,
+          "mean": 0.009735966435185185,
+          "maximum": 163,
+          "pixelsOver16": 63
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 11537,
+          "mean": 0.008094618055555556,
+          "maximum": 49,
+          "pixelsOver16": 58
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 10046,
+          "mean": 0.008091724537037038,
+          "maximum": 90,
+          "pixelsOver16": 130
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 8412,
+          "mean": 0.005393518518518519,
+          "maximum": 64,
+          "pixelsOver16": 20
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Pixel metrics locate differences, not aesthetic acceptance or flicker guarantees.",
+    "One machine/browser; buffer sizes and nominal texture payload are not process memory."
+  ],
+  "combinedAgainstShadow": [
+    {
+      "level": 2,
+      "label": "travel2",
+      "changedPixels": 1,
+      "maximum": 1,
+      "mean": 3.616898148148148e-07
+    }
+  ]
+}

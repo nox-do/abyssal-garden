@@ -1,0 +1,90 @@
+Abyssal Garden optimization experiment
+
+Upstream: https://github.com/Noniv/abyssal-garden
+Revision: a596354eff400d458bc2aeb9bdf5e0a9734b2bcf
+Original MIT license: upstream/LICENSE
+Upstream sources and index.html are unchanged. build-variants.mjs applies
+experimental transformations in memory and writes variants/.
+
+Location in our fork: experiments/optimizations/
+Project context and next steps: ../../docs/optimization-handoff.md
+Requirements: Node.js 24.22.1 (see .node-version) and Google Chrome at
+/Applications/Google Chrome.app (browser runner uses macOS).
+Build dependencies are pinned in this experiment's package.json/package-lock.json;
+Staticseal is no longer required.
+
+Run from the Abyssal Garden repository root:
+  npm ci --ignore-scripts --prefix experiments/optimizations
+  npm --prefix experiments/optimizations run build
+  npm --prefix experiments/optimizations run test:data
+  npm --prefix experiments/optimizations run test:browser
+  npm --prefix experiments/optimizations run summarize
+
+The commands overwrite their generated outputs/reports. Existing browser reports
+and screenshots were recorded before the move from Staticseal; their absolute
+file: URLs are historical evidence and have intentionally been preserved.
+
+The browser test launches its own temporary Chrome profile, blocks network
+access, opens local file: URLs, and removes that profile when finished.
+Deterministic screenshots hold/request animation frames explicitly; afterward
+the test resumes ordinary animation. Tests cover the start frame, six viewpoints,
+forward movement, mute/unmute, menu return and audio startup with a user gesture.
+The report records every page resource request and runtime error.
+
+Useful outputs:
+  variants/original.html                 Unchanged 99,514-byte original
+  variants/original-packed.html         56,506 bytes, exact restored original JS
+  variants/near-fly-uint16.html          Reordered height checks and 16-bit indices
+  variants/near-fly-uint16-mapped.html   Also avoids the 80 MiB density-field copy
+  variants/terser-packed.html           54,554 bytes, Terser plus embedded gzip
+  results/build.json                    Byte counts, gzip sizes and SHA-256 hashes
+  results/data.json                     All index values and predicate checks
+  results/browser.json                  Eleven offline browser cases and comparisons
+  results/browser-audio.json            Additional tests with active audio
+  results/summary.json                  Consolidated result and limitations
+
+The headline saving is 43,008 bytes (43.22%) of local HTML file size. Gzip via
+HTTP does not get the same saving: original 40,287 bytes; packed 41,197 bytes.
+The compressed variant uses native DecompressionStream and recreates exactly
+the same JavaScript. Source compression and index compression are independent.
+
+Only the object index buffer changes to uint16. Terrain stays uint32.
+Source offsets and every addressed vertex were checked at all quality levels.
+nearFly timing is a synthetic microbenchmark, not a total rendering speedup.
+Browser startup timings are not controlled cold/warm performance measurements.
+The mapped-buffer case passed High-quality visual checks; memory peaks were
+not measured. Audio state was checked, not its exact waveform.
+
+The frozen upstream/ snapshot is the reference for reproducible measurements.
+The fork's normal source/ and index.html have not received the experimental edits.
+Generated HTML and screenshots are present locally but ignored by Git; rebuild
+them with the commands above. Result JSON, scripts and the snapshot can be tracked.
+
+nearFly alternatives (2026-11-18, isolated from the older reports):
+  npm --prefix experiments/optimizations run test:near-fly
+  ABYSSAL_REPORT=near-fly-browser.json ABYSSAL_LOG=near-fly-chrome.log ABYSSAL_BASELINE=nf-original node experiments/optimizations/browser-smoke.mjs nf-original:0 nf-height:0 nf-box:0 nf-grid8:0 nf-grid16:0 nf-grid32:0
+  ABYSSAL_REPORT=near-fly-browser-lower.json ABYSSAL_LOG=near-fly-chrome-lower.log ABYSSAL_BASELINE=nf-original node experiments/optimizations/browser-smoke.mjs nf-original:1 nf-height:1 nf-box:1 nf-grid8:1 nf-grid16:1 nf-grid32:1 nf-original:2 nf-height:2 nf-box:2 nf-grid8:2 nf-grid16:2 nf-grid32:2
+  npm --prefix experiments/optimizations run test:near-fly-timing
+  npm --prefix experiments/optimizations run summarize:near-fly
+
+Use Node 24.22.1 for all commands, and run the browser/measurement commands
+sequentially to avoid competing for CPU/GPU resources. The build compares
+20,000 synthetic and 62,874 boundary/grid queries, including the actual six
+call-site radii. Raw squared distances are diagnostic and are excluded from
+browser builds if any strict-boundary decision changes.
+
+near-fly-{name}.html are uninstrumented candidates; their byte counts go into
+near-fly-data.json. nf-{name}.html collect real world-generation queries, hash
+every returned typed array plus serializable world metadata, and replay all
+accepted predicates. The normal browser runner additionally compares the start
+frame, six poses and movement, and checks menu, live animation and running audio.
+These instrumented startup times are NOT performance results.
+
+nf-time-{name}.html have only timestamps around makeWorld and at menu reveal
+after the first GPU frame. The timing runner opens fresh pages sequentially in
+one Chrome process: one warmup round, then five rotating/reversed rounds of all
+six accepted variants on High. Index setup is included in makeWorld time.
+near-fly-timing.json stores raw samples; near-fly-summary.json validates all
+18 visual cases and summarizes medians/ranges, bytes and limits. Grid payload
+counts are typed-array bytes, not a measurement of total/peak heap use.
+Original browser/data/build reports and the product sources are preserved.

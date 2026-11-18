@@ -1,0 +1,20 @@
+{
+  "name": "abyssal-garden-optimization-experiment",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-variants.mjs",
+    "test:near-fly": "node build-variants.mjs --near-fly",
+    "test:near-fly-timing": "node near-fly-timing.mjs",
+    "summarize:near-fly": "node summarize-near-fly.mjs",
+    "test:data": "node verify-data-optimizations.mjs",
+    "test:browser": "node browser-smoke.mjs",
+    "summarize": "node summarize.mjs",
+    "test": "npm run build && npm run test:data && npm run test:browser && npm run summarize"
+  },
+  "engines": { "node": ">=24" },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "terser": "5.51.2"
+  }
+}

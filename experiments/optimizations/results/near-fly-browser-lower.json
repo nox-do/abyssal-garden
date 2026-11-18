@@ -1,0 +1,3858 @@
+{
+  "date": "2026-11-18T08:27:44.759Z",
+  "offline": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "nf-original",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7726.5,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 49.099999994039536
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 56.599999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 258.20000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 438
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6724.29999999702
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7303.399999991059
+        }
+      ],
+      "screenshotFile": "nf-original-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-original-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-original-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-original-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-original-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-original-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-original-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 270172224,
+        "totalSize": 319356928,
+        "embedderHeapUsedSize": 1352096,
+        "backingStorageSize": 252307974
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-original.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1131.7000000029802,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 381.09999999403954,
+            "trials": [
+              {
+                "ms": 383.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 381.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 379.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 379.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 381.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 381.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 381.59999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 184.09999999403954,
+            "trials": [
+              {
+                "ms": 183.5,
+                "matches": 2086
+              },
+              {
+                "ms": 183.5,
+                "matches": 2086
+              },
+              {
+                "ms": 184.3999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 184.5,
+                "matches": 2086
+              },
+              {
+                "ms": 184.40000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 184,
+                "matches": 2086
+              },
+              {
+                "ms": 184.09999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 62.400000005960464,
+            "trials": [
+              {
+                "ms": 62.30000001192093,
+                "matches": 2086
+              },
+              {
+                "ms": 62.30000001192093,
+                "matches": 2086
+              },
+              {
+                "ms": 62.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 62.400000005960464,
+                "matches": 2086
+              },
+              {
+                "ms": 63.099999994039536,
+                "matches": 2086
+              },
+              {
+                "ms": 62.900000005960464,
+                "matches": 2086
+              },
+              {
+                "ms": 63.1000000089407,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 3.0999999940395355,
+            "trials": [
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3,
+                "matches": 2086
+              },
+              {
+                "ms": 3,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 4.0999999940395355,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.8999999910593033,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 7,
+            "trials": [
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 6.799999997019768,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-height",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7777.20000000298,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13.700000002980232
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 41.30000001192093
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 411.6000000089407
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6774.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7403.600000008941
+        }
+      ],
+      "screenshotFile": "nf-height-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-height-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-height-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-height-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-height-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-height-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-height-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 269776456,
+        "totalSize": 320307200,
+        "embedderHeapUsedSize": 1349352,
+        "backingStorageSize": 252307970
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-height.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "height",
+        "worldMs": 947.0999999940395,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 403.59999999403954,
+            "trials": [
+              {
+                "ms": 396.59999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 398.5,
+                "matches": 2086
+              },
+              {
+                "ms": 400.59999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 404.40000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 404.19999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 405.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 403.59999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 193.69999998807907,
+            "trials": [
+              {
+                "ms": 191.5,
+                "matches": 2086
+              },
+              {
+                "ms": 192.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 193.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 194.3999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 195,
+                "matches": 2086
+              },
+              {
+                "ms": 195.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 193.30000001192093,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 66.30000001192093,
+            "trials": [
+              {
+                "ms": 65.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 65.5,
+                "matches": 2086
+              },
+              {
+                "ms": 65.5,
+                "matches": 2086
+              },
+              {
+                "ms": 67.6000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 66.30000001192093,
+                "matches": 2086
+              },
+              {
+                "ms": 66.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 67.20000000298023,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 3.2999999970197678,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2086
+              },
+              {
+                "ms": 3.300000011920929,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 4.299999997019768,
+            "trials": [
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.4000000059604645,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.5999999940395355,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0,
+            "medianMs": 7.5,
+            "trials": [
+              {
+                "ms": 7.5,
+                "matches": 2086
+              },
+              {
+                "ms": 7.399999991059303,
+                "matches": 2086
+              },
+              {
+                "ms": 7.4000000059604645,
+                "matches": 2086
+              },
+              {
+                "ms": 7.5,
+                "matches": 2086
+              },
+              {
+                "ms": 7.5,
+                "matches": 2086
+              },
+              {
+                "ms": 7.600000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 7.300000011920929,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-box",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7477,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 31.299999997019768
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 219.19999998807907
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 403.19999998807907
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6475.699999988079
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7071.29999999702
+        }
+      ],
+      "screenshotFile": "nf-box-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-box-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-box-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-box-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-box-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-box-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-box-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 255469956,
+        "totalSize": 308756480,
+        "embedderHeapUsedSize": 1349904,
+        "backingStorageSize": 251986584
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-box.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "box",
+        "worldMs": 862.3999999910593,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 383.19999998807907,
+            "trials": [
+              {
+                "ms": 380.90000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 382.8999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 382.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 383.19999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 384.90000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 387.40000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 390.79999999701977,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.1000000089407,
+            "trials": [
+              {
+                "ms": 184.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 184.6000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 184.90000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 186.1000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 186.3999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 187.5,
+                "matches": 2086
+              },
+              {
+                "ms": 188.70000000298023,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 64.6000000089407,
+            "trials": [
+              {
+                "ms": 64.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 64,
+                "matches": 2086
+              },
+              {
+                "ms": 63.19999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 64,
+                "matches": 2086
+              },
+              {
+                "ms": 64.6000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 66.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 68,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.29999999701976776,
+            "medianMs": 3.2000000029802322,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.3999999910593033,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 4.300000011920929,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 7.100000008940697,
+            "trials": [
+              {
+                "ms": 7.199999988079071,
+                "matches": 2086
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7.299999997019768,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid8",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7370.5999999940395,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.700000002980232
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 32.099999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 408.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6368
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 6952.399999991059
+        }
+      ],
+      "screenshotFile": "nf-grid8-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid8-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid8-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid8-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid8-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid8-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid8-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 274229844,
+        "totalSize": 326402048,
+        "embedderHeapUsedSize": 1353592,
+        "backingStorageSize": 252310393
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid8.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 760,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 384.70000000298023,
+            "trials": [
+              {
+                "ms": 384.70000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 387.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 385.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 386,
+                "matches": 2086
+              },
+              {
+                "ms": 384.70000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 383.80000001192093,
+                "matches": 2086
+              },
+              {
+                "ms": 381.40000000596046,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 185.5,
+            "trials": [
+              {
+                "ms": 186.1000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 186.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 185.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 185.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 185.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 185.5,
+                "matches": 2086
+              },
+              {
+                "ms": 184.59999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.29999999701977,
+            "trials": [
+              {
+                "ms": 62.099999994039536,
+                "matches": 2086
+              },
+              {
+                "ms": 61.900000005960464,
+                "matches": 2086
+              },
+              {
+                "ms": 61.5,
+                "matches": 2086
+              },
+              {
+                "ms": 63.80000001192093,
+                "matches": 2086
+              },
+              {
+                "ms": 63.599999994039536,
+                "matches": 2086
+              },
+              {
+                "ms": 63.69999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 63.29999999701977,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.29999999701976776,
+            "medianMs": 3.1000000089406967,
+            "trials": [
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 4.199999988079071,
+            "trials": [
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2086
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 7.199999988079071,
+            "trials": [
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7.300000011920929,
+                "matches": 2086
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7,
+                "matches": 2086
+              },
+              {
+                "ms": 7.199999988079071,
+                "matches": 2086
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid16",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7409.4000000059605,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.900000005960464
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 47.30000001192093
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 239.6000000089407
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 420.90000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6406.9000000059605
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7003.20000000298
+        }
+      ],
+      "screenshotFile": "nf-grid16-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid16-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid16-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid16-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid16-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid16-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid16-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 257107860,
+        "totalSize": 309231616,
+        "embedderHeapUsedSize": 1481792,
+        "backingStorageSize": 252309852
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid16.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 764.8999999910593,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 386.5,
+            "trials": [
+              {
+                "ms": 385.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 387.40000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 384.8999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 385.8999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 386.5,
+                "matches": 2086
+              },
+              {
+                "ms": 388.5,
+                "matches": 2086
+              },
+              {
+                "ms": 387.6000000089407,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.1000000089407,
+            "trials": [
+              {
+                "ms": 185.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 186.70000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 186,
+                "matches": 2086
+              },
+              {
+                "ms": 186.1000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 186.09999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 187.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 188.59999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.79999999701977,
+            "trials": [
+              {
+                "ms": 63.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 64.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 62.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 62.3999999910593,
+                "matches": 2086
+              },
+              {
+                "ms": 64.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 62.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 64.29999999701977,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 3.2000000029802322,
+            "trials": [
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 4,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 3.8999999910593033,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 7.200000002980232,
+            "trials": [
+              {
+                "ms": 7.299999997019768,
+                "matches": 2086
+              },
+              {
+                "ms": 7.5999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 7.300000011920929,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 6.9000000059604645,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid32",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7462.70000000298,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.099999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 233.79999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 421.20000000298023
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6460.4000000059605
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7050.70000000298
+        }
+      ],
+      "screenshotFile": "nf-grid32-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid32-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid32-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid32-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid32-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid32-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid32-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 259610904,
+        "totalSize": 309067776,
+        "embedderHeapUsedSize": 1468144,
+        "backingStorageSize": 252309660
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid32.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 760.4000000059605,
+        "worldDataBytes": 20529184,
+        "worldSha256": "2b01fea6ca751e6bd1fc84ebf5f1ee3d36e79661fc364474ffc667961a247b9a",
+        "queryCount": 99414,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 392.40000000596046,
+            "trials": [
+              {
+                "ms": 383.5,
+                "matches": 2086
+              },
+              {
+                "ms": 390.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 392.40000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 391.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 392.59999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 392.70000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 393,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.70000000298023,
+            "trials": [
+              {
+                "ms": 185.29999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 185.19999998807907,
+                "matches": 2086
+              },
+              {
+                "ms": 187,
+                "matches": 2086
+              },
+              {
+                "ms": 186.6000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 186.90000000596046,
+                "matches": 2086
+              },
+              {
+                "ms": 186.70000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 187,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 67.79999999701977,
+            "trials": [
+              {
+                "ms": 67.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 67.6000000089407,
+                "matches": 2086
+              },
+              {
+                "ms": 67.20000000298023,
+                "matches": 2086
+              },
+              {
+                "ms": 67.79999999701977,
+                "matches": 2086
+              },
+              {
+                "ms": 68.59999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 68.59999999403954,
+                "matches": 2086
+              },
+              {
+                "ms": 68.59999999403954,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 3.1000000089406967,
+            "trials": [
+              {
+                "ms": 3,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3,
+                "matches": 2086
+              },
+              {
+                "ms": 3.199999988079071,
+                "matches": 2086
+              },
+              {
+                "ms": 3,
+                "matches": 2086
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2086
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2086
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 7.100000008940697,
+            "trials": [
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2086
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2086
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2086
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-original",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7790.0999999940395,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.699999988079071
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 252.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 432.29999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6787.5999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7370.5
+        }
+      ],
+      "screenshotFile": "nf-original-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-original-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-original-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-original-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-original-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-original-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-original-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 123233080,
+        "totalSize": 186384384,
+        "embedderHeapUsedSize": 1463512,
+        "backingStorageSize": 221535010
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-original.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1153.0999999940395,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 385.20000000298023,
+            "trials": [
+              {
+                "ms": 387.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 381.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 385.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 385.70000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 385.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 384.8999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 384.79999999701977,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.09999999403954,
+            "trials": [
+              {
+                "ms": 186,
+                "matches": 2049
+              },
+              {
+                "ms": 187.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 186.5,
+                "matches": 2049
+              },
+              {
+                "ms": 186.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 185.8999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 186.1000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 185.90000000596046,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 61.3999999910593,
+            "trials": [
+              {
+                "ms": 63,
+                "matches": 2049
+              },
+              {
+                "ms": 64,
+                "matches": 2049
+              },
+              {
+                "ms": 61.3999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 61.70000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 61.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 61.19999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 61.29999999701977,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 3.2000000029802322,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.4000000059604645,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.399999991059303,
+                "matches": 2049
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0,
+            "medianMs": 7.200000002980232,
+            "trials": [
+              {
+                "ms": 7.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 7.399999991059303,
+                "matches": 2049
+              },
+              {
+                "ms": 7.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-height",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7502.9000000059605,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39.400000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 228.70000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 414.70000000298023
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6500.70000000298
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7088.9000000059605
+        }
+      ],
+      "screenshotFile": "nf-height-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-height-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-height-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-height-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-height-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-height-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-height-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 113032208,
+        "totalSize": 186335232,
+        "embedderHeapUsedSize": 1352992,
+        "backingStorageSize": 208952094
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-height.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "height",
+        "worldMs": 932.5999999940395,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 378.90000000596046,
+            "trials": [
+              {
+                "ms": 380.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 378.5,
+                "matches": 2049
+              },
+              {
+                "ms": 378.80000001192093,
+                "matches": 2049
+              },
+              {
+                "ms": 378,
+                "matches": 2049
+              },
+              {
+                "ms": 378.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 380,
+                "matches": 2049
+              },
+              {
+                "ms": 379.09999999403954,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 182.90000000596046,
+            "trials": [
+              {
+                "ms": 182.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 182.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 182.5,
+                "matches": 2049
+              },
+              {
+                "ms": 182.40000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 184.69999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 184.59999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 183.40000000596046,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 65.69999998807907,
+            "trials": [
+              {
+                "ms": 65.69999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 65.3999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 66.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 65.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 66.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 65.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 65.8999999910593,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 3.1000000089406967,
+            "trials": [
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 3.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2049
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 7.0999999940395355,
+            "trials": [
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-box",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7427.9000000059605,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13.700000002980232
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 44.900000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 235.20000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 416.70000000298023
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6426.29999999702
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 7011.70000000298
+        }
+      ],
+      "screenshotFile": "nf-box-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-box-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-box-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-box-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-box-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-box-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-box-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 2847004,
+        "totalSize": 71303168,
+        "embedderHeapUsedSize": 1126152,
+        "backingStorageSize": 6995533
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-box.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "box",
+        "worldMs": 792.7999999970198,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 386.09999999403954,
+            "trials": [
+              {
+                "ms": 386.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 388.59999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 387.80000001192093,
+                "matches": 2049
+              },
+              {
+                "ms": 385.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 385.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 386.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 386.09999999403954,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.20000000298023,
+            "trials": [
+              {
+                "ms": 186,
+                "matches": 2049
+              },
+              {
+                "ms": 186.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 186.8999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 186.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 186.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 186.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 186.40000000596046,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.79999999701977,
+            "trials": [
+              {
+                "ms": 63.70000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 63.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 64,
+                "matches": 2049
+              },
+              {
+                "ms": 63.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 63.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 63.5,
+                "matches": 2049
+              },
+              {
+                "ms": 63.79999999701977,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 3.1000000089406967,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 2.9000000059604645,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 4.199999988079071,
+            "trials": [
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 4.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 7.0999999940395355,
+            "trials": [
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 6.9000000059604645,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 6.899999991059303,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid8",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7401.5,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 38.8999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 229.59999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 413.59999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6398.79999999702
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 6984.399999991059
+        }
+      ],
+      "screenshotFile": "nf-grid8-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid8-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid8-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid8-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid8-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid8-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid8-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 114749616,
+        "totalSize": 182927360,
+        "embedderHeapUsedSize": 1353384,
+        "backingStorageSize": 221537429
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid8.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 733.7000000029802,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 389.5,
+            "trials": [
+              {
+                "ms": 389.5,
+                "matches": 2049
+              },
+              {
+                "ms": 387.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 390.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 388.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 387.70000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 391.5,
+                "matches": 2049
+              },
+              {
+                "ms": 394.79999999701977,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 187.90000000596046,
+            "trials": [
+              {
+                "ms": 188,
+                "matches": 2049
+              },
+              {
+                "ms": 188.5,
+                "matches": 2049
+              },
+              {
+                "ms": 187.1000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 186.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 188.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 187.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 187.20000000298023,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.20000000298023,
+            "trials": [
+              {
+                "ms": 62.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 62,
+                "matches": 2049
+              },
+              {
+                "ms": 61.900000005960464,
+                "matches": 2049
+              },
+              {
+                "ms": 63.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 65.69999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 63.8999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 63.5,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 3.2000000029802322,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3,
+                "matches": 2049
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 3.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 7.200000002980232,
+            "trials": [
+              {
+                "ms": 7.4000000059604645,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid16",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7392.79999999702,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13.900000005960464
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 44.900000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 249.1000000089407
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 431.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6390.20000000298
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 6973.5
+        }
+      ],
+      "screenshotFile": "nf-grid16-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid16-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid16-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid16-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid16-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid16-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid16-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 118418524,
+        "totalSize": 182927360,
+        "embedderHeapUsedSize": 1352352,
+        "backingStorageSize": 221536888
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid16.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 737.2999999970198,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0,
+            "medianMs": 387.5,
+            "trials": [
+              {
+                "ms": 387.3999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 388.1000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 388,
+                "matches": 2049
+              },
+              {
+                "ms": 390.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 387.5,
+                "matches": 2049
+              },
+              {
+                "ms": 382.59999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 383.80000001192093,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 186.29999999701977,
+            "trials": [
+              {
+                "ms": 186.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 186.40000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 187.6000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 188.90000000596046,
+                "matches": 2049
+              },
+              {
+                "ms": 185.3999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 184.59999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 185.29999999701977,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.599999994039536,
+            "trials": [
+              {
+                "ms": 63.6000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 64.19999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 63.599999994039536,
+                "matches": 2049
+              },
+              {
+                "ms": 63.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 62.5,
+                "matches": 2049
+              },
+              {
+                "ms": 62.6000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 63.099999994039536,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 3.2000000029802322,
+            "trials": [
+              {
+                "ms": 3,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.19999998807907104,
+            "medianMs": 4.199999988079071,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 7.100000008940697,
+            "trials": [
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "nf-grid32",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 7302.0999999940395,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.899999991059303
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39.70000000298023
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 409
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 6299.29999999702
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 6887.399999991059
+        }
+      ],
+      "screenshotFile": "nf-grid32-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "nf-grid32-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "nf-grid32-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "nf-grid32-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "nf-grid32-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "nf-grid32-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "nf-grid32-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 124178220,
+        "totalSize": 183189504,
+        "embedderHeapUsedSize": 1353704,
+        "backingStorageSize": 221858104
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-grid32.html"
+      ],
+      "failures": [],
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 738.1000000089407,
+        "worldDataBytes": 15066912,
+        "worldSha256": "7e857548883a06b4f7609ae956a2685be0dd311195ffa4a8ba06fa2522d542b0",
+        "queryCount": 99199,
+        "replay": [
+          {
+            "name": "original",
+            "setupMs": 0.10000000894069672,
+            "medianMs": 380.20000000298023,
+            "trials": [
+              {
+                "ms": 382,
+                "matches": 2049
+              },
+              {
+                "ms": 379.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 381.29999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 380.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 380.09999999403954,
+                "matches": 2049
+              },
+              {
+                "ms": 379.3999999910593,
+                "matches": 2049
+              },
+              {
+                "ms": 381.5,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "height",
+            "setupMs": 0,
+            "medianMs": 183.20000000298023,
+            "trials": [
+              {
+                "ms": 183.6000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 182.79999999701977,
+                "matches": 2049
+              },
+              {
+                "ms": 183.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 183,
+                "matches": 2049
+              },
+              {
+                "ms": 183.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 184.20000000298023,
+                "matches": 2049
+              },
+              {
+                "ms": 184.1000000089407,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "box",
+            "setupMs": 0,
+            "medianMs": 63.900000005960464,
+            "trials": [
+              {
+                "ms": 64,
+                "matches": 2049
+              },
+              {
+                "ms": 64.30000001192093,
+                "matches": 2049
+              },
+              {
+                "ms": 64,
+                "matches": 2049
+              },
+              {
+                "ms": 63.900000005960464,
+                "matches": 2049
+              },
+              {
+                "ms": 63.69999998807907,
+                "matches": 2049
+              },
+              {
+                "ms": 63.6000000089407,
+                "matches": 2049
+              },
+              {
+                "ms": 63.8999999910593,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid8",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 3.199999988079071,
+            "trials": [
+              {
+                "ms": 3.2000000029802322,
+                "matches": 2049
+              },
+              {
+                "ms": 3.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 3.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3.1000000089406967,
+                "matches": 2049
+              },
+              {
+                "ms": 3,
+                "matches": 2049
+              },
+              {
+                "ms": 3.2999999970197678,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid16",
+            "setupMs": 0.20000000298023224,
+            "medianMs": 4.200000002980232,
+            "trials": [
+              {
+                "ms": 4.0999999940395355,
+                "matches": 2049
+              },
+              {
+                "ms": 3.9000000059604645,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.199999988079071,
+                "matches": 2049
+              },
+              {
+                "ms": 4.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 4.299999997019768,
+                "matches": 2049
+              },
+              {
+                "ms": 4.300000011920929,
+                "matches": 2049
+              }
+            ]
+          },
+          {
+            "name": "grid32",
+            "setupMs": 0.09999999403953552,
+            "medianMs": 7,
+            "trials": [
+              {
+                "ms": 7.100000008940697,
+                "matches": 2049
+              },
+              {
+                "ms": 7.200000002980232,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 7,
+                "matches": 2049
+              },
+              {
+                "ms": 6.899999991059303,
+                "matches": 2049
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "comparisons": [
+    {
+      "name": "nf-height",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-box",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid8",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid16",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid32",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-height",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-box",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid8",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid16",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "nf-grid32",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    }
+  ]
+}

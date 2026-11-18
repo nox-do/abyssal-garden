@@ -1,0 +1,42 @@
+{
+  "upstream": {
+    "repository": "https://github.com/Noniv/abyssal-garden",
+    "commit": "a596354eff400d458bc2aeb9bdf5e0a9734b2bcf",
+    "exactBuildReproduction": true
+  },
+  "primaryResult": {
+    "originalHtmlBytes": 99514,
+    "packedHtmlBytes": 56506,
+    "savedBytes": 43008,
+    "savedPercent": 43.21803967280985,
+    "restoredJavaScriptIsByteIdentical": true,
+    "browser": "Chrome/157.0.8103.79",
+    "platform": "macOS, Apple Metal WebGPU adapter",
+    "qualityLevels": 3,
+    "cameraViewsPerQuality": 6,
+    "initialViewsAndMovementPixelIdentical": true,
+    "offlineFileUrlLoading": true,
+    "externalResourceRequests": 0,
+    "audioStartedWithUserGesture": true
+  },
+  "secondaryResults": {
+    "terserPackedBytes": 54554,
+    "terserPackedSavedBytes": 44960,
+    "highQualityObjectIndexBufferSavedBytes": 541248,
+    "densityCopyAvoidedBytes": 83886080,
+    "nearFlySyntheticMicrobenchmark": {
+      "originalMedianMs": 74.80933400000004,
+      "reorderedMedianMs": 27.265457999999853,
+      "queries": 20000
+    }
+  },
+  "limits": [
+    "File-size savings describe the local HTML artifact. HTTP gzip sizes are 40287 bytes original and 41197 bytes packed.",
+    "Browser tests use one Chrome version on one Mac. No claim of universal browser compatibility.",
+    "Fixed views and a movement sequence are pixel-compared; this is not an exhaustive full-world visual audit.",
+    "The nearFly benchmark uses synthetic queries and is not an end-to-end scene speedup.",
+    "Startup timings share browser caches and are not a controlled performance comparison.",
+    "The mapped-buffer experiment avoids one 80 MiB JavaScript copy; peak process or GPU memory savings were not measured.",
+    "Audio initialization and running state were verified; audio waveforms were not compared."
+  ]
+}

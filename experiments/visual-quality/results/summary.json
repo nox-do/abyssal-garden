@@ -1,0 +1,811 @@
+{
+  "build": {
+    "baseline": {
+      "bytes": 99514,
+      "gzipBytes": 40287,
+      "sha256": "ac151ea4a84092e529b98ac21feedc7905c170a7959f6bd6d829ef1b85e56767",
+      "sampling": "sin(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    },
+    "uniform": {
+      "bytes": 99502,
+      "gzipBytes": 40281,
+      "sha256": "e205cc61f15db601729ff2b3f763160192be5a0f1fb5d8a60bd88e08669126ad",
+      "sampling": "f32(vi >> 1u) / (ROWS - 1.)"
+    },
+    "basal": {
+      "bytes": 99517,
+      "gzipBytes": 40291,
+      "sha256": "ecbe8e3990a6ac08d6f4182def984da2804c38dd3c222a3323de98047e26c06d",
+      "sampling": "1. - cos(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    },
+    "organic": {
+      "bytes": 99514,
+      "gzipBytes": 40289,
+      "sha256": "d11e244ffadb6cc2146c72227719a4780879179742710cede7e67464bfb2e44c",
+      "sampling": "sin(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    }
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "adapter": {
+    "vendor": "apple",
+    "architecture": "metal-3",
+    "device": "",
+    "description": ""
+  },
+  "validation": [
+    {
+      "level": 0,
+      "typedArrayHashes": 134,
+      "bufferDescriptors": 40,
+      "textureDescriptors": 17,
+      "generatedDataEqual": true,
+      "allocationsEqual": true,
+      "movementEqual": true,
+      "viewsPerVariant": 39,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    },
+    {
+      "level": 1,
+      "typedArrayHashes": 134,
+      "bufferDescriptors": 40,
+      "textureDescriptors": 17,
+      "generatedDataEqual": true,
+      "allocationsEqual": true,
+      "movementEqual": true,
+      "viewsPerVariant": 39,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    },
+    {
+      "level": 2,
+      "typedArrayHashes": 134,
+      "bufferDescriptors": 40,
+      "textureDescriptors": 17,
+      "generatedDataEqual": true,
+      "allocationsEqual": true,
+      "movementEqual": true,
+      "viewsPerVariant": 39,
+      "audio": {
+        "state": "running",
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "timing": [
+    {
+      "name": "baseline",
+      "level": 0,
+      "readyMs": {
+        "n": 5,
+        "median": 2336.4000000059605,
+        "minimum": 2317.4000000059605,
+        "maximum": 2381.2000000029802,
+        "p95": 2377.380000001192
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1223.7999999970198,
+        "minimum": 1219.7000000029802,
+        "maximum": 1260.3999999910593,
+        "p95": 1254.3399999916553
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 10.354688,
+            "minimum": 10.289152,
+            "maximum": 10.747904,
+            "p95": 10.6954752
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 10.8855296,
+            "minimum": 10.6856448,
+            "maximum": 12.1929728,
+            "p95": 12.06255616
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 7.86432,
+            "minimum": 7.86432,
+            "maximum": 7.962624,
+            "p95": 7.9429632
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 8.126464,
+            "minimum": 8.060928,
+            "maximum": 8.781824,
+            "p95": 8.742502400000001
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 7.733248,
+            "minimum": 7.667712,
+            "maximum": 7.831552,
+            "p95": 7.8249984
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 7.929856,
+            "minimum": 7.8675968,
+            "maximum": 8.650752,
+            "p95": 8.598323200000001
+          }
+        }
+      ]
+    },
+    {
+      "name": "organic",
+      "level": 0,
+      "readyMs": {
+        "n": 5,
+        "median": 2338.6000000089407,
+        "minimum": 2328.5,
+        "maximum": 2366.199999988079,
+        "p95": 2363.7799999892713
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1237.5,
+        "minimum": 1216.5999999940395,
+        "maximum": 1255.9000000059605,
+        "p95": 1254.1600000053645
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 10.289152,
+            "minimum": 10.15808,
+            "maximum": 10.81344,
+            "p95": 10.7085824
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 10.551296,
+            "minimum": 10.48576,
+            "maximum": 11.6686848,
+            "p95": 11.47142144
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 7.929856,
+            "minimum": 7.798784,
+            "maximum": 8.192,
+            "p95": 8.1526784
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 8.192,
+            "minimum": 7.86432,
+            "maximum": 8.84736,
+            "p95": 8.75692032
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 7.733248,
+            "minimum": 7.667712,
+            "maximum": 7.86432,
+            "p95": 7.8381056000000005
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 8.1297408,
+            "minimum": 7.798784,
+            "maximum": 8.3918848,
+            "p95": 8.36501504
+          }
+        }
+      ]
+    },
+    {
+      "name": "baseline",
+      "level": 1,
+      "readyMs": {
+        "n": 5,
+        "median": 2228.6000000089407,
+        "minimum": 2208.0,
+        "maximum": 2250.7000000029802,
+        "p95": 2249.9
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1155.3999999910593,
+        "minimum": 1140.9000000059605,
+        "maximum": 1171.7999999970198,
+        "p95": 1171.5199999988079
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 8.126464,
+            "minimum": 8.060928,
+            "maximum": 8.257536,
+            "p95": 8.2313216
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 8.454144,
+            "minimum": 8.126464,
+            "maximum": 9.0537984,
+            "p95": 8.94697472
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 6.619136,
+            "minimum": 6.5536,
+            "maximum": 6.619136,
+            "p95": 6.619136
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.0,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 6.88128,
+            "minimum": 6.619136,
+            "maximum": 7.53664,
+            "p95": 7.40622336
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 6.5536,
+            "minimum": 6.488064,
+            "maximum": 6.619136,
+            "p95": 6.6060288
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 7.012352,
+            "minimum": 6.815744,
+            "maximum": 7.20896,
+            "p95": 7.17029376
+          }
+        }
+      ]
+    },
+    {
+      "name": "organic",
+      "level": 1,
+      "readyMs": {
+        "n": 5,
+        "median": 2256.2999999970198,
+        "minimum": 2218.7999999970198,
+        "maximum": 2311.7999999970198,
+        "p95": 2301.6799999982118
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1170.5999999940395,
+        "minimum": 1152.5999999940395,
+        "maximum": 1189.7000000029802,
+        "p95": 1186.5000000029802
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 8.224768000000001,
+            "minimum": 8.060928,
+            "maximum": 8.388608,
+            "p95": 8.362393599999999
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 8.716288,
+            "minimum": 8.126464,
+            "maximum": 9.109504,
+            "p95": 9.045278719999999
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 6.619136,
+            "minimum": 6.5536,
+            "maximum": 6.750208,
+            "p95": 6.7371007999999994
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 7.018905599999999,
+            "minimum": 6.619136,
+            "maximum": 7.471104,
+            "p95": 7.4186752
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 6.488064,
+            "minimum": 6.488064,
+            "maximum": 6.5536,
+            "p95": 6.5404928
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 6.750208,
+            "minimum": 6.619136,
+            "maximum": 7.274496,
+            "p95": 7.1696384
+          }
+        }
+      ]
+    },
+    {
+      "name": "baseline",
+      "level": 2,
+      "readyMs": {
+        "n": 5,
+        "median": 2184.7000000029802,
+        "minimum": 2162.5,
+        "maximum": 2216.3999999910593,
+        "p95": 2214.3599999934436
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1123.5,
+        "minimum": 1110.5,
+        "maximum": 1166.3999999910593,
+        "p95": 1158.1799999922514
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 3.211264,
+            "minimum": 3.211264,
+            "maximum": 3.211264,
+            "p95": 3.211264
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 3.342336,
+            "minimum": 3.2145407999999995,
+            "maximum": 3.801088,
+            "p95": 3.801088
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 2.686976,
+            "minimum": 2.62144,
+            "maximum": 2.686976,
+            "p95": 2.686976
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.0,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 2.818048,
+            "minimum": 2.6902527999999997,
+            "maximum": 3.2800768,
+            "p95": 3.2794214399999997
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 2.29376,
+            "minimum": 2.29376,
+            "maximum": 2.359296,
+            "p95": 2.3461888
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.10000000894069672,
+            "p95": 0.10000000596046447
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 2.5591807999999996,
+            "minimum": 2.359296,
+            "maximum": 3.014656,
+            "p95": 3.0015488
+          }
+        }
+      ]
+    },
+    {
+      "name": "organic",
+      "level": 2,
+      "readyMs": {
+        "n": 5,
+        "median": 2193.699999988079,
+        "minimum": 2152.7000000029802,
+        "maximum": 2261.2000000029802,
+        "p95": 2249.840000000596
+      },
+      "worldMs": {
+        "n": 5,
+        "median": 1126.9000000059605,
+        "minimum": 1112.0,
+        "maximum": 1203.3999999910593,
+        "p95": 1191.1599999934435
+      },
+      "poses": [
+        {
+          "pose": 1,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 3.211264,
+            "minimum": 3.211264,
+            "maximum": 3.211264,
+            "p95": 3.211264
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.09999999403953552,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 3.342336,
+            "minimum": 3.2145407999999995,
+            "maximum": 3.801088,
+            "p95": 3.7355519999999998
+          }
+        },
+        {
+          "pose": 4,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 2.62144,
+            "minimum": 2.62144,
+            "maximum": 2.686976,
+            "p95": 2.686976
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.0,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 2.818048,
+            "minimum": 2.752512,
+            "maximum": 2.9655039999999993,
+            "p95": 2.9497753599999994
+          }
+        },
+        {
+          "pose": 6,
+          "gpuRunMediansMs": {
+            "n": 5,
+            "median": 2.29376,
+            "minimum": 2.29376,
+            "maximum": 2.424832,
+            "p95": 2.3986175999999997
+          },
+          "cpuRunMediansMs": {
+            "n": 5,
+            "median": 0.09999999403953552,
+            "minimum": 0.04999999701976776,
+            "maximum": 0.09999999403953552,
+            "p95": 0.09999999403953552
+          },
+          "gpuRunP95Ms": {
+            "n": 5,
+            "median": 2.490368,
+            "minimum": 2.359296,
+            "maximum": 2.818048,
+            "p95": 2.76627456
+          }
+        }
+      ]
+    }
+  ],
+  "imageDifferences": [
+    {
+      "level": 0,
+      "view": "pose1",
+      "meanAbsoluteChannelDifference": 0.4677737991898148,
+      "changedPixelFraction": 0.10792100694444444
+    },
+    {
+      "level": 0,
+      "view": "pose2",
+      "meanAbsoluteChannelDifference": 0.22850441261574075,
+      "changedPixelFraction": 0.0884299045138889
+    },
+    {
+      "level": 0,
+      "view": "pose3",
+      "meanAbsoluteChannelDifference": 0.009015480324074074,
+      "changedPixelFraction": 0.008304036458333334
+    },
+    {
+      "level": 0,
+      "view": "pose4",
+      "meanAbsoluteChannelDifference": 1.0519751880787036,
+      "changedPixelFraction": 0.22326605902777777
+    },
+    {
+      "level": 0,
+      "view": "pose5",
+      "meanAbsoluteChannelDifference": 0.017576316550925924,
+      "changedPixelFraction": 0.016079644097222224
+    },
+    {
+      "level": 0,
+      "view": "pose6",
+      "meanAbsoluteChannelDifference": 0.48955837673611113,
+      "changedPixelFraction": 0.16315212673611112
+    },
+    {
+      "level": 0,
+      "view": "detail1",
+      "meanAbsoluteChannelDifference": 0.18571650752314814,
+      "changedPixelFraction": 0.07315321180555556
+    },
+    {
+      "level": 0,
+      "view": "detail4",
+      "meanAbsoluteChannelDifference": 1.358984736689815,
+      "changedPixelFraction": 0.21492838541666667
+    },
+    {
+      "level": 0,
+      "view": "detail6",
+      "meanAbsoluteChannelDifference": 0.46946903935185186,
+      "changedPixelFraction": 0.17758680555555556
+    },
+    {
+      "level": 1,
+      "view": "pose1",
+      "meanAbsoluteChannelDifference": 0.5080942563657408,
+      "changedPixelFraction": 0.11902886284722222
+    },
+    {
+      "level": 1,
+      "view": "pose2",
+      "meanAbsoluteChannelDifference": 0.2902484809027778,
+      "changedPixelFraction": 0.09989040798611111
+    },
+    {
+      "level": 1,
+      "view": "pose3",
+      "meanAbsoluteChannelDifference": 0.010597873263888889,
+      "changedPixelFraction": 0.008971354166666667
+    },
+    {
+      "level": 1,
+      "view": "pose4",
+      "meanAbsoluteChannelDifference": 1.1475596788194444,
+      "changedPixelFraction": 0.23728190104166666
+    },
+    {
+      "level": 1,
+      "view": "pose5",
+      "meanAbsoluteChannelDifference": 0.02450810185185185,
+      "changedPixelFraction": 0.017740885416666668
+    },
+    {
+      "level": 1,
+      "view": "pose6",
+      "meanAbsoluteChannelDifference": 0.5781839554398148,
+      "changedPixelFraction": 0.17934244791666668
+    },
+    {
+      "level": 1,
+      "view": "detail1",
+      "meanAbsoluteChannelDifference": 0.2019549334490741,
+      "changedPixelFraction": 0.07608181423611111
+    },
+    {
+      "level": 1,
+      "view": "detail4",
+      "meanAbsoluteChannelDifference": 1.435347583912037,
+      "changedPixelFraction": 0.2290234375
+    },
+    {
+      "level": 1,
+      "view": "detail6",
+      "meanAbsoluteChannelDifference": 0.5692903645833334,
+      "changedPixelFraction": 0.20013129340277777
+    },
+    {
+      "level": 2,
+      "view": "pose1",
+      "meanAbsoluteChannelDifference": 0.49771882233796294,
+      "changedPixelFraction": 0.11768337673611111
+    },
+    {
+      "level": 2,
+      "view": "pose2",
+      "meanAbsoluteChannelDifference": 0.2610561342592593,
+      "changedPixelFraction": 0.095732421875
+    },
+    {
+      "level": 2,
+      "view": "pose3",
+      "meanAbsoluteChannelDifference": 0.011225766782407408,
+      "changedPixelFraction": 0.008986545138888889
+    },
+    {
+      "level": 2,
+      "view": "pose4",
+      "meanAbsoluteChannelDifference": 1.1157548466435185,
+      "changedPixelFraction": 0.23432725694444445
+    },
+    {
+      "level": 2,
+      "view": "pose5",
+      "meanAbsoluteChannelDifference": 0.030485026041666665,
+      "changedPixelFraction": 0.019854600694444443
+    },
+    {
+      "level": 2,
+      "view": "pose6",
+      "meanAbsoluteChannelDifference": 0.5673198784722222,
+      "changedPixelFraction": 0.18213758680555556
+    },
+    {
+      "level": 2,
+      "view": "detail1",
+      "meanAbsoluteChannelDifference": 0.1931785300925926,
+      "changedPixelFraction": 0.08020941840277777
+    },
+    {
+      "level": 2,
+      "view": "detail4",
+      "meanAbsoluteChannelDifference": 1.431689453125,
+      "changedPixelFraction": 0.23094835069444444
+    },
+    {
+      "level": 2,
+      "view": "detail6",
+      "meanAbsoluteChannelDifference": 0.5259682436342593,
+      "changedPixelFraction": 0.19509006076388888
+    }
+  ],
+  "limits": [
+    "Image differences are not quality scores; adoption is an aesthetic judgement.",
+    "Fixed 1280x720 internal resolution and detail 1, including Low.",
+    "Equal resource descriptors do not measure driver/process peak memory.",
+    "GPU is serialized between frames; not a free-running FPS benchmark.",
+    "One warm-up per variant/quality omitted, five fresh pages measured.",
+    "One Mac/Chrome only; no general browser or device guarantee."
+  ]
+}

@@ -349,16 +349,17 @@ fn tri(p: vec3f, n: vec3f, s: f32) -> TP {
     let hue = fract(sd * 7.31);
     alb = mix(vec3f(.60, .17, .08), vec3f(.64, .35, .10), fract(hue * 3.));
     if (hue > .75) { alb = vec3f(.44, .18, .42); }
-    alb *= (.45 + .75 * B.h) * (.7 + .3 * C.h);
-    vao = i.ao * i.ao; gloss = .2; bump = 1.4; flu = .55;
+    // Keep pores subordinate to the sponge's rounded body; preserve the mid-grey albedo.
+    alb *= (.70 + .25 * B.h) * (.8 + .1 * C.h);
+    vao = i.ao * i.ao; gloss = .2; bump = .45; flu = .55;
   } else {
     let hue = fract(sd * 5.73);
     alb = mix(vec3f(.80, .08, .10), vec3f(.90, .22, .40), fract(hue * 4.));
     if (hue > .7) { alb = vec3f(.88, .42, .10); }
     if (hue > .9) { alb = vec3f(.55, .22, .75); }
-    alb *= (.4 + .8 * B.h) * (.5 + .9 * i.ao * i.ao);
+    alb *= (.65 + .3 * B.h) * (.5 + .9 * i.ao * i.ao);
     alb = mix(alb, vec3f(1., .75, .6), ss(.8, 1., i.ao) * .35);
-    emi = alb * .01; flu = .75; gloss = .25; bump = 1.5;
+    emi = alb * .01; flu = .75; gloss = .25; bump = .5;
   }
   let rip = select(0., flt * gm.a * cos((i.wp.x * .8 + i.wp.z * .35) * 5. + A.c * 9.) * .65, mat == 0);
   let N = normalize(qrot(i.q, normalize(on + (A.n * .85 + B.n * .65 + C.n * .45 * ss(60., 12., dist) + F.n * .5 * fk) * bump + vec3f(.8, sgro, .35) * vec3f(rip, 1., rip))));

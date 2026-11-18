@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-18T08:31:54.194Z",
+  "node": "v24.22.1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "host": {
+    "platform": "darwin",
+    "release": "25.5.0",
+    "architecture": "arm64",
+    "cpu": "Apple M5 Pro"
+  },
+  "syntheticQueries": 20000,
+  "boundaryQueries": 62874,
+  "qualityLevels": [
+    0,
+    1,
+    2
+  ],
+  "visualCases": 18,
+  "comparedAlternatives": 15,
+  "allGeneratedWorldDataAndEightViewsEqual": true,
+  "realQueryCounts": {
+    "0": 99386,
+    "1": 99414,
+    "2": 99199
+  },
+  "rejected": {
+    "squared": {
+      "mismatches": 4,
+      "firstMismatch": {
+        "query": [
+          10.919238815542512,
+          -42.20000076293945,
+          7.919238815542512,
+          1.3
+        ],
+        "expected": false,
+        "actual": true
+      }
+    }
+  },
+  "warmupCases": 6,
+  "measuredRounds": 5,
+  "variants": {
+    "original": {
+      "htmlBytes": 99514,
+      "htmlDeltaBytes": 0,
+      "httpGzipDeltaBytes": 0,
+      "additionalTypedArrayPayloadBytes": 0,
+      "highQualityRealQueryReplayMedianMs": 365.70000000298023,
+      "worldMedianMs": 1258.6000000089407,
+      "worldRangeMs": [
+        1224.300000011921,
+        1299.5
+      ],
+      "readyMedianMs": 2380.0999999940395,
+      "readyRangeMs": [
+        2327.7000000029802,
+        2443.2999999970198
+      ],
+      "worldSavedMs": 0,
+      "worldSavedPercent": 0,
+      "readySavedMs": 0
+    },
+    "height": {
+      "htmlBytes": 99514,
+      "htmlDeltaBytes": 0,
+      "httpGzipDeltaBytes": 4,
+      "additionalTypedArrayPayloadBytes": 0,
+      "highQualityRealQueryReplayMedianMs": 178.90000000596046,
+      "worldMedianMs": 1031.5999999940395,
+      "worldRangeMs": [
+        1014.8000000119209,
+        1048.5999999940395
+      ],
+      "readyMedianMs": 2129.5,
+      "readyRangeMs": [
+        2107.5,
+        2143.7999999970198
+      ],
+      "worldSavedMs": 227.00000001490116,
+      "worldSavedPercent": 18.035912920172304,
+      "readySavedMs": 250.59999999403954
+    },
+    "box": {
+      "htmlBytes": 99542,
+      "htmlDeltaBytes": 28,
+      "httpGzipDeltaBytes": 16,
+      "additionalTypedArrayPayloadBytes": 0,
+      "highQualityRealQueryReplayMedianMs": 61.70000000298023,
+      "worldMedianMs": 889.3000000119209,
+      "worldRangeMs": [
+        879.6999999880791,
+        909.1000000089407
+      ],
+      "readyMedianMs": 1983.8999999910593,
+      "readyRangeMs": [
+        1974.7000000029802,
+        2004.2999999970198
+      ],
+      "worldSavedMs": 369.29999999701977,
+      "worldSavedPercent": 29.342126171491845,
+      "readySavedMs": 396.20000000298023
+    },
+    "grid8": {
+      "htmlBytes": 99993,
+      "htmlDeltaBytes": 479,
+      "httpGzipDeltaBytes": 218,
+      "additionalTypedArrayPayloadBytes": 1948,
+      "highQualityRealQueryReplayMedianMs": 3,
+      "worldMedianMs": 821.7999999970198,
+      "worldRangeMs": [
+        820.0999999940395,
+        866.1999999880791
+      ],
+      "readyMedianMs": 1921,
+      "readyRangeMs": [
+        1916.5999999940395,
+        1989.8999999910593
+      ],
+      "worldSavedMs": 436.80000001192093,
+      "worldSavedPercent": 34.70522803184634,
+      "readySavedMs": 459.09999999403954
+    },
+    "grid16": {
+      "htmlBytes": 99994,
+      "htmlDeltaBytes": 480,
+      "httpGzipDeltaBytes": 217,
+      "additionalTypedArrayPayloadBytes": 1404,
+      "highQualityRealQueryReplayMedianMs": 3.8999999910593033,
+      "worldMedianMs": 823.8000000119209,
+      "worldRangeMs": [
+        818.1000000089407,
+        830.1000000089407
+      ],
+      "readyMedianMs": 1923.2999999970198,
+      "readyRangeMs": [
+        1906.5999999940395,
+        1941.8999999910593
+      ],
+      "worldSavedMs": 434.79999999701977,
+      "worldSavedPercent": 34.54632130890919,
+      "readySavedMs": 456.79999999701977
+    },
+    "grid32": {
+      "htmlBytes": 99994,
+      "htmlDeltaBytes": 480,
+      "httpGzipDeltaBytes": 219,
+      "additionalTypedArrayPayloadBytes": 1268,
+      "highQualityRealQueryReplayMedianMs": 6.899999991059303,
+      "worldMedianMs": 824.6000000089407,
+      "worldRangeMs": [
+        816.9000000059605,
+        840.6999999880791
+      ],
+      "readyMedianMs": 1930.2999999970198,
+      "readyRangeMs": [
+        1901.7999999970198,
+        1933.5
+      ],
+      "worldSavedMs": 434,
+      "worldSavedPercent": 34.4827586204447,
+      "readySavedMs": 449.79999999701977
+    }
+  },
+  "limitations": [
+    "Single Mac, Chrome, WebGPU backend; not a general browser or hardware guarantee.",
+    "Visual cases collect queries and hash output; their startup timings are unsuitable for performance comparisons.",
+    "Timing cases use only timestamps around makeWorld (including index setup) and after the initial GPU frame/menu reveal; no query recording, replay or hashing.",
+    "Timing uses fresh pages in one warmed Chrome process; it is not a cold application or operating-system startup measurement.",
+    "Typed array payload excludes object headers, temporary setup arrays and engine overhead. No total or peak memory saving has been measured.",
+    "Every candidate retains all path points; none reduces the HTML or world output memory versus the original.",
+    "Squared distances differ at strict radius boundaries and are excluded from browser candidates."
+  ]
+}

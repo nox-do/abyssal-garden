@@ -1,0 +1,91 @@
+{
+  "geometryReports": [
+    {
+      "level": 0,
+      "vertexCount": 52774,
+      "maximumIndex": 29357,
+      "indices": 270624,
+      "originalBytes": 1082496,
+      "compactBytes": 541248,
+      "allAddressedVerticesIdentical": true
+    },
+    {
+      "level": 1,
+      "vertexCount": 52774,
+      "maximumIndex": 29357,
+      "indices": 270624,
+      "originalBytes": 1082496,
+      "compactBytes": 541248,
+      "allAddressedVerticesIdentical": true
+    },
+    {
+      "level": 2,
+      "vertexCount": 47190,
+      "maximumIndex": 29357,
+      "indices": 237774,
+      "originalBytes": 951096,
+      "compactBytes": 475548,
+      "allAddressedVerticesIdentical": true
+    }
+  ],
+  "nearFly": {
+    "points": 606,
+    "syntheticQueries": 20000,
+    "exactResults": true,
+    "originalMedianMs": 74.80933400000004,
+    "reorderedMedianMs": 27.265457999999853,
+    "trials": [
+      {
+        "original": {
+          "ms": 74.81608399999982,
+          "matched": 149
+        },
+        "reordered": {
+          "ms": 27.5417080000002,
+          "matched": 149
+        }
+      },
+      {
+        "original": {
+          "ms": 74.80933400000004,
+          "matched": 149
+        },
+        "reordered": {
+          "ms": 26.924332999999933,
+          "matched": 149
+        }
+      },
+      {
+        "original": {
+          "ms": 79.00070800000003,
+          "matched": 149
+        },
+        "reordered": {
+          "ms": 28.201916000000438,
+          "matched": 149
+        }
+      },
+      {
+        "original": {
+          "ms": 74.50083300000006,
+          "matched": 149
+        },
+        "reordered": {
+          "ms": 27.265457999999853,
+          "matched": 149
+        }
+      },
+      {
+        "original": {
+          "ms": 74.69641700000011,
+          "matched": 149
+        },
+        "reordered": {
+          "ms": 27.23349999999982,
+          "matched": 149
+        }
+      }
+    ]
+  },
+  "densityArrayCopyBytes": 83886080
+}

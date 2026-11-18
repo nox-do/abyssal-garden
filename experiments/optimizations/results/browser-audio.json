@@ -1,0 +1,319 @@
+{
+  "date": "2026-11-17T17:52:52.326Z",
+  "offline": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "original",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2615.5,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 55.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 72
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 268
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 439.4000000022352
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1613
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2193.199999999255
+        }
+      ],
+      "screenshotFile": "original-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1491480,
+        "totalSize": 92012544,
+        "embedderHeapUsedSize": 931624,
+        "backingStorageSize": 299165682
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2592,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 20.400000002235174
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 223.90000000223517
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 398.4000000022352
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1590.2000000029802
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2184.2000000029802
+        }
+      ],
+      "screenshotFile": "original-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-packed-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-packed-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-packed-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-packed-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-packed-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-packed-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1502752,
+        "totalSize": 90963968,
+        "embedderHeapUsedSize": 710360,
+        "backingStorageSize": 299266282
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "terser-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2642,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 18.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 36.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 216.30000000074506
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.1000000014901
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1640.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2256.5
+        }
+      ],
+      "screenshotFile": "terser-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "terser-packed-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "terser-packed-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "terser-packed-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "terser-packed-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "terser-packed-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "terser-packed-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "running",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1464612,
+        "totalSize": 90963968,
+        "embedderHeapUsedSize": 706208,
+        "backingStorageSize": 299261229
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/terser-packed.html"
+      ],
+      "failures": []
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "comparisons": [
+    {
+      "name": "original-packed",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "terser-packed",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    }
+  ]
+}

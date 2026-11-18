@@ -1,0 +1,410 @@
+{
+  "date": "2026-11-17T17:49:47.649Z",
+  "offline": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "original",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 4637.89999999851,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 45.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 70.60000000149012
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 2299.89999999851
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 2479.60000000149
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 3635.699999999255
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 4204.89999999851
+        }
+      ],
+      "screenshotFile": "original-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "heap": {
+        "usedSize": 438582148,
+        "totalSize": 507756544,
+        "embedderHeapUsedSize": 1440936,
+        "backingStorageSize": 299168160
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2591.199999999255,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 17.199999999254942
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 45.599999997764826
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 217.59999999776483
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 393.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1579.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2147.5
+        }
+      ],
+      "screenshotFile": "original-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "heap": {
+        "usedSize": 1495688,
+        "totalSize": 90701824,
+        "embedderHeapUsedSize": 1044248,
+        "backingStorageSize": 299266262
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2520.10000000149,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39.80000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 363.4000000022352
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 538.6999999992549
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1518.300000000745
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2100.199999999255
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "heap": {
+        "usedSize": 1479492,
+        "totalSize": 90963968,
+        "embedderHeapUsedSize": 955264,
+        "backingStorageSize": 298624426
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16-mapped",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2393.400000002235,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.800000000745058
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42.20000000298023
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 206
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 374.30000000074506
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1391.2000000029802
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2065
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-mapped-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "heap": {
+        "usedSize": 216521120,
+        "totalSize": 305217536,
+        "embedderHeapUsedSize": 1384640,
+        "backingStorageSize": 213938529
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16-mapped.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "terser-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2674.39999999851,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 19.300000000745058
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42.899999998509884
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.19999999925494
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 397.3999999985099
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1672.300000000745
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2305.89999999851
+        }
+      ],
+      "screenshotFile": "terser-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "heap": {
+        "usedSize": 1453272,
+        "totalSize": 89128960,
+        "embedderHeapUsedSize": 705640,
+        "backingStorageSize": 299261208
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/terser-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 3224.599999997765,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13.099999997764826
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 31.899999998509884
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 956.7999999970198
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 1136.7999999970198
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 2222
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2786.699999999255
+        }
+      ],
+      "screenshotFile": "original-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "heap": {
+        "usedSize": 122099100,
+        "totalSize": 191463424,
+        "embedderHeapUsedSize": 1456240,
+        "backingStorageSize": 208746845
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2294.5,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.199999999254942
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 37.79999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 219.19999999925494
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 399.79999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1292
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1870.5999999977648
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "heap": {
+        "usedSize": 1460268,
+        "totalSize": 82313216,
+        "embedderHeapUsedSize": 836696,
+        "backingStorageSize": 208268810
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16.html"
+      ],
+      "failures": []
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "upstream": {
+    "repository": "https://github.com/Noniv/abyssal-garden",
+    "commit": "a596354eff400d458bc2aeb9bdf5e0a9734b2bcf",
+    "exactBuildReproduction": true
+  },
+  "node": "v24.22.1",
+  "variants": {
+    "original": {
+      "bytes": 99514,
+      "gzipBytes": 40287,
+      "sha256": "ac151ea4a84092e529b98ac21feedc7905c170a7959f6bd6d829ef1b85e56767"
+    },
+    "near-fly": {
+      "bytes": 99514,
+      "gzipBytes": 40291,
+      "sha256": "379641748c15d39d3c5dd452ce87c25dbde90e3f2ea831a4e41ee109ed9a459c"
+    },
+    "near-fly-uint16": {
+      "bytes": 99514,
+      "gzipBytes": 40293,
+      "sha256": "63268451d542ade09f8a29b9e3af38882a242457b7dbb32f73641c7e0cf5b85d"
+    },
+    "near-fly-uint16-mapped": {
+      "bytes": 99535,
+      "gzipBytes": 40312,
+      "sha256": "3d3daf8b4e41621f94a271a19234e9b9e9d8f9a5709a3270c63fc9f388d7ad55"
+    },
+    "terser": {
+      "bytes": 98383,
+      "gzipBytes": 38761,
+      "sha256": "b6eb839e42cf7a56a1eb458be75a441668df98cfd03e97f6a3cc1445dccf5bce"
+    },
+    "original-packed": {
+      "bytes": 56506,
+      "gzipBytes": 41197,
+      "sha256": "c06b54cf8ebb64b98096089af57e9a1eb05f42b2a771cd3376c183d0b5f9436d",
+      "exactSourceRoundtrip": true,
+      "restoredJsSha256": "20603c0a175d5eeddb7b32af1fc1ade4e916823b929f7ed9139d59a1496fda27"
+    },
+    "near-fly-uint16-packed": {
+      "bytes": 56510,
+      "gzipBytes": 41197,
+      "sha256": "4a401808af69cd9aaf7d97920e1145b2008a2cb0b3b7b7ffdfcc7e13bd1e41d7",
+      "exactSourceRoundtrip": true,
+      "restoredJsSha256": "192c40e07634bcb0a8f1a23f6dde9043af8bc7e0bf4e928814269b00b8ce7072"
+    },
+    "terser-packed": {
+      "bytes": 54554,
+      "gzipBytes": 39727,
+      "sha256": "18c2afb386d41eec13dc0b22e2d296d769e69a6adb03a2079f8cdd8e7e84b74d",
+      "exactSourceRoundtrip": true,
+      "restoredJsSha256": "b32a510608ffaf583aaae2230b0c4a4d788cf0bd27104beab4d6794fc1d56c4a"
+    }
+  }
+}

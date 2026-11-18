@@ -1,0 +1,1422 @@
+{
+  "date": "2026-11-18T08:29:57.316Z",
+  "offline": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1209.2999999970198,
+        "readyMs": 2375.7999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 50
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 58.29999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 261.90000000596046
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 444
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1654.2000000029802
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2283.4000000059605
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1073.9000000059605,
+        "readyMs": 2207
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 35.20000000298023
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 403.79999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1478.6000000089407
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2118.6000000089407
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 894.5999999940395,
+        "readyMs": 2001.7000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.300000011920929
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42.6000000089407
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 224.40000000596046
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 410.20000000298023
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1305.6000000089407
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1913.5
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 842.2999999970198,
+        "readyMs": 1947.7000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 40.29999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 223.29999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 410.79999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1253.8999999910593
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1858
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 829.5,
+        "readyMs": 1920.4000000059605
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.900000005960464
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 34.79999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 213.59999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402.40000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1232.5999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1833
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 866.2000000029802,
+        "readyMs": 2001.7999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.599999994039536
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 48.3999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 228
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 418.29999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1285.2999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1909.3999999910593
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    },
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1299.5,
+        "readyMs": 2443.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.799999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.79999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 417.29999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1717.5999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2354.2000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 817.2000000029802,
+        "readyMs": 1901.7999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 33.6000000089407
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 208.6000000089407
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 394.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1212.6000000089407
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1813.1000000089407
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 830.1000000089407,
+        "readyMs": 1906.5999999940395
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.799999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39.3999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.20000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 394
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1224.7999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1820.5999999940395
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 820.0999999940395,
+        "readyMs": 1922.0999999940395
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.900000005960464
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 37.099999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 217.40000000596046
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402.79999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1223.7000000029802
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1831.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 879.6999999880791,
+        "readyMs": 1983.8999999910593
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.299999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 48.79999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 229.59999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 414
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1294.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1896.5999999940395
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1048.5999999940395,
+        "readyMs": 2137.6000000089407
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.600000008940697
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 41.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 223.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402.6000000089407
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1452.1000000089407
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2048.7000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 894.7999999970198,
+        "readyMs": 1982.7000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 223.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 401
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1296.6000000089407
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1893.9000000059605
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 821.7999999970198,
+        "readyMs": 1916.5999999940395
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 47.099999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 225.19999998807907
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 409.19999998807907
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1231.5999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1829.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 823.8000000119209,
+        "readyMs": 1923.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.700000002980232
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 37.29999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 217.90000000596046
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 401.40000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1226.0999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1832.2000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 816.9000000059605,
+        "readyMs": 1906.4000000059605
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 43.70000000298023
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 224.29999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.40000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1223.0999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1817.4000000059605
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    },
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1258.6000000089407,
+        "readyMs": 2380.0999999940395
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.299999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 35.3999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 219.59999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1661.2999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2290.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1031.5999999940395,
+        "readyMs": 2129.5
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.899999991059303
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.599999994039536
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.09999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 407.09999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1439.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2040.2999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 886.2999999970198,
+        "readyMs": 1974.7000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15.299999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 39.6000000089407
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 222.20000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.40000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1292.4000000059605
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1883.7000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1023.8000000119209,
+        "readyMs": 2123.2000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 34.29999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 214.29999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 396.79999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1421.2999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2033.2999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1264.1000000089407,
+        "readyMs": 2400.1000000089407
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.400000005960464
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.900000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 234.1000000089407
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 423.20000000298023
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1688
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2306.2999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 835.7000000029802,
+        "readyMs": 1930.7999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15.100000008940697
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 44.1000000089407
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 224.6000000089407
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.90000000596046
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1242.2999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1842.4000000059605
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 827.6999999880791,
+        "readyMs": 1941.8999999910593
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.700000002980232
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 38.29999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 219.79999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 409.09999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1237.5999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1847.0999999940395
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 866.1999999880791,
+        "readyMs": 1989.8999999910593
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.599999994039536
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 47.79999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 231.79999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 420.59999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1287.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1897.7000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 818.1000000089407,
+        "readyMs": 1925.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 43.900000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 226.29999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 412.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1231.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1834.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 824.6000000089407,
+        "readyMs": 1930.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.599999994039536
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 44.400000005960464
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 226
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 410.5
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1235.7999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1839.7000000029802
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    },
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1224.300000011921,
+        "readyMs": 2327.7000000029802
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.299999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 41.8999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 222.59999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 406.29999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1631.2999999970198
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2238.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1014.8000000119209,
+        "readyMs": 2107.5
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 15.100000008940697
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 33.80000001192093
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 214.20000000298023
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 397.80000001192093
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1413.4000000059605
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2018.800000011921
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 909.1000000089407,
+        "readyMs": 2004.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 34.8999999910593
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 216.3999999910593
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 403.59999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1313.3999999910593
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1916.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 820.2000000029802,
+        "readyMs": 1921
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.799999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 37.20000000298023
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 217.3999999910593
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.8999999910593
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1226.8999999910593
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1829.3999999910593
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid16",
+      "level": 0,
+      "nearFly": {
+        "name": "grid16",
+        "worldMs": 819.4000000059605,
+        "readyMs": 1920
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.799999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 43.79999999701977
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 225.3999999910593
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 409.09999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1229.3999999910593
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1828.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid16.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid8",
+      "level": 0,
+      "nearFly": {
+        "name": "grid8",
+        "worldMs": 821.8999999910593,
+        "readyMs": 1918.2999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.899999991059303
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 33.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 212.8999999910593
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 397.8999999910593
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1220.5
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1829.5
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid8.html"
+      ]
+    },
+    {
+      "name": "nf-time-box",
+      "level": 0,
+      "nearFly": {
+        "name": "box",
+        "worldMs": 889.3000000119209,
+        "readyMs": 1989.5999999940395
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.29999999701977
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 409.59999999403954
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1299.699999988079
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1900.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-box.html"
+      ]
+    },
+    {
+      "name": "nf-time-height",
+      "level": 0,
+      "nearFly": {
+        "name": "height",
+        "worldMs": 1044.9000000059605,
+        "readyMs": 2143.7999999970198
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 221.09999999403954
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402.29999999701977
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1448.0999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2055.0999999940395
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-height.html"
+      ]
+    },
+    {
+      "name": "nf-time-original",
+      "level": 0,
+      "nearFly": {
+        "name": "original",
+        "worldMs": 1226.5999999940395,
+        "readyMs": 2350
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 14.599999994039536
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.5
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 415.69999998807907
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1643.0999999940395
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2258.8999999910593
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-original.html"
+      ]
+    },
+    {
+      "name": "nf-time-grid32",
+      "level": 0,
+      "nearFly": {
+        "name": "grid32",
+        "worldMs": 840.6999999880791,
+        "readyMs": 1933.5
+      },
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.299999997019768
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42.19999998807907
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.3999999910593
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 402.8999999910593
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1244.3999999910593
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1843.7999999970198
+        }
+      ],
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/play/abyssal-garden/experiments/optimizations/variants/nf-time-grid32.html"
+      ]
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  }
+}

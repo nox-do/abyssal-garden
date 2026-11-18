@@ -1,0 +1,37 @@
+{
+  "node": "v22.23.4",
+  "sources": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "a792e5547d7f8011e39231e979b8abb592e1ad306fad67ed583af5aa0e549cae",
+    "shaders.js": "b830f2ac793e78fd42f778173cbaf0f167f8e36877d33b0d15ad2920d02e2f3f",
+    "world.js": "7fc2821ecc95c4284a29fab3a6d6db77998be1872a65c2831de76ccb83719e73",
+    "main.js": "aac0fa8d0f90b1ba0f5240e62dacfcc77e713a990616072f220f95b273c03632",
+    "audio.js": "efd4feba3e36b2b5b7d3faf33a04f3c87df1f3999679e25185e297fd427076e7"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 99514,
+      "gzipBytes": 40287,
+      "sha256": "ac151ea4a84092e529b98ac21feedc7905c170a7959f6bd6d829ef1b85e56767",
+      "sampling": "sin(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    },
+    "uniform": {
+      "bytes": 99502,
+      "gzipBytes": 40281,
+      "sha256": "e205cc61f15db601729ff2b3f763160192be5a0f1fb5d8a60bd88e08669126ad",
+      "sampling": "f32(vi >> 1u) / (ROWS - 1.)"
+    },
+    "basal": {
+      "bytes": 99517,
+      "gzipBytes": 40291,
+      "sha256": "ecbe8e3990a6ac08d6f4182def984da2804c38dd3c222a3323de98047e26c06d",
+      "sampling": "1. - cos(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    },
+    "organic": {
+      "bytes": 99514,
+      "gzipBytes": 40289,
+      "sha256": "d11e244ffadb6cc2146c72227719a4780879179742710cede7e67464bfb2e44c",
+      "sampling": "sin(f32(vi >> 1u) / (ROWS - 1.) * 1.5708)"
+    }
+  }
+}

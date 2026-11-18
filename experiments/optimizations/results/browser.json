@@ -1,0 +1,1121 @@
+{
+  "date": "2026-11-17T17:51:31.035Z",
+  "offline": true,
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "deviceScaleFactor": 1
+  },
+  "tests": [
+    {
+      "name": "original",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2621.800000000745,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 54.30000000074506
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 83.90000000223517
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 284.5
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 465.19999999925494
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1619.4000000022352
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2221.199999999255
+        }
+      ],
+      "screenshotFile": "original-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1491424,
+        "totalSize": 92274688,
+        "embedderHeapUsedSize": 932616,
+        "backingStorageSize": 299165682
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2553.10000000149,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 22.100000001490116
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 220.60000000149012
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 395.69999999925494
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1550.699999999255
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2127.699999999255
+        }
+      ],
+      "screenshotFile": "original-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-packed-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-packed-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-packed-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-packed-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-packed-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-packed-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1502804,
+        "totalSize": 92536832,
+        "embedderHeapUsedSize": 830656,
+        "backingStorageSize": 299266282
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2401.400000002235,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.199999999254942
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 41.19999999925494
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 213.80000000074506
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 391.1000000014901
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1399.4000000022352
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2006.199999999255
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "near-fly-uint16-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "near-fly-uint16-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "near-fly-uint16-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "near-fly-uint16-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "near-fly-uint16-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "near-fly-uint16-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1486320,
+        "totalSize": 90701824,
+        "embedderHeapUsedSize": 706432,
+        "backingStorageSize": 298624446
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16-mapped",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2454,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 13.300000000745058
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 47.30000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 213.80000000074506
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 391.4000000022352
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1451.300000000745
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2057.7000000029802
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-mapped-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "near-fly-uint16-mapped-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 217193628,
+        "totalSize": 306790400,
+        "embedderHeapUsedSize": 1454248,
+        "backingStorageSize": 213946758
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16-mapped.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "terser-packed",
+      "level": 0,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2564.5,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 17.800000000745058
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 46.30000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 218.10000000149012
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 399.69999999925494
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1563.1000000014901
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2147.699999999255
+        }
+      ],
+      "screenshotFile": "terser-packed-q0.png",
+      "screenshotSha256": "55157253a32e7a557c7bf041e1b22643f49ad6185ec705f9387bc38305616077",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "terser-packed-q0-pose1.png",
+          "sha256": "a7ada194f41b83b66be5c9a5b6cf291d650beb0a9077ea6f203f5b233f425500"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "terser-packed-q0-pose2.png",
+          "sha256": "f200baeb31bdf53a518605887004850ad91a5ba0bc83d0f65386ef1c5a4c75fc"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "terser-packed-q0-pose3.png",
+          "sha256": "1d75f210d4b29e80c089c87220e320d952906904cbcfa1cfeec06d046a143f12"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "terser-packed-q0-pose4.png",
+          "sha256": "4408dbd5bd75173d762c49fefb518c34c4e7c53b69358dee21b33a5ecf4edeee"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "terser-packed-q0-pose5.png",
+          "sha256": "93eb783812f3f6d5a5fedbab7ada1afc927e98c07ca78779a49eaf7edcf1cb10"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "terser-packed-q0-pose6.png",
+          "sha256": "fe6dad1ac8fa9be604ec4e07d6617b10bea7812b24df9713b1c2d4a0b7f0dc70"
+        }
+      ],
+      "movementSha256": "c8231ccc83731b1088b6710f87bb3bbecdb7c2fd2fa7eb5694ca80207ca20a56",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1464760,
+        "totalSize": 91226112,
+        "embedderHeapUsedSize": 830768,
+        "backingStorageSize": 299261229
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/terser-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2758.199999999255,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.5
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 43.80000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 449.1000000014901
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 625
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1755.3999999985099
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2335.89999999851
+        }
+      ],
+      "screenshotFile": "original-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 242071388,
+        "totalSize": 310067200,
+        "embedderHeapUsedSize": 1328488,
+        "backingStorageSize": 239195349
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original-packed",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2519,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 22.300000000745058
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 44.100000001490116
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 216.60000000149012
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 397.80000000074506
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1516.699999999255
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2096.199999999255
+        }
+      ],
+      "screenshotFile": "original-packed-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-packed-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-packed-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-packed-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-packed-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-packed-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-packed-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 236024868,
+        "totalSize": 305627136,
+        "embedderHeapUsedSize": 1344520,
+        "backingStorageSize": 239295950
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 1,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2334.89999999851,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 40.19999999925494
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 211.39999999850988
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 392.5999999977648
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1332.300000000745
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1908.800000000745
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-q1.png",
+      "screenshotSha256": "c2c611238bb8e7844aeef207753cd4043d08a29c2968224bad0a6294e5a8d5ba",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "near-fly-uint16-q1-pose1.png",
+          "sha256": "9b82c0a29ee10ea1edf03418d43ae0850cf430c487440105f3ac6ea877eb772f"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "near-fly-uint16-q1-pose2.png",
+          "sha256": "0eda40f1a2869a044e92566a0f75e1e02e289e3d0b15cbbfdd325eccdf8180f9"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "near-fly-uint16-q1-pose3.png",
+          "sha256": "2cdb22498c9f1a46d6718808ccf285589a91d88cba2d2d2f3af284ab88ca8e4d"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "near-fly-uint16-q1-pose4.png",
+          "sha256": "60ac79bb0bbb855fadb5c5830a9dcec0626ae903c971959f82e7faabca9e28cd"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "near-fly-uint16-q1-pose5.png",
+          "sha256": "23b40e9d11a01bdf49fd74b81d93687cf6e9f64e0fb79cc093b952ff57107202"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "near-fly-uint16-q1-pose6.png",
+          "sha256": "0da0c248b7bc146b5b583eeb50c6f8ed094ad2954993dab0a19ae81b19af882a"
+        }
+      ],
+      "movementSha256": "ebb1268a8a6ae4a1b1cd36403bcf922b55e7585a20ecf9116abfa76fa7cc763b",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 233983044,
+        "totalSize": 304496640,
+        "embedderHeapUsedSize": 1335368,
+        "backingStorageSize": 238645906
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2503.39999999851,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.399999998509884
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 43.30000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 227.19999999925494
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 405.8999999985099
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1501.0999999977648
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2077.800000000745
+        }
+      ],
+      "screenshotFile": "original-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1478160,
+        "totalSize": 70778880,
+        "embedderHeapUsedSize": 931600,
+        "backingStorageSize": 113586095
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "original-packed",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2518.199999999255,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 21.099999997764826
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 42.19999999925494
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 237.30000000074506
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 416.3999999985099
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1516
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 2090.89999999851
+        }
+      ],
+      "screenshotFile": "original-packed-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "original-packed-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "original-packed-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "original-packed-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "original-packed-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "original-packed-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "original-packed-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1493840,
+        "totalSize": 70254592,
+        "embedderHeapUsedSize": 931080,
+        "backingStorageSize": 126781732
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/original-packed.html"
+      ],
+      "failures": []
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 2,
+      "capabilities": {
+        "secure": true,
+        "webgpu": true,
+        "adapter": true,
+        "adapterInfo": {
+          "vendor": "apple",
+          "architecture": "metal-3",
+          "device": "",
+          "description": ""
+        },
+        "decompression": "function"
+      },
+      "startupMs": 2320.2000000029802,
+      "stages": [
+        {
+          "text": "Compiling shaders…",
+          "ms": 12.400000002235174
+        },
+        {
+          "text": "Sculpting the seabed…",
+          "ms": 37.30000000074506
+        },
+        {
+          "text": "Carving canyons…",
+          "ms": 231.60000000149012
+        },
+        {
+          "text": "Growing kelp…",
+          "ms": 411.9000000022352
+        },
+        {
+          "text": "Building set pieces…",
+          "ms": 1317.800000000745
+        },
+        {
+          "text": "Letting the light in…",
+          "ms": 1925.300000000745
+        }
+      ],
+      "screenshotFile": "near-fly-uint16-q2.png",
+      "screenshotSha256": "5f0c36939a08107796fa515534730d022393058fed333c2d9090f7b22025b4e1",
+      "views": [
+        {
+          "pose": 1,
+          "screenshotFile": "near-fly-uint16-q2-pose1.png",
+          "sha256": "11ec7173f3eb5af4429a82eaa4696202d6efef805d2be07d754b55ad8ed4e212"
+        },
+        {
+          "pose": 2,
+          "screenshotFile": "near-fly-uint16-q2-pose2.png",
+          "sha256": "e08c4f78c32219aa6a783e5174f70b2feddd1f9a3e300c6fbe77be042bc084ea"
+        },
+        {
+          "pose": 3,
+          "screenshotFile": "near-fly-uint16-q2-pose3.png",
+          "sha256": "f320370394a472718b6de65396ddda9bd45e2a57d3791bb93ad55791e06ec28c"
+        },
+        {
+          "pose": 4,
+          "screenshotFile": "near-fly-uint16-q2-pose4.png",
+          "sha256": "d9fccdba27369c9242f16c7bb53449b6a17daad84666805a17ad7dbedab0b829"
+        },
+        {
+          "pose": 5,
+          "screenshotFile": "near-fly-uint16-q2-pose5.png",
+          "sha256": "1e706565685569c7002e52818835c0babaf434f4de68294ae7851a6f4ccaee64"
+        },
+        {
+          "pose": 6,
+          "screenshotFile": "near-fly-uint16-q2-pose6.png",
+          "sha256": "4f5ba0214fc5a1f8910a567b14c19f06930251d712d7adb96017ff64a9da4531"
+        }
+      ],
+      "movementSha256": "f2db0fb875d9bc9f318f9ee47c6b03e4e57b8f81cfec348ebcf67544378567eb",
+      "audio": {
+        "created": true,
+        "state": "suspended",
+        "sampleRate": 48000
+      },
+      "liveAnimationChecked": true,
+      "heap": {
+        "usedSize": 1472084,
+        "totalSize": 87818240,
+        "embedderHeapUsedSize": 712056,
+        "backingStorageSize": 208454027
+      },
+      "errors": [],
+      "requests": [
+        "file:///Users/ddeuter/dev/work/staticSeal/experiments/abyssal-garden/variants/near-fly-uint16.html"
+      ],
+      "failures": []
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.79",
+    "revision": "@6dc9bc3bdaea5c35ed6d41fceab2f7a3a2227c4f",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.43"
+  },
+  "comparisons": [
+    {
+      "name": "original-packed",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "near-fly-uint16-mapped",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "terser-packed",
+      "level": 0,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "original-packed",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 1,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "original-packed",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    },
+    {
+      "name": "near-fly-uint16",
+      "level": 2,
+      "startEqual": true,
+      "allSixViewsEqual": true,
+      "movementEqual": true
+    }
+  ]
+}

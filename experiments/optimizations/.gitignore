@@ -1,0 +1,4 @@
+variants/
+results/*.png
+results/chrome.log
+results/near-fly-chrome*.log

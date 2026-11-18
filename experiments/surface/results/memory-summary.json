@@ -1,0 +1,647 @@
+{
+  "note": "Array payloads/references and GPU descriptors; no RSS measurement.",
+  "tests": [
+    {
+      "level": 0,
+      "freedCPUBytes": 2846672,
+      "savedGPUBytes": 541248,
+      "matchedHashes": 136,
+      "identicalImages": 41,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "coast",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "east",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "down",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "sun",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "justBelow",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.28",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave7",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave8",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave11",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave12",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave13",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave14",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave15",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "freedCPUBytes": 2846672,
+      "savedGPUBytes": 541248,
+      "matchedHashes": 136,
+      "identicalImages": 41,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "coast",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "east",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "down",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "sun",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "justBelow",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.28",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave7",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave8",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave11",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave12",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave13",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave14",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave15",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "freedCPUBytes": 2625928,
+      "savedGPUBytes": 475548,
+      "matchedHashes": 136,
+      "identicalImages": 40,
+      "images": [
+        {
+          "label": "pose1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose4",
+          "changedPixels": 1,
+          "maxChannelDifference": 1
+        },
+        {
+          "label": "pose5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "pose6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "detail6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "lagoon",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "coast",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "east",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "west",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "down",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "sun",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "justBelow",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross-0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.005",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.03",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "cross0.28",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave1",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave2",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave3",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave4",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave5",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave6",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave7",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave8",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave11",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave12",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave13",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave14",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave15",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time9",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        },
+        {
+          "label": "wave-time10",
+          "changedPixels": 0,
+          "maxChannelDifference": 0
+        }
+      ]
+    }
+  ]
+}

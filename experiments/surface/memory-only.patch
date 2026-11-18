@@ -1,0 +1,68 @@
+--- a/source/src/main.js
++++ b/source/src/main.js
+@@ -284,8 +284,8 @@
+   meshChunk(3).build(), meshChunk(11).build(), meshChunk(29).build(), meshChunk(5, 3).build(), meshChunk(17, 3).build(), meshChunk(41, 3).build(), meshChunk(9, 1).build(), meshCoral(0, 1).build(), meshCoral(1, 1).build(), meshChunk(5, 2, 1).build(), meshChunk(17, 2, 1).build(), meshChunk(41, 2, 1).build());
+ let nV = 0, nI = 0;
+ for (const m of meshes) { m.v0 = nV; m.i0 = nI; nV += m.nv; nI += m.ib.length; }
+-const allV = new Uint8Array(nV * 16), allI = new Uint32Array(nI);
+-for (const m of meshes) { allV.set(new Uint8Array(m.vb), m.v0 * 16); allI.set(m.ib, m.i0); }
++const allV = new Uint8Array(nV * 16), allI = new Uint16Array(nI);
++for (const m of meshes) { allV.set(new Uint8Array(m.vb), m.v0 * 16); allI.set(m.ib, m.i0); m.ni = m.ib.length; m.vb = m.ib = 0; }
+ const vbMesh = buf(allV, BU.VERTEX), ibMesh = buf(allI, BU.INDEX);
+ const vbTerrain = buf(new Uint8Array(T.vb), BU.VERTEX), ibTerrain = buf(T.ib, BU.INDEX);
+ const nSolid = Wd.solids.data.length / 12;
+@@ -315,18 +315,18 @@
+   r.setPipeline(pTerrSh);
+   r.setVertexBuffer(0, vbTerrain); r.setVertexBuffer(1, ibSolids); r.setIndexBuffer(ibTerrain, 'uint32');
+   r.drawIndexed(T.ib.length, 1, 0, 0, nSolid);
+-  r.setPipeline(pSolidSh); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint32');
+-  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ib.length, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
++  r.setPipeline(pSolidSh); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint16');
++  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ni, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
+   // small rocks, sponges and corals (~35M triangles) only on High: too much for a phone's driver
+-  if (!LV) for (let i = 0; i < NCHUNK; i++) { r.setVertexBuffer(1, ibChunk[i]); r.drawIndexed(meshes[14 + i].ib.length, Wd.chunks[i].n, meshes[14 + i].i0, meshes[14 + i].v0, 0); }
+-  if (!LV) for (let i = 0; i < 6; i++) if (Wd.props[i].n) { r.setVertexBuffer(1, ibProp[i]); r.drawIndexed(meshes[4 + i].ib.length, Wd.props[i].n, meshes[4 + i].i0, meshes[4 + i].v0, 0); }
++  if (!LV) for (let i = 0; i < NCHUNK; i++) { r.setVertexBuffer(1, ibChunk[i]); r.drawIndexed(meshes[14 + i].ni, Wd.chunks[i].n, meshes[14 + i].i0, meshes[14 + i].v0, 0); }
++  if (!LV) for (let i = 0; i < 6; i++) if (Wd.props[i].n) { r.setVertexBuffer(1, ibProp[i]); r.drawIndexed(meshes[4 + i].ni, Wd.props[i].n, meshes[4 + i].i0, meshes[4 + i].v0, 0); }
+   r.setPipeline(pLeafSh); r.setVertexBuffer(0, ibBig); r.draw(6, Wd.big.n);
+   r.end();
+   Q.submit([e.finish()]);
+ }
+ // the GPU has its own copies now: let go of the generator's (about 300 MB)
+ for (const o of [Wd.big, Wd.bigF, Wd.small, ...Wd.chunks, ...Wd.props]) o.buf = o.data = 0;
+-Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
++Wd.solids.data = Wd.bubbles = Wd.fish = Wd.mantas = Wd.snow = Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
+ 
+ // ---------------------------------------------------------------- render targets (rebuilt on resize)
+ // The scene is drawn at `pix` pixels and scaled up to the window. frame() tunes it and the draw distance scale `det`
+@@ -417,7 +417,7 @@
+       }
+       if (v) { if (run < 0) run = c; } else if (run >= 0) {
+         const a = start[run], n = start[c] - a;
+-        if (n > 0) { if (indexed === 1) r.drawIndexed(n * 6, 1, a * 6, 0, nSolid); else if (indexed) r.drawIndexed(indexed.ib.length, n, indexed.i0, indexed.v0, a); else r.draw(verts, n, 0, a); }
++        if (n > 0) { if (indexed === 1) r.drawIndexed(n * 6, 1, a * 6, 0, nSolid); else if (indexed) r.drawIndexed(indexed.ni, n, indexed.i0, indexed.v0, a); else r.draw(verts, n, 0, a); }
+         run = -1;
+       }
+     }
+@@ -459,8 +459,8 @@
+   r.setBindGroup(0, bg0);
+   r.setPipeline(pTerrain); r.setVertexBuffer(0, vbTerrain); r.setVertexBuffer(1, ibSolids); r.setIndexBuffer(ibTerrain, 'uint32');
+   drawCells(r, T.start, T.lo, T.hi, 1.5, 1, 0, 0, cy > -.2 ? 400 : 240);
+-  r.setPipeline(pSolid); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint32');
+-  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ib.length, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
++  r.setPipeline(pSolid); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint16');
++  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ni, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
+   for (let i = 0; i < NCHUNK; i++) {
+     const c = Wd.chunks[i], big = i > 2 && i < 6; r.setVertexBuffer(1, ibChunk[i]);
+     drawCells(r, c.start, c.lo, c.hi, 3, meshes[14 + i], 0, 0, i > 5 ? 30 : big ? 40 : 96);
+@@ -471,8 +471,8 @@
+     drawCells(r, Wd.props[i].start, Wd.props[i].lo, Wd.props[i].hi, 3, meshes[4 + i], 0, 0, lod ? 6 : 110);
+     if (lod) drawCells(r, Wd.props[i].start, Wd.props[i].lo, Wd.props[i].hi, 3, meshes[18 + i], 0, 6, 110);
+   }
+-  r.setPipeline(pManta); r.setVertexBuffer(1, ibManta); r.drawIndexed(MANTA.ib.length, nManta, MANTA.i0, MANTA.v0, 0);
+-  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ib.length, nFish, FISH.i0, FISH.v0, 0);
++  r.setPipeline(pManta); r.setVertexBuffer(1, ibManta); r.drawIndexed(MANTA.ni, nManta, MANTA.i0, MANTA.v0, 0);
++  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ni, nFish, FISH.i0, FISH.v0, 0);
+   // kelp and plants: 9-row blades up close, 5 rows mid-range, a decimated set far away
+   r.setPipeline(pLeaf); r.setVertexBuffer(0, ibBig); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 18, 0, 24);
+   r.setPipeline(pLeaf5); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 10, 24, 58);

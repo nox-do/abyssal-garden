@@ -11,12 +11,33 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
   komplett in einer offline nutzbaren HTML-Datei. MIT, Copyright Maksymilian Dendura.
 - Ziel unserer Untersuchung: weniger Dateigroesse, Speicher und unnoetige
   Rechenarbeit bei erhaltenem Szeneninhalt, Erscheinungsbild und Verhalten.
-- Die Optimierungen sind bisher Experimente. Der normale Renderer und das
-  ausgelieferte `index.html` wurden beim Uebernehmen der Experimente nicht geaendert.
+- Die urspruenglichen Optimierungen liegen als getrennte Experimente vor.
+  Spaetere, ausdruecklich integrierte Produktaenderungen sind unten aufgefuehrt;
+  nicht alle frueheren Kandidaten sind in `source/` oder `index.html` enthalten.
 - Die spaetere Materialkorrektur fuer Schwaemme/Korallen ist in `source/` und
   `index.html` integriert; siehe `docs/visual-quality-study.md`.
-- Naechster Schwerpunkt: weniger eckige Blaetter. Die vorhandene Bewegung
-  gefaellt dem Nutzer und soll erhalten bleiben; zuerst Kontur und Normalen pruefen.
+- Ein reversibler Blattkonturversuch ist inzwischen ebenfalls in `source/` und
+  `index.html`: mathematischer Randschnitt, gleiche Dreieckszahl und gleiche
+  Bewegungsparameter. Siehe `docs/leaf-quality-study.md` und `experiments/leaves/`.
+  Referenz vor den Blattarbeiten ist lokal `461db8a`. Blatt-, Auftauch-,
+  Ufer-, Strand- und Speicherarbeiten gehoeren zum folgenden Sicherungsstand.
+  Die vorhandene Bewegung gefaellt dem Nutzer und soll erhalten bleiben.
+- Zusaetzlich ist der beauftragte Auftauchversuch in `source/` und `index.html`:
+  Augenhoehe maximal +0,28 m, vorhandene Kueste 1,5-3 m, kein Landgang.
+  Siehe `docs/surface-study.md` und `experiments/surface/`. Eigener Rueckweg:
+  `surface-only.patch` erhaelt den vorherigen Blatt-/Materialstand.
+  Nach Nutzerfeedback reicht das Kollisionsfeld jetzt bis zur aeusseren Kueste;
+  die Sicherheitsgrenze liegt bei 180 statt 150 m hinter dem Felsrand.
+  Nachweise getrennt in `experiments/surface/results/boundary-*.json`.
+- Nach Review und Nutzerfreigabe sind CPU-Aufraeumen nach Upload und Uint16-
+  Objektindizes integriert. `memory-summary.json`: 2,5-2,7 MiB Array-Nutzdaten
+  freigegeben, 0,45-0,52 MiB kleinerer GPU-Indexpuffer; keine RSS-Garantie.
+- Eine einzelne westliche Sandbucht (um x=-170,z=10) ist als Versuch integriert.
+  Bestehende Topologie/Instanzen, lokale Hoehenabbildung samt inverser Kollision,
+  freier Bodenfarbenkanal fuer Sand. `beach-*.json`, `beach-only.patch` und
+  `memory-only.patch` unter `experiments/surface/`. Fuer Ruecknahme des gesamten
+  Auftauchens zuerst den Strand-Patch umkehren; der danach verwendete aktualisierte
+  `surface-only.patch` erhaelt Blatt-, Material- und Speicheroptimierungen.
 
 ## Code und Builds
 

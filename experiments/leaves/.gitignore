@@ -1,0 +1,5 @@
+variants/
+results/*.png
+results/*.gif
+results/*.log
+results/compare.html

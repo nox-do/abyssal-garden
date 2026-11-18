@@ -1,0 +1,24 @@
+{
+  "baseline": "461db8a + accepted contour transform",
+  "node": "v22.23.4",
+  "sources": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "a792e5547d7f8011e39231e979b8abb592e1ad306fad67ed583af5aa0e549cae",
+    "shaders.js": "1241997ecf9e34df348fffc1132e6ad8df7ff4fb8477576b96790b58dce01ec4",
+    "world.js": "7fc2821ecc95c4284a29fab3a6d6db77998be1872a65c2831de76ccb83719e73",
+    "main.js": "bdfb519954acbb8c23c90e0583be4a6760882d551b1cdc096b438abbf377542f",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 100253,
+      "gzipBytes": 40591,
+      "sha256": "f88d761fc2899a0892349f044cfeccca5c7e157535ea15b4670f96ab2cf805e0"
+    },
+    "surface": {
+      "bytes": 103119,
+      "gzipBytes": 41628,
+      "sha256": "17153f45f4c9376921fb9491c0decae907364993228ac4c2fc89693bcc9ad1f8"
+    }
+  }
+}

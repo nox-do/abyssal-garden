@@ -88,8 +88,9 @@ const scenePipe = (m, vsE, fsE, buffers, o = {}) => device.createRenderPipeline(
   vertex: { module: m, entryPoint: vsE, buffers, constants: o.constants },
   fragment: { module: m, entryPoint: fsE, targets: [{ format: HDR, blend: o.blend }] },
   primitive: { topology: o.strip ? 'triangle-strip' : 'triangle-list', cullMode: o.cull || 'none' },
-  depthStencil: { format: DEPTH, depthWriteEnabled: !o.blend, depthCompare: 'greater' }, multisample: { count: AA } });
+  depthStencil: { format: DEPTH, depthWriteEnabled: o.depthWrite ?? !o.blend, depthCompare: 'greater' }, multisample: { count: AA, alphaToCoverageEnabled: !!o.coverage && AA > 1 } });
 const shadowPipe = (m, vsE, buffers, o = {}) => device.createRenderPipeline({ layout: pl0,
+  fragment: o.clip ? { module: m, entryPoint: 'fsSh', targets: [] } : undefined,
   vertex: { module: m, entryPoint: vsE, buffers, constants: o.constants },
   primitive: { topology: o.strip ? 'triangle-strip' : 'triangle-list', cullMode: o.cull || 'none' },
   depthStencil: { format: DEPTH, depthWriteEnabled: true, depthCompare: 'less', depthBias: 2, depthBiasSlopeScale: 1.5 } });
@@ -98,19 +99,19 @@ await say('Compiling shaders…', 0.05, 300);
 const mSolid = mod(W_SOLID), mLeaf = mod(W_LEAF), mAnim = mod(W_ANIM), mSurf = mod(W_SURF), mSpr = mod(W_SPR);
 const pTerrain = scenePipe(mSolid, 'vs', 'fs', [vbSolid, ibSolid], { cull: 'back' });
 const pSolid = scenePipe(mSolid, 'vs', 'fs', [vbSolid, ibSolid]);
-const pLeaf = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants: { ROWS: 9 } });
-const pLeaf5 = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants: { ROWS: 5 } });
+const pLeaf = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 9 } });
+const pLeaf5 = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 5 } });
 const pLeafS = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants: { ROWS: 3, FAR: 70 } });
-const pLeafF = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants: { ROWS: 3 } });
+const pLeafF = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 3 } });
 const pFish = scenePipe(mAnim, 'vsFish', 'fsFish', [vbSolid, ibAnim]);
 const pManta = scenePipe(mAnim, 'vsManta', 'fsManta', [vbSolid, ibAnim]);
-const pSurf = scenePipe(mSurf, 'vs', 'fs', [], { strip: true }), pBack = scenePipe(mSurf, 'vsB', 'fsB', [], { strip: true });
+const pSurf = scenePipe(mSurf, 'vs', 'fs', [], { strip: true, depthWrite: true, blend: { color: { srcFactor: 'src-alpha', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'zero' } } }), pBack = scenePipe(mSurf, 'vsB', 'fsB', [], { strip: true });
 const pBub = scenePipe(mSpr, 'vsBub', 'fsBub', [ibBub], { strip: true, blend: { color: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' } } });
 const ADD = { color: { srcFactor: 'one', dstFactor: 'one' }, alpha: { srcFactor: 'one', dstFactor: 'one' } };
 const pSnow = scenePipe(mSpr, 'vsSnow', 'fsSnow', [ibSnow], { strip: true, blend: ADD });
 const pGl = scenePipe(mLeaf, 'vsGl', 'fsGl', [ibBub], { strip: true, blend: ADD, constants: { ROWS: 7 } });
 const pSolidSh = shadowPipe(mSolid, 'vs', [vbSolid, ibSolid]), pTerrSh = shadowPipe(mSolid, 'vs', [vbSolid, ibSolid], { cull: 'front' });
-const pLeafSh = shadowPipe(mLeaf, 'vs', [ibLeaf], { strip: true, constants: { ROWS: 3 } });
+const pLeafSh = shadowPipe(mLeaf, 'vs', [ibLeaf], { strip: true, clip: true, constants: { CUTOUT: true, ROWS: 3 } });
 
 const mWater = mod(W_WATER);
 const pWater = device.createRenderPipeline({ layout: 'auto', vertex: { module: mWater, entryPoint: 'vs' }, fragment: { module: mWater, entryPoint: 'fs', targets: [{ format: HDR }] } });
@@ -172,18 +173,32 @@ let D;
   for (const i of L) if (!R[i]) D[i] = -D[i];
 }
 // Distance to the rock for collide(), in 1/127 m (> 0 in rock, clamped to ±1 m), kept only in the 4x4x4-voxel
-// bricks near the surface within the camera's reach (~2 MB). CI per brick: 0 all water, 1 all rock, n brick n-2 in CG.
-const CO = 52, CN = 102, CI = new Uint16Array(CN * CN * NY / 4);
+// bricks near the surface within the camera's reach (~3 MB). CI per brick: 0 all water, 1 all rock, n brick n-2 in CG.
+const CO = 8, CN = 124, CI = new Uint16Array(CN * CN * NY / 4);
 let CG = new Int8Array(64 * 65534);
 {
+  // Invert the visible shore mapping while building collision; keep the original
+  // terrain topology and generator positions. No second density grid is needed.
+  const sample = sampler3(D, NX, NY, NZ);
+  const cd = (x, y, z) => {
+    const wx = OX + x * VS, wy = OY + y * VS, wz = OZ + z * VS;
+    if (wy <= -4 || !beachMask(wx, wz)) return D[x + NX * (y + NY * z)];
+    const sy = coastOriginalY(wx, wy, wz);
+    return sy >= 3.25 ? 2.25 - sy : sample(x, (sy - OY) / VS, z);
+  };
+  const cq = (x, y, z) => {
+    const gx = cd(x + 1, y, z) - cd(x - 1, y, z), gy = cd(x, y + 1, z) - cd(x, y - 1, z), gz = cd(x, y, z + 1) - cd(x, y, z - 1);
+    return round(clamp(cd(x, y, z) / max(sqrt(gx * gx + gy * gy + gz * gz) / 1.5, .05), -1, 1) * 127);
+  };
   let n = 0;
   for (let bz = 0; bz < CN; bz++) for (let by = 1; by < NY / 4 - 1; by++) for (let bx = 0; bx < CN; bx++) {
-    if (hypot(bx - CN / 2 + 0.5, bz - CN / 2 + 0.5) > 52) continue; // more than 156 m out: never reached
+    if (hypot(bx - CN / 2 + 0.5, bz - CN / 2 + 0.5) > 62) continue; // 186 m: includes the coast and a margin for collision samples
+    const shore = by >= 17 && bx < 17 && abs(OZ + (CO + bz * 4 + 1.5) * VS - 10) < 39;
     let lo = 127, hi = -127;
     for (let z = 0; z < 4; z++) for (let y = 0; y < 4; y++) for (let x = 0; x < 4; x++) {
       const i = CO + bx * 4 + x + NX * (by * 4 + y + NY * (CO + bz * 4 + z)), gz = D[i + NX * NY] - D[i - NX * NY];
       const gx = D[i + 1] - D[i - 1], g = D[i + NX] - D[i - NX], l = sqrt(gx * gx + g * g + gz * gz) / 1.5;
-      const q = round(clamp(D[i] / max(l, 0.05), -1, 1) * 127);
+      const q = shore ? cq(CO + bx * 4 + x, by * 4 + y, CO + bz * 4 + z) : round(clamp(D[i] / max(l, 0.05), -1, 1) * 127);
       CG[n * 64 + x + 4 * y + 16 * z] = q; if (q < lo) lo = q; if (q > hi) hi = q;
     }
     CI[bx + CN * (by + NY / 4 * bz)] = lo === hi && lo * lo === 16129 ? +(lo > 0) : (n++, n + 1);
@@ -269,6 +284,12 @@ for (const p of POSES) flyPts.push([p[0], -40, p[2]]);
 await say('Growing kelp…', 0.73, 2500);
 const Wd = makeWorld(D, T, flyPts, POSES);
 for (const p of POSES) p[1] += Wd.gy(p[0], p[2]);
+// The beach mapping stays above -4 m. Expand existing bounds only in its cells.
+for (const o of [T, Wd.big, Wd.bigF, Wd.small, ...Wd.chunks, ...Wd.props]) {
+  for (let c = 0; c < CELLS * CELLS; c++) {
+    if (OX + c % CELLS * CELLW < -138 && abs(OZ + (floor(c / CELLS) + .5) * CELLW - 10) < 40 && o.lo[c] <= o.hi[c]) o.lo[c] = min(o.lo[c], -4);
+  }
+}
 D = Wd.gy = T.smp = null; // with gy goes the generator's working memory (about 200 MB)
 
 await say('Building set pieces…', 0.94, 1200);
@@ -283,8 +304,8 @@ meshes.push(meshFluke(), meshShip().build(), meshManta().build(), meshFish().bui
   meshChunk(3).build(), meshChunk(11).build(), meshChunk(29).build(), meshChunk(5, 3).build(), meshChunk(17, 3).build(), meshChunk(41, 3).build(), meshChunk(9, 1).build(), meshCoral(0, 1).build(), meshCoral(1, 1).build(), meshChunk(5, 2, 1).build(), meshChunk(17, 2, 1).build(), meshChunk(41, 2, 1).build());
 let nV = 0, nI = 0;
 for (const m of meshes) { m.v0 = nV; m.i0 = nI; nV += m.nv; nI += m.ib.length; }
-const allV = new Uint8Array(nV * 16), allI = new Uint32Array(nI);
-for (const m of meshes) { allV.set(new Uint8Array(m.vb), m.v0 * 16); allI.set(m.ib, m.i0); }
+const allV = new Uint8Array(nV * 16), allI = new Uint16Array(nI);
+for (const m of meshes) { allV.set(new Uint8Array(m.vb), m.v0 * 16); allI.set(m.ib, m.i0); m.ni = m.ib.length; m.vb = m.ib = 0; }
 const vbMesh = buf(allV, BU.VERTEX), ibMesh = buf(allI, BU.INDEX);
 const vbTerrain = buf(new Uint8Array(T.vb), BU.VERTEX), ibTerrain = buf(T.ib, BU.INDEX);
 const nSolid = Wd.solids.data.length / 12;
@@ -314,18 +335,18 @@ Q.writeTexture({ texture: tMap }, Wd.gm, { bytesPerRow: 2048 }, [512, 512]);
   r.setPipeline(pTerrSh);
   r.setVertexBuffer(0, vbTerrain); r.setVertexBuffer(1, ibSolids); r.setIndexBuffer(ibTerrain, 'uint32');
   r.drawIndexed(T.ib.length, 1, 0, 0, nSolid);
-  r.setPipeline(pSolidSh); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint32');
-  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ib.length, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
+  r.setPipeline(pSolidSh); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint16');
+  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ni, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
   // small rocks, sponges and corals (~35M triangles) only on High: too much for a phone's driver
-  if (!LV) for (let i = 0; i < NCHUNK; i++) { r.setVertexBuffer(1, ibChunk[i]); r.drawIndexed(meshes[14 + i].ib.length, Wd.chunks[i].n, meshes[14 + i].i0, meshes[14 + i].v0, 0); }
-  if (!LV) for (let i = 0; i < 6; i++) if (Wd.props[i].n) { r.setVertexBuffer(1, ibProp[i]); r.drawIndexed(meshes[4 + i].ib.length, Wd.props[i].n, meshes[4 + i].i0, meshes[4 + i].v0, 0); }
+  if (!LV) for (let i = 0; i < NCHUNK; i++) { r.setVertexBuffer(1, ibChunk[i]); r.drawIndexed(meshes[14 + i].ni, Wd.chunks[i].n, meshes[14 + i].i0, meshes[14 + i].v0, 0); }
+  if (!LV) for (let i = 0; i < 6; i++) if (Wd.props[i].n) { r.setVertexBuffer(1, ibProp[i]); r.drawIndexed(meshes[4 + i].ni, Wd.props[i].n, meshes[4 + i].i0, meshes[4 + i].v0, 0); }
   r.setPipeline(pLeafSh); r.setVertexBuffer(0, ibBig); r.draw(6, Wd.big.n);
   r.end();
   Q.submit([e.finish()]);
 }
 // the GPU has its own copies now: let go of the generator's (about 300 MB)
 for (const o of [Wd.big, Wd.bigF, Wd.small, ...Wd.chunks, ...Wd.props]) o.buf = o.data = 0;
-Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
+Wd.solids.data = Wd.bubbles = Wd.fish = Wd.mantas = Wd.snow = Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
 
 // ---------------------------------------------------------------- render targets (rebuilt on resize)
 // The scene is drawn at `pix` pixels and scaled up to the window. frame() tunes it and the draw distance scale `det`
@@ -416,7 +437,7 @@ function drawCells(r, start, lo, hi, mar, indexed, verts, minD, maxD) {
       }
       if (v) { if (run < 0) run = c; } else if (run >= 0) {
         const a = start[run], n = start[c] - a;
-        if (n > 0) { if (indexed === 1) r.drawIndexed(n * 6, 1, a * 6, 0, nSolid); else if (indexed) r.drawIndexed(indexed.ib.length, n, indexed.i0, indexed.v0, a); else r.draw(verts, n, 0, a); }
+        if (n > 0) { if (indexed === 1) r.drawIndexed(n * 6, 1, a * 6, 0, nSolid); else if (indexed) r.drawIndexed(indexed.ni, n, indexed.i0, indexed.v0, a); else r.draw(verts, n, 0, a); }
         run = -1;
       }
     }
@@ -457,9 +478,9 @@ function render() {
   r = e.beginRenderPass(passScene);
   r.setBindGroup(0, bg0);
   r.setPipeline(pTerrain); r.setVertexBuffer(0, vbTerrain); r.setVertexBuffer(1, ibSolids); r.setIndexBuffer(ibTerrain, 'uint32');
-  drawCells(r, T.start, T.lo, T.hi, 1.5, 1, 0, 0, 240);
-  r.setPipeline(pSolid); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint32');
-  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ib.length, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
+  drawCells(r, T.start, T.lo, T.hi, 1.5, 1, 0, 0, cy > -.2 ? 400 : 240);
+  r.setPipeline(pSolid); r.setVertexBuffer(0, vbMesh); r.setIndexBuffer(ibMesh, 'uint16');
+  for (let i = 0; i < 12; i++) { const g = Wd.solids.ranges[i]; if (g[1]) r.drawIndexed(meshes[i].ni, g[1], meshes[i].i0, meshes[i].v0, g[0]); }
   for (let i = 0; i < NCHUNK; i++) {
     const c = Wd.chunks[i], big = i > 2 && i < 6; r.setVertexBuffer(1, ibChunk[i]);
     drawCells(r, c.start, c.lo, c.hi, 3, meshes[14 + i], 0, 0, i > 5 ? 30 : big ? 40 : 96);
@@ -470,18 +491,18 @@ function render() {
     drawCells(r, Wd.props[i].start, Wd.props[i].lo, Wd.props[i].hi, 3, meshes[4 + i], 0, 0, lod ? 6 : 110);
     if (lod) drawCells(r, Wd.props[i].start, Wd.props[i].lo, Wd.props[i].hi, 3, meshes[18 + i], 0, 6, 110);
   }
-  r.setPipeline(pManta); r.setVertexBuffer(1, ibManta); r.drawIndexed(MANTA.ib.length, nManta, MANTA.i0, MANTA.v0, 0);
-  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ib.length, nFish, FISH.i0, FISH.v0, 0);
+  r.setPipeline(pManta); r.setVertexBuffer(1, ibManta); r.drawIndexed(MANTA.ni, nManta, MANTA.i0, MANTA.v0, 0);
+  r.setPipeline(pFish); r.setVertexBuffer(1, ibFish); r.drawIndexed(FISH.ni, nFish, FISH.i0, FISH.v0, 0);
   // kelp and plants: 9-row blades up close, 5 rows mid-range, a decimated set far away
   r.setPipeline(pLeaf); r.setVertexBuffer(0, ibBig); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 18, 0, 24);
   r.setPipeline(pLeaf5); drawCells(r, Wd.big.start, Wd.big.lo, Wd.big.hi, 5, false, 10, 24, 58);
   r.setPipeline(pLeafF); r.setVertexBuffer(0, ibBigF); drawCells(r, Wd.bigF.start, Wd.bigF.lo, Wd.bigF.hi, 5, false, 6, 58, 150);
   r.setPipeline(pLeafS); r.setVertexBuffer(0, ibSmall); drawCells(r, Wd.small.start, Wd.small.lo, Wd.small.hi, 1.5, false, 6, 0, 70);
-  r.setPipeline(pSurf); r.draw(4);
   r.setPipeline(pBack); r.draw(4);
   r.setPipeline(pBub); r.setVertexBuffer(0, ibBubbles); r.draw(4, nBub);
   r.setPipeline(pGl); r.setVertexBuffer(0, ibGl); r.draw(4, nGl);
   r.setPipeline(pSnow); r.setVertexBuffer(0, ibSnowB); r.draw(4, nSnow);
+  r.setPipeline(pSurf); r.draw(4);
   r.end();
   // light shafts
   r = e.beginRenderPass(passRays); r.setPipeline(pRays); r.setBindGroup(0, bgRays); r.draw(3); r.end();
@@ -503,11 +524,19 @@ function render() {
 // each axis for the gradient
 const CE = new Float64Array([0, 0, 0, .375, 0, 0, -.375, 0, 0, 0, .375, 0, 0, -.375, 0, 0, 0, .375, 0, 0, -.375]), CS = new Float64Array(7);
 const cv = (x, y, z) => { const b = CI[(x >> 2) + CN * ((y >> 2) + NY / 4 * (z >> 2))]; return b > 1 ? CG[b * 64 - 128 + (x & 3) + 4 * (y & 3) + 16 * (z & 3)] : b * 254 - 127; };
-function sd(j) {
-  const x = (F[CX] + CE[j * 3] - OX) / VS - CO, y = (F[CY] + CE[j * 3 + 1] - OY) / VS, z = (F[CZ] + CE[j * 3 + 2] - OZ) / VS - CO;
+function rockAt(wx, wy, wz) {
+  const x = (wx - OX) / VS - CO, y = (wy - OY) / VS, z = (wz - OZ) / VS - CO;
   const ix = x | 0, iy = y | 0, iz = z | 0, u = x - ix, v = y - iy, a = cv(ix, iy, iz), b = cv(ix, iy + 1, iz), c = cv(ix, iy, iz + 1), d = cv(ix, iy + 1, iz + 1);
   const p = a + (cv(ix + 1, iy, iz) - a) * u, q = b + (cv(ix + 1, iy + 1, iz) - b) * u, r = c + (cv(ix + 1, iy, iz + 1) - c) * u, s = d + (cv(ix + 1, iy + 1, iz + 1) - d) * u;
-  const e = p + (q - p) * v; CS[j] = (e + (r + (s - r) * v - e) * (z - iz)) / 127;
+  const e = p + (q - p) * v; return (e + (r + (s - r) * v - e) * (z - iz)) / 127;
+}
+// Keep a submerged body below the eyes near the surface; the original head sphere remains.
+const SURFACE_EYE = .28;
+function sd(j) {
+  const x = F[CX] + CE[j * 3], y = F[CY] + CE[j * 3 + 1], z = F[CZ] + CE[j * 3 + 2];
+  const body = .9 * sstep(-1.2, SURFACE_EYE, F[CY]);
+  CS[j] = rockAt(x, y, z);
+  if (body > 0) CS[j] = max(CS[j], rockAt(x, y - body, z));
 }
 // Moves the camera by F[MX..MZ] in steps shorter than its radius CR (so it can't pass through thin rock), pushing it
 // back out after each step and dropping velocity into the rock, so it slides along.
@@ -515,6 +544,7 @@ const CR = 0.5;
 function collide() {
   const n = floor(sqrt(F[MX] * F[MX] + F[MY] * F[MY] + F[MZ] * F[MZ]) / 0.4) + 1;
   for (let i = 0; i < n; i++) {
+    const px = F[CX], py = F[CY], pz = F[CZ];
     F[CX] += F[MX] / n; F[CY] += F[MY] / n; F[CZ] += F[MZ] / n;
     for (let k = 0; k < 2; k++) {
       sd(0); const s = CS[0] + CR; if (s <= 0) break;
@@ -524,6 +554,11 @@ function collide() {
       gx /= l; gy /= l; gz /= l; const vn = F[VX] * gx + F[VY] * gy + F[VZ] * gz;
       F[CX] -= gx * s; F[CY] -= gy * s; F[CZ] -= gz * s;
       if (vn > 0) { F[VX] -= gx * vn; F[VY] -= gy * vn; F[VZ] -= gz * vn; }
+    }
+    // Collision must not push the swimmer up a bank and out of the water.
+    if (F[CY] > SURFACE_EYE + 1e-6) {
+      F[CX] = px; F[CY] = min(py, SURFACE_EYE); F[CZ] = pz;
+      F[VX] = F[VZ] = 0; F[VY] = min(F[VY], 0);
     }
   }
 }
@@ -566,8 +601,9 @@ function frame(now) {
     const sp = ks || tN > 1 ? 26 : 7, k = 1 - exp(-dt * 4.5), mf = tId >= 0 ? 0.7 : kf - kb, mr = kr - kl, mu = ku - kd, cp = cos(pitch), sy = sin(yaw), cw = cos(yaw);
     const vx = F[VX] + ((sy * cp * mf + cw * mr) * sp - F[VX]) * k, vy = F[VY] + ((sin(pitch) * mf + mu) * sp - F[VY]) * k, vz = F[VZ] + ((-cw * cp * mf + sy * mr) * sp - F[VZ]) * k;
     let x = F[CX] + vx * dt, y = F[CY] + vy * dt, z = F[CZ] + vz * dt;
-    const rad = sqrt(x * x + z * z); if (rad > 150) { x *= 150 / rad; z *= 150 / rad; }
-    y = y < -52 ? -52 : y > -1.2 ? -1.2 : y;
+    // Safety limit behind the physical coast, inside the collision field.
+    const rad = sqrt(x * x + z * z); if (rad > 180) { x *= 180 / rad; z *= 180 / rad; }
+    y = y < -52 ? -52 : y > SURFACE_EYE ? SURFACE_EYE : y;
     F[YAW] = yaw; F[PIT] = pitch; F[VX] = vx; F[VY] = vy; F[VZ] = vz; F[MX] = x - F[CX]; F[MY] = y - F[CY]; F[MZ] = z - F[CZ];
     collide();
   }

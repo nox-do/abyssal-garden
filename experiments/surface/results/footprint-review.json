@@ -1,0 +1,47 @@
+{
+  "note": "Static build and loader round-trip only; no browser, heap or GPU measurements",
+  "variants": {
+    "base": {
+      "bytes": 103118,
+      "gzip": 41628,
+      "deltaBytes": 0,
+      "deltaGzip": 0
+    },
+    "cleanup": {
+      "bytes": 103145,
+      "gzip": 41655,
+      "deltaBytes": 27,
+      "deltaGzip": 27
+    },
+    "indices": {
+      "bytes": 103118,
+      "gzip": 41631,
+      "deltaBytes": 0,
+      "deltaGzip": 3
+    },
+    "nearFlyBox": {
+      "bytes": 103146,
+      "gzip": 41641,
+      "deltaBytes": 28,
+      "deltaGzip": 13
+    },
+    "aboveWaterZeroRays": {
+      "bytes": 103144,
+      "gzip": 41640,
+      "deltaBytes": 26,
+      "deltaGzip": 12
+    },
+    "cleanupAndIndices": {
+      "bytes": 103145,
+      "gzip": 41658,
+      "deltaBytes": 27,
+      "deltaGzip": 30
+    },
+    "packed": {
+      "bytes": 58342,
+      "gzip": 42592,
+      "deltaBytes": -44776,
+      "deltaGzip": 964
+    }
+  }
+}

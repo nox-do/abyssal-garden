@@ -1,0 +1,24 @@
+{
+  "baseline": "Current product with only collision extent and movement limit reverted",
+  "node": "v22.23.4",
+  "sources": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "a792e5547d7f8011e39231e979b8abb592e1ad306fad67ed583af5aa0e549cae",
+    "shaders.js": "1241997ecf9e34df348fffc1132e6ad8df7ff4fb8477576b96790b58dce01ec4",
+    "world.js": "7fc2821ecc95c4284a29fab3a6d6db77998be1872a65c2831de76ccb83719e73",
+    "main.js": "1272835977f071fd399db87333c90507dfc00aa0faa32df2e7405c1302a7f538",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "boundary-before": {
+      "bytes": 103119,
+      "gzipBytes": 41628,
+      "sha256": "17153f45f4c9376921fb9491c0decae907364993228ac4c2fc89693bcc9ad1f8"
+    },
+    "boundary": {
+      "bytes": 103118,
+      "gzipBytes": 41628,
+      "sha256": "f5cef635d8b2cdb3e7dc28b3d51aa77aa9e05a1a30529febe2a67d46bbca9945"
+    }
+  }
+}

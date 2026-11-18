@@ -1,0 +1,6 @@
+variants/
+results/*.png
+results/*.gif
+results/*.log
+results/compare.html
+results/beach-compare.html

@@ -206,6 +206,39 @@ fn hs(x: f32) -> f32 { return fract(sin(x * 127.1) * 43758.5453); }
 fn kd(z: f32) -> vec3f { return mix(KD, KDZ, z); }
 fn sg(z: f32) -> vec3f { return mix(SIG, vec3f(.034, .026, .022), z); }
 fn fin(c: vec3f) -> vec4f { return vec4f(min(max(c, vec3f(0.)), vec3f(40.)), 1.); }
+fn airSky(rd: vec3f, sun: vec3f) -> vec3f {
+  let h = pow(sat(rd.y), .45); let mu = sat(dot(rd, sun));
+  return mix(vec3f(.43, .69, .88), vec3f(.09, .29, .63), h) * 1.3
+    + vec3f(1., .83, .59) * (pow(mu, 16.) * .25 + ss(.999975, .999992, mu) * 22.);
+}
+// Vary the existing three-metre coast without enlarging the density grid.
+// The same mapping anchors dry props and plants to their underlying rock.
+fn coastShape(p: vec2f) -> vec3f {
+  let b = ss(138., 148., -p.x) * ss(28., 14., abs(p.y - 10.));
+  let h = .75 + .25 * sin(p.x * .045) * cos(p.y * .052);
+  let top = -2.1 + 2.26 * ss(165., 171., -p.x) + .46 * ss(171., 180., -p.x) + 2.38 * (.75 + .25 * sin(p.y * .13)) * ss(180., 188., -p.x);
+  let a = (top + 4.) / 7.;
+  return vec3f(mix(1., a, b), mix(h, a, b), b * (4. * a - 4.));
+}
+fn coastPosition(p: vec3f) -> vec3f {
+  if (p.y <= -4. || (p.y <= 0. && (p.x >= -138. || abs(p.z - 10.) >= 28.))) { return p; }
+  let c = coastShape(p.xz);
+  return vec3f(p.x, p.y * select(c.x, c.y, p.y > 0.) + c.z, p.z);
+}
+fn coastNormal(p: vec3f, n: vec3f) -> vec3f {
+  if (p.y <= -4.) { return n; }
+  if (p.x < -138. && abs(p.z - 10.) < 28.) {
+    let c = coastShape(p.xz); let sy = select(c.x, c.y, p.y > 0.);
+    let dx = (coastPosition(p + vec3f(.1, 0., 0.)).y - coastPosition(p - vec3f(.1, 0., 0.)).y) * 5.;
+    let dz = (coastPosition(p + vec3f(0., 0., .1)).y - coastPosition(p - vec3f(0., 0., .1)).y) * 5.;
+    return normalize(vec3f(n.x - n.y * dx / sy, n.y / sy, n.z - n.y * dz / sy));
+  }
+  if (p.y <= 0.) { return n; }
+  let h = .75 + .25 * sin(p.x * .045) * cos(p.z * .052);
+  let dx = .01125 * cos(p.x * .045) * cos(p.z * .052);
+  let dz = -.013 * sin(p.x * .045) * sin(p.z * .052);
+  return normalize(vec3f(n.x - n.y * p.y * dx / h, n.y / h, n.z - n.y * p.y * dz / h));
+}
 const KDF = vec3f(.043, .045, .042);
 fn fogIn(ro: vec3f, rd: vec3f, d: f32, z: f32, sun: vec3f) -> vec3f {
   let k = mix(KD, KDF, z);
@@ -254,10 +287,17 @@ fn caus2(p: vec3f, d: f32) -> f32 {
   let c = min(pow(textureSample(tW, sR, q / 4.1).r, 1.4) * 2.6 * (.45 + textureSample(tW, sR, q.yx / 6.9 + .37).r * 1.3), 2.6);
   return mix(c, .33, ss(35., 100., d));
 }
-fn sunE(y: f32, z: f32) -> vec3f { return SUNC * exp(kd(z) * (min(y, 0.) / g.sun.y)) * (.5 + .5 * sat(-y / 30.)); }
-fn vol(p: vec3f) -> vec4f { return textureSampleLevel(tV, sC, (p - vec3f(-192., -56., -192.)) / vec3f(384., 60., 384.), 0.); }
+fn sunE(y: f32, z: f32) -> vec3f { return SUNC * exp(kd(z) * (min(y, 0.) / g.sun.y)) * mix(.5 + .5 * sat(-y / 30.), 1., ss(-.15, .2, y)); }
+fn vol(p: vec3f) -> vec4f {
+  var q = p;
+  if (p.y > -4. && p.x < -138. && abs(p.z - 10.) < 28.) {
+    let c = coastShape(p.xz); q.y = (p.y - c.z) / select(c.x, c.y, p.y > c.z);
+  }
+  return textureSampleLevel(tV, sC, (q - vec3f(-192., -56., -192.)) / vec3f(384., 60., 384.), 0.);
+}
 fn amb(p: vec3f, n: vec3f, sky: f32, z: f32) -> vec3f {
   let up = n.y * .5 + .5;
+  if (p.y > 0.) { return mix(vec3f(.08, .07, .05), vec3f(.28, .39, .53), up) * (.4 + .6 * sky); }
   return mix(vec3f(.22, .60, .80), vec3f(.34, .56, .82), z) * exp(kd(z) * min(p.y, 0.) * 1.2) * (.3 + .7 * sky) * (.24 + .76 * up * up) * 1.3 * (.55 + .45 * sat(-p.y / 30.)) + vec3f(.003, .010, .016);
 }
 fn zone(p: vec3f) -> f32 { return mix(g.sun.w, textureSampleLevel(tM, sC, p.xz / 384. + .5, 0.).b, .2); }
@@ -265,6 +305,16 @@ fn side(p: vec3f, n: vec3f, open: f32, z: f32) -> vec3f { return mix(WCOL, PCOL,
 // skylight at most 150 m along the ray: past that, terrain and the background behind it (vsB) get the same haze
 fn fog(c: vec3f, wp: vec3f, z: f32) -> vec3f {
   let v = wp - g.cam.xyz; let d = length(v); let rd = v / d;
+  // Only the submerged portion of the sight line absorbs and scatters light.
+  if (g.cam.y > 0. || wp.y > 0.) {
+    let a = g.cam.xyz; let crossed = a.y * wp.y < 0.;
+    let f = sat(-a.y / select(1., v.y, abs(v.y) > 1e-6));
+    let start = select(a, a + v * f, a.y > 0. && crossed);
+    var wd = select(0., d, a.y <= 0. && wp.y <= 0.);
+    if (crossed) { wd = d * select(f, 1. - f, a.y > 0.); }
+    let water = c * exp(-sg(z) * wd) + fogIn(start, rd, min(wd, 240.), z, g.sun.xyz) * (.58 + .42 * vol(start + rd * min(wd, 150.)).g);
+    return mix(water, vec3f(.70, .84, .94), 1. - exp(-(d - wd) * .0012));
+  }
   return c * exp(-sg(z) * d) * ss(230., 185., d) + fogIn(g.cam.xyz, rd, d, z, g.sun.xyz) * (.58 + .42 * vol(g.cam.xyz + rd * min(d, 150.)).g);
 }
 fn qrot(q: vec4f, v: vec3f) -> vec3f { return v + 2. * cross(q.xyz, cross(q.xyz, v) + q.w * v); }
@@ -281,7 +331,8 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
   if (i.c.x < 1.5 && i.c.z > 1.5 && g.res.x > 0.) { sc *= 1. - ss(i.c.z * .7, i.c.z, distance(i.a.xyz, g.cam.xyz) / g.mis.z); }
   var w = i.a.xyz + qrot(i.b, i.p * sc);
   w.y += sin(g.cam.w * .3 + i.c.y * 40.) * i.c.w;
-  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.n = qrot(i.b, i.n.xyz); o.op = i.p * i.a.w + i.c.y * 37.; o.on = i.n.xyz;
+  o.n = coastNormal(w, qrot(i.b, i.n.xyz)); w = coastPosition(w);
+  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.op = i.p * i.a.w + i.c.y * 37.; o.on = i.n.xyz;
   o.m = i.c; o.q = i.b; o.ao = i.n.w;
   return o;
 }
@@ -309,8 +360,8 @@ fn tri(p: vec3f, n: vec3f, s: f32) -> TP {
   let sk = textureSample(tD, sR, vec2f((i.op.x + i.op.z) * .33, i.op.y * .035));
   let sk2 = textureSample(tD, sR, vec2f((i.op.x - i.op.z) * 1.1, i.op.y * .11));
   let gm = textureSample(tM, sC, i.wp.xz / 384. + .5);
-  let ca = caus(i.wp, dist);
-  let hgt = A.h * .5 + B.h * .35 + C.h * .15;
+  let ca = mix(caus(i.wp, dist), vec3f(.33), ss(-.3, .05, i.wp.y));
+  var hgt = A.h * .5 + B.h * .35 + C.h * .15;
   var bump = 1.7; var gloss = .1; var alb = vec3f(0.); var emi = vec3f(0.); var vao = 1.; var flu = 0.;
   let flt = ss(.72, .93, n0.y);
   if (mat <= 1) {
@@ -361,8 +412,24 @@ fn tri(p: vec3f, n: vec3f, s: f32) -> TP {
     alb = mix(alb, vec3f(1., .75, .6), ss(.8, 1., i.ao) * .35);
     emi = alb * .01; flu = .75; gloss = .25; bump = .5;
   }
-  let rip = select(0., flt * gm.a * cos((i.wp.x * .8 + i.wp.z * .35) * 5. + A.c * 9.) * .65, mat == 0);
-  let N = normalize(qrot(i.q, normalize(on + (A.n * .85 + B.n * .65 + C.n * .45 * ss(60., 12., dist) + F.n * .5 * fk) * bump + vec3f(.8, sgro, .35) * vec3f(rip, 1., rip))));
+  // Existing rock forms become a dry coast with a darker wet margin.
+  if (mat <= 1 && i.wp.y > -1.2) {
+    let shore = ss(-1.2, .2, i.wp.y); let dry = ss(.05, .65, i.wp.y);
+    let stone = mix(vec3f(.19, .18, .15), vec3f(.38, .35, .28), A.h) * (.85 + .25 * B.h);
+    alb = mix(alb, stone * mix(.65, 1., dry), shore * .85);
+    bump = mix(bump, .65, shore); gloss = mix(gloss, mix(.35, .08, dry), shore);
+  }
+  var sand = 0.;
+  if (gm.g > 0. && i.wp.y > -4. && mat == 0) {
+    sand = gm.g * ss(-4., -1., i.wp.y) * ss(.65, .93, n0.y);
+    let dry = ss(.04, .34, i.wp.y);
+    alb = mix(alb, mix(vec3f(.25, .19, .12), vec3f(.72, .61, .42), dry) * (.9 + .2 * B.h), sand);
+    bump = mix(bump, .09, sand); gloss = mix(gloss, mix(.22, .025, dry), sand);
+    sgro *= 1. - sand; hgt = mix(hgt, .55, sand);
+  }
+  let rip = select(0., flt * gm.a * cos((i.wp.x * .8 + i.wp.z * .35) * 5. + A.c * 9.) * .65 * (1. - sand), mat == 0);
+  var N = normalize(qrot(i.q, normalize(on + (A.n * .85 + B.n * .65 + C.n * .45 * ss(60., 12., dist) + F.n * .5 * fk) * bump + vec3f(.8, sgro, .35) * vec3f(rip, 1., rip))));
+  if (i.wp.y > 0. || (gm.g > 0. && i.wp.y > -4.)) { N = normalize(n0 + (N - qrot(i.q, on)) * select(1., .5, i.wp.y > 0.)); }
   let L = g.sun.xyz; let V = normalize(g.cam.xyz - i.wp);
   let v1 = vol(i.wp + n0 * 1.5); let v2 = vol(i.wp + n0 * 4.5);
   let ao = (sat((v1.r - .5) * 8.) * .55 + sat((v2.r - .5) * 2.7) * .45) * vao * ss(.12, .6, hgt);
@@ -382,17 +449,23 @@ fn tri(p: vec3f, n: vec3f, s: f32) -> TP {
 // ---------------------------------------------------------------- leaves (kelp, grasses, ground cover)
 const W_LEAF = S_B + /*wgsl*/`
 override ROWS: f32 = 7.;
+override CUTOUT: bool = false;
 override FAR: f32 = 150.;
 struct LI { @location(0) a: vec4f, @location(1) b: vec4f, @location(2) c: vec4f };
 struct LO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n: vec3f, @location(2) uv: vec2f,
   @location(3) @interpolate(flat) col: vec3f, @location(4) @interpolate(flat) pr: vec4f,
-  @location(5) @interpolate(flat) sd: vec2f, @location(6) @interpolate(flat) spc: vec3f };
+  @location(5) @interpolate(flat) sd: vec2f, @location(6) @interpolate(flat) spc: vec3f, @location(7) @interpolate(flat) edge: vec3f };
 fn sway(p: vec2f, h: f32, t: f32) -> vec2f {
   let ph = dot(p, vec2f(.031, .017));
   let a = .024 * pow(max(h, 0.), 1.25);
   return a * (vec2f(sin(t * .5 + ph + h * .09), cos(t * .37 + ph * 1.3 + h * .07)) + .35 * vec2f(sin(t * 1.3 + ph * 3. + h * .3), cos(t * 1.1 + ph * 2. + h * .23)));
 }
+
 fn shape2(v: f32) -> f32 { return sin(3.14159 * sat(v)); }
+// Reuse the species profile per pixel, so a sparse ribbon can have a curved edge.
+fn leafWidth(v: f32, s: vec2f) -> f32 { return pow(max(sin(3.14159 * pow(sat(v), s.x)), 0.), s.y); }
+@fragment fn fsSh(i: LO) { if (i.edge.z > .5 && abs(i.uv.x) > leafWidth(i.uv.y, i.edge.xy)) { discard; } }
+
 fn pal(h: f32) -> vec3f {
   if (h < .3) { return vec3f(1., .62, .08); }
   if (h < .6) { return vec3f(.12, 1., .22); }
@@ -431,7 +504,9 @@ fn pal(h: f32) -> vec3f {
   let N = normalize(pe * cK - d * sl); let T0 = normalize(d * cK + pe * sl);
   let tw = (s1 - .5) * 2.4 * v + sin(t * .9 + s2 * 20.) * .25 * v;
   let S = sd * cos(tw) + N * sin(tw); let N2 = N * cos(tw) - sd * sin(tw);
-  let shape = pow(max(sin(3.14159 * pow(v, shp.x)), 0.), shp.y);
+  // Big blades use an enclosing ribbon. Stems retain their original geometry.
+  let cut = CUTOUT && ty != 1;
+  let shape = select(leafWidth(v, shp), 1., cut);
   let shp_ = g.res.x == 0.;
   let cd = distance(i.a.xyz, g.cam.xyz); let far = FAR * g.mis.z;
   let nearK = select(1. - ss(26., 40., cd), 0., shp_);
@@ -441,8 +516,10 @@ fn pal(h: f32) -> vec3f {
   p += N2 * ruf;
   let sw = sway(i.a.xz, hA + (p.y - i.a.y), t);
   p.x += sw.x; p.z += sw.y;
-  o.cp = g.vp * vec4f(p, 1.); o.wp = p; o.n = normalize(N2 + S * u * .55 - T0 * cos(v * 10. + s2 * 30. + t * .6) * u * .7 * nearK); o.uv = vec2f(u, v);
-  o.col = col; o.pr = pr; o.sd = vec2f(s1, s2); o.spc = spc;
+  o.n = coastNormal(p, normalize(N2 + S * u * .55 - T0 * cos(v * 10. + s2 * 30. + t * .6) * u * .7 * nearK));
+  p = coastPosition(p);
+  o.cp = g.vp * vec4f(p, 1.); o.wp = p; o.uv = vec2f(u, v);
+  o.col = col; o.pr = pr; o.sd = vec2f(s1, s2); o.spc = spc; o.edge = vec3f(shp, f32(cut));
   return o;
 }
 struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @interpolate(flat) col: vec3f };
@@ -450,6 +527,7 @@ struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @
   var o: GO; let q = vec2f(f32(vi & 1u), f32(vi >> 1u)) * 2. - 1.; let t = g.cam.w;
   var p = a.xyz; let sw = sway(a.xz, a.w, t); p.x += sw.x; p.z += sw.y;
   p += .1 * vec3f(sin(t * .7 + b.x * 50.), sin(t * .9 + b.x * 70.), cos(t * .8 + b.x * 90.));
+  p = coastPosition(p);
   let d = length(p - g.cam.xyz);
   if (d > 120. || dot(p - g.cam.xyz, g.fwd.xyz) < -1.) { o.cp = vec4f(0., 0., 2., 1.); return o; }
   let tw = pow(.5 + .5 * sin(t * (.35 + .9 * hs(b.x)) + b.x * 100.), 4.);
@@ -466,23 +544,31 @@ struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @
   let r = dot(i.uv, i.uv);
   return vec4f(min(i.col * exp(-r * 7.) * (1. - ss(.7, 1., r)), vec3f(10.)), 0.);
 }
+
 @fragment fn fs(i: LO, @builtin(front_facing) ff: bool) -> @location(0) vec4f {
+  let width = leafWidth(i.uv.y, i.edge.xy);
+  let edge = width - abs(i.uv.x);
+  let coverage = ss(-.5, .5, edge / max(fwidth(edge), 1e-4));
+  // High/Medium reuse MSAA coverage; Low keeps an opaque binary edge.
+  if (i.edge.z > .5 && coverage < select(.001, .5, LOW)) { discard; }
+  let uv = vec2f(select(i.uv.x, i.uv.x / max(width, .001), i.edge.z > .5), i.uv.y);
+
   let dist = length(i.wp - g.cam.xyz);
   let ca = caus2(i.wp, dist);
   var n = normalize(i.n); if (!ff) { n = -n; }
   let V = normalize(g.cam.xyz - i.wp); let L = g.sun.xyz;
   let z = zone(i.wp);
-  let lt = textureSample(tD, sR, vec2f(i.uv.x * .13 + i.sd.x * 3.7, i.uv.y * .8 + i.sd.y * 5.3));
+  let lt = textureSample(tD, sR, vec2f(uv.x * .13 + i.sd.x * 3.7, uv.y * .8 + i.sd.y * 5.3));
   let vv = vol(i.wp + vec3f(0., .8, 0.));
   let E = sunE(i.wp.y, z) * shadow1(i.wp + L * .3);
   let ndl = dot(n, L);
-  var alb = i.col * (.72 + .28 * ss(0., .25, abs(i.uv.x))) * mix(.5, 1.12, i.uv.y) * (1. - .45 * ss(30., 8., dist) * ss(.6, 1., sin(i.uv.y * 40. - abs(i.uv.x) * 7. + i.sd.x * 40.))) * (.58 + .42 * ss(0., .13, abs(i.uv.x))) * (.5 + 1.0 * lt.b) * (.65 + .7 * lt.a);
+  var alb = i.col * (.72 + .28 * ss(0., .25, abs(uv.x))) * mix(.5, 1.12, uv.y) * (1. - .45 * ss(30., 8., dist) * ss(.6, 1., sin(uv.y * 40. - abs(uv.x) * 7. + i.sd.x * 40.))) * (.58 + .42 * ss(0., .13, abs(uv.x))) * (.5 + 1.0 * lt.b) * (.65 + .7 * lt.a);
   let ndv = sat(dot(n, V));
-  let ir = .5 + .5 * cos(TAU * (vec3f(0., .33, .67) + ndv * 1.1 + i.sd.x * .22 + i.uv.y * .5 + .55));
+  let ir = .5 + .5 * cos(TAU * (vec3f(0., .33, .67) + ndv * 1.1 + i.sd.x * .22 + uv.y * .5 + .55));
   alb = mix(alb, alb * .5 + ir * vec3f(.15, .13, .30), i.pr.z * (1. - ndv) * .8);
   let tr = (max(-ndl, 0.) * .85 + .15) * i.pr.y;
   let trc = alb * mix(vec3f(1.), vec3f(1.5, 1.4, .75), sat(i.pr.y) * (1. - i.pr.z));
-  let aov = sat((vv.r - .5) * 6.) * mix(.4, 1., i.uv.y);
+  let aov = sat((vv.r - .5) * 6.) * mix(.4, 1., uv.y);
   let am = (amb(i.wp, n, vv.g, z) + amb(i.wp, -n, vv.g, z) * i.pr.y * .55 * vec3f(1.1, 1.15, .7) + side(i.wp, n, sat((vv.r - .5) * 4.), z) * .6) * (.3 + .7 * aov);
   var c = E * (.06 + ca * 1.5) * (alb * max(ndl, 0.) + trc * tr) + alb * am;
   let H = normalize(V + L);
@@ -491,10 +577,10 @@ struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @
   c += alb * i.pr.w * (.5 + 3. * dot(am + E * .3, vec3f(.1, .5, .5)));
   // sparkle: whole-leaf glints that twinkle slowly
   let tw = pow(.5 + .5 * sin(g.cam.w * (.5 + i.sd.y * 1.4) + i.sd.x * 90.), 5.);
-  let m = ss(.2, .0, abs(i.uv.y - (.35 + .45 * i.sd.y))) * (1. - i.uv.x * i.uv.x);
+  let m = ss(.2, .0, abs(uv.y - (.35 + .45 * i.sd.y))) * (1. - uv.x * uv.x);
   let lit = .35 + E.g * 1.2;
   c += i.spc * i.pr.x * (.1 + tw) * m * lit * .6;
-  return fin(fog(c, i.wp, z));
+  return vec4f(fin(fog(c, i.wp, z)).rgb, select(1., coverage, i.edge.z > .5 && !LOW));
 }
 `;
 
@@ -579,20 +665,38 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
 }
 `;
 
-// ---------------------------------------------------------------- water surface seen from below
+// ---------------------------------------------------------------- water surface and air sky
 const W_SURF = S_B + /*wgsl*/`
 struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f };
 @vertex fn vs(@builtin(vertex_index) i: u32) -> VO {
   var o: VO;
   let p = vec2f(f32(i & 1u), f32(i >> 1u)) * 2. - 1.;
-  o.wp = vec3f(g.cam.x + p.x * 900., 0., g.cam.z + p.y * 900.);
-  o.cp = g.vp * vec4f(o.wp, 1.);
+  // Intersect per pixel: a geometric plane would vanish at the near clip while surfacing.
+  o.wp = g.cam.xyz + g.fwd.xyz + g.right.xyz * (p.x * g.right.w) + g.up.xyz * (p.y * g.up.w);
+  o.cp = vec4f(p, 0., 1.);
   return o;
 }
-@fragment fn fs(i: VO) -> @location(0) vec4f {
-  let v = i.wp - g.cam.xyz; let d = length(v); let V = v / d;
+struct SurfaceOut { @location(0) color: vec4f, @builtin(frag_depth) depth: f32 };
+@fragment fn fs(i: VO) -> SurfaceOut {
+  let V = normalize(i.wp - g.cam.xyz);
+  // A small lens-height transition avoids toggling the entire view at y=0.
+  let air = ss(-.06, .06, g.cam.y); let fromAir = V.y < 0.;
+  if (abs(V.y) < 1e-6 || (fromAir && air <= 0.) || (!fromAir && air >= 1.)) { discard; }
+  let cy = select(min(g.cam.y, -.0001), max(g.cam.y, .0001), fromAir);
+  let d = -cy / V.y; let hit = g.cam.xyz + V * d; let wp = vec3f(hit.x, 0., hit.z);
+  var o: SurfaceOut;
+  o.depth = sat(g.fwd.w / max(d * dot(V, g.fwd.xyz), 1e-6));
   let fl = ss(260., 60., d);
-  let s = (textureSample(tW, sR, i.wp.xz / 13.).ba + textureSample(tW, sR, i.wp.zx / 4.7 + .2).ba * .7 + textureSample(tW, sR, i.wp.xz / 37. + .6).ba * .8) * fl;
+  let s = (textureSample(tW, sR, wp.xz / 13.).ba + textureSample(tW, sR, wp.zx / 4.7 + .2).ba * .7 + textureSample(tW, sR, wp.xz / 37. + .6).ba * .8) * fl;
+  if (fromAir) {
+    let n = normalize(vec3f(-s.x * .32, 1., -s.y * .32));
+    let ndv = sat(dot(-V, n)); let fr = .02 + .98 * pow(1. - ndv, 5.);
+    let R = reflect(V, n); let H = normalize(-V + g.sun.xyz);
+    let glint = pow(sat(dot(n, H)), 220.) * 2.5 * shadow4(wp + g.sun.xyz * .15);
+    let reflected = airSky(R, g.sun.xyz) * fr + SUNC * glint;
+    o.color = vec4f(min(reflected / max(fr, .02), vec3f(40.)), fr * air);
+    return o;
+  }
   let n = normalize(vec3f(-s.x * .8, -1., -s.y * .8));
   let ci = sat(dot(V, -n));
   let k = 1. - 1.769 * (1. - ci * ci);
@@ -601,11 +705,11 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f };
   let sd = max(dot(rr, g.sun.xyz), 0.);
   let fr = pow(1. - sqrt(max(k, 0.)), 5.);
   let sky = (vec3f(.30, .78, 1.) * 1.3 * clamp(1. + 3.8 * (s.x * .6 - s.y * .8), .25, 3.) + vec3f(1., .95, .85) * (pow(sd, 60.) * 1.3 + pow(sd, 500.) * 12.)) * (1. - fr);
-  let z = zone(i.wp);
+  let z = zone(wp);
   let R = reflect(V, n);
-  let refl = fogIn(i.wp, R, 300., z, g.sun.xyz) * 1.15;
+  let refl = fogIn(wp, R, 300., z, g.sun.xyz) * 1.15;
   let c = mix(refl, sky, win);
-  return fin(fog(c, i.wp, z));
+  o.color = vec4f(fin(fog(c, wp, z)).rgb, 1. - air); return o;
 }
 // behind everything: where no terrain is drawn (it stops at ~240 m) the water looks as it does at that distance
 @vertex fn vsB(@builtin(vertex_index) i: u32) -> VO {
@@ -616,7 +720,9 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f };
   return o;
 }
 @fragment fn fsB(i: VO) -> @location(0) vec4f {
-  let p = g.cam.xyz + normalize(i.wp - g.cam.xyz) * 240.;
+  let rd = normalize(i.wp - g.cam.xyz);
+  if (rd.y >= 0.) { return fin(airSky(rd, g.sun.xyz)); }
+  let p = g.cam.xyz + rd * 240.;
   return fin(fog(vec3f(0.), p, zone(p)));
 }
 `;
@@ -700,6 +806,8 @@ const W_RAYS = S_G + W_FS + /*wgsl*/`
   let rv = g.fwd.xyz + g.right.xyz * (nd.x * g.right.w) + g.up.xyz * (nd.y * g.up.w);
   let rl = length(rv); let rd = rv / rl;
   let zl = g.fwd.w / max(dp, 1e-6);
+  // The surface pass already composites reflected air over submerged geometry.
+  if (g.cam.y >= 0.) { return vec4f(0., 0., 0., zl); }
   var tm = min(zl * rl, 120.);
   if (rd.y > 1e-4) { tm = min(tm, -g.cam.y / rd.y); }
   let ro = g.cam.xyz; let sx = g.sun.xyz; let k = kd(g.sun.w); let sgz = sg(g.sun.w);

@@ -360,7 +360,7 @@ function makeWorld(D, T, flyPts, POSES) {
   const gm = new Uint8Array(512 * 512 * 4);
   for (let j = 0; j < 512; j++) for (let i = 0; i < 512; i++) {
     const x = (i + 0.5) / 512 * 384 - 192, z = (j + 0.5) / 512 * 384 - 192, o = (i + 512 * j) * 4;
-    gm[o] = magAt(x, z) * 255; gm[o + 2] = zoneP(x, z) * 255; gm[o + 3] = sstep(0.42, 0.6, fbm(x * 0.04, 3, z * 0.04, 3)) * 255;
+    gm[o] = magAt(x, z) * 255; gm[o + 1] = beachMask(x, z) * 255; gm[o + 2] = zoneP(x, z) * 255; gm[o + 3] = sstep(0.42, 0.6, fbm(x * 0.04, 3, z * 0.04, 3)) * 255;
   }
 
   // --- fish schools + mantas

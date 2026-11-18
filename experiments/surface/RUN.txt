@@ -1,0 +1,148 @@
+Abyssal Garden: Auftauchversuch, 18.11.2026
+
+Voraussetzungen: Node 22+ (getestet 22.23.4), source/node_modules aus
+source/package-lock.json, macOS Chrome. Python-Auswertung: Pillow und NumPy.
+
+Aus dem Projektstamm:
+  npm ci --prefix source
+  npm --prefix source run build
+  node experiments/surface/build.mjs
+  node experiments/surface/browser.mjs baseline:0 surface:0 baseline:1 surface:1 baseline:2 surface:2
+  node experiments/surface/timing.mjs
+  python3 experiments/surface/analyze.py
+  node experiments/surface/browser.mjs --shipping
+  cmp index.html experiments/surface/variants/surface.html
+
+Nicht mehrere GPU-Tests gleichzeitig ausfuehren. Tests ueberschreiben Berichte
+und Bilder. Fuer eine schnelle Sichtung: --quick surface:0; eigener Dateiname
+mit VISUAL_REPORT=screen.json. Die alten screen/trial-Berichte dokumentieren
+Zwischenstaende, keine finalen Nachweise.
+
+Baseline: Produkt aus Commit 461db8a + akzeptierte Blattkontur-Transformation
+aus experiments/leaves/variants.mjs, exakt 100253 B / gzip 40591 B. Kandidat:
+aktuelle Produktquellen. Keine Lese-/Schreibzugriffe auf die eingefrorene
+Referenz experiments/optimizations/upstream/.
+
+Generierte Dateien liegen unter variants/. Ohne Suffix normale Offline-Dateien;
+-qa/-timing enthalten nur fuer
+Pruefungen bestimmte Hooks. Screenshots/HTML sind in Git ignoriert.
+
+QA: 41 feste Bilder je Variante/Stufe, gleiche Kamera, Zeit, 1280x720 interne
+Pixel, Detailfaktor 1. 6 Totalen + 3 Details unter Wasser, 7 Oberflaechenansichten,
+8 Hoehen um die Wasserlinie, 15 weitere 30-Hz-Wellenbilder + 2 weitere Phasen.
+Oberflaechenkameras in der Baseline liegen ausserhalb ihrer alten Steuergrenze:
+sie sind Diagnosebilder, kein frueheres nutzbares Feature.
+
+Je Kandidat: Aufsteigen, Abtauchen, gegen die innere Felsinsel sowie gegen drei
+Weltgrenzen schwimmen, gleichzeitig aufwaerts und mit Shift. Jeder Frame wird
+auf endliche Koordinaten, Hoehe und Radius geprueft; Kopf und Koerper bleiben
+ausserhalb des Felsens. Anschliessend identischer tiefer Bewegungsvergleich.
+
+Chrome: eigenes temporaeres Headless-Profil, file:, Netzwerk offline. Vor dem
+Laden wird requestPointerLock ersetzt, damit der Test keine Maus faengt. RAF
+merkt waehrend manueller Frames nur den letzten Callback; beim Fortsetzen
+entstehen keine parallelen Animationsschleifen. Reales Pointer Lock ist daher
+kein praktisch getesteter Teil. Steuerungs-/Audio-Code wird normal ausgeloest.
+
+Zeitlauf: 1 Aufwaermseite + 3 Messseiten pro Variante/Stufe, wechselnde
+Reihenfolge. Jeweils 3 Kameras, 20 Aufwaerm- + 120 Messframes; GPU-Timestamps,
+CPU render()-Encoding. Keine Hashes, Allokationsaufzeichnung oder Screenshots.
+Oberflaechenzeit des Kandidaten nur absolut interpretieren; alte Oberflaeche
+ist keine gleichwertige Darstellung. Keine freie FPS-/Latenzmessung.
+
+RUECKWEG (nur solange keine weiteren Aenderungen die betroffenen Stellen beruehren):
+  git apply --check --reverse experiments/surface/surface-only.patch
+  git apply --reverse experiments/surface/surface-only.patch
+  npm --prefix source run build
+
+Der Patch enthaelt ausschliesslich den Auftauchversuch und erhaelt die zuvor
+akzeptierten Material- und Blattaenderungen. Er wurde mit --check geprueft.
+Nach spaeteren Aenderungen zuerst Diff pruefen. Keine Commits/Pushes in diesem
+Versuch. Details und Grenzen: docs/surface-study.md.
+
+NACHTRAG UFERGRENZE:
+  npm --prefix source run build
+  node experiments/surface/build.mjs --boundary
+  node experiments/surface/browser.mjs --boundary --quick
+  VISUAL_REPORT=boundary-shipping.json node experiments/surface/browser.mjs --shipping
+  cmp index.html experiments/surface/variants/boundary.html
+
+--boundary rekonstruiert den vorherigen Stand durch Ruecksetzen genau der
+Kollisionsabdeckung und Radialgrenze in den aktuellen Produktquellen. Die
+Baseline wurde gegen die vorherige 103119-B-Produktdatei bytegleich geprueft.
+Eigene Berichte boundary-build.json/boundary-browser.json/boundary-shipping.json;
+die alten Auftauchberichte werden dabei nicht ueberschrieben.
+
+16 identische Bilder pro Version/Stufe; 3 zusaetzliche erreichbare Uferbilder.
+Je Version/Stufe 80 Wege, je 600 Physikschritte ohne Zwischenrendering, alle
+Schritte geprueft. Berichte speichern Maxima/Minima und jede Sekunde eine Probe.
+Zusatztest: Felsring bei 178 m, Hoehen -52 bis +0,25 m, 720 Richtungen.
+132 Welt-/Mesh-Hashes bleiben gleich; nur CI und CG wachsen. Getrennte Angabe
+der einmaligen Kollisionsaufbauzeit (ein Durchlauf je Stufe, kein FPS-Beleg).
+Ein erster QA-Lauf brach beim GPU-Bildabruf mit CDP-Zeitlimit ab; der komplette
+erneute Lauf bestand. Die finalen Berichte stammen aus dem bestandenen Lauf.
+
+Separater Rueckweg nur fuer die Grenze:
+  git apply --check --reverse experiments/surface/boundary-only.patch
+  git apply --reverse experiments/surface/boundary-only.patch
+  npm --prefix source run build
+
+surface-only.patch enthaelt jetzt auch diese Korrektur; die zuvor beschriebenen
+Aufbau-/GPU-Zeitmessungen gehoeren zum ersten Auftauchstand, nicht zum Ufer-Fix.
+
+HISTORISCHER STATISCHER FOOTPRINT-REVIEW (damals keine Produktintegration):
+  node experiments/surface/review-footprint.mjs
+
+Reproduziert index.html aus den aktuellen Quellen, misst kleine getrennte
+Transformationen sowie deren Kombination und prueft den gzip-Loader durch
+Ausfuehren/Entpacken unter Node. Schreibt nur results/footprint-review.json;
+keine Produktdateien oder Browservarianten. Kein Browser-, Heap- oder GPU-Test.
+Die Transformationsanker beziehen sich auf den aktuellen Auftauch-/Uferstand.
+Interpretation und Prioritaeten: docs/surface-study.md, Abschnitt Footprint-Review.
+Nach Integration der Speicheroptimierung stoppt dieser historische Runner mit
+einem Hinweis; fuer den aktuellen Stand --memory und memory-analyze.py verwenden.
+
+INTEGRIERTE SPEICHEROPTIMIERUNG UND EINZELNE SANDBUCHT:
+  npm --prefix source run build
+  node experiments/surface/build.mjs --memory
+  node experiments/surface/browser.mjs --memory
+  python3 experiments/surface/memory-analyze.py
+  node experiments/surface/build.mjs --beach
+  node experiments/surface/browser.mjs --beach
+  node experiments/surface/beach-timing.mjs
+  python3 experiments/surface/beach-analyze.py
+  VISUAL_REPORT=beach-shipping.json node experiments/surface/browser.mjs --shipping
+  VISUAL_REPORT=beach-collision-layers.json node experiments/surface/browser.mjs --collision-info beach-before:0 beach:0
+  cmp index.html experiments/surface/variants/beach.html
+
+Der Builder kehrt beach-only.patch in einer temporaeren Quellkopie um. --memory
+vergleicht diesen Stand vor/nach CPU-Aufraeumen+Uint16, --beach vergleicht den
+optimierten Stand vor/nach Strand. Produktquellen werden dabei nicht veraendert.
+--memory erzeugt seinen historischen 103118/103145-B-Vergleich weiter exakt.
+memory-analyze.py prueft neben Daten/Allokationen alle Bildpixel; toleriert und
+berichtet hoechstens einen Pixel mit maximal einer 8-Bit-Farbstufe Differenz.
+Der erste starre SHA-Bildtest lehnte genau diese Low-pose4-Abweichung ab;
+die anschliessende dekodierte Pixelpruefung bestaetigt die genannte Grenze.
+
+Strand-QA: 45 identische Kameras/Zeiten plus drei tatsaechlich erreichte, daher
+nicht identische Uferpositionen je Version/Stufe (288 Bilder insgesamt).
+Je Version/Stufe 80 radiale + 10 gezielte Strand-Anlaeufe, je 600 Physikschritte;
+keine Zwischenrenderings in diesen Physikreihen. Wellenbilder separat 30 Hz.
+Strand-Zeitlauf: 1 Warmup + 3 Messseiten je Variante/Stufe, wechselnde Reihenfolge,
+4 feste Kameras, je 20 Aufwaerm- + 120 Messframes. Nicht parallel zu anderen
+GPU-Tests laufen lassen. beach-timing-standby.json ist wegen vom Nutzer
+gemeldeten Laptop-Standbys von Leistungsbewertungen ausgeschlossen. Auch
+beach-timing-interrupted.json (Browser-Timeout, 12 komplette plus ein teilweiser
+Fall) ist vollstaendig ausgeschlossen. Der abschliessende Lauf wird separat
+neu gestartet; auf macOS kann caffeinate -i fuer dessen Dauer Idle-Standby
+verhindern. Das aendert keine dauerhaften Systemeinstellungen.
+
+Rueckwege (vorher stets --check):
+  git apply --check --reverse experiments/surface/beach-only.patch
+  git apply --reverse experiments/surface/beach-only.patch
+  npm --prefix source run build
+
+Danach kann surface-only.patch das Auftauchen separat rueckgaengig machen;
+die Speicheroptimierung bleibt erhalten. memory-only.patch nimmt nur die
+Speicheroptimierung zurueck. Diese Kombinationen wurden in temporaeren
+Quellkopien geprueft. Keine Commits/Pushes dieses Versuchs.

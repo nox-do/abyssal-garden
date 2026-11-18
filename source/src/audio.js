@@ -25,7 +25,8 @@ function mkSound(ac) {
   const rum = G(0.34, out); src(1, BQ('lowpass', 150, 0.7, rum)); lfo(0.07, 0.11, rum.gain); lfo(0.113, 0.08, rum.gain);
   // surface wash + water rush: the same noise played at another speed, so the loops never line up
   const wash = G(0.25, out), wave = G(1, wash), rush = G(0, out), rushF = BQ('bandpass', 300, 0.9, rush);
-  src(0.63, BQ('bandpass', 420, 0.5, wave), rushF); lfo(0.09, 0.3, wave.gain); lfo(0.151, 0.25, wave.gain);
+  const washF = BQ('bandpass', 420, 0.5, wave);
+  src(0.63, washF, rushF); lfo(0.09, 0.3, wave.gain); lfo(0.151, 0.25, wave.gain);
   // drone: stacked fifths on D, each note a pair of slightly detuned sines that slowly beat
   const pad = G(1, out, G(1.5, wet));
   [73.42, 110, 164.81, 246.94, 369.99].forEach((f, i) => { const g = G(0.022 - i * 0.003, pad); N(OscillatorNode, { frequency: f }, g); N(OscillatorNode, { frequency: f + rr(0.03, 0.11) }, g); });
@@ -49,9 +50,13 @@ function mkSound(ac) {
     lt = now; lx = F[CX]; ly = F[CY]; lz = F[CZ];
     rush.gain.setTargetAtTime(0.5 * pow(min(v / 26, 1), 1.2), t, 0.3); rushF.frequency.setTargetAtTime(220 + v * 14, t, 0.3);
     const s = clamp(1 + ly / 30, 0, 1); wash.gain.setTargetAtTime(0.25 + 0.55 * s * s, t, 0.5);
+    // Reuse the same voices and filters on emergence: brighter wash, less rumble.
+    const air = sstep(-.12, .12, ly);
+    washF.frequency.setTargetAtTime(420 + air * 900, t, .18);
+    rum.gain.setTargetAtTime(.34 - air * .12, t, .18);
     if (t > tB) { // a burst of 1-6 bubbles: short rising blips, smaller bubbles higher and shorter
       let tt = t;
-      for (let n = 1 + rnd() * rnd() * 6 | 0; n--;) { const f = rr(380, 1300); play(bub, tt, f, f * rr(1.4, 2.2), 0.05 + 40 / f, rr(0.03, 0.08), 0.006); tt += rr(0.07, 0.2); }
+      for (let n = 1 + rnd() * rnd() * 6 | 0; n--;) { const f = rr(380, 1300); play(bub, tt, f, f * rr(1.4, 2.2), 0.05 + 40 / f, rr(0.03, 0.08) * (1. - air * .85), 0.006); tt += rr(0.07, 0.2); }
       tB = tt + rr(0.5, 5);
     }
     if (t > tC) { const f = 440 * pow(2, NOTES[rnd() * 9 | 0] / 12); play(chime, t, f, f, 5, rr(0.02, 0.04), 0.03); tC = t + rr(2.5, 9); }

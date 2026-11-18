@@ -55,6 +55,15 @@ const NX = 512, NY = 80, NZ = 512, VS = 0.75, OX = -192, OY = -56, OZ = -192;
 const CELLS = 16, CELLW = 24; // culling grid over XZ
 const NCHUNK = 7; // 3 small + 3 large rock chunk meshes + pebbles
 
+// One western sand pocket. The shader uses the same piecewise shore mapping.
+const beachMask = (x, z) => sstep(138, 148, -x) * sstep(28, 14, abs(z - 10));
+const coastOriginalY = (x, y, z) => {
+  const b = beachMask(x, z), h = .75 + .25 * sin(x * .045) * cos(z * .052);
+  const top = -2.1 + 2.26 * sstep(165, 171, -x) + .46 * sstep(171, 180, -x) + 2.38 * (.75 + .25 * sin(z * .13)) * sstep(180, 188, -x);
+  const a = (top + 4) / 7, offset = b * (4 * a - 4);
+  return (y - offset) / mix(y > offset ? h : 1, a, b);
+};
+
 // ---------------------------------------------------------------- naive surface nets
 // D: scalar field (>0 inside), dims nx,ny,nz. Returns grid-space positions + triangle indices.
 function surfaceNets(D, nx, ny, nz) {

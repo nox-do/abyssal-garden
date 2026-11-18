@@ -1,0 +1,24 @@
+{
+  "baseline": "Current product with only CPU cleanup and Uint16 object indices reverted",
+  "node": "v22.23.4",
+  "sources": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "bf749a644787a025f917008bb3bd696d7921a0b2374b3d7c95d7c131e6991d3b",
+    "shaders.js": "3c9a9dc87249d651ec328ae61f4740999775034babc5b8af3585638c5644b31c",
+    "world.js": "fb37fd59be60d7a643ab1d8551008a56df57271c73c5a7d563abd74e32ccf260",
+    "main.js": "2093703de3aec2538445921eb77767af8b2012fe3ffff7e82a215f1bf18c5742",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "memory-before": {
+      "bytes": 103118,
+      "gzipBytes": 41628,
+      "sha256": "f5cef635d8b2cdb3e7dc28b3d51aa77aa9e05a1a30529febe2a67d46bbca9945"
+    },
+    "memory": {
+      "bytes": 103145,
+      "gzipBytes": 41658,
+      "sha256": "ea91d8dfd0537b3905a686312f53420b5fb3d2e57e6076e160a348facfc99eae"
+    }
+  }
+}

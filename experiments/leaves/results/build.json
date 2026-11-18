@@ -1,0 +1,39 @@
+{
+  "revision": "461db8a",
+  "node": "v22.23.4",
+  "sources": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "a792e5547d7f8011e39231e979b8abb592e1ad306fad67ed583af5aa0e549cae",
+    "shaders.js": "b830f2ac793e78fd42f778173cbaf0f167f8e36877d33b0d15ad2920d02e2f3f",
+    "world.js": "7fc2821ecc95c4284a29fab3a6d6db77998be1872a65c2831de76ccb83719e73",
+    "main.js": "aac0fa8d0f90b1ba0f5240e62dacfcc77e713a990616072f220f95b273c03632",
+    "audio.js": "efd4feba3e36b2b5b7d3faf33a04f3c87df1f3999679e25185e297fd427076e7"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 99514,
+      "gzipBytes": 40289,
+      "sha256": "d11e244ffadb6cc2146c72227719a4780879179742710cede7e67464bfb2e44c"
+    },
+    "normals": {
+      "bytes": 99653,
+      "gzipBytes": 40320,
+      "sha256": "61fa746e121c214410434e6a6ee58779a4ff890ce45076ff4f716252588daaea"
+    },
+    "contour": {
+      "bytes": 100253,
+      "gzipBytes": 40591,
+      "sha256": "f88d761fc2899a0892349f044cfeccca5c7e157535ea15b4670f96ab2cf805e0"
+    },
+    "geometry": {
+      "bytes": 99516,
+      "gzipBytes": 40290,
+      "sha256": "9acf2d0045bc27a6eb0e264e83d947d88e11dad7f3ed6d4a581e2d77bcbcc854"
+    },
+    "balanced": {
+      "bytes": 99521,
+      "gzipBytes": 40292,
+      "sha256": "eb241f80f61d8b15ec6a262731e63c024e16e169ad9281661557657d7910c52f"
+    }
+  }
+}

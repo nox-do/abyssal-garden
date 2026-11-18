@@ -205,3 +205,160 @@ Die bisherigen Optimierungsempfehlungen (nearFly, Indizes, Kompression) sind
 weiterhin nicht integriert. Dieser Stand wurde anschliessend auf Nutzerwunsch
 lokal committed; nichts wurde gepusht. Naechster Schwerpunkt sind weniger
 eckige Blaetter bei unveraenderter, vom Nutzer gut bewerteter Bewegung.
+
+## Fortsetzung: Blattkonturen (18.11.2026)
+
+Der Nutzer hat einen reversiblen Versuch beauftragt. Der vorherige akzeptierte
+Produktstand ist lokal in `461db8a` gesichert. Nach Sichtung von Normalen,
+zusaetzlichen Reihen und anderer Punktverteilung wurde eine mathematische
+Konturmaske in `source/` und `index.html` uebernommen. Neue Untersuchung:
+`docs/leaf-quality-study.md`, reproduzierbare Varianten unter `experiments/leaves/`.
+Die eingefrorene Referenz bleibt unveraendert.
+
+Rundere Raender ohne neue Texturen, Puffer oder Dreiecke. HTML +739 Bytes,
+gzip +302 Bytes. Biegungs-/Wellen-/Stroemungsparameter bleiben erhalten;
+die anders gerasterte Oberflaeche ist nicht pixelgleich animiert. Innere Knicke
+stark verdrehter Blaetter bleiben sichtbar. Schwebende Felsen waren bereits
+im Original absichtlich vorhanden und wurden nicht geaendert.
+
+360 kontrollierte Bilder auf High/Medium/Low, darunter aufeinanderfolgende
+30-Hz-Phasen; Weltdaten und Ressourcenanforderungen gleich, Offline, Bewegung,
+Menue und Audio geprueft. Wiederholte Zeitmessung auf diesem Mac: High
+je nach Ansicht +0,066 bis +0,721 ms GPU-Zeit, Low +0,131 ms. Kein belegter
+Startzeitnachteil; kein gemessener Gesamt-/Spitzenspeicher. Der Mehrbedarf ist
+ein bewusster Qualitaetskompromiss, kein Performancegewinn. Noch nicht committed
+oder gepusht. Test-Runner unterdrueckt weiterhin Pointer Lock.
+
+## Fortsetzung: Auftauchen (18.11.2026)
+
+Der Nutzer hat Auftauchen, Wasser von oben, Sonne und eine sichtbare Kueste
+beauftragt und ausdruecklich bestaetigt, dass der vorhandene etwa drei Meter
+hohe Felsrand ausreicht. Der Versuch ist in `source/` und `index.html`, Details
+in `docs/surface-study.md`, Vergleich und Messung unter `experiments/surface/`.
+
+Mit E auftauchen, Q abtauchen, Shift beschleunigt. Maximal +0,28 m Augenhoehe;
+zusaetzliche Koerperkollision und eine Hoehensicherung verhindern Landgang.
+Nur positive Landschaftshoehen werden auf 1,5-3 m variiert; gleiche Verformung
+fuer trockene Objekte/Pflanzen und Schatten. Unterwasserformen und alle 134
+Weltdaten-Hashes bleiben gleich. Keine neuen GPU-Texturen oder Puffer.
+
+Himmel/Sonne, Wasseroberseite und Luft-/Wasserabsorption sind erweitert. Die
+Oberflaeche mischt die vorhandene Unterwasserszene mit Himmelsreflexion, ohne
+zusaetzlichen Szenenrenderlauf. Bewusste Grenzen: keine Brechungsverzerrung
+der Unterwasserobjekte, keine Spiegelung der Kueste, nur optische Wellen,
+statische Sonne und Schatten. Die erste Version behielt die 150-m-Bewegungsgrenze;
+der nachfolgende Ufer-Fix verschiebt sie hinter die Kueste (siehe unten).
+
+HTML gegen den Blattstand: 100.253 auf 103.119 B (+2.866 B); gzip +1.037 B.
+Wiederholte Messung auf diesem Mac: +0,066 bis +0,590 ms GPU in den geprueften
+Unterwasseransichten. Kein belegter allgemeiner Startzeitnachteil; kalte
+Shaderuebersetzung und Gesamt-/Spitzenspeicher nicht gemessen. Drei Stufen,
+feste Bild-/Zeitvergleiche, Auf-/Abtauchen und Ufer-/Grenztests, Offline/Audio.
+
+Noch nicht committed/gepusht. `experiments/surface/surface-only.patch` enthaelt
+nur den Auftauchversuch und kann separat umgekehrt werden; danach regulaer
+bauen. Vorherige Blatt- und Materialarbeiten bleiben so erhalten. Die
+eingefrorene Optimierungsreferenz bleibt unveraendert.
+
+## Fortsetzung: erreichbare Kueste (18.11.2026)
+
+Nach Nutzerfeedback wurde die zu fruehe Grenze korrigiert: Kollisionsabdeckung
+von etwa 156 auf 186 m, radiale Sicherung von 150 auf 180 m hinter den Felsrand.
+Keine groessere Landschaft und keine zusaetzliche Geometrie. In den geprueften
+Oberflaechenanlaeufen erreicht man nun im Norden/Osten/Westen etwa 166-169 m
+statt 150 m; die vorhandene Felskollision stoppt den Schwimmer.
+
+Alle drei Stufen: je 80 Wege in 16 Richtungen und fuenf Starttiefen, 600 Schritte
+pro Weg; kein Durchdringen/Verlassen des Wassers in diesen Stichproben. 16 feste
+Vorher-nachher-Bilder pro Stufe pixelgleich, 132 Welt-/Mesh-Hashes und alle GPU-
+Allokationen identisch. Nur CPU-Kollisionsarrays wachsen um 786.272 B (~0,75 MiB).
+HTML 103.118 B, gzip unveraendert. Einmaliger Kollisionsaufbau in den lokalen
+QA-Laeufen +19,6 bis +21,9 ms, keine allgemeine Gesamtstart-/FPS-Aussage.
+
+Details im Nachtrag von `docs/surface-study.md`; separate `boundary-*.json`-
+Berichte unter `experiments/surface/results/`. Die vorherigen Auftauchberichte
+bleiben historisch. `boundary-only.patch` nimmt nur den Ufer-Fix zurueck;
+`surface-only.patch` wurde fuer den kompletten Auftauchversuch aktualisiert.
+
+## Review und Strandkonzept (18.11.2026)
+
+Auf Nutzerwunsch hat ein separater Agent Einsparpotenzial geprueft. Keine neue
+Produktintegration. Prioritaet: unnoetige CPU-Arrays nach Upload freigeben
+(2,5-2,7 MiB Nutzdaten), Objektindizes Uint16 (0,45-0,52 MiB GPU), danach ueber
+Wasser bereits leere Lichtstrahl-Paesse ueberspringen. Statische Probebuilds und
+aktueller gzip-Loader-Roundtrip unter `experiments/surface/review-footprint.mjs`
+und `results/footprint-review.json`. Noch kein aktueller Browser-/Heap-Nachweis
+fuer diese Kandidaten; Details im Review-Abschnitt von `docs/surface-study.md`.
+
+Dort auch das noch nicht umgesetzte Strandkonzept: wenige Sandbuchten, kurze
+Unterwasserboeschung, ruhige Sandnormalen/Nasssaum, vorhandenen freien Gruenkanal
+der Bodenkarte nutzen. Terrainform und Kollision gemeinsam behandeln; bei
+Formaenderungen die von Terrain-Vertexindizes abhaengige Platzierung beachten.
+
+## Fortsetzung: Speicherbereinigung und erste Sandbucht (18.11.2026)
+
+Nach Freigabe sind CPU-Aufraeumen nach Upload und Uint16-Objektindizes in
+`source/` und `index.html` integriert. Terrainindizes bleiben Uint32. Gezaehlte
+Array-Nutzdaten: 2.846.672 B High/Medium bzw. 2.625.928 B Low freigegeben;
+GPU-Indexpuffer 541.248 B bzw. 475.548 B kleiner. Keine RSS-/Spitzenmessung.
+136 Daten-Hashes pro Stufe identisch. 41 feste Bildpaare pro Stufe: High/Medium
+pixelgleich; Low ein Pixel mit einer 8-Bit-Stufe Differenz in einem Bild,
+alle anderen gleich. Dekodierter Nachweis in `memory-summary.json`.
+
+Danach isolierter Strandversuch am westlichen Rand (x etwa -170, z=10): lokale
+Hoehenabbildung oberhalb -4 m, inverse Abbildung fuer Kollision und bestehende
+Volumenbeleuchtung, passende Normalen/Schatten/Pflanzen, Sandmaske im freien
+Gruenkanal der vorhandenen Bodenkarte. Dunkler Nasssaum, ruhige Sandnormalen,
+hellere trockene Flaeche. Sichtbarer Unterschied gegen die steile Felswand;
+keine neuen Dreiecke, Instanzen, GPU-Puffer, Texturen oder Renderpaesse.
+Topologie und Platzierungsarrays bleiben identisch; sichtbare Positionen im
+Strandbereich werden im Shader verformt. Bestehende Blattbewegung erhalten.
+
+HTML: vorher 103.118 B, nach Speicherbereinigung 103.145 B, mit Strand
+105.121 B. Strand allein +1.976 B HTML/+775 B gzip, CPU-Kollision +12.288 B.
+Diese 12 KiB sind 192 zusaetzliche gemischte 64-B-Blöcke, davon 191 zwischen
+-2 und +0,25 m: fast vollstaendig neuer Unterwasserhang, kein Collider fuer
+begehbares Land. Eine gesonderte zweidimensionale Ufersperre wurde deshalb
+nicht eingebaut. Nach beiden Aenderungen netto 2,49-2,70 MiB weniger gehaltene
+CPU-Nutzdaten plus die GPU-Indexersparnis. Quell-/Build-Hashes und genaue
+Abgrenzung in `docs/surface-study.md`, `results/memory-*.json`, `beach-*.json`.
+
+Strandpruefung auf allen drei Stufen: 288 Bilder, davon 45 feste Bildpaare pro
+Stufe einschliesslich Nah-/Gesamtansichten, Wasserlinie und zeitlicher Sequenz.
+Je Version/Stufe 90 Wege mit 600 Physikschritten; kein Landgang/Durchdringen in
+diesen Stichproben, geringster Feldabstand 0,442 m. Westliches Ufer bleibt
+erreichbar (x=-169,694 m statt -168,407 m). 130 von 135 Daten-Hashes gleich;
+nur CI/CG, Bodenkarte und zwei Culling-Untergrenzen geaendert. Normaler Build
+ebenfalls in drei Stufen offline mit Audio/Menue/Bewegung geprueft.
+
+Die unterbrochenen Zeitlaeufe `beach-timing-standby.json` und
+`beach-timing-interrupted.json` sind von Leistungsbehauptungen ausgeschlossen.
+Aktuelle Zeitmessung und deren Grenzen stehen im Umsetzungsteil der
+Oberflaechenstudie: voller neuer Lauf ab 15:59 UTC, ein Warmup plus drei Seiten
+je Variante/Stufe. Lokale Mediane bis erstem Bild +76,8 bis +106,0 ms,
+Kollisionsaufbau davon +51,6 bis +55,1 ms. Nahe Bucht GPU High +0,295 ms,
+Medium +0,262 ms, Low innerhalb der Messaufloesung gleich; tiefe Ansichten
+kleinere Mediandifferenzen bei teils stark schwankenden Runden. Keine
+allgemeine FPS-/Startzeitgarantie. Vorhandenes Lichtvolumen ist nur raeumlich umgerechnet,
+keine neu berechnete Lichtausbreitung; kurze Bildsequenzen belegen keine
+allgemeine Artefaktfreiheit. Keine kalte Shader-/Gesamtspeichergarantie.
+
+Rueckweg: zuerst `beach-only.patch` umkehren; danach entfernt der aktualisierte
+`surface-only.patch` das Auftauchen samt Uferkorrektur unter Erhalt von
+Speicher-, Blatt- und Materialarbeit. `memory-only.patch` entfernt separat die
+Speicheroptimierung. Geprueft in temporaeren Quellkopien. Die eingefrorene
+Referenz bleibt unveraendert; weiterhin kein neuer Commit oder Push.
+
+## Lokaler Sicherungsstand (18.11.2026)
+
+Auf Nutzerwunsch werden die seit `461db8a` entstandenen Blatt-, Auftauch-,
+Ufer-, Strand- und Speicherarbeiten zusammen mit Quellen, regulaerem Build,
+Versuchswerkzeugen, Messberichten und Dokumentation lokal committed. Die oben
+stehenden Angaben zu damals uncommitteten Arbeiten sind historische Zustaende.
+Kein Push beauftragt. Vergleichsbilder und generierte Varianten bleiben wie
+bisher lokal ignorierte Artefakte, die eingefrorene Referenz bleibt unveraendert.
+
+Der regulaere Build wurde vor dem Commit erneut bytegleich reproduziert:
+`index.html` 105.121 Bytes = 105,121 kB = 102,657 KiB; gzip (Stufe 9)
+42.433 Bytes. Der eingebettete gzip-Loader aus dem frueheren Experiment ist
+weiterhin nicht in diesem Produkt-Build enthalten.

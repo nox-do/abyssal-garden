@@ -1,0 +1,161 @@
+--- a/source/src/math.js
++++ b/source/src/math.js
+@@ -54,6 +54,15 @@
+ const NX = 512, NY = 80, NZ = 512, VS = 0.75, OX = -192, OY = -56, OZ = -192;
+ const CELLS = 16, CELLW = 24; // culling grid over XZ
+ const NCHUNK = 7; // 3 small + 3 large rock chunk meshes + pebbles
++
++// One western sand pocket. The shader uses the same piecewise shore mapping.
++const beachMask = (x, z) => sstep(138, 148, -x) * sstep(28, 14, abs(z - 10));
++const coastOriginalY = (x, y, z) => {
++  const b = beachMask(x, z), h = .75 + .25 * sin(x * .045) * cos(z * .052);
++  const top = -2.1 + 2.26 * sstep(165, 171, -x) + .46 * sstep(171, 180, -x) + 2.38 * (.75 + .25 * sin(z * .13)) * sstep(180, 188, -x);
++  const a = (top + 4) / 7, offset = b * (4 * a - 4);
++  return (y - offset) / mix(y > offset ? h : 1, a, b);
++};
+ 
+ // ---------------------------------------------------------------- naive surface nets
+ // D: scalar field (>0 inside), dims nx,ny,nz. Returns grid-space positions + triangle indices.
+--- a/source/src/main.js
++++ b/source/src/main.js
+@@ -177,14 +177,28 @@
+ const CO = 8, CN = 124, CI = new Uint16Array(CN * CN * NY / 4);
+ let CG = new Int8Array(64 * 65534);
+ {
++  // Invert the visible shore mapping while building collision; keep the original
++  // terrain topology and generator positions. No second density grid is needed.
++  const sample = sampler3(D, NX, NY, NZ);
++  const cd = (x, y, z) => {
++    const wx = OX + x * VS, wy = OY + y * VS, wz = OZ + z * VS;
++    if (wy <= -4 || !beachMask(wx, wz)) return D[x + NX * (y + NY * z)];
++    const sy = coastOriginalY(wx, wy, wz);
++    return sy >= 3.25 ? 2.25 - sy : sample(x, (sy - OY) / VS, z);
++  };
++  const cq = (x, y, z) => {
++    const gx = cd(x + 1, y, z) - cd(x - 1, y, z), gy = cd(x, y + 1, z) - cd(x, y - 1, z), gz = cd(x, y, z + 1) - cd(x, y, z - 1);
++    return round(clamp(cd(x, y, z) / max(sqrt(gx * gx + gy * gy + gz * gz) / 1.5, .05), -1, 1) * 127);
++  };
+   let n = 0;
+   for (let bz = 0; bz < CN; bz++) for (let by = 1; by < NY / 4 - 1; by++) for (let bx = 0; bx < CN; bx++) {
+     if (hypot(bx - CN / 2 + 0.5, bz - CN / 2 + 0.5) > 62) continue; // 186 m: includes the coast and a margin for collision samples
++    const shore = by >= 17 && bx < 17 && abs(OZ + (CO + bz * 4 + 1.5) * VS - 10) < 39;
+     let lo = 127, hi = -127;
+     for (let z = 0; z < 4; z++) for (let y = 0; y < 4; y++) for (let x = 0; x < 4; x++) {
+       const i = CO + bx * 4 + x + NX * (by * 4 + y + NY * (CO + bz * 4 + z)), gz = D[i + NX * NY] - D[i - NX * NY];
+       const gx = D[i + 1] - D[i - 1], g = D[i + NX] - D[i - NX], l = sqrt(gx * gx + g * g + gz * gz) / 1.5;
+-      const q = round(clamp(D[i] / max(l, 0.05), -1, 1) * 127);
++      const q = shore ? cq(CO + bx * 4 + x, by * 4 + y, CO + bz * 4 + z) : round(clamp(D[i] / max(l, 0.05), -1, 1) * 127);
+       CG[n * 64 + x + 4 * y + 16 * z] = q; if (q < lo) lo = q; if (q > hi) hi = q;
+     }
+     CI[bx + CN * (by + NY / 4 * bz)] = lo === hi && lo * lo === 16129 ? +(lo > 0) : (n++, n + 1);
+@@ -270,6 +284,12 @@
+ await say('Growing kelp…', 0.73, 2500);
+ const Wd = makeWorld(D, T, flyPts, POSES);
+ for (const p of POSES) p[1] += Wd.gy(p[0], p[2]);
++// The beach mapping stays above -4 m. Expand existing bounds only in its cells.
++for (const o of [T, Wd.big, Wd.bigF, Wd.small, ...Wd.chunks, ...Wd.props]) {
++  for (let c = 0; c < CELLS * CELLS; c++) {
++    if (OX + c % CELLS * CELLW < -138 && abs(OZ + (floor(c / CELLS) + .5) * CELLW - 10) < 40 && o.lo[c] <= o.hi[c]) o.lo[c] = min(o.lo[c], -4);
++  }
++}
+ D = Wd.gy = T.smp = null; // with gy goes the generator's working memory (about 200 MB)
+ 
+ await say('Building set pieces…', 0.94, 1200);
+--- a/source/src/world.js
++++ b/source/src/world.js
+@@ -360,7 +360,7 @@
+   const gm = new Uint8Array(512 * 512 * 4);
+   for (let j = 0; j < 512; j++) for (let i = 0; i < 512; i++) {
+     const x = (i + 0.5) / 512 * 384 - 192, z = (j + 0.5) / 512 * 384 - 192, o = (i + 512 * j) * 4;
+-    gm[o] = magAt(x, z) * 255; gm[o + 2] = zoneP(x, z) * 255; gm[o + 3] = sstep(0.42, 0.6, fbm(x * 0.04, 3, z * 0.04, 3)) * 255;
++    gm[o] = magAt(x, z) * 255; gm[o + 1] = beachMask(x, z) * 255; gm[o + 2] = zoneP(x, z) * 255; gm[o + 3] = sstep(0.42, 0.6, fbm(x * 0.04, 3, z * 0.04, 3)) * 255;
+   }
+ 
+   // --- fish schools + mantas
+--- a/source/src/shaders.js
++++ b/source/src/shaders.js
+@@ -213,12 +213,26 @@
+ }
+ // Vary the existing three-metre coast without enlarging the density grid.
+ // The same mapping anchors dry props and plants to their underlying rock.
++fn coastShape(p: vec2f) -> vec3f {
++  let b = ss(138., 148., -p.x) * ss(28., 14., abs(p.y - 10.));
++  let h = .75 + .25 * sin(p.x * .045) * cos(p.y * .052);
++  let top = -2.1 + 2.26 * ss(165., 171., -p.x) + .46 * ss(171., 180., -p.x) + 2.38 * (.75 + .25 * sin(p.y * .13)) * ss(180., 188., -p.x);
++  let a = (top + 4.) / 7.;
++  return vec3f(mix(1., a, b), mix(h, a, b), b * (4. * a - 4.));
++}
+ fn coastPosition(p: vec3f) -> vec3f {
+-  if (p.y <= 0.) { return p; }
+-  let h = .75 + .25 * sin(p.x * .045) * cos(p.z * .052);
+-  return vec3f(p.x, select(p.y, p.y * h, p.y > 0.), p.z);
++  if (p.y <= -4. || (p.y <= 0. && (p.x >= -138. || abs(p.z - 10.) >= 28.))) { return p; }
++  let c = coastShape(p.xz);
++  return vec3f(p.x, p.y * select(c.x, c.y, p.y > 0.) + c.z, p.z);
+ }
+ fn coastNormal(p: vec3f, n: vec3f) -> vec3f {
++  if (p.y <= -4.) { return n; }
++  if (p.x < -138. && abs(p.z - 10.) < 28.) {
++    let c = coastShape(p.xz); let sy = select(c.x, c.y, p.y > 0.);
++    let dx = (coastPosition(p + vec3f(.1, 0., 0.)).y - coastPosition(p - vec3f(.1, 0., 0.)).y) * 5.;
++    let dz = (coastPosition(p + vec3f(0., 0., .1)).y - coastPosition(p - vec3f(0., 0., .1)).y) * 5.;
++    return normalize(vec3f(n.x - n.y * dx / sy, n.y / sy, n.z - n.y * dz / sy));
++  }
+   if (p.y <= 0.) { return n; }
+   let h = .75 + .25 * sin(p.x * .045) * cos(p.z * .052);
+   let dx = .01125 * cos(p.x * .045) * cos(p.z * .052);
+@@ -274,7 +288,13 @@
+   return mix(c, .33, ss(35., 100., d));
+ }
+ fn sunE(y: f32, z: f32) -> vec3f { return SUNC * exp(kd(z) * (min(y, 0.) / g.sun.y)) * mix(.5 + .5 * sat(-y / 30.), 1., ss(-.15, .2, y)); }
+-fn vol(p: vec3f) -> vec4f { return textureSampleLevel(tV, sC, (p - vec3f(-192., -56., -192.)) / vec3f(384., 60., 384.), 0.); }
++fn vol(p: vec3f) -> vec4f {
++  var q = p;
++  if (p.y > -4. && p.x < -138. && abs(p.z - 10.) < 28.) {
++    let c = coastShape(p.xz); q.y = (p.y - c.z) / select(c.x, c.y, p.y > c.z);
++  }
++  return textureSampleLevel(tV, sC, (q - vec3f(-192., -56., -192.)) / vec3f(384., 60., 384.), 0.);
++}
+ fn amb(p: vec3f, n: vec3f, sky: f32, z: f32) -> vec3f {
+   let up = n.y * .5 + .5;
+   if (p.y > 0.) { return mix(vec3f(.08, .07, .05), vec3f(.28, .39, .53), up) * (.4 + .6 * sky); }
+@@ -341,7 +361,7 @@
+   let sk2 = textureSample(tD, sR, vec2f((i.op.x - i.op.z) * 1.1, i.op.y * .11));
+   let gm = textureSample(tM, sC, i.wp.xz / 384. + .5);
+   let ca = mix(caus(i.wp, dist), vec3f(.33), ss(-.3, .05, i.wp.y));
+-  let hgt = A.h * .5 + B.h * .35 + C.h * .15;
++  var hgt = A.h * .5 + B.h * .35 + C.h * .15;
+   var bump = 1.7; var gloss = .1; var alb = vec3f(0.); var emi = vec3f(0.); var vao = 1.; var flu = 0.;
+   let flt = ss(.72, .93, n0.y);
+   if (mat <= 1) {
+@@ -399,9 +419,17 @@
+     alb = mix(alb, stone * mix(.65, 1., dry), shore * .85);
+     bump = mix(bump, .65, shore); gloss = mix(gloss, mix(.35, .08, dry), shore);
+   }
+-  let rip = select(0., flt * gm.a * cos((i.wp.x * .8 + i.wp.z * .35) * 5. + A.c * 9.) * .65, mat == 0);
++  var sand = 0.;
++  if (gm.g > 0. && i.wp.y > -4. && mat == 0) {
++    sand = gm.g * ss(-4., -1., i.wp.y) * ss(.65, .93, n0.y);
++    let dry = ss(.04, .34, i.wp.y);
++    alb = mix(alb, mix(vec3f(.25, .19, .12), vec3f(.72, .61, .42), dry) * (.9 + .2 * B.h), sand);
++    bump = mix(bump, .09, sand); gloss = mix(gloss, mix(.22, .025, dry), sand);
++    sgro *= 1. - sand; hgt = mix(hgt, .55, sand);
++  }
++  let rip = select(0., flt * gm.a * cos((i.wp.x * .8 + i.wp.z * .35) * 5. + A.c * 9.) * .65 * (1. - sand), mat == 0);
+   var N = normalize(qrot(i.q, normalize(on + (A.n * .85 + B.n * .65 + C.n * .45 * ss(60., 12., dist) + F.n * .5 * fk) * bump + vec3f(.8, sgro, .35) * vec3f(rip, 1., rip))));
+-  if (i.wp.y > 0.) { N = normalize(n0 + (N - qrot(i.q, on)) * .5); }
++  if (i.wp.y > 0. || (gm.g > 0. && i.wp.y > -4.)) { N = normalize(n0 + (N - qrot(i.q, on)) * select(1., .5, i.wp.y > 0.)); }
+   let L = g.sun.xyz; let V = normalize(g.cam.xyz - i.wp);
+   let v1 = vol(i.wp + n0 * 1.5); let v2 = vol(i.wp + n0 * 4.5);
+   let ao = (sat((v1.r - .5) * 8.) * .55 + sat((v2.r - .5) * 2.7) * .45) * vao * ss(.12, .6, hgt);
+@@ -488,8 +516,9 @@
+   p += N2 * ruf;
+   let sw = sway(i.a.xz, hA + (p.y - i.a.y), t);
+   p.x += sw.x; p.z += sw.y;
++  o.n = coastNormal(p, normalize(N2 + S * u * .55 - T0 * cos(v * 10. + s2 * 30. + t * .6) * u * .7 * nearK));
+   p = coastPosition(p);
+-  o.cp = g.vp * vec4f(p, 1.); o.wp = p; o.n = normalize(N2 + S * u * .55 - T0 * cos(v * 10. + s2 * 30. + t * .6) * u * .7 * nearK); o.uv = vec2f(u, v);
++  o.cp = g.vp * vec4f(p, 1.); o.wp = p; o.uv = vec2f(u, v);
+   o.col = col; o.pr = pr; o.sd = vec2f(s1, s2); o.spc = spc; o.edge = vec3f(shp, f32(cut));
+   return o;
+ }

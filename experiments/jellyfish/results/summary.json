@@ -1,0 +1,440 @@
+{
+  "baseline": {
+    "bytes": 107000,
+    "gzipBytes": 43241,
+    "sha256": "f5b532374dd61cdfa3ecabf73d1ad85b233091d373a92834a608fee91d0d75f5"
+  },
+  "jelly": {
+    "bytes": 108902,
+    "gzipBytes": 43825,
+    "sha256": "9990baa6a0d05ec78a2a6cc83a89bd027670e1fc5390af86d5c0bd1ae0b36ed5"
+  },
+  "productByteIdentical": true,
+  "htmlDelta": 1902,
+  "gzipDelta": 584,
+  "qa": {
+    "cases": 6,
+    "images": 378
+  },
+  "geometry": {
+    "vertices": 397,
+    "triangles": 738,
+    "vertexBytes": 6352,
+    "indexBytes": 4428,
+    "gpuMeshBytes": 10780,
+    "temporaryMeshTypedBytes": 15208,
+    "minTriangleArea": 0.000003156662596794221,
+    "minOutwardDot": 0.52
+  },
+  "resources": [
+    {
+      "level": 0,
+      "floatingStonesBefore": 852,
+      "floatingStonesAfter": 0,
+      "jellyfish": 33,
+      "gpuBufferDelta": -29060,
+      "removedSolidBufferBytes": 40896,
+      "addedJellyInstanceBytes": 1056,
+      "newBuffers": 1,
+      "newTextures": 0,
+      "newPipelines": 1,
+      "extraDrawCalls": 1,
+      "removedTrianglesPerFrame": 1090560,
+      "jellyTrianglesPerFrame": 24354,
+      "netTriangleDelta": -1066206,
+      "unchangedHashes": 135,
+      "paths": {
+        "count": 33,
+        "vertices": 397,
+        "times": 181,
+        "checks": 2371281,
+        "minClearance": 0.5087322367049532,
+        "maxY": -6.417164105885532
+      },
+      "maxCPUCenterError": 0.00000410285778684738
+    },
+    {
+      "level": 1,
+      "floatingStonesBefore": 852,
+      "floatingStonesAfter": 0,
+      "jellyfish": 33,
+      "gpuBufferDelta": -29060,
+      "removedSolidBufferBytes": 40896,
+      "addedJellyInstanceBytes": 1056,
+      "newBuffers": 1,
+      "newTextures": 0,
+      "newPipelines": 1,
+      "extraDrawCalls": 1,
+      "removedTrianglesPerFrame": 1090560,
+      "jellyTrianglesPerFrame": 24354,
+      "netTriangleDelta": -1066206,
+      "unchangedHashes": 135,
+      "paths": {
+        "count": 33,
+        "vertices": 397,
+        "times": 181,
+        "checks": 2371281,
+        "minClearance": 0.5087322367049532,
+        "maxY": -6.417164105885532
+      },
+      "maxCPUCenterError": 0.00000410285778684738
+    },
+    {
+      "level": 2,
+      "floatingStonesBefore": 852,
+      "floatingStonesAfter": 0,
+      "jellyfish": 33,
+      "gpuBufferDelta": -29060,
+      "removedSolidBufferBytes": 40896,
+      "addedJellyInstanceBytes": 1056,
+      "newBuffers": 1,
+      "newTextures": 0,
+      "newPipelines": 1,
+      "extraDrawCalls": 1,
+      "removedTrianglesPerFrame": 272640,
+      "jellyTrianglesPerFrame": 24354,
+      "netTriangleDelta": -248286,
+      "unchangedHashes": 135,
+      "paths": {
+        "count": 33,
+        "vertices": 397,
+        "times": 181,
+        "checks": 2371281,
+        "minClearance": 0.5087322367049532,
+        "maxY": -6.417164105885532
+      },
+      "maxCPUCenterError": 0.00000410285778684738
+    }
+  ],
+  "timing": {
+    "protocol": {
+      "warmupRounds": 1,
+      "measuredRounds": 3,
+      "views": 2,
+      "warmupFrames": 20,
+      "measuredFrames": 60,
+      "serialGPU": true,
+      "limits": [
+        "Repeated local pages, not cold starts.",
+        "GPU timestamps of serial render passes, not gameplay FPS.",
+        "Two interrupted runs; remaining cases completed in fresh browsers with warmup.",
+        "One Mac/Chrome; no process/peak RAM measurement."
+      ]
+    },
+    "groups": [
+      {
+        "name": "baseline",
+        "level": 0,
+        "readyMs": {
+          "median": 2405.3999999910593,
+          "min": 2292.7000000029802,
+          "max": 2430.5
+        },
+        "worldMs": {
+          "median": 1200.2000000029802,
+          "min": 1127.9000000059605,
+          "max": 1219.7000000029802
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 11.272192,
+              "min": 11.272192,
+              "max": 11.272192
+            },
+            "cpuMeanMs": {
+              "median": 0.07499999975164731,
+              "min": 0.06833333397905032,
+              "max": 0.0783333328862985
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 7.53664,
+              "min": 7.53664,
+              "max": 7.569408
+            },
+            "cpuMeanMs": {
+              "median": 0.07666666631897291,
+              "min": 0.05833333258827527,
+              "max": 0.08166666651765506
+            }
+          }
+        ]
+      },
+      {
+        "name": "jelly",
+        "level": 0,
+        "readyMs": {
+          "median": 2364.800000011921,
+          "min": 2297.7000000029802,
+          "max": 2437.5
+        },
+        "worldMs": {
+          "median": 1165.6000000089407,
+          "min": 1123.2999999970198,
+          "max": 1205
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 10.878976,
+              "min": 10.878976,
+              "max": 10.878976
+            },
+            "cpuMeanMs": {
+              "median": 0.11000000089406967,
+              "min": 0.07499999925494194,
+              "max": 0.11333333353201548
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 7.86432,
+              "min": 7.86432,
+              "max": 7.86432
+            },
+            "cpuMeanMs": {
+              "median": 0.07833333263794581,
+              "min": 0.06999999930461248,
+              "max": 0.10166666830579439
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 1,
+        "readyMs": {
+          "median": 2263.3999999910593,
+          "min": 2211.2999999970198,
+          "max": 2307.0999999940395
+        },
+        "worldMs": {
+          "median": 1099.7999999970198,
+          "min": 1069.5,
+          "max": 1108.2999999970198
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 8.880128,
+              "min": 8.84736,
+              "max": 8.912896
+            },
+            "cpuMeanMs": {
+              "median": 0.06999999880790711,
+              "min": 0.0566666675110658,
+              "max": 0.08666666572292646
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 6.127616,
+              "min": 6.094848,
+              "max": 6.160384
+            },
+            "cpuMeanMs": {
+              "median": 0.07666666681567828,
+              "min": 0.06833333298563957,
+              "max": 0.08833333378036817
+            }
+          }
+        ]
+      },
+      {
+        "name": "jelly",
+        "level": 1,
+        "readyMs": {
+          "median": 2251.2999999970198,
+          "min": 2218.6000000089407,
+          "max": 2474.3999999910593
+        },
+        "worldMs": {
+          "median": 1091.7000000029802,
+          "min": 1082.9000000059605,
+          "max": 1234.9000000059605
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 8.51968,
+              "min": 8.51968,
+              "max": 8.51968
+            },
+            "cpuMeanMs": {
+              "median": 0.08499999965230624,
+              "min": 0.07166666686534881,
+              "max": 0.08833333204189936
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 6.356992,
+              "min": 6.356992,
+              "max": 6.356992
+            },
+            "cpuMeanMs": {
+              "median": 0.07666666582226753,
+              "min": 0.07499999900658925,
+              "max": 0.07833333387970924
+            }
+          }
+        ]
+      },
+      {
+        "name": "baseline",
+        "level": 2,
+        "readyMs": {
+          "median": 2276,
+          "min": 2214.7999999970198,
+          "max": 2360.6000000089407
+        },
+        "worldMs": {
+          "median": 1108.3999999910593,
+          "min": 1076.800000011921,
+          "max": 1172.1000000089407
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.473408,
+              "min": 3.473408,
+              "max": 3.473408
+            },
+            "cpuMeanMs": {
+              "median": 0.08500000114242236,
+              "min": 0.07499999975164731,
+              "max": 0.08666666721304257
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 2.424832,
+              "min": 2.392064,
+              "max": 2.424832
+            },
+            "cpuMeanMs": {
+              "median": 0.06666666666666667,
+              "min": 0.061666667461395264,
+              "max": 0.07166666612029075
+            }
+          }
+        ]
+      },
+      {
+        "name": "jelly",
+        "level": 2,
+        "readyMs": {
+          "median": 2189.5,
+          "min": 2166.2999999970198,
+          "max": 2277.5
+        },
+        "worldMs": {
+          "median": 1069.800000011921,
+          "min": 1058.5999999940395,
+          "max": 1108.7000000029802
+        },
+        "views": [
+          {
+            "pose": 0,
+            "gpuMs": {
+              "median": 3.407872,
+              "min": 3.407872,
+              "max": 3.407872
+            },
+            "cpuMeanMs": {
+              "median": 0.08833333253860473,
+              "min": 0.07666666805744171,
+              "max": 0.10499999920527141
+            }
+          },
+          {
+            "pose": [
+              60.41771088730543,
+              -7.613538071033783,
+              39.845804494274375,
+              60.117710887305435,
+              -7.613538071033783,
+              36.845804494274375
+            ],
+            "gpuMs": {
+              "median": 2.424832,
+              "min": 2.424832,
+              "max": 2.424832
+            },
+            "cpuMeanMs": {
+              "median": 0.06666666741172472,
+              "min": 0.06333333378036816,
+              "max": 0.07000000029802322
+            }
+          }
+        ]
+      }
+    ],
+    "recovery": {
+      "interruptions": 2,
+      "completedInitial": 17,
+      "completedFirstRetry": 4,
+      "firstRetryWarmupPages": 2,
+      "freshBrowserCases": 3,
+      "warmupPerFreshBrowser": 1,
+      "reason": "Runtime.evaluate timeouts in both candidate and baseline; Chrome logged CVDisplayLink/Invalid mailbox errors. All completed cases retained."
+    }
+  },
+  "limits": [
+    "Actual process/peak RAM not measured.",
+    "Serial render timing is not gameplay FPS.",
+    "One Mac/Chrome; three measured pages per group."
+  ],
+  "shipping": {
+    "passed": true,
+    "cases": 3,
+    "date": "2026-11-18T18:14:42.452Z"
+  }
+}

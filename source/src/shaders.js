@@ -330,7 +330,6 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
   var sc = i.a.w;
   if (i.c.x < 1.5 && i.c.z > 1.5 && g.res.x > 0.) { sc *= 1. - ss(i.c.z * .7, i.c.z, distance(i.a.xyz, g.cam.xyz) / g.mis.z); }
   var w = i.a.xyz + qrot(i.b, i.p * sc);
-  w.y += sin(g.cam.w * .3 + i.c.y * 40.) * i.c.w;
   o.n = coastNormal(w, qrot(i.b, i.n.xyz)); w = coastPosition(w);
   o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.op = i.p * i.a.w + i.c.y * 37.; o.on = i.n.xyz;
   o.m = i.c; o.q = i.b; o.ao = i.n.w;
@@ -589,6 +588,25 @@ struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @
 const W_ANIM = S_B + /*wgsl*/`
 struct VI { @location(0) p: vec3f, @location(1) n: vec4f, @location(2) a: vec4f, @location(3) b: vec4f };
 struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n: vec3f, @location(2) op: vec3f, @location(3) @interpolate(flat) sd: f32, @location(4) lt: f32 };
+@vertex fn vsJelly(i: VI) -> VO {
+  var o: VO; let t = g.cam.w; let phase = t * i.b.z + i.b.w;
+  let pulse = sin(phase); let radius = .9 + .1 * pulse; let height = 1.05 - .1 * pulse;
+  let drag = max(-i.p.y, 0.); var l = i.p * vec3f(radius, height, radius);
+  l.x += drag * .12 * (sin(t * .8 + i.b.w + drag * 2.) - sin(t * .8 + i.b.w));
+  l.z += drag * .09 * (sin(t * .6 + i.b.w + drag * 2.5) - sin(t * .6 + i.b.w));
+  let w = i.a.xyz + l * i.a.w + vec3f(.15 * sin(t * .17 + i.b.w), i.b.y * sin(t * .3 + i.b.w), .12 * cos(t * .13 + i.b.w));
+  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.op = i.p; o.n = i.n.xyz / vec3f(radius, height, radius); o.sd = i.b.x; o.lt = shadow1(w);
+  return o;
+}
+@fragment fn fsJelly(i: VO) -> @location(0) vec4f {
+  let n = normalize(i.n); let V = normalize(g.cam.xyz - i.wp); let rim = pow(1. - abs(dot(n, V)), 2.);
+  let organ = (1. - ss(.025, .055, abs(length(abs(i.op.xz) - vec2f(.15)) - .085))) * ss(.2, .4, i.op.y);
+  let alb = mix(mix(vec3f(.72, .84, .9), vec3f(.85, .65, .8), i.sd), vec3f(.6, .3, .55), organ * .7);
+  let z = zone(i.wp); let vv = vol(i.wp); let E = sunE(i.wp.y, z) * i.lt;
+  let c = alb * (E * (.45 + .55 * abs(dot(n, g.sun.xyz))) + amb(i.wp, vec3f(0., 1., 0.), vv.g, z) * 1.8);
+  let alpha = select(.2 + .48 * rim + .3 * organ + .25 * (1. - ss(0., .05, i.op.y)), .6, i.op.y < -.001);
+  return vec4f(fog(c, i.wp, z) * alpha, alpha);
+}
 @vertex fn vsFish(i: VI) -> VO {
   var o: VO;
   let s = i.b.x; let h = vec3f(hs(s), hs(s + .37), hs(s + .71));

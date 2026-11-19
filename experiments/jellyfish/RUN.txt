@@ -1,0 +1,69 @@
+Jellyfish replacing floating stones. Baseline: local commit 75920eb.
+Run from repository root; source/node_modules provides esbuild.
+
+node experiments/jellyfish/build.mjs
+node experiments/jellyfish/data.mjs
+caffeinate -i node experiments/jellyfish/browser.mjs
+python3 experiments/jellyfish/analyze.py
+caffeinate -i node experiments/jellyfish/timing.mjs
+npm --prefix source run build
+caffeinate -i node experiments/jellyfish/browser.mjs --shipping
+node experiments/jellyfish/summarize.mjs
+
+Python needs Pillow and NumPy. This machine used:
+/Users/ddeuter/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+
+Browser runs must be SERIAL. Own temporary headless Chrome profile, offline,
+requestPointerLock suppressed. No personal browser or physical mouse capture.
+caffeinate ends with the test process. Reports are overwritten on rerun.
+Generated HTML/PNG/log files are ignored in Git.
+
+The baseline builds byte-for-byte from 75920eb. The candidate uses source/src/.
+The frozen upstream reference is untouched. QA and timing are separate builds;
+normal and timing variants have no copied world arrays, hashes or probe buffers.
+
+63 captures per case, baseline/candidate on all three quality levels:
+six original views, wide/kelp/grotto/surface, seven fixed near/waterline views,
+two 12-step 30-Hz sequences, 12 steps over an 8.4 s pulse cycle, later frames,
+and seven camera-height steps across the waterline transition.
+Viewport 1280x720, detail 1, identical cameras and times. Near camera positions
+were derived from the shallow jelly near the wreck at t=8 then frozen in poses.json.
+Some baseline near views are obscured by the deliberately removed floating
+boulders; full-frame pixel differences are not quality or performance scores.
+
+QA hashes all world data and meshes, plus the solid records with zero bob.
+Only floating solid records are removed; the candidate adds one jelly array
+and one mesh. Ground rocks, other decoration, plants, terrain, fish and mantas
+must retain their hashes. Resource descriptors change only by the recorded
+instance/mesh buffers and one transparent pipeline. Fish draws remain exact.
+
+The CPU motion probe checks all 397 mesh vertices of 33 jellyfish at every
+integer second from 0 to 180 against rockAt. It is a sampled terrain check,
+not a continuous collision proof and not a test against all decorative props
+or plant leaves. A QA-only GPU compute probe verifies actual shader centers
+at t=8; CPU and GPU trig rounding can differ slightly. The initial candidate
+failed the 5 cm clearance threshold and is recorded in results/screening.json.
+
+Timing: one warmup + three measured rounds, alternating variants and rotated
+quality order. Two views with 20 warmup + 60 measured frames each. Local page
+starts, serial GPU render timestamps, not cold starts or gameplay FPS. This
+compares a deliberate content replacement; removing 852 stones changes work,
+shadows and occlusion. It does not measure jelly rendering in isolation.
+
+Recorded timing recovery: two runs hit Runtime.evaluate timeouts (candidate
+and baseline); Chrome logged CVDisplayLink/Invalid mailbox errors. The first
+17 complete cases were retained. timing.mjs --resume retried the suffix after
+two warmup pages, completing another four cases. recover-timing.mjs finishes
+only the last three cases in separate browsers, each with one warmup page.
+Bounded caffeinate -di was used for recovery/shipping. No completed slow cases
+were discarded. Raw interrupted/retry/single-case reports and recovery metadata
+are retained; these interruptions limit timing conclusions.
+
+Rollback to the accepted fish version, then rebuild:
+git apply --reverse experiments/jellyfish/jelly-only.patch
+npm --prefix source run build
+
+Publication menu/credit check (19 November 2026), separate from historical reports:
+JELLY_REPORT=publication-shipping.json node experiments/jellyfish/browser.mjs --shipping --menu-check
+Uses the current product HTML, checks all three levels offline with audio/menu,
+and checks credit links and footer bounds at 1280x720. Screenshots remain ignored.

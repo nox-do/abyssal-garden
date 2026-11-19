@@ -269,17 +269,19 @@ function makeWorld(D, T, flyPts, POSES) {
       solid(coral ? 7 + (rnd() * 3 | 0) : 4 + (rnd() * 3 | 0), x - nx / l * 0.1 * sc, y - ny / l * 0.1 * sc, z - nz / l * 0.1 * sc, sc, qMul(qFromY(nx / l, ny / l, nz / l), qAxis(0, 1, 0, rnd() * TAU)), coral ? 5 : 4, rnd(), 1, 0);
     }
   }
-  // --- rocks: floating boulder clusters + scattered ground rocks
+  // --- jellyfish in the former floating-boulder regions; ground rocks stay below
   const BOULD = [[-11, -11, -105, 14, 5], [-56, -19, -18, 18, 6], [10, -13, -88, 22, 7], [24, -15, -24, 22, 7], [-18, -12, 4, 14, 6], [30, -14, 30, 16, 6], [36, -12, -70, 22, 8], [-30, -13, -84, 16, 7], [-58, -14, 0, 14, 6], [19, -13, 98, 18, 6], [62, -9, 34, 14, 6]];
   rseed(8);
   for (let i = 0; i < 9; i++) { const a = rnd() * TAU, r = rr(60, 150); BOULD.push([cos(a) * r, rr(-20, -9), sin(a) * r, 10 + rnd() * 12 | 0, rr(5, 9)]); }
-  for (const b of BOULD) for (let i = 0; i < b[3]; i++) {
-    const sc = rnd() < 0.12 ? rr(1.8, 3.2) : rr(0.35, 1.5);
-    const x = b[0] + rr(-1, 1) * b[4], y = b[1] + rr(-1, 1) * b[4] * 0.6, z = b[2] + rr(-1, 1) * b[4];
-    if (Dw(x, y, z) > -sc) continue;
-    const bob = rr(0.12, 0.4), sd = rnd();
-    solid(rnd() * 4 | 0, x, min(y, -2 - sc), z, sc, qRand(), 1, sd, 1, bob);
-    if (sc > 1.1) for (let j = 0; j < 7; j++) solid(rnd() * 4 | 0, x + rr(-1.6, 1.6) * sc, min(y, -2 - sc) + rr(-1.4, 1) * sc, z + rr(-1.6, 1.6) * sc, rr(0.1, 0.35), qRand(), 1, sd, 1, bob);
+  const jelly = [];
+  for (const b of BOULD) {
+    let n = 0;
+    for (let i = 0; i < 24 && n < 2; i++) {
+      const x = b[0] + rr(-1, 1) * b[4], y = b[1] + rr(-1, 1) * 2, z = b[2] + rr(-1, 1) * b[4], sc = rr(.65, 1.15);
+      // Reserve room for the bell, drifting envelope and hanging tentacles.
+      if ([1, 0, -1, -2.3].some(dy => Dw(x, y + dy * sc, z) > -1.4 * sc - .2)) continue;
+      jelly.push(x, y, z, sc, rnd(), rr(.15, .3), rr(.8, 1.15), rnd() * TAU); n++;
+    }
   }
   rseed(9);
   for (let i = 0; i < 2600; i++) {
@@ -395,7 +397,7 @@ function makeWorld(D, T, flyPts, POSES) {
     for (let c = 0; c < nCells; c++) { const a = L[c]; for (let i = 0; i < a.length; i += 12) { for (let j = 0; j < 12; j++) data[k++] = a[i + j]; lo[c] = min(lo[c], a[i + 1] - 3); hi[c] = max(hi[c], a[i + 1] + 3); } }
     return { data, n, start, lo, hi };
   };
-  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), nSchoolFish, mantas: new Float32Array(mantas), snow };
+  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), nSchoolFish, mantas: new Float32Array(mantas), jelly: new Float32Array(jelly), snow };
 }
 const fract = (x) => x - floor(x);
 
@@ -576,5 +578,20 @@ function meshFish(reef = false) {
   }
   const a = m.v(-0.33, 0, 0), b = m.v(-0.56, 0.2, 0), c = m.v(-0.47, 0, 0), d = m.v(-0.56, -0.2, 0);
   m.tri(a, b, c); m.tri(a, c, d);
+  return m;
+}
+function meshJelly() {
+  const m = new Mesh(), rings = [], top = m.v(0, .52, 0), sides = 24;
+  for (let j = 1; j <= 8; j++) {
+    const a = j / 8 * PI / 2, r = [];
+    for (let k = 0; k < sides; k++) { const t = k / sides * TAU, rad = .62 * sin(a) * (1 + .025 * cos(t * 12) * pow(j / 8, 5)); r.push(m.v(rad * cos(t), .52 * cos(a), rad * sin(t))); }
+    rings.push(r);
+    for (let k = 0; k < sides; k++) { const next = (k + 1) % sides; if (j === 1) m.tri(top, r[next], r[k]); else { const p = rings[j - 2]; m.quad(p[k], p[next], r[next], r[k]); } }
+  }
+  for (let k = 0; k < 6; k++) {
+    const a = k / 6 * TAU, pts = [];
+    for (let j = 0; j <= 10; j++) { const u = j / 10, r = .59 + .04 * sin(u * PI); pts.push([cos(a) * r, -u * (1.5 + .3 * sin(a * 2)), sin(a) * r]); }
+    m.tube(pts, j => .018 * (1 - .85 * j / 10), 3, true);
+  }
   return m;
 }

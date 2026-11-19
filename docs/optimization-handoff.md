@@ -1,6 +1,42 @@
 # Optimierungsexperiment: Stand und Einstieg
 
-**Aktuellster Stand (18.11.2026):** Nach Feedback zu den eckigen bunten Fischen
+## Veröffentlichungsstand (19.11.2026)
+
+Der Nutzer hat Aufräumen, Commit, Push auf den Fork und Veröffentlichung über
+GitHub Pages beauftragt. Die README beschreibt jetzt die tatsächlich integrierten
+Erweiterungen und trennt deren Ressourcen- und GPU-Zeitmessungen von historischen,
+nicht integrierten Optimierungsexperimenten. Originalautor Maksymilian Dendura
+(Noniv), Originalquelle und Support bleiben erhalten; Fork-Hinweis im Menü,
+vollständige MIT-Lizenz zusätzlich in der einzelnen HTML-Datei.
+
+Release-Build: **110.422 B HTML, 44.704 B gzip Level 9**. Gegenüber dem geprüften
+Quallenstand +1.520 B ausschließlich Veröffentlichungs-Markup; eingebettetes
+Szenen-JavaScript bytegleich. Historische Größen/Hashes unten und in den Studien
+bleiben Nachweise der jeweiligen Schritte, keine Maße des neuen Release-HTML.
+[Publikationsbericht](publication-report.json), neuer separater
+`experiments/jellyfish/results/publication-shipping.json`: alle drei Stufen,
+Offline/Audio/Bewegung/Menü, Credits/Links und Footer-Grenzen bei 1280x720 bestanden.
+Keine neue Performance-Messreihe. Reproduktion der Zusatzprüfung steht in
+`experiments/jellyfish/RUN.txt`.
+
+Der Pages-Workflow `.github/workflows/pages.yml` baut auf Pushes nach `main`,
+prüft das eingecheckte HTML und veröffentlicht nur `index.html` und `LICENSE`.
+Ziel: https://nox-do.github.io/abyssal-garden/ — Workflow-Erfolg und ausgelieferte
+Bytes nach dem Push prüfen. Keine Veröffentlichung über das Original-Repository.
+
+Die folgenden Abschnitte dokumentieren die historischen Arbeitsstände.
+
+**Aktuellster Stand (18.11.2026):** Auf Nutzerwunsch ersetzt ein neuer Versuch
+die 852 bewusst schwebenden Steine durch 33 Quallen mit transparentem Schirm,
+Puls und Tentakeln. Bodensteine und sonstige Weltdaten bleiben erhalten.
+Basis `75920eb`; HTML **108.902 B** (+1.902 B), gzip 43.825 B (+584 B),
+nominal -29.060 B GPU-Pufferdaten. Bewusster Inhaltsaustausch, keine Optimierung
+bei gleicher Szene. In `source/` und `index.html`, noch uncommitted.
+Details, Grenzen und Rueckweg: [`jellyfish-study.md`](jellyfish-study.md),
+`experiments/jellyfish/RUN.txt` und `jelly-only.patch`. Die Zeichenreihenfolge
+beruecksichtigt den Wasserlinien-Uebergang ab -0,06 m. Kein Push.
+
+**Vorheriger Fischstand (18.11.2026):** Nach Feedback zu den eckigen bunten Fischen
 haben nur diese 56 Tiere ein rundes Laengsprofil und korrekte Koerpernormalen
 erhalten. Sichtbarer Nahbereichsgewinn fuer weitere 446 B HTML, 3.020 B
 GPU-Modelldaten und einen Draw. HTML jetzt **107.000 B**, gzip 43.241 B.

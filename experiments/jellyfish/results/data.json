@@ -1,0 +1,10 @@
+{
+  "vertices": 397,
+  "triangles": 738,
+  "vertexBytes": 6352,
+  "indexBytes": 4428,
+  "gpuMeshBytes": 10780,
+  "temporaryMeshTypedBytes": 15208,
+  "minTriangleArea": 0.000003156662596794221,
+  "minOutwardDot": 0.52
+}

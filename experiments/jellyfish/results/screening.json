@@ -1,0 +1,8 @@
+{
+  "rejectedCandidate": "42bd5329308f8c142c1ac00195cac665a9c038af3f7b27e15117f4c92e1b2b84",
+  "reason": "Tentacle came closer than the required 0.05 m terrain reserve during the 0..180 s motion check.",
+  "jellyCount": 33,
+  "sampledMinimumClearance": 0.04971342577465185,
+  "checksPerQuality": 2371281,
+  "resolution": "Increase the generation clearance and vertical extent; rebuild and rerun all final comparisons."
+}

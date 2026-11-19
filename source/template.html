@@ -2,6 +2,32 @@
 <html lang=en>
 <head>
 <meta charset=utf-8>
+<!--
+Abyssal Garden — original by Maksymilian Dendura (Noniv).
+Modified version by nox-do: https://github.com/nox-do/abyssal-garden
+
+MIT License
+
+Copyright (c) 2026 Maksymilian Dendura
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
 <title>Abyssal Garden</title>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=theme-color content=#03131c>
@@ -31,7 +57,7 @@ body:not(.g) canvas { filter: blur(1vmax) brightness(.5); transform: scale(1.06)
 /* menu: the loading bar and the buttons share one grid cell, so nothing jumps when they swap */
 #m {
   position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: min(2.2em, 6vmin);
-  padding: 1em 1em 4.5em; text-align: center; background: radial-gradient(#03131c00 30%, #03131ccc);
+  padding: 1em 1em 7em; text-align: center; background: radial-gradient(#03131c00 30%, #03131ccc);
   transition: opacity .5s, visibility .5s;
 }
 .g #m, .m #l, .l #g { opacity: 0; visibility: hidden; }
@@ -74,9 +100,10 @@ button:active, a:active { transform: translateY(.1em); filter: brightness(.9); }
   box-shadow: inset 0 -.2em #0003, 0 0 2em #19c3d6b3;
 }
 
-/* GitHub and Ko-fi: always at the bottom of the menu, in their own colours */
-#f { position: absolute; left: 0; right: 0; bottom: 1.5em; display: flex; justify-content: center; gap: 1em; font-size: .8em; }
-a + a { background: #ff5e5b; color: #fff; }
+/* Original credits, fork source and author support stay in the menu. */
+#f { position: absolute; left: 0; right: 0; bottom: 1em; display: flex; flex-wrap: wrap; justify-content: center; gap: .6em 1em; padding: 0 1em; font-size: .8em; }
+#credits { flex-basis: 100%; font-weight: 500; text-wrap: balance; }
+#support { background: #ff5e5b; color: #fff; }
 svg { width: 1.5em; height: 1.5em; fill: currentColor; }
 
 /* dark plates under the dive button: detail level, list of controls, touch hint */
@@ -145,8 +172,10 @@ svg { width: 1.5em; height: 1.5em; fill: currentColor; }
     </div>
   </div>
   <p id=f>
-    <a href=https://github.com/Noniv/abyssal-garden target=_blank><svg viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>GitHub</a>
-    <a href=https://ko-fi.com/noniv target=_blank><svg viewBox="0 0 24 24"><path fill-rule=evenodd d="M2 5h16.5a4.5 4.5 0 0 1 0 9H17a6 6 0 0 1-6 5H8a6 6 0 0 1-6-6zM17 8v3h1.5a1.5 1.5 0 0 0 0-3zM9.5 15.5 5.9 12a2.2 2.2 0 0 1 3.6-2.5 2.2 2.2 0 0 1 3.6 2.5z"/></svg>Support</a>
+    <span id=credits>Original by Maksymilian Dendura (Noniv) · Modified by nox-do</span>
+    <a href=https://github.com/nox-do/abyssal-garden target=_blank rel=noopener>Our fork</a>
+    <a href=https://github.com/Noniv/abyssal-garden target=_blank rel=noopener><svg viewBox="0 0 16 16"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>Original</a>
+    <a id=support href=https://ko-fi.com/noniv target=_blank rel=noopener><svg viewBox="0 0 24 24"><path fill-rule=evenodd d="M2 5h16.5a4.5 4.5 0 0 1 0 9H17a6 6 0 0 1-6 5H8a6 6 0 0 1-6-6zM17 8v3h1.5a1.5 1.5 0 0 0 0-3zM9.5 15.5 5.9 12a2.2 2.2 0 0 1 3.6-2.5 2.2 2.2 0 0 1 3.6 2.5z"/></svg>Support</a>
   </p>
 </div>
 <button id=o aria-label=Menu>≡</button>

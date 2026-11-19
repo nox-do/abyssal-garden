@@ -1,0 +1,24 @@
+{
+  "base": "75920eb",
+  "node": "v22.23.4",
+  "sourceHashes": {
+    "quality.js": "3d0f5e35ad6c90f3168c0d58a8ba220a807d90e04c74a58c0853242034d7d6e5",
+    "math.js": "bf749a644787a025f917008bb3bd696d7921a0b2374b3d7c95d7c131e6991d3b",
+    "shaders.js": "9c710224d14a790e0db6bc8d63cc0f1d2966bc01563a3b63211f46d00cfa886a",
+    "world.js": "c770a5eed57678726a3bd3467a84bcfbe4a0b8d07b990e72c6168d7ccc8716ce",
+    "main.js": "af10f61701fb4a68dec8667e2862151b716141097ad4732ee8d1e3553810c778",
+    "audio.js": "2e60867020e3cb7007f428d7c4a3a69f582b55ea93b51421e570e8eb01a92220"
+  },
+  "variants": {
+    "baseline": {
+      "bytes": 107000,
+      "gzipBytes": 43241,
+      "sha256": "f5b532374dd61cdfa3ecabf73d1ad85b233091d373a92834a608fee91d0d75f5"
+    },
+    "jelly": {
+      "bytes": 108902,
+      "gzipBytes": 43825,
+      "sha256": "9990baa6a0d05ec78a2a6cc83a89bd027670e1fc5390af86d5c0bd1ae0b36ed5"
+    }
+  }
+}

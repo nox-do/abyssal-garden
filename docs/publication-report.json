@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-19T16:26:57.376Z",
+  "htmlBytes": 110422,
+  "gzipLevel9Bytes": 44704,
+  "sha256": "d813bda0a8294ee5854ba49f1ef1919ccf6162176e2c8e2ec8206456befcd9d8",
+  "originalReference": {
+    "revision": "a596354eff400d458bc2aeb9bdf5e0a9734b2bcf",
+    "htmlBytes": 99514
+  },
+  "htmlDeltaFromOriginal": 10908,
+  "previousJellyfishBuild": {
+    "bytes": 108902,
+    "gzipBytes": 43825,
+    "sha256": "9990baa6a0d05ec78a2a6cc83a89bd027670e1fc5390af86d5c0bd1ae0b36ed5"
+  },
+  "publicationMarkupDeltaBytes": 1520,
+  "renderingScriptByteIdenticalToTestedJellyfishBuild": true,
+  "shippingReport": "../experiments/jellyfish/results/publication-shipping.json",
+  "shippingLevels": [
+    "High",
+    "Medium",
+    "Low"
+  ],
+  "checks": [
+    "offline start",
+    "audio running",
+    "forward movement and menu",
+    "no JavaScript/console errors",
+    "pointer lock suppressed",
+    "credit links and menu bounds at 1280x720",
+    "MIT license embedded in HTML",
+    "reproducible build"
+  ],
+  "limits": [
+    "Publication smoke test is not a new performance benchmark.",
+    "Historical step-by-step measurements retain their original source/build hashes.",
+    "Only the publication markup changed from the previously tested jellyfish rendering code.",
+    "Process RAM, peak memory, gameplay FPS and other browsers/devices not measured."
+  ]
+}

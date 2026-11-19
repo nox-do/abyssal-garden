@@ -1,0 +1,168 @@
+diff --git a/source/src/main.js b/source/src/main.js
+index 41013fe..de3276e 100644
+--- a/source/src/main.js
++++ b/source/src/main.js
+@@ -105,6 +105,7 @@ const pLeafS = scenePipe(mLeaf, 'vs', 'fs', [ibLeaf], { strip: true, constants:
+ const pLeafF = scenePipe(mLeaf, 'vs', 'fs', [{ ...ibLeaf, arrayStride: 72 }], { strip: true, coverage: true, constants: { CUTOUT: true, ROWS: 3, WIDTH: 1.5 } });
+ const pFish = scenePipe(mAnim, 'vsFish', 'fsFish', [vbSolid, ibAnim]);
+ const pManta = scenePipe(mAnim, 'vsManta', 'fsManta', [vbSolid, ibAnim]);
++const pJelly = scenePipe(mAnim, 'vsJelly', 'fsJelly', [vbSolid, ibAnim], { blend: { color: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' } } });
+ const pSurf = scenePipe(mSurf, 'vs', 'fs', [], { strip: true, depthWrite: true, blend: { color: { srcFactor: 'src-alpha', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'zero' } } }), pBack = scenePipe(mSurf, 'vsB', 'fsB', [], { strip: true });
+ const pBub = scenePipe(mSpr, 'vsBub', 'fsBub', [ibBub], { strip: true, blend: { color: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' }, alpha: { srcFactor: 'one', dstFactor: 'one-minus-src-alpha' } } });
+ const ADD = { color: { srcFactor: 'one', dstFactor: 'one' }, alpha: { srcFactor: 'one', dstFactor: 'one' } };
+@@ -294,7 +295,7 @@ D = Wd.gy = T.smp = null; // with gy goes the generator's working memory (about
+ 
+ await say('Building set pieces…', 0.94, 1200);
+ // mesh ids: 0-3 boulders, 4-6 sponges, 7-8 coral, 9 tube sponge, 10 whale fluke, 11 ship, 12 manta, 13 fish,
+-// 14-20 rock chunks + pebbles, 21-22 coral LOD, 23-25 far rock LOD, 26 shallow fish
++// 14-20 rock chunks + pebbles, 21-22 coral LOD, 23-25 far rock LOD, 26 shallow fish, 27 jellyfish
+ const meshes = [meshChunk(1, 3), meshChunk(7, 3), meshChunk(13, 3), meshChunk(22, 3),
+   meshLathe([[0, 0, 0.5], [0.34, 0, 0.6], [0.5, 0.2, 0.85], [0.6, 0.6, 1], [0.55, 0.95, 1], [0.47, 1.08, 1], [0.38, 1.1, 0.9], [0.3, 1.0, 0.45], [0.26, 0.6, 0.15], [0, 0.35, 0.05]], 18, 0.3, 9),
+   meshLathe([[0, 0, 0.5], [0.2, 0, 0.6], [0.26, 0.5, 0.85], [0.4, 1.25, 1], [0.4, 1.42, 1], [0.33, 1.48, 0.9], [0.26, 1.38, 0.4], [0.18, 0.8, 0.12], [0, 0.5, 0.05]], 16, 0.35, 8),
+@@ -303,6 +304,7 @@ const meshes = [meshChunk(1, 3), meshChunk(7, 3), meshChunk(13, 3), meshChunk(22
+ meshes.push(meshFluke(), meshShip().build(), meshManta().build(), meshFish().build(),
+   meshChunk(3).build(), meshChunk(11).build(), meshChunk(29).build(), meshChunk(5, 3).build(), meshChunk(17, 3).build(), meshChunk(41, 3).build(), meshChunk(9, 1).build(), meshCoral(0, 1).build(), meshCoral(1, 1).build(), meshChunk(5, 2, 1).build(), meshChunk(17, 2, 1).build(), meshChunk(41, 2, 1).build());
+ meshes.push(meshFish(true).build());
++meshes.push(meshJelly().build());
+ let nV = 0, nI = 0;
+ for (const m of meshes) { m.v0 = nV; m.i0 = nI; nV += m.nv; nI += m.ib.length; }
+ const allV = new Uint8Array(nV * 16), allI = new Uint16Array(nI);
+@@ -315,6 +317,7 @@ const ibSolids = buf(solidData, BU.VERTEX);
+ const ibChunk = Wd.chunks.map((c) => buf(c.data, BU.VERTEX)), ibProp = Wd.props.map((c) => buf(c.data, BU.VERTEX));
+ const ibBig = buf(new Uint8Array(Wd.big.buf), BU.VERTEX), ibSmall = buf(new Uint8Array(Wd.small.buf), BU.VERTEX);
+ const ibFish = buf(Wd.fish, BU.VERTEX), ibManta = buf(Wd.mantas, BU.VERTEX), ibBubbles = buf(Wd.bubbles, BU.VERTEX), ibSnowB = buf(Wd.snow, BU.VERTEX);
++const ibJelly = buf(Wd.jelly, BU.VERTEX), nJelly = Wd.jelly.length / 8, JELLY = meshes[27];
+ const ibGl = buf(Wd.glints, BU.VERTEX), nGl = Wd.glints.length / 8;
+ const nFish = Wd.fish.length / 8, nManta = Wd.mantas.length / 8, nBub = Wd.bubbles.length / 8, nSnow = Wd.snow.length / 4;
+ const MANTA = meshes[12], FISH = meshes[13], REEF = meshes[26];
+@@ -347,7 +350,7 @@ Q.writeTexture({ texture: tMap }, Wd.gm, { bytesPerRow: 2048 }, [512, 512]);
+ }
+ // the GPU has its own copies now: let go of the generator's (about 300 MB)
+ for (const o of [Wd.big, Wd.bigF, Wd.small, ...Wd.chunks, ...Wd.props]) o.buf = o.data = 0;
+-Wd.solids.data = Wd.bubbles = Wd.fish = Wd.mantas = Wd.snow = Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
++Wd.solids.data = Wd.bubbles = Wd.fish = Wd.mantas = Wd.jelly = Wd.snow = Wd.glints = Wd.volD = Wd.gm = T.vb = T.ib = T.wp = T.wn = 0;
+ 
+ // ---------------------------------------------------------------- render targets (rebuilt on resize)
+ // The scene is drawn at `pix` pixels and scaled up to the window. frame() tunes it and the draw distance scale `det`
+@@ -455,6 +458,9 @@ function drawCells(r, start, lo, hi, mar, indexed, verts, minD, maxD, sharedFar
+     }
+   }
+ }
++function drawJelly(r) {
++  r.setPipeline(pJelly); r.setVertexBuffer(0, vbMesh); r.setVertexBuffer(1, ibJelly); r.drawIndexed(JELLY.ni, nJelly, JELLY.i0, JELLY.v0, 0);
++}
+ function render() {
+   // camera basis (right vector is horizontal)
+   const cx = F[CX], cy = F[CY], cz = F[CZ], pitch = F[PIT], yaw = F[YAW];
+@@ -512,10 +518,13 @@ function render() {
+   r.setPipeline(pLeafF); drawCells(r, Wd.bigF.start, Wd.bigF.lo, Wd.bigF.hi, 5, false, 6, 58, 150, true);
+   r.setPipeline(pLeafS); r.setVertexBuffer(0, ibSmall); drawCells(r, Wd.small.start, Wd.small.lo, Wd.small.hi, 1.5, false, 6, 0, 70);
+   r.setPipeline(pBack); r.draw(4);
++  // Include the water shader's lens transition; all jellyfish stay well below it.
++  if (cy >= -.06) drawJelly(r);
+   r.setPipeline(pBub); r.setVertexBuffer(0, ibBubbles); r.draw(4, nBub);
+   r.setPipeline(pGl); r.setVertexBuffer(0, ibGl); r.draw(4, nGl);
+   r.setPipeline(pSnow); r.setVertexBuffer(0, ibSnowB); r.draw(4, nSnow);
+   r.setPipeline(pSurf); r.draw(4);
++  if (cy < -.06) drawJelly(r);
+   r.end();
+   // light shafts
+   r = e.beginRenderPass(passRays); r.setPipeline(pRays); r.setBindGroup(0, bgRays); r.draw(3); r.end();
+diff --git a/source/src/shaders.js b/source/src/shaders.js
+index 975e8a9..6ed6cce 100644
+--- a/source/src/shaders.js
++++ b/source/src/shaders.js
+@@ -330,7 +330,6 @@ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n
+   var sc = i.a.w;
+   if (i.c.x < 1.5 && i.c.z > 1.5 && g.res.x > 0.) { sc *= 1. - ss(i.c.z * .7, i.c.z, distance(i.a.xyz, g.cam.xyz) / g.mis.z); }
+   var w = i.a.xyz + qrot(i.b, i.p * sc);
+-  w.y += sin(g.cam.w * .3 + i.c.y * 40.) * i.c.w;
+   o.n = coastNormal(w, qrot(i.b, i.n.xyz)); w = coastPosition(w);
+   o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.op = i.p * i.a.w + i.c.y * 37.; o.on = i.n.xyz;
+   o.m = i.c; o.q = i.b; o.ao = i.n.w;
+@@ -589,6 +588,25 @@ struct GO { @builtin(position) cp: vec4f, @location(0) uv: vec2f, @location(1) @
+ const W_ANIM = S_B + /*wgsl*/`
+ struct VI { @location(0) p: vec3f, @location(1) n: vec4f, @location(2) a: vec4f, @location(3) b: vec4f };
+ struct VO { @builtin(position) cp: vec4f, @location(0) wp: vec3f, @location(1) n: vec3f, @location(2) op: vec3f, @location(3) @interpolate(flat) sd: f32, @location(4) lt: f32 };
++@vertex fn vsJelly(i: VI) -> VO {
++  var o: VO; let t = g.cam.w; let phase = t * i.b.z + i.b.w;
++  let pulse = sin(phase); let radius = .9 + .1 * pulse; let height = 1.05 - .1 * pulse;
++  let drag = max(-i.p.y, 0.); var l = i.p * vec3f(radius, height, radius);
++  l.x += drag * .12 * (sin(t * .8 + i.b.w + drag * 2.) - sin(t * .8 + i.b.w));
++  l.z += drag * .09 * (sin(t * .6 + i.b.w + drag * 2.5) - sin(t * .6 + i.b.w));
++  let w = i.a.xyz + l * i.a.w + vec3f(.15 * sin(t * .17 + i.b.w), i.b.y * sin(t * .3 + i.b.w), .12 * cos(t * .13 + i.b.w));
++  o.cp = g.vp * vec4f(w, 1.); o.wp = w; o.op = i.p; o.n = i.n.xyz / vec3f(radius, height, radius); o.sd = i.b.x; o.lt = shadow1(w);
++  return o;
++}
++@fragment fn fsJelly(i: VO) -> @location(0) vec4f {
++  let n = normalize(i.n); let V = normalize(g.cam.xyz - i.wp); let rim = pow(1. - abs(dot(n, V)), 2.);
++  let organ = (1. - ss(.025, .055, abs(length(abs(i.op.xz) - vec2f(.15)) - .085))) * ss(.2, .4, i.op.y);
++  let alb = mix(mix(vec3f(.72, .84, .9), vec3f(.85, .65, .8), i.sd), vec3f(.6, .3, .55), organ * .7);
++  let z = zone(i.wp); let vv = vol(i.wp); let E = sunE(i.wp.y, z) * i.lt;
++  let c = alb * (E * (.45 + .55 * abs(dot(n, g.sun.xyz))) + amb(i.wp, vec3f(0., 1., 0.), vv.g, z) * 1.8);
++  let alpha = select(.2 + .48 * rim + .3 * organ + .25 * (1. - ss(0., .05, i.op.y)), .6, i.op.y < -.001);
++  return vec4f(fog(c, i.wp, z) * alpha, alpha);
++}
+ @vertex fn vsFish(i: VI) -> VO {
+   var o: VO;
+   let s = i.b.x; let h = vec3f(hs(s), hs(s + .37), hs(s + .71));
+diff --git a/source/src/world.js b/source/src/world.js
+index 3e173c8..f018a37 100644
+--- a/source/src/world.js
++++ b/source/src/world.js
+@@ -269,17 +269,19 @@ function makeWorld(D, T, flyPts, POSES) {
+       solid(coral ? 7 + (rnd() * 3 | 0) : 4 + (rnd() * 3 | 0), x - nx / l * 0.1 * sc, y - ny / l * 0.1 * sc, z - nz / l * 0.1 * sc, sc, qMul(qFromY(nx / l, ny / l, nz / l), qAxis(0, 1, 0, rnd() * TAU)), coral ? 5 : 4, rnd(), 1, 0);
+     }
+   }
+-  // --- rocks: floating boulder clusters + scattered ground rocks
++  // --- jellyfish in the former floating-boulder regions; ground rocks stay below
+   const BOULD = [[-11, -11, -105, 14, 5], [-56, -19, -18, 18, 6], [10, -13, -88, 22, 7], [24, -15, -24, 22, 7], [-18, -12, 4, 14, 6], [30, -14, 30, 16, 6], [36, -12, -70, 22, 8], [-30, -13, -84, 16, 7], [-58, -14, 0, 14, 6], [19, -13, 98, 18, 6], [62, -9, 34, 14, 6]];
+   rseed(8);
+   for (let i = 0; i < 9; i++) { const a = rnd() * TAU, r = rr(60, 150); BOULD.push([cos(a) * r, rr(-20, -9), sin(a) * r, 10 + rnd() * 12 | 0, rr(5, 9)]); }
+-  for (const b of BOULD) for (let i = 0; i < b[3]; i++) {
+-    const sc = rnd() < 0.12 ? rr(1.8, 3.2) : rr(0.35, 1.5);
+-    const x = b[0] + rr(-1, 1) * b[4], y = b[1] + rr(-1, 1) * b[4] * 0.6, z = b[2] + rr(-1, 1) * b[4];
+-    if (Dw(x, y, z) > -sc) continue;
+-    const bob = rr(0.12, 0.4), sd = rnd();
+-    solid(rnd() * 4 | 0, x, min(y, -2 - sc), z, sc, qRand(), 1, sd, 1, bob);
+-    if (sc > 1.1) for (let j = 0; j < 7; j++) solid(rnd() * 4 | 0, x + rr(-1.6, 1.6) * sc, min(y, -2 - sc) + rr(-1.4, 1) * sc, z + rr(-1.6, 1.6) * sc, rr(0.1, 0.35), qRand(), 1, sd, 1, bob);
++  const jelly = [];
++  for (const b of BOULD) {
++    let n = 0;
++    for (let i = 0; i < 24 && n < 2; i++) {
++      const x = b[0] + rr(-1, 1) * b[4], y = b[1] + rr(-1, 1) * 2, z = b[2] + rr(-1, 1) * b[4], sc = rr(.65, 1.15);
++      // Reserve room for the bell, drifting envelope and hanging tentacles.
++      if ([1, 0, -1, -2.3].some(dy => Dw(x, y + dy * sc, z) > -1.4 * sc - .2)) continue;
++      jelly.push(x, y, z, sc, rnd(), rr(.15, .3), rr(.8, 1.15), rnd() * TAU); n++;
++    }
+   }
+   rseed(9);
+   for (let i = 0; i < 2600; i++) {
+@@ -395,7 +397,7 @@ function makeWorld(D, T, flyPts, POSES) {
+     for (let c = 0; c < nCells; c++) { const a = L[c]; for (let i = 0; i < a.length; i += 12) { for (let j = 0; j < 12; j++) data[k++] = a[i + j]; lo[c] = min(lo[c], a[i + 1] - 3); hi[c] = max(hi[c], a[i + 1] + 3); } }
+     return { data, n, start, lo, hi };
+   };
+-  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), nSchoolFish, mantas: new Float32Array(mantas), snow };
++  return { gy, glints: new Float32Array(glints), chunks: chunks.map(packC), props: props.map(packC), big: pack(big), bigF: pack(big, 2), small: pack(small), solids: { data: new Float32Array(sol.data), ranges: sol.ranges }, bubbles: new Float32Array(bubbles), volD, gm, fish: new Float32Array(fish), nSchoolFish, mantas: new Float32Array(mantas), jelly: new Float32Array(jelly), snow };
+ }
+ const fract = (x) => x - floor(x);
+ 
+@@ -578,3 +580,18 @@ function meshFish(reef = false) {
+   m.tri(a, b, c); m.tri(a, c, d);
+   return m;
+ }
++function meshJelly() {
++  const m = new Mesh(), rings = [], top = m.v(0, .52, 0), sides = 24;
++  for (let j = 1; j <= 8; j++) {
++    const a = j / 8 * PI / 2, r = [];
++    for (let k = 0; k < sides; k++) { const t = k / sides * TAU, rad = .62 * sin(a) * (1 + .025 * cos(t * 12) * pow(j / 8, 5)); r.push(m.v(rad * cos(t), .52 * cos(a), rad * sin(t))); }
++    rings.push(r);
++    for (let k = 0; k < sides; k++) { const next = (k + 1) % sides; if (j === 1) m.tri(top, r[next], r[k]); else { const p = rings[j - 2]; m.quad(p[k], p[next], r[next], r[k]); } }
++  }
++  for (let k = 0; k < 6; k++) {
++    const a = k / 6 * TAU, pts = [];
++    for (let j = 0; j <= 10; j++) { const u = j / 10, r = .59 + .04 * sin(u * PI); pts.push([cos(a) * r, -u * (1.5 + .3 * sin(a * 2)), sin(a) * r]); }
++    m.tube(pts, j => .018 * (1 - .85 * j / 10), 3, true);
++  }
++  return m;
++}

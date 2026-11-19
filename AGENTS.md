@@ -56,12 +56,34 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
   bleiben erhalten. Pointer Lock bleibt in allen Testseiten unterdrueckt.
 - Nach Nutzerfeedback sind nur diese 56 Fische gerundet: eigenes kleines
   Modell, nach aussen gerichtete Normalen, ein zusaetzlicher Draw. Weitere
-  +446 B HTML / +3.020 B GPU-Modelldaten. Aktuell **107.000 B HTML**;
+  +446 B HTML / +3.020 B GPU-Modelldaten. Fischstand: **107.000 B HTML**;
   Details in `docs/fish-shape-study.md` und `experiments/fish-shape/RUN.txt`.
   Alle bisherigen 133 Datenhashes und Bewegungsparameter unveraendert;
   282 Vergleichsbilder auf drei Stufen. Auf Nutzerwunsch lokal committed,
   nichts gepusht. Fuer Ruecknahme
   aller Fische zuerst `shape-only.patch`, dann `fish-only.patch` umkehren.
+- Danach auf Nutzerwunsch Quallen statt schwebender Felsgruppen als neuer
+  Versuch: 33 Quallen ersetzen 852 Schwebesteine, Bodensteine bleiben exakt.
+  Basis `75920eb`, aktuell **108.902 B HTML** (+1.902 B), nominal -29.060 B
+  GPU-Pufferdaten; ein neues Modell, Instanzpuffer und transparenter Draw.
+  `docs/jellyfish-study.md`, `experiments/jellyfish/RUN.txt` und eigener
+  `jelly-only.patch`. Unter-/Ueberwasser-Reihenfolge umfasst den bestehenden
+  Linsen-Uebergang ab -0,06 m. Noch nicht committed; kein Push.
+
+## Veröffentlichung (19.11.2026)
+
+- Nutzer hat Aufräumen, Commit, Push und GitHub-Pages-Veröffentlichung beauftragt.
+- Aktueller Release-Build samt Credits/MIT: 110.422 B HTML, 44.704 B gzip.
+  Szenen-JavaScript bytegleich zum geprüften 108.902-B-Quallenstand; alte
+  Berichte und Größen sind historische Schrittnachweise.
+- README beschreibt integrierte Änderungen und verlinkt Footprint/GPU-Nachweise.
+  `docs/publication-report.json` und separater `publication-shipping.json`
+  dokumentieren den Releasecheck auf allen drei Stufen.
+- `.github/workflows/pages.yml` veröffentlicht bei Push auf `main` nur HTML
+  und LICENSE nach reproduzierbarem Build. Ziel ist
+  https://nox-do.github.io/abyssal-garden/ ; Erfolg nach Push prüfen.
+- Copyright/Originalautor Maksymilian Dendura (Noniv) erhalten; sichtbare
+  Fork-Credits und Original-/Supportlinks im Menü, MIT im Standalone-HTML.
 
 ## Code und Builds
 
@@ -98,4 +120,4 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
 - Datenpruefungen, Bildvergleiche und Performancemessungen getrennt bewerten.
 
 Beim Einstieg den aktuellen Git-Status pruefen. Der untersuchte Stand wurde
-am 18.11.2026 auf Nutzerwunsch lokal gesichert; ein Push ist nicht beauftragt.
+am 18.11.2026 auf Nutzerwunsch lokal gesichert; die spätere Freigabe für Push und Veröffentlichung steht im Abschnitt oben.

@@ -21,8 +21,9 @@ Keine neue Performance-Messreihe. Reproduktion der Zusatzprüfung steht in
 
 Der Pages-Workflow `.github/workflows/pages.yml` baut auf Pushes nach `main`,
 prüft das eingecheckte HTML und veröffentlicht nur `index.html` und `LICENSE`.
-Ziel: https://nox-do.github.io/abyssal-garden/ — Workflow-Erfolg und ausgelieferte
-Bytes nach dem Push prüfen. Keine Veröffentlichung über das Original-Repository.
+Veröffentlicht: https://nox-do.github.io/abyssal-garden/ . Erster Workflow
+[44566424954](https://github.com/nox-do/abyssal-garden/actions/runs/44566424954)
+erfolgreich, öffentliches HTML und LICENSE bytegleich zum lokalen Stand geprüft. Keine Veröffentlichung über das Original-Repository.
 
 Die folgenden Abschnitte dokumentieren die historischen Arbeitsstände.
 

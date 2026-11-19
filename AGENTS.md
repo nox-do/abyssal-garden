@@ -81,7 +81,8 @@ nachgewiesene Ergebnisse, Grenzen der Tests und moegliche naechste Schritte.
   dokumentieren den Releasecheck auf allen drei Stufen.
 - `.github/workflows/pages.yml` veröffentlicht bei Push auf `main` nur HTML
   und LICENSE nach reproduzierbarem Build. Ziel ist
-  https://nox-do.github.io/abyssal-garden/ ; Erfolg nach Push prüfen.
+  https://nox-do.github.io/abyssal-garden/ ; erste Veröffentlichung erfolgreich,
+  öffentliches HTML und LICENSE bytegleich geprüft.
 - Copyright/Originalautor Maksymilian Dendura (Noniv) erhalten; sichtbare
   Fork-Credits und Original-/Supportlinks im Menü, MIT im Standalone-HTML.
 

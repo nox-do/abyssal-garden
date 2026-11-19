@@ -36,5 +36,12 @@
     "Historical step-by-step measurements retain their original source/build hashes.",
     "Only the publication markup changed from the previously tested jellyfish rendering code.",
     "Process RAM, peak memory, gameplay FPS and other browsers/devices not measured."
-  ]
+  ],
+  "publication": {
+    "url": "https://nox-do.github.io/abyssal-garden/",
+    "firstDeployedCommit": "3cd9e421ca5c796b65c0a9f2f27a9afe2105904a",
+    "successfulRun": "https://github.com/nox-do/abyssal-garden/actions/runs/44566424954",
+    "publicHTMLByteIdentical": true,
+    "publicLicenseByteIdentical": true
+  }
 }
